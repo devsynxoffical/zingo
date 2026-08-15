@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('title', 'Blog | ZingoAssist')
+@section('meta_description', 'Stay updated with the latest trends, insights, and tips on virtual assistant services, digital marketing, real estate, and business growth from Zingo Assist.')
 
 @push('css')
     <link rel="stylesheet" href="{{ asset('assets/css/blog-page.css') }}?v={{ time() }}">

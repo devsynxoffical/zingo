@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('title', 'Get our Virtual Assistance Services Today | Zingo Assist')
+@section('meta_description', 'Contact Zingo Assist today to hire professional virtual assistants. Get in touch with our experts to find the right digital marketing, SEO, or virtual support for your business.')
 
 @push('css')
     <link rel="stylesheet" href="{{ asset('assets/css/contact-page.css') }}?v={{ time() }}">

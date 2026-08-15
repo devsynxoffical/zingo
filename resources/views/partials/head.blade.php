@@ -2,10 +2,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="@yield('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1')">
     <meta name="google-site-verification" content="y-16gOmynT_OEhNUd5wtBsrV1MdGs5r9WKcfOFobH5k" />
+    <meta name="google-site-verification" content="o_UdEd4Ilf18eAs1wHDE4uz6bNIFga3FbWCBmqusG1E" />
     <meta name="description" content="@yield('meta_description', 'Zingo Assist - Professional Virtual Assistant Services')">
     <title>@yield('title')</title>
+    <link rel="canonical" href="{{ url()->current() }}" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:title" content="@yield('title')" />
+    <meta property="og:description" content="@yield('meta_description', 'Zingo Assist - Professional Virtual Assistant Services')" />
+    <meta property="og:image" content="@yield('og_image', asset('assets/images/zingo assist logo png.png'))" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="{{ url()->current() }}" />
+    <meta name="twitter:title" content="@yield('title')" />
+    <meta name="twitter:description" content="@yield('meta_description', 'Zingo Assist - Professional Virtual Assistant Services')" />
+    <meta name="twitter:image" content="@yield('og_image', asset('assets/images/zingo assist logo png.png'))" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link

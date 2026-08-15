@@ -213,4 +213,70 @@ class WebController extends Controller
     {
         return view('blog.benefits_outsourcing_business_tasks');
     }
+
+    public function sitemap()
+    {
+        $routes = [
+            'home',
+            'about',
+            'blog',
+            'blog1',
+            'blog2',
+            'blog3',
+            'blog4',
+            'blog.seo_strategies',
+            'blog.free_va_trial',
+            'blog.top_5_tasks',
+            'blog.web_dev_trends_2025',
+            'blog.digital_marketing_budget',
+            'blog.crm_powered_workflow',
+            'blog.va_vs_full_time',
+            'blog.crm_management_2025',
+            'blog.website_redesign_checklist',
+            'blog.seo_vs_ppc',
+            'blog.content_marketing_tips',
+            'blog.optimize_website_seo',
+            'blog.ten_signs_need_virtual_assistant',
+            'blog.benefits_outsourcing_business_tasks',
+            'contact',
+            'service',
+            'faq',
+            'service.digital_marketing',
+            'service.search_seo',
+            'service.web_development',
+            'service.graphic_design',
+            'service.testimonials',
+            'service.app_development',
+            'service.crm_management',
+            'service.it_support',
+            'service.video_editing',
+            'service.personal_assistance',
+            'service.lead_generation',
+            'service.cold_calling',
+            'service.virtual_business_assistance',
+            'service.virtual_property_management',
+            'service.real_estate_transaction_coordinator',
+            'service.bookkeeping_accountant',
+            'terms',
+            'privacy',
+        ];
+
+        $xml = '<?xml version="1.0" encoding="UTF-8"?>';
+        $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+        
+        foreach ($routes as $route) {
+            if (\Illuminate\Support\Facades\Route::has($route)) {
+                $xml .= '<url>';
+                $xml .= '<loc>' . route($route) . '</loc>';
+                $xml .= '<lastmod>' . date('Y-m-d') . '</lastmod>';
+                $xml .= '<changefreq>' . ($route === 'home' ? 'daily' : 'weekly') . '</changefreq>';
+                $xml .= '<priority>' . ($route === 'home' ? '1.0' : (str_starts_with($route, 'service.') ? '0.8' : '0.6')) . '</priority>';
+                $xml .= '</url>';
+            }
+        }
+        
+        $xml .= '</urlset>';
+
+        return response($xml, 200)->header('Content-Type', 'text/xml');
+    }
 }

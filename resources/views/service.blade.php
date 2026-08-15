@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('title', 'Explore our Virtual Assistance Services')
+@section('meta_description', 'Discover the full suite of virtual assistant services offered by Zingo Assist, including digital marketing, SEO optimization, IT support, lead generation, cold calling, and bookkeeping.')
 
 @push('css')
     <link rel="stylesheet" href="{{ asset('assets/css/our-services.css') }}?v={{ time() }}">

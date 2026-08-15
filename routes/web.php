@@ -46,6 +46,7 @@ Route::controller(WebController::class)->group(function () {
     Route::get('/virtual-property-management-services', 'virtual_property_management')->name('service.virtual_property_management');
     Route::get('/real-estate-transaction-coordinator-services', 'real_estate_transaction_coordinator')->name('service.real_estate_transaction_coordinator');
     Route::get('/accounting-and-bookkeeping-services', 'bookkeeping_accountant')->name('service.bookkeeping_accountant');
+    Route::get('/sitemap.xml', 'sitemap')->name('sitemap');
 });
 
 Route::controller(EmailController::class)->group(function () {
@@ -54,3 +55,9 @@ Route::controller(EmailController::class)->group(function () {
 
 Route::view('/terms-conditions', 'static.terms')->name('terms');
 Route::view('/privacy-policy', 'static.privacy')->name('privacy');
+
+Route::get('/clear-cache', function () {
+    \Illuminate\Support\Facades\Artisan::call('view:clear');
+    \Illuminate\Support\Facades\Artisan::call('cache:clear');
+    return 'Laravel Cache Cleared successfully!';
+});

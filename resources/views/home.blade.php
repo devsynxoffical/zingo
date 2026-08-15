@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('title', 'Zingo Assist – Premier Virtual Assistant Agency in USA')
+@section('meta_description', 'Zingo Assist is the premier virtual assistant agency in the USA, providing elite virtual assistants, digital marketing, real estate cold calling, SEO, bookkeeping, and web development services to accelerate your business growth.')
 
 
 
