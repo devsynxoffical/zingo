@@ -1,0 +1,6 @@
+---
+# cPanel Git Version Control: "Deploy HEAD Commit" runs this.
+deployment:
+  tasks:
+    - export FORCE=1
+    - /bin/bash $HOME/repositories/zingo/scripts/deploy.sh >> $HOME/deploy.log 2>&1

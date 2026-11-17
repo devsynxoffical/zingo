@@ -1,8 +1,8 @@
 name: Deploy to zingoassist.us (FTP)
 
+# Live deploys now run from the server itself (scripts/deploy.sh via cPanel cron).
+# This FTP workflow is kept as a manual fallback only.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
     inputs:
       dry_run:
