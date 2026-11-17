@@ -1,8 +1,26 @@
 @extends('layout.main')
 
-@section('title', 'Video Editing Services | ZingoAssist')
-@section('meta_description', 'Professional video editing services by ZingoAssist. Custom edits, unlimited projects, motion graphics, and optimized content for marketing, social media, and corporate videos.')
+@section('title', 'Video Editing Services for Business | Zingo Assist')
+@section('meta_description', 'Professional video editing for marketing, social media, real estate listing tours and corporate content, with captions, motion graphics and fast turnaround.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'Video Editing Services',
+        'serviceType' => 'Video Editing Services',
+        'description' => 'Professional video editing for marketing, social media, real estate listing tours and corporate content, with captions, motion graphics and fast turnaround.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['What is included in your Video Editing Services?', 'We handle trimming, cutting, color correction, audio editing, motion graphics, subtitles, and platform-specific optimization.'],
+            ['Do you offer unlimited video editing?', 'Yes. Our packages allow continuous editing without limits, ensuring consistent output.'],
+            ['Can you handle corporate and marketing videos?', 'Absolutely. We specialize in promotional, training, social media, and corporate content.'],
+            ['Do you provide revisions?', 'Yes. We include revisions and feedback loops to ensure satisfaction.'],
+            ['How fast can you deliver projects?', 'Turnaround depends on project scope, but we prioritize speed while maintaining quality.'],
+            ['What platforms do you optimize videos for?', 'We optimize videos for YouTube, Instagram, Facebook, LinkedIn, TikTok, and other platforms.'],
+            ['Can you integrate branding in the edits?', 'Yes. Logos, colors, fonts, and brand elements are integrated for a consistent visual identity.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush

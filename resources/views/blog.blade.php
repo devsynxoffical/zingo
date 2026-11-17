@@ -1,8 +1,16 @@
 @extends('layout.main')
 
-@section('title', 'Blog | ZingoAssist')
-@section('meta_description', 'Stay updated with the latest trends, insights, and tips on virtual assistant services, digital marketing, real estate, and business growth from Zingo Assist.')
+@section('title', 'Virtual Assistant & Real Estate Business Blog | Zingo Assist')
+@section('meta_description', 'Guides on hiring virtual assistants, real estate cold calling, transaction coordination, CRM management and digital marketing from the Zingo Assist team.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'page',
+        'name' => 'Blog',
+        'description' => 'Guides on hiring virtual assistants, real estate cold calling, transaction coordination, CRM management and digital marketing from the Zingo Assist team.',
+        'breadcrumbs' => [],
+    ])
+@endpush
 @push('css')
     <link rel="stylesheet" href="{{ asset('assets/css/blog-page.css') }}?v={{ time() }}">
     <style>.header-section { background: #A52673; }</style>
@@ -40,7 +48,7 @@
                 <div class="row g-0 align-items-stretch">
                     <div class="col-lg-6">
                         <div class="bp-featured-img">
-                            <img src="{{ asset('assets/images/blog/Virtual Assistant vs In-House Employees Which is Best for Your Business.jpg') }}" alt="Featured Blog">
+                            <img src="{{ asset('assets/images/blog/Virtual Assistant vs In-House Employees Which is Best for Your Business.jpg') }}" alt="Featured Blog" loading="lazy" decoding="async">
                             <div class="bp-featured-badge">Featured</div>
                         </div>
                     </div>
@@ -51,7 +59,7 @@
                                 <span class="bp-meta-date"><i class="fas fa-calendar"></i> October 31, 2025</span>
                             </div>
                             <h2 class="bp-featured-title">
-                                <a href="{{ route('blog1') }}">Why Your Business Needs a Virtual Assistant in 2025</a>
+                                <a href="{{ route('blog1') }}">Why Your Business Needs a Virtual Assistant</a>
                             </h2>
                             <p class="bp-featured-excerpt">Discover how virtual assistants can transform your business operations, save time, and drive growth in today's competitive market.</p>
                             <a href="{{ route('blog1') }}" class="bp-btn-read">
@@ -79,7 +87,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                     <a href="{{ route('blog.ten_signs_need_virtual_assistant') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="10 signs you need a virtual assistant">
+                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="10 signs you need a virtual assistant" loading="lazy" decoding="async">
                             <div class="bp-post-category">Virtual Assistant</div>
                         </div>
                         <div class="bp-post-body">
@@ -97,7 +105,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
                     <a href="{{ route('blog.benefits_outsourcing_business_tasks') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg') }}" alt="Benefits of outsourcing business tasks">
+                            <img src="{{ asset('assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg') }}" alt="Benefits of outsourcing business tasks" loading="lazy" decoding="async">
                             <div class="bp-post-category">Outsourcing</div>
                         </div>
                         <div class="bp-post-body">
@@ -113,18 +121,54 @@
                 </div>
 
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
-                    <a href="{{ route('blog2') }}" class="bp-post-card">
+                    <a href="{{ route('blog.re_va_cost') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="blog">
-                            <div class="bp-post-category">Virtual Assistant</div>
+                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="How Much Does a Real Estate Virtual Assistant Cost in 2026?" loading="lazy">
+                            <div class="bp-post-category">Real Estate</div>
                         </div>
                         <div class="bp-post-body">
                             <div class="bp-post-meta-sm">
-                                <span><i class="fas fa-calendar"></i> Nov 14, 2025</span>
-                                <span><i class="fas fa-clock"></i> 5 min read</span>
+                                <span><i class="fas fa-calendar"></i> Nov 17, 2026</span>
+                                <span><i class="fas fa-clock"></i> 9 min read</span>
                             </div>
-                            <h3 class="bp-post-title">5 Signs You Need a Virtual Assistant</h3>
-                            <p class="bp-post-excerpt">Are you overwhelmed with tasks? Here are the telltale signs your business needs professional support.</p>
+                            <h3 class="bp-post-title">How Much Does a Real Estate Virtual Assistant Cost in 2026?</h3>
+                            <p class="bp-post-excerpt">Hourly and monthly price ranges for real estate VAs, what drives the cost, and how to calculate your ROI.</p>
+                            <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('blog.tc_vs_va') }}" class="bp-post-card">
+                        <div class="bp-post-img">
+                            <img src="{{ asset('assets/images/blog/Research.jpg') }}" alt="Transaction Coordinator vs Virtual Assistant: Which Do You Need?" loading="lazy">
+                            <div class="bp-post-category">Real Estate</div>
+                        </div>
+                        <div class="bp-post-body">
+                            <div class="bp-post-meta-sm">
+                                <span><i class="fas fa-calendar"></i> Nov 17, 2026</span>
+                                <span><i class="fas fa-clock"></i> 8 min read</span>
+                            </div>
+                            <h3 class="bp-post-title">Transaction Coordinator vs Virtual Assistant: Which Do You Need?</h3>
+                            <p class="bp-post-excerpt">How a real estate transaction coordinator differs from a VA in duties, licensing, pricing and when to hire each.</p>
+                            <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('blog.florida_cold_calling_laws') }}" class="bp-post-card">
+                        <div class="bp-post-img">
+                            <img src="{{ asset('assets/images/blog/Managing Customer Relations.jpg') }}" alt="Florida Real Estate Cold Calling Laws: TCPA, FTSA & DNC Guide" loading="lazy">
+                            <div class="bp-post-category">Cold Calling</div>
+                        </div>
+                        <div class="bp-post-body">
+                            <div class="bp-post-meta-sm">
+                                <span><i class="fas fa-calendar"></i> Nov 17, 2026</span>
+                                <span><i class="fas fa-clock"></i> 10 min read</span>
+                            </div>
+                            <h3 class="bp-post-title">Florida Real Estate Cold Calling Laws: TCPA, FTSA & DNC Guide</h3>
+                            <p class="bp-post-excerpt">Calling hours, Do Not Call scrubbing, call limits and consent rules Florida agents and investors must follow.</p>
                             <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </a>
@@ -133,7 +177,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
                     <a href="{{ route('blog3') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg') }}" alt="blog">
+                            <img src="{{ asset('assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg') }}" alt="10 Tasks to Outsource to a Virtual Assistant Today" loading="lazy">
                             <div class="bp-post-category">Productivity</div>
                         </div>
                         <div class="bp-post-body">
@@ -151,7 +195,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <a href="{{ route('blog4') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/What is Virtual Assistance.jpg') }}" alt="blog">
+                            <img src="{{ asset('assets/images/blog/What is Virtual Assistance.jpg') }}" alt="How to Become a Virtual Assistant in 2024" loading="lazy">
                             <div class="bp-post-category">Career</div>
                         </div>
                         <div class="bp-post-body">
@@ -169,7 +213,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                     <a href="{{ route('blog.seo_strategies') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="blog">
+                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="SEO Strategies That Zingo Assist Swears By for Small Businesses" loading="lazy">
                             <div class="bp-post-category">SEO</div>
                         </div>
                         <div class="bp-post-body">
@@ -187,7 +231,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
                     <a href="{{ route('blog.free_va_trial') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="blog">
+                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="Free 2-Day VA Trial: What to Expect from Zingo Assist" loading="lazy">
                             <div class="bp-post-category">Zingo Assist</div>
                         </div>
                         <div class="bp-post-body">
@@ -205,7 +249,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <a href="{{ route('blog.top_5_tasks') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg') }}" alt="blog">
+                            <img src="{{ asset('assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg') }}" alt="Top 5 Tasks You Should Outsource to a Virtual Assistant" loading="lazy">
                             <div class="bp-post-category">Outsourcing</div>
                         </div>
                         <div class="bp-post-body">
@@ -223,7 +267,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                     <a href="{{ route('blog.web_dev_trends_2025') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/Virtual Assistant vs In-House Employees Which is Best for Your Business.jpg') }}" alt="blog">
+                            <img src="{{ asset('assets/images/blog/Virtual Assistant vs In-House Employees Which is Best for Your Business.jpg') }}" alt="Web Development Trends 2025: Stay Ahead with Zingo Assist" loading="lazy">
                             <div class="bp-post-category">Web Development</div>
                         </div>
                         <div class="bp-post-body">
@@ -241,7 +285,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
                     <a href="{{ route('blog.digital_marketing_budget') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="blog">
+                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="Digital Marketing on a Budget: Zingo's 3-Step Guide" loading="lazy">
                             <div class="bp-post-category">Marketing</div>
                         </div>
                         <div class="bp-post-body">
@@ -259,7 +303,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <a href="{{ route('blog.crm_powered_workflow') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg') }}" alt="blog">
+                            <img src="{{ asset('assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg') }}" alt="From Lead Generation to Sales: Zingo's CRM-Powered Workflow" loading="lazy">
                             <div class="bp-post-category">CRM</div>
                         </div>
                         <div class="bp-post-body">
@@ -277,7 +321,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                     <a href="{{ route('blog.va_vs_full_time') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/Virtual Assistant vs In-House Employees Which is Best for Your Business.jpg') }}" alt="blog">
+                            <img src="{{ asset('assets/images/blog/Virtual Assistant vs In-House Employees Which is Best for Your Business.jpg') }}" alt="Why Use a VA Instead of Hiring Full-Time Staff?" loading="lazy">
                             <div class="bp-post-category">Business</div>
                         </div>
                         <div class="bp-post-body">
@@ -295,7 +339,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
                     <a href="{{ route('blog.crm_management_2025') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="blog">
+                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="What Is CRM Management and Why Every Business Needs It in 2025" loading="lazy">
                             <div class="bp-post-category">CRM</div>
                         </div>
                         <div class="bp-post-body">
@@ -313,7 +357,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <a href="{{ route('blog.website_redesign_checklist') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg') }}" alt="blog">
+                            <img src="{{ asset('assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg') }}" alt="The Ultimate Website Redesign Checklist for 2025" loading="lazy">
                             <div class="bp-post-category">Web Design</div>
                         </div>
                         <div class="bp-post-body">
@@ -331,7 +375,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                     <a href="{{ route('blog.seo_vs_ppc') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/Virtual Assistant vs In-House Employees Which is Best for Your Business.jpg') }}" alt="blog">
+                            <img src="{{ asset('assets/images/blog/Virtual Assistant vs In-House Employees Which is Best for Your Business.jpg') }}" alt="SEO vs PPC: Which Is Better for Your Business Growth in 2025?" loading="lazy">
                             <div class="bp-post-category">SEO</div>
                         </div>
                         <div class="bp-post-body">
@@ -349,7 +393,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
                     <a href="{{ route('blog.content_marketing_tips') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="blog">
+                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="10 Smart Content Marketing Tips for Startups to Build Their Brand in 2025" loading="lazy">
                             <div class="bp-post-category">Marketing</div>
                         </div>
                         <div class="bp-post-body">
@@ -367,7 +411,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <a href="{{ route('blog.optimize_website_seo') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg') }}" alt="blog">
+                            <img src="{{ asset('assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg') }}" alt="How to Optimize a Website for SEO: A Step-by-Step Guide for 2025" loading="lazy">
                             <div class="bp-post-category">SEO</div>
                         </div>
                         <div class="bp-post-body">

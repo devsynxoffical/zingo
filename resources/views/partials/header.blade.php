@@ -28,9 +28,11 @@
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                                         <li><a class="dropdown-item" href="{{ route('service') }}">All Services</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('service.real_estate_virtual_assistant') }}">Real Estate Virtual Assistant</a></li>
                                         <li><hr class="dropdown-divider"></li>
                                         <li><a class="dropdown-item" href="{{ route('service.it_support') }}">IT Support</a></li>
-                                        <li><a class="dropdown-item" href="{{ route('service.cold_calling') }}">Cold Calling</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('service.cold_calling') }}">Real Estate Cold Calling</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('service.wholesale_cold_calling') }}">Wholesale Cold Calling</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.search_seo') }}">SEO Services</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.video_editing') }}">Video Editing</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.crm_management') }}">CRM Management</a></li>

@@ -1,8 +1,29 @@
 @extends('layout.main')
 
-@section('title', 'Real Estate Transaction Coordinator Services')
-@section('meta_description', 'ZingoAssist provides professional real estate transaction coordinator services. Streamline paperwork, deadlines, and client communication for smooth, stress-free closings.')
+@section('title', 'Real Estate Transaction Coordinator Services | Zingo Assist')
+@section('meta_description', 'Virtual real estate transaction coordinator services: contract-to-close paperwork, deadline tracking and communication with clients, lenders and title.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'Real Estate Transaction Coordinator Services',
+        'serviceType' => 'Real estate transaction coordination',
+        'description' => 'Virtual real estate transaction coordinator services: contract-to-close paperwork, deadline tracking and communication with clients, lenders and title.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['1. What are Real Estate Transaction Coordinator services?', 'They include managing paperwork, timelines, communication, and compliance from contract to close.'],
+            ['2. What do transaction coordinator companies do?', 'They manage disclosures, deadlines, client communication, and file preparation for agents and brokers.'],
+            ['3. Do you offer remote coordination support?', 'Yes. We provide virtual coordination for agents, brokers, and investors nationwide.'],
+            ['4. How do your transaction coordinator services work?', 'We organize documents, track deadlines, communicate with all parties, and manage the entire closing process.'],
+            ['5. Can these services help new agents?', 'Absolutely. New agents benefit from structured guidance and administrative support during each transaction.'],
+            ['6. How long does it take to start?', 'Most clients get started within 24 to 48 hours.'],
+            ['7. Is pricing customizable?', 'Yes. Pricing depends on transaction volume and the level of coordination required.'],
+            ['8. Can I use your service for multiple properties?', 'Yes. We support investors and agents handling multiple active files.'],
+            ['9. Are my files kept confidential?', 'All documents and client information are handled with full privacy and security.'],
+            ['10. How do you improve closing efficiency?', 'By tracking deadlines, managing documents, and providing consistent communication, our service eliminates delays and ensures smooth transactions.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush
@@ -56,6 +77,7 @@
                 <p class="sp-about-text">
                     Real estate professionals deal with countless tasks behind the scenes. From drafting files to meeting contractual deadlines and managing client communication, the workload can be overwhelming. This is where Real Estate Transaction Coordinator services become essential.
                 </p>
+                <p class="sp-about-text zingo-related"><strong>Not sure whether you need a TC or a broader assistant? Compare them in <a href="{{ route('blog.tc_vs_va') }}">transaction coordinator vs virtual assistant</a>, or explore our <a href="{{ route('service.real_estate_virtual_assistant') }}">real estate virtual assistant services</a>.</strong></p>
                 <p class="sp-about-text">
                     For example, an agent managing multiple active listings may struggle with constant emails, inspection scheduling, disclosure tracking, and compliance requirements. These challenges can lead to missed deadlines, delayed closings, and unhappy clients. ZingoAssist solves these issues by providing structured coordination support, ensuring every step of the transaction is handled efficiently.
                 </p>

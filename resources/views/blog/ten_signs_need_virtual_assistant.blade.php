@@ -1,8 +1,18 @@
 @extends('layout.main')
 
+@section('og_type', 'article')
 @section('title', '10 Signs You Need a Virtual Assistant Right Now | Zingo Assist')
+@section('meta_description', 'Feeling overwhelmed running your business? Here are 10 clear signs you need a virtual assistant and how delegating can transform your productivity.')
 
-@section('meta_description', 'Feeling overwhelmed running your business? Here are 10 clear signs you need a virtual assistant and how getting help can transform your productivity and growth.')
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'article',
+        'name' => '10 Clear Signs You Need a Virtual Assistant Right Now',
+        'description' => 'Feeling overwhelmed running your business? Here are 10 clear signs you need a virtual assistant and how delegating can transform your productivity.',
+        'breadcrumbs' => [['Blog', route('blog')]],
+        'datePublished' => '2026-05-11',
+    ])
+@endpush
 
 @section('content')
     <section class="banner-section two inner">
@@ -43,6 +53,8 @@
                             <h1 class="title">10 Clear Signs You Need a Virtual Assistant Right Now</h1>
 
                             <p>You started your business because you were passionate about something. Maybe it was your craft, your expertise, or your vision for something better. But somewhere along the way, the passion got buried under a mountain of emails, missed follow-ups, unfinished tasks, and a to-do list that grows faster than you can check things off.</p>
+
+                            <p class="zingo-related"><em>Real estate agent? See what a <a href="{{ route('service.real_estate_virtual_assistant') }}">real estate virtual assistant</a> can take off your plate, and <a href="{{ route('blog.re_va_cost') }}">what it costs</a>.</em></p>
 
                             <p>If that sounds familiar, you're not failing, you're just doing too much alone. And there's a name for the solution: a virtual assistant.</p>
 

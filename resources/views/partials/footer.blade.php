@@ -33,7 +33,7 @@
                     <div class="footer-column">
                         <div class="company-info">
                             <div class="footer-logo">
-                                <img src="{{ asset('assets/images/zingo assist logo png.png') }}" alt="Zingo Assist" class="logo-img">
+                                <img src="{{ asset('assets/images/zingo assist logo png.png') }}" alt="Zingo Assist" class="logo-img" loading="lazy" decoding="async">
                             </div>
                             <p class="footer-description">
                                 Your trusted partner for virtual assistance and digital solutions. We help businesses grow with innovative services.
@@ -88,12 +88,15 @@
                     <div class="footer-column">
                         <h5 class="column-title">Our Services</h5>
                         <ul class="footer-links">
+                            <li><a href="{{ route('service.real_estate_virtual_assistant') }}"><i class="fas fa-arrow-right"></i>Real Estate Virtual Assistant</a></li>
                             <li><a href="{{ route('service.virtual_business_assistance') }}"><i class="fas fa-arrow-right"></i>Virtual Assistance</a></li>
                             <li><a href="{{ route('service.web_development') }}"><i class="fas fa-arrow-right"></i>Web & App Development</a></li>
                             <li><a href="{{ route('service.crm_management') }}"><i class="fas fa-arrow-right"></i>CRM & MLS Management</a></li>
                             <li><a href="{{ route('service.digital_marketing') }}"><i class="fas fa-arrow-right"></i>Digital Marketing & Branding</a></li>
                             <li><a href="{{ route('service.cold_calling') }}"><i class="fas fa-arrow-right"></i>Customer Outreach & Cold Calling</a></li>
                             <li><a href="{{ route('service.lead_generation') }}"><i class="fas fa-arrow-right"></i>Lead Generation</a></li>
+                            <li><a href="{{ route('service.real_estate_transaction_coordinator') }}"><i class="fas fa-arrow-right"></i>Transaction Coordinator</a></li>
+                            <li><a href="{{ route('location.tampa_st_petersburg') }}"><i class="fas fa-arrow-right"></i>Tampa &amp; St. Pete VAs</a></li>
                         </ul>
                     </div>
                 </div>

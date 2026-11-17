@@ -1,8 +1,26 @@
 @extends('layout.main')
 
-@section('title', 'Business IT Support Services | ZingoAssist')
-@section('meta_description', 'ZingoAssist offers expert business IT support services, including managed IT, network management, and IT consulting, to enhance and secure your technology.')
+@section('title', 'Business IT Support Services | Zingo Assist')
+@section('meta_description', 'Remote business IT support: help desk, network management, cloud and email administration, security and IT consulting for small and mid-sized businesses.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'Business IT Support Services',
+        'serviceType' => 'Business IT Support Services',
+        'description' => 'Remote business IT support: help desk, network management, cloud and email administration, security and IT consulting for small and mid-sized businesses.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['What are Business IT Support Services?', 'They include a range of solutions to maintain, optimize, and secure IT systems for businesses.'],
+            ['Can ZingoAssist provide remote IT support?', 'Yes. We offer both on-site and remote support to resolve issues efficiently.'],
+            ['Do you offer cybersecurity solutions?', 'Absolutely. Our services include firewalls, antivirus, encryption, and security audits.'],
+            ['Can you handle network setup and maintenance?', 'Yes. Our team designs, implements, and manages reliable network infrastructure.'],
+            ['How do I choose the right IT support package?', 'We assess your business needs and recommend a package that fits your size, budget, and IT complexity.'],
+            ['Do you provide IT consulting and strategy planning?', 'Yes. We help businesses plan IT strategies aligned with their long-term goals.'],
+            ['Can your services scale as my business grows?', 'Absolutely. Our solutions are fully scalable, supporting expansion and evolving technology needs.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush

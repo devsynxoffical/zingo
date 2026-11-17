@@ -1,8 +1,16 @@
 @extends('layout.main')
 
-@section('title', 'Get our Virtual Assistance Services Today | Zingo Assist')
-@section('meta_description', 'Contact Zingo Assist today to hire professional virtual assistants. Get in touch with our experts to find the right digital marketing, SEO, or virtual support for your business.')
+@section('title', 'Contact Zingo Assist | Book a Free VA Consultation')
+@section('meta_description', 'Talk to Zingo Assist about hiring a virtual assistant. Call +1 424-542-7170 or send a message to book a free consultation and start your 2-day free trial.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'page',
+        'name' => 'Contact Zingo Assist',
+        'description' => 'Talk to Zingo Assist about hiring a virtual assistant. Call +1 424-542-7170 or send a message to book a free consultation and start your 2-day free trial.',
+        'breadcrumbs' => [],
+    ])
+@endpush
 @push('css')
     <link rel="stylesheet" href="{{ asset('assets/css/contact-page.css') }}?v={{ time() }}">
     <style>.header-section { background: #A52673; }</style>
@@ -181,7 +189,7 @@
                         <!-- USA -->
                         <div class="cp-office-card">
                             <div class="cp-office-flag">
-                                <img src="https://flagcdn.com/w40/us.png" alt="USA" width="32" height="20">
+                                <img src="https://flagcdn.com/w40/us.png" alt="USA" width="32" height="20" loading="lazy" decoding="async">
                             </div>
                             <div class="cp-office-content">
                                 <h4>USA Office</h4>
@@ -208,7 +216,7 @@
                         <!-- UAE -->
                         <div class="cp-office-card">
                             <div class="cp-office-flag">
-                                <img src="https://flagcdn.com/w40/ae.png" alt="UAE" width="32" height="20">
+                                <img src="https://flagcdn.com/w40/ae.png" alt="UAE" width="32" height="20" loading="lazy" decoding="async">
                     </div>
                             <div class="cp-office-content">
                                 <h4>UAE Office</h4>
@@ -235,7 +243,7 @@
                         <!-- Pakistan -->
                         <div class="cp-office-card">
                             <div class="cp-office-flag">
-                                <img src="https://flagcdn.com/w40/pk.png" alt="Pakistan" width="32" height="20">
+                                <img src="https://flagcdn.com/w40/pk.png" alt="Pakistan" width="32" height="20" loading="lazy" decoding="async">
                     </div>
                             <div class="cp-office-content">
                                 <h4>Pakistan Office</h4>

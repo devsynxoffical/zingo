@@ -1,8 +1,26 @@
 @extends('layout.main')
 
-@section('title', 'Real Estate SEO Services | Zingo Assist')
-@section('meta_description', 'ZingoAssist offers expert real estate SEO services to help agents and brokerages rank higher, generate leads, and grow online visibility. Get optimized, scalable SEO solutions.')
+@section('title', 'Real Estate SEO Services for Agents & Brokers | Zingo Assist')
+@section('meta_description', 'Real estate SEO services that help agents and brokerages rank in Google and AI search for local buyer and seller searches, and turn that traffic into leads.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'Real Estate SEO Services',
+        'serviceType' => 'Real estate SEO',
+        'description' => 'Real estate SEO services that help agents and brokerages rank in Google and AI search for local buyer and seller searches, and turn that traffic into leads.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['1. What do real estate SEO services include?', 'A complete optimization strategy covering technical SEO, content, local SEO, keyword targeting, and ranking growth.'],
+            ['2. What does a real estate SEO agency do?', 'It specializes in improving search visibility for real estate websites through targeted optimization and strategic content.'],
+            ['3. How do website SEO services help real estate agents?', 'They increase visibility, generate organic leads, and improve ranking for local and high-value keywords.'],
+            ['4. Is ZingoAssist a search engine optimization company?', 'Yes, we provide professional SEO solutions for real estate clients nationwide.'],
+            ['5. How long does SEO take to show results?', 'Most clients begin seeing ranking improvements within 60 to 90 days.'],
+            ['6. Do you offer custom plans?', 'Yes, pricing and service levels are customized based on your goals and market.'],
+            ['7. Can SEO help new real estate agents?', 'Absolutely. SEO builds long-term visibility and authority for new agents.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush
@@ -56,6 +74,7 @@
                 <p class="sp-about-text">
                     Real estate websites often struggle with visibility because of high competition, outdated optimization, or lack of consistent content. This is where real estate SEO services become essential for long-term growth. Unlike general SEO approaches, our strategies are built specifically for agents and real estate businesses.
                 </p>
+                <p class="sp-about-text zingo-related"><strong>Pair your marketing with a <a href="{{ route('service.real_estate_virtual_assistant') }}">real estate virtual assistant</a> who follows up with every new lead within minutes.</strong></p>
                 <p class="sp-about-text">
                     For example, a real estate brokerage may have a high-quality website but still fail to attract local buyers or sellers. Without relevant keywords, optimized pages, and consistent authority-building, ranking becomes nearly impossible. ZingoAssist solves this by delivering strategic optimization from research to implementation.
                 </p>

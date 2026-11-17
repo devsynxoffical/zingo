@@ -1,8 +1,18 @@
 @extends('layout.main')
 
-@section('title', 'Top Benefits of Outsourcing Business Tasks for Growth | Zingo Assist')
+@section('og_type', 'article')
+@section('title', 'Benefits of Outsourcing Business Tasks | Zingo Assist')
+@section('meta_description', 'The real benefits of outsourcing business tasks, from lower costs to faster scaling, and how US entrepreneurs use smart delegation to grow.')
 
-@section('meta_description', 'Discover the real benefits of outsourcing business tasks from cutting costs to scaling faster. Learn how smart delegation drives growth for US entrepreneurs.')
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'article',
+        'name' => 'Top Benefits of Outsourcing Business Tasks and Why Smart Businesses Do It',
+        'description' => 'The real benefits of outsourcing business tasks, from lower costs to faster scaling, and how US entrepreneurs use smart delegation to grow.',
+        'breadcrumbs' => [['Blog', route('blog')]],
+        'datePublished' => '2026-05-11',
+    ])
+@endpush
 
 @section('content')
     <section class="banner-section two inner">

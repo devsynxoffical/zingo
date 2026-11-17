@@ -1,8 +1,16 @@
 @extends('layout.main')
 
-@section('title', 'About Zingo Assist | #1 VA Agency in USA')
-@section('meta_description', 'Learn more about the Zingo Assist, the #1 VA agency in the USA, offers expert virtual assistance, digital solutions, and business support for growth.')
+@section('title', 'About Zingo Assist | US Virtual Assistant Agency')
+@section('meta_description', 'Zingo Assist is a St. Petersburg, FL virtual assistant agency helping real estate professionals and small businesses delegate admin, calling and marketing work.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'page',
+        'name' => 'About Zingo Assist',
+        'description' => 'Zingo Assist is a St. Petersburg, FL virtual assistant agency helping real estate professionals and small businesses delegate admin, calling and marketing work.',
+        'breadcrumbs' => [],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/about-page.css') }}?v={{ time() }}">
 @endpush

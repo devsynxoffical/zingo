@@ -1,6 +1,18 @@
 @extends('layout.main')
 
-@section('title', 'Free 2-Day VA Trial: What to Expect from Zingo Assist | Blog')
+@section('og_type', 'article')
+@section('title', 'Free 2-Day Virtual Assistant Trial: What to Expect')
+@section('meta_description', 'What happens during the Zingo Assist free 2-day virtual assistant trial: onboarding, the tasks to test, and how to judge whether your VA is a fit.')
+
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'article',
+        'name' => 'Free 2-Day VA Trial: What to Expect from Zingo Assist',
+        'description' => 'What happens during the Zingo Assist free 2-day virtual assistant trial: onboarding, the tasks to test, and how to judge whether your VA is a fit.',
+        'breadcrumbs' => [['Blog', route('blog')]],
+        'datePublished' => '2025-10-12',
+    ])
+@endpush
 
 @section('content')
     <section class="banner-section two inner">

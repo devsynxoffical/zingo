@@ -1,8 +1,26 @@
 @extends('layout.main')
 
-@section('title', 'Accounting and Bookkeeping Services | ZingoAssist')
-@section('meta_description', 'ZingoAssist offers professional accounting and bookkeeping services including payroll, financial reporting, & compliance management for all businesses.')
+@section('title', 'Accounting & Bookkeeping Services | Zingo Assist')
+@section('meta_description', 'Virtual bookkeeping and accounting services: transaction categorization, reconciliations, payroll support and monthly financial reports for small businesses.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'Accounting & Bookkeeping Services',
+        'serviceType' => 'Accounting & Bookkeeping Services',
+        'description' => 'Virtual bookkeeping and accounting services: transaction categorization, reconciliations, payroll support and monthly financial reports for small businesses.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['What is included in these services?', 'We handle financial records, payroll, taxes, reporting, and compliance.'],
+            ['Can small businesses use these services?', 'Yes, we specialize in small business bookkeeping and accounting.'],
+            ['Are cloud solutions available?', 'Yes, we provide real-time access with cloud-based accounting tools.'],
+            ['Do you ensure tax compliance?', 'Absolutely, we handle all tax obligations accurately.'],
+            ['Can you provide financial reports?', 'Yes, including P&L, balance sheets, and cash flow statements.'],
+            ['How often are accounts updated?', 'We provide regular reconciliations and updates for accuracy.'],
+            ['Is ongoing support provided?', 'Yes, including financial advice, updates, and system maintenance.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush

@@ -1,8 +1,16 @@
 @extends('layout.main')
 
-@section('title', 'Explore our Virtual Assistance Services')
-@section('meta_description', 'Discover the full suite of virtual assistant services offered by Zingo Assist, including digital marketing, SEO optimization, IT support, lead generation, cold calling, and bookkeeping.')
+@section('title', 'Virtual Assistant Services for Businesses | Zingo Assist')
+@section('meta_description', 'Explore Zingo Assist services: real estate virtual assistants, cold calling, transaction coordination, lead generation, CRM management, bookkeeping and SEO.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'page',
+        'name' => 'Our Services',
+        'description' => 'Explore Zingo Assist services: real estate virtual assistants, cold calling, transaction coordination, lead generation, CRM management, bookkeeping and SEO.',
+        'breadcrumbs' => [],
+    ])
+@endpush
 @push('css')
     <link rel="stylesheet" href="{{ asset('assets/css/our-services.css') }}?v={{ time() }}">
     <style>.header-section { background: #A52673; }</style>
@@ -81,7 +89,7 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/lead_generation.png') }}" alt="Lead Generation">
+                                <img src="{{ asset('assets/images/icon2/lead_generation.png') }}" alt="Lead Generation" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">01</span>
                         </div>
@@ -100,7 +108,7 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/cold_calling.png') }}" alt="Cold Calling">
+                                <img src="{{ asset('assets/images/icon2/cold_calling.png') }}" alt="Cold Calling" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">02</span>
                         </div>
@@ -119,7 +127,7 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/app_dev.png') }}" alt="Web Development">
+                                <img src="{{ asset('assets/images/icon2/app_dev.png') }}" alt="Web Development" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">03</span>
                         </div>
@@ -138,7 +146,7 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/personal_assistance.png') }}" alt="Personal Assistance">
+                                <img src="{{ asset('assets/images/icon2/personal_assistance.png') }}" alt="Personal Assistance" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">04</span>
                         </div>
@@ -157,7 +165,7 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/digital_marketing.png') }}" alt="Digital Marketing">
+                                <img src="{{ asset('assets/images/icon2/digital_marketing.png') }}" alt="Digital Marketing" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">05</span>
                         </div>
@@ -176,7 +184,7 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/web_design.png') }}" alt="Graphic Design">
+                                <img src="{{ asset('assets/images/icon2/web_design.png') }}" alt="Graphic Design" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">06</span>
                         </div>
@@ -195,7 +203,7 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/seo.png') }}" alt="Search SEO">
+                                <img src="{{ asset('assets/images/icon2/seo.png') }}" alt="Search SEO" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">07</span>
                         </div>
@@ -214,7 +222,7 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/app_dev.png') }}" alt="App Development">
+                                <img src="{{ asset('assets/images/icon2/app_dev.png') }}" alt="App Development" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">08</span>
                         </div>
@@ -233,7 +241,7 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/personal_assistance.png') }}" alt="Virtual Business Assistance">
+                                <img src="{{ asset('assets/images/icon2/personal_assistance.png') }}" alt="Virtual Business Assistance" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">09</span>
                         </div>
@@ -252,7 +260,7 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/crm_managemnt.png') }}" alt="Virtual Property Management">
+                                <img src="{{ asset('assets/images/icon2/crm_managemnt.png') }}" alt="Virtual Property Management" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">10</span>
                         </div>
@@ -271,7 +279,7 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/lead_generation.png') }}" alt="Transaction Coordination">
+                                <img src="{{ asset('assets/images/icon2/lead_generation.png') }}" alt="Transaction Coordination" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">11</span>
                         </div>
@@ -290,7 +298,7 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/video_editing.png') }}" alt="Video Editing">
+                                <img src="{{ asset('assets/images/icon2/video_editing.png') }}" alt="Video Editing" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">12</span>
                         </div>
@@ -309,7 +317,7 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/it_support.png') }}" alt="IT Support">
+                                <img src="{{ asset('assets/images/icon2/it_support.png') }}" alt="IT Support" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">13</span>
                         </div>
@@ -328,7 +336,7 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/crm_managemnt.png') }}" alt="CRM Management">
+                                <img src="{{ asset('assets/images/icon2/crm_managemnt.png') }}" alt="CRM Management" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">14</span>
                         </div>
@@ -347,12 +355,66 @@
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/personal_assistance.png') }}" alt="Bookkeeping & Accounting">
+                                <img src="{{ asset('assets/images/icon2/personal_assistance.png') }}" alt="Bookkeeping & Accounting" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">15</span>
                         </div>
                         <h3 class="os-card-title">Bookkeeping & Accounting</h3>
                         <p class="os-card-text">Maintain accurate financial records and ensure compliance with our expert Bookkeeping and Accounting services. We handle transactions, reporting, and reconciliations, giving you peace of mind and more time to focus on growth.</p>
+                        <div class="os-card-footer">
+                            <span class="os-card-link">Learn More</span>
+                            <span class="os-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('service.real_estate_virtual_assistant') }}" class="os-service-card">
+                        <div class="os-card-accent"></div>
+                        <div class="os-card-header">
+                            <div class="os-card-icon">
+                                <img src="{{ asset('assets/images/icon2/personal_assistance.png') }}" alt="Real Estate Virtual Assistant" loading="lazy" decoding="async">
+                            </div>
+                            <span class="os-card-number">16</span>
+                        </div>
+                        <h3 class="os-card-title">Real Estate Virtual Assistant</h3>
+                        <p class="os-card-text">Dedicated real estate VAs for agents, teams and investors: CRM updates, lead follow-up and ISA calls, listing coordination, transaction support and marketing, starting with a free 2-day trial.</p>
+                        <div class="os-card-footer">
+                            <span class="os-card-link">Learn More</span>
+                            <span class="os-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('service.wholesale_cold_calling') }}" class="os-service-card">
+                        <div class="os-card-accent"></div>
+                        <div class="os-card-header">
+                            <div class="os-card-icon">
+                                <img src="{{ asset('assets/images/icon2/cold_calling.png') }}" alt="Wholesale Real Estate Cold Calling" loading="lazy" decoding="async">
+                            </div>
+                            <span class="os-card-number">17</span>
+                        </div>
+                        <h3 class="os-card-title">Wholesale Real Estate Cold Calling</h3>
+                        <p class="os-card-text">Trained callers who work your lists of absentee owners, tired landlords, pre-foreclosures and probate leads to find and qualify motivated sellers for wholesalers and investors.</p>
+                        <div class="os-card-footer">
+                            <span class="os-card-link">Learn More</span>
+                            <span class="os-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('location.tampa_st_petersburg') }}" class="os-service-card">
+                        <div class="os-card-accent"></div>
+                        <div class="os-card-header">
+                            <div class="os-card-icon">
+                                <img src="{{ asset('assets/images/icon2/crm_managemnt.png') }}" alt="Tampa &amp; St. Petersburg Real Estate VAs" loading="lazy" decoding="async">
+                            </div>
+                            <span class="os-card-number">18</span>
+                        </div>
+                        <h3 class="os-card-title">Tampa &amp; St. Petersburg Real Estate VAs</h3>
+                        <p class="os-card-text">Our St. Petersburg-based team supports Tampa Bay agents, investors and property managers with Eastern Time assistants who understand Florida transactions and calling rules.</p>
                         <div class="os-card-footer">
                             <span class="os-card-link">Learn More</span>
                             <span class="os-card-arrow"><i class="fas fa-arrow-right"></i></span>
@@ -452,7 +514,7 @@
                     </div>
                     <div class="os-process-step-content">
                         <div class="os-process-step-icon">
-                            <img src="{{ asset('assets/images/icon/icon-22.png') }}" alt="Discover">
+                            <img src="{{ asset('assets/images/icon/icon-22.png') }}" alt="Discover" loading="lazy" decoding="async">
                         </div>
                         <h3>Discover</h3>
                         <p>We begin by understanding your business needs, goals, and current operational processes. This discovery phase helps us identify areas where our Virtual Assistant Services can provide the most impact. We analyze workflows, assess challenges, and gather insights to design customized solutions.</p>
@@ -465,7 +527,7 @@
                     </div>
                     <div class="os-process-step-content">
                         <div class="os-process-step-icon">
-                            <img src="{{ asset('assets/images/icon/icon-23.png') }}" alt="Design">
+                            <img src="{{ asset('assets/images/icon/icon-23.png') }}" alt="Design" loading="lazy" decoding="async">
                         </div>
                         <h3>Design</h3>
                         <p>Based on our findings, we create strategies and processes tailored to your requirements. Our design phase focuses on efficiency, scalability, and effectiveness, ensuring that our solutions integrate seamlessly with your existing operations.</p>
@@ -478,7 +540,7 @@
                     </div>
                     <div class="os-process-step-content">
                         <div class="os-process-step-icon">
-                            <img src="{{ asset('assets/images/icon/icon-24.png') }}" alt="Build">
+                            <img src="{{ asset('assets/images/icon/icon-24.png') }}" alt="Build" loading="lazy" decoding="async">
                         </div>
                         <h3>Build</h3>
                         <p>In the implementation stage, we use proven tools, technologies, and best practices to execute solutions. Our team works closely with you to ensure every task, project, or process is built to deliver tangible business results.</p>
@@ -491,7 +553,7 @@
                     </div>
                     <div class="os-process-step-content">
                         <div class="os-process-step-icon">
-                            <img src="{{ asset('assets/images/icon/icon-25.png') }}" alt="Deliver">
+                            <img src="{{ asset('assets/images/icon/icon-25.png') }}" alt="Deliver" loading="lazy" decoding="async">
                         </div>
                         <h3>Deliver</h3>
                         <p>Once completed, we ensure every solution is fully operational and optimized for performance. We provide ongoing support and monitoring to maintain efficiency, address challenges, and continuously improve outcomes.</p>

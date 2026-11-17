@@ -1,6 +1,18 @@
 @extends('layout.main')
 
-@section('title', '10 Smart Content Marketing Tips for Startups to Build Their Brand in 2025 | Blog')
+@section('og_type', 'article')
+@section('title', '10 Content Marketing Tips for Startups | Zingo Assist')
+@section('meta_description', 'Ten practical content marketing tips startups can use to build brand awareness, earn search traffic and turn readers into leads on a lean budget.')
+
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'article',
+        'name' => '10 Smart Content Marketing Tips for Startups to Build Their Brand in 2025',
+        'description' => 'Ten practical content marketing tips startups can use to build brand awareness, earn search traffic and turn readers into leads on a lean budget.',
+        'breadcrumbs' => [['Blog', route('blog')]],
+        'datePublished' => '2025-12-14',
+    ])
+@endpush
 
 @section('content')
     <section class="banner-section two inner">

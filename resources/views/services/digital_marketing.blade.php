@@ -1,8 +1,26 @@
 @extends('layout.main')
 
-@section('title', 'Best Real Estate Digital Marketing Agency')
-@section('meta_description', 'ZingoAssist is a leading real estate digital marketing agency providing SEO, social media, PPC, & content marketing services for real estate professionals.')
+@section('title', 'Real Estate Digital Marketing Agency | Zingo Assist')
+@section('meta_description', 'Real estate digital marketing for agents and brokerages: SEO, social media, PPC and content that turns local searches into listing and buyer leads.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'Real Estate Digital Marketing Agency',
+        'serviceType' => 'Real estate digital marketing',
+        'description' => 'Real estate digital marketing for agents and brokerages: SEO, social media, PPC and content that turns local searches into listing and buyer leads.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['1. What services does a real estate digital marketing agency provide?', 'We provide SEO, social media marketing, PPC, email campaigns, content creation, website optimization, and lead generation services.'],
+            ['2. Can you handle multiple listings and campaigns at once?', 'Yes. Our digital marketing agency is equipped to manage multiple projects simultaneously.'],
+            ['3. Do you provide support after campaigns are launched?', 'Yes, our digital marketing services include ongoing monitoring, optimization, and reporting.'],
+            ['4. Can you integrate real estate IDX listings into marketing campaigns?', 'Yes. As a real estate digital marketing company, we incorporate property listings into content and ads to maximize engagement.'],
+            ['5. How long before I see results?', 'Depending on the campaign type, results can appear in weeks for paid ads and 3–6 months for organic SEO campaigns.'],
+            ['6. Are your marketing services customizable?', 'Absolutely. We tailor all digital marketing services to meet your specific business needs.'],
+            ['7. Is my client data kept confidential?', 'Yes. All information is securely stored and handled with strict confidentiality.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush
@@ -56,6 +74,7 @@
                 <p class="sp-about-text">
                     Managing multiple digital channels, content creation, online advertising, and lead generation can overwhelm even the most experienced agents. This is where a dedicated real estate digital marketing agency becomes essential.
                 </p>
+                <p class="sp-about-text zingo-related"><strong>Pair your marketing with a <a href="{{ route('service.real_estate_virtual_assistant') }}">real estate virtual assistant</a> who follows up with every new lead within minutes.</strong></p>
                 <p class="sp-about-text">
                     For example, an agent juggling active listings may struggle with posting on social media, tracking ads, monitoring website traffic, and following up with leads. These challenges can lead to missed opportunities, lost leads, and reduced ROI. ZingoAssist solves these issues by providing structured, professional support across every marketing channel.
                 </p>

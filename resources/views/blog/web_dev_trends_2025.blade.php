@@ -1,6 +1,18 @@
 @extends('layout.main')
 
-@section('title', 'Web Development Trends 2025: Stay Ahead with Zingo Assist | Blog')
+@section('og_type', 'article')
+@section('title', 'Web Development Trends to Watch | Zingo Assist')
+@section('meta_description', 'The web development trends shaping business websites: performance, AI features, headless builds, accessibility and security, and what to adopt first.')
+
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'article',
+        'name' => 'Web Development Trends 2025: Stay Ahead with Zingo Assist',
+        'description' => 'The web development trends shaping business websites: performance, AI features, headless builds, accessibility and security, and what to adopt first.',
+        'breadcrumbs' => [['Blog', route('blog')]],
+        'datePublished' => '2025-10-26',
+    ])
+@endpush
 
 @section('content')
     <section class="banner-section two inner">

@@ -1,8 +1,16 @@
 @extends('layout.main')
 
-@section('title', 'Privacy Policy | Zingo Assist VA & Digital Solutions')
-@section('meta_description', 'Read Zingo Assist's Privacy Policy to learn how we collect, use, and protect your information as we deliver trusted virtual assistance and digital services.')
+@section('title', 'Privacy Policy | Zingo Assist')
+@section('meta_description', 'Read the Zingo Assist privacy policy to learn how we collect, use and protect your information when you use our website and virtual assistant services.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'page',
+        'name' => 'Privacy Policy',
+        'description' => 'Read the Zingo Assist privacy policy to learn how we collect, use and protect your information when you use our website and virtual assistant services.',
+        'breadcrumbs' => [],
+    ])
+@endpush
 @push('css')
     <link rel="stylesheet" href="{{ asset('assets/css/legal-pages.css') }}?v={{ time() }}">
     <style>.header-section { background: #A52673; }</style>

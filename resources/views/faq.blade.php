@@ -1,6 +1,32 @@
+@php
+    $faqs = [
+        ['What services do your virtual assistants provide?', 'Our virtual assistants handle administrative support, email and calendar management, data entry, customer service, CRM management, cold calling, lead generation, bookkeeping, social media and content tasks. For real estate professionals we also provide <a href="' . route('service.real_estate_virtual_assistant') . '">real estate virtual assistants</a>, <a href="' . route('service.real_estate_transaction_coordinator') . '">transaction coordination</a> and <a href="' . route('service.virtual_property_management') . '">virtual property management</a>.'],
+        ['How do I know if a virtual assistant is right for my business?', 'If repetitive tasks such as inbox management, scheduling, follow-ups or data entry are taking hours away from revenue-generating work, a virtual assistant is usually a good fit. Our <a href="' . route('blog.ten_signs_need_virtual_assistant') . '">10 signs you need a virtual assistant</a> guide walks through the most common triggers.'],
+        ['Are your virtual assistants trained and experienced?', 'Yes. Every Zingo Assist virtual assistant is vetted and trained before being matched with a client, and is assigned based on the tools and industry experience your work requires.'],
+        ['Do you offer a free trial?', 'Yes. You can start with a free 2-day trial to see how a Zingo Assist virtual assistant fits your workflow before you commit. <a href="' . route('blog.free_va_trial') . '">See what to expect from the trial</a>.'],
+        ['How quickly can a virtual assistant start?', 'Once we understand your requirements and match you with an assistant, most clients can start within 24 to 48 hours.'],
+        ['How much does a virtual assistant cost?', 'Pricing depends on the number of hours, the type of work and whether you need a general or specialized assistant. We provide a quote after a free consultation. For market benchmarks, read our guide on <a href="' . route('blog.re_va_cost') . '">how much a real estate virtual assistant costs</a>.'],
+        ['Can I hire a virtual assistant for part-time or project-based work?', 'Yes. We offer part-time, full-time and project-based support, and you can scale hours up or down as your workload changes.'],
+        ['Do you provide virtual assistants for real estate agents and investors?', 'Yes. Real estate is our core specialty. Our assistants support agents, teams, brokers, wholesalers, investors and property managers with CRM updates, listing coordination, <a href="' . route('service.cold_calling') . '">cold calling</a>, appointment setting and transaction paperwork.'],
+        ['Is real estate cold calling legal?', 'Cold calling is legal in the United States when campaigns follow the federal TCPA, the National Do Not Call Registry and state rules such as Florida&#39;s Telephone Solicitation Act. Our <a href="' . route('blog.florida_cold_calling_laws') . '">Florida cold calling laws guide</a> explains calling hours, DNC scrubbing and consent requirements.'],
+        ['How do I communicate with my virtual assistant?', 'You can work with your assistant by email, phone, video calls, Slack, WhatsApp or the project-management tool you already use. We set up a communication routine that matches your workflow.'],
+        ['How do you keep my business data secure?', 'Assistants work under confidentiality agreements and are trained in privacy best practices. We recommend giving assistants role-based access to tools such as your CRM and password managers instead of sharing personal logins.'],
+        ['Which time zones do your assistants work in?', 'We schedule your assistant around your US business hours, and our support team is available 24/7.'],
+    ];
+@endphp
 @extends('layout.main')
 
-@section('title', 'FAQ | ZingoAssist')
+@section('title', 'Virtual Assistant FAQ: Pricing, Trial & Hiring | Zingo Assist')
+@section('meta_description', 'Answers to common questions about hiring a Zingo Assist virtual assistant: services, pricing, the free 2-day trial, data security, time zones and onboarding.')
+
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'page',
+        'name' => 'Frequently Asked Questions',
+        'description' => 'Answers to common questions about hiring a Zingo Assist virtual assistant.',
+        'faqs' => array_map(fn ($f) => [$f[0], html_entity_decode(strip_tags($f[1]), ENT_QUOTES)], $faqs),
+    ])
+@endpush
 
 
 @push('css')
@@ -223,26 +249,26 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <section class="banner-section two inner">
         <div class="banner-element-four two">
-            <img src="assets/images/element/element-5.png" alt="element">
+            <img src="assets/images/element/element-5.png" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-five two">
-            <img src="assets/images/element/element-7.png" alt="element">
+            <img src="assets/images/element/element-7.png" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-nineteen two">
-            <img src="assets/images/element/element-6.png" alt="element">
+            <img src="assets/images/element/element-6.png" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-twenty-two two">
-            <img src="assets/images/element/element-69.png" alt="element">
+            <img src="assets/images/element/element-69.png" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-twenty-three two">
-            <img src="assets/images/element/element-70.png" alt="element">
+            <img src="assets/images/element/element-70.png" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="container">
             <div class="row justify-content-center align-items-center mb-30-none">
                 <div class="col-xl-12 mb-30">
                     <div class="banner-content two">
                         <div class="banner-content-header">
-                            <h2 class="title">Frequently Asked Questions</h2>
+                            <h1 class="title">Frequently Asked Questions About Hiring a Virtual Assistant</h1>
                             <div class="breadcrumb-area">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
@@ -279,81 +305,14 @@
             <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-12">
                     <div class="faq-wrapper">
-                        <div class="faq-item">
-                            <h3 class="faq-title"><span class="title">What services does your virtual assistant
-                                    provide?</span><span class="right-icon"></span></h3>
+                        @foreach ($faqs as $i => $faq)
+                        <div class="faq-item{{ $i === 0 ? ' active open' : '' }}">
+                            <h2 class="faq-title"><span class="title">{{ $faq[0] }}</span><span class="right-icon"></span></h2>
                             <div class="faq-content">
-                                <p>Our virtual assistants offer a wide range of services, including administrative
-                                    support, email and calendar management, social media management, content creation,
-                                    customer service, CRM management, Cold Calling, and more. We tailor our services to meet
-                                    the unique
-                                    needs of each client, so feel free to reach out with specific requirements!</p>
-                                <div class="faq-inner-thumb-area">
-                                    <div class="faq-inner-thumb">
-                                        <img src="{{ asset('assets/images/faq.png') }}" alt="faq">
-                                    </div>
-                                </div>
+                                <p>{!! $faq[1] !!}</p>
                             </div>
                         </div>
-                        <div class="faq-item">
-                            <h3 class="faq-title"><span class="title"> How do I know if a virtual assistant is right for
-                                    my business?</span><span class="right-icon"></span></h3>
-                            <div class="faq-content">
-                                <p>If you’re looking to streamline tasks, free up time, and focus on core aspects of
-                                    your business, a virtual assistant can be a great solution. Our assistants handle
-                                    daily tasks that might otherwise take up your time, allowing you to increase
-                                    productivity and grow your business.
-                                </p>
-                                <div class="faq-inner-thumb-area">
-                                    <div class="faq-inner-thumb">
-                                        <img src="{{ asset('assets/images/faq.png') }}" alt="faq">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="faq-item active open">
-                            <h3 class="faq-title"><span class="title">Are your virtual assistants trained and
-                                    experienced?</span><span class="right-icon"></span></h3>
-                            <div class="faq-content">
-                                <p>Yes, our virtual assistants are skilled professionals with experience in various
-                                    fields, including administrative support, marketing, and customer service. Each
-                                    assistant is carefully vetted and trained to provide reliable, high-quality support
-                                    to our clients.</p>
-                                <div class="faq-inner-thumb-area">
-                                    <div class="faq-inner-thumb">
-                                        <img src="{{ asset('assets/images/faq.png') }}" alt="faq">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <h3 class="faq-title"><span class="title">Can I hire a virtual assistant for part-time or
-                                    project-based work?</span><span class="right-icon"></span></h3>
-                            <div class="faq-content">
-                                <p>Absolutely! We offer flexible options to accommodate part-time, full-time, and
-                                    project-based needs. Whether you require assistance for a single project or ongoing
-                                    support, we can tailor a package to suit your needs.</p>
-                                <div class="faq-inner-thumb-area">
-                                    <div class="faq-inner-thumb">
-                                        <img src="{{ asset('assets/images/faq.png') }}" alt="faq">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="faq-item">
-                            <h3 class="faq-title"><span class="title">How do I communicate with my virtual
-                                    assistant?</span><span class="right-icon"></span></h3>
-                            <div class="faq-content">
-                                <p>You can communicate with your virtual assistant through your preferred methods, such
-                                    as email, phone calls, video conferencing, or instant messaging. We work with you to
-                                    establish a seamless communication process that aligns with your workflow.</p>
-                                <div class="faq-inner-thumb-area">
-                                    <div class="faq-inner-thumb">
-                                        <img src="{{ asset('assets/images/faq.png') }}" alt="faq">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

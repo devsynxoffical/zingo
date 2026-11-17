@@ -1,3 +1,14 @@
+@php
+    $seoTitle = trim($__env->yieldContent('title')) ?: 'Zingo Assist | Virtual Assistant Agency in the USA';
+    $seoDescription = trim($__env->yieldContent('meta_description')) ?: 'Zingo Assist provides US businesses and real estate professionals with skilled virtual assistants, cold calling, lead generation, bookkeeping and digital marketing support.';
+    $seoCanonical = trim($__env->yieldContent('canonical')) ?: url()->current();
+    $seoImage = trim($__env->yieldContent('og_image')) ?: asset('assets/images/zingo-assist-og.jpg');
+    $seoType = trim($__env->yieldContent('og_type')) ?: 'website';
+    $assetVersion = function ($path) {
+        $file = public_path($path);
+        return asset($path) . (is_file($file) ? '?v=' . filemtime($file) : '');
+    };
+@endphp
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -5,34 +16,39 @@
     <meta name="robots" content="@yield('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1')">
     <meta name="google-site-verification" content="y-16gOmynT_OEhNUd5wtBsrV1MdGs5r9WKcfOFobH5k" />
     <meta name="google-site-verification" content="o_UdEd4Ilf18eAs1wHDE4uz6bNIFga3FbWCBmqusG1E" />
-    <meta name="description" content="@yield('meta_description', 'Zingo Assist - Professional Virtual Assistant Services')">
-    <title>@yield('title')</title>
-    <link rel="canonical" href="{{ url()->current() }}" />
+    <title>{{ $seoTitle }}</title>
+    <meta name="description" content="{{ $seoDescription }}">
+    <link rel="canonical" href="{{ $seoCanonical }}" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ url()->current() }}" />
-    <meta property="og:title" content="@yield('title')" />
-    <meta property="og:description" content="@yield('meta_description', 'Zingo Assist - Professional Virtual Assistant Services')" />
-    <meta property="og:image" content="@yield('og_image', asset('assets/images/zingo assist logo png.png'))" />
+    <meta property="og:site_name" content="Zingo Assist" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="{{ $seoType }}" />
+    <meta property="og:url" content="{{ $seoCanonical }}" />
+    <meta property="og:title" content="{{ $seoTitle }}" />
+    <meta property="og:description" content="{{ $seoDescription }}" />
+    <meta property="og:image" content="{{ $seoImage }}" />
+    <meta property="og:image:alt" content="Zingo Assist logo" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="{{ url()->current() }}" />
-    <meta name="twitter:title" content="@yield('title')" />
-    <meta name="twitter:description" content="@yield('meta_description', 'Zingo Assist - Professional Virtual Assistant Services')" />
-    <meta name="twitter:image" content="@yield('og_image', asset('assets/images/zingo assist logo png.png'))" />
+    <meta name="twitter:title" content="{{ $seoTitle }}" />
+    <meta name="twitter:description" content="{{ $seoDescription }}" />
+    <meta name="twitter:image" content="{{ $seoImage }}" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    @stack('css_first')
     <!-- fontawesome css link -->
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.min.css') }}">
     <!-- bootstrap css link -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <!-- favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/fav.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets/images/fav.png') }}" type="image/png">
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/fav.png') }}">
     <!-- swipper css link -->
     <link rel="stylesheet" href="{{ asset('assets/css/swiper.min.css') }}">
     <!-- lightcase css links -->
@@ -52,13 +68,16 @@
     <!-- main style css link -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('assets/custom/custom.css') }}">
-    
+    <link rel="stylesheet" href="{{ $assetVersion('assets/custom/custom.css') }}">
+
     <!-- Custom Navigation CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/custom-nav.css') }}?v={{ time() }}">
-    
+    <link rel="stylesheet" href="{{ $assetVersion('assets/css/custom-nav.css') }}">
+
     <!-- Hero Section Fix CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/hero-fix.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ $assetVersion('assets/css/hero-fix.css') }}">
 
     @stack('css')
+
+    @include('partials.schema-global')
+    @stack('schema')
 </head>

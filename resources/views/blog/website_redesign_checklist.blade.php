@@ -1,6 +1,18 @@
 @extends('layout.main')
 
-@section('title', 'The Ultimate Website Redesign Checklist for 2025 | Blog')
+@section('og_type', 'article')
+@section('title', 'Website Redesign Checklist: SEO-Safe Steps | Zingo Assist')
+@section('meta_description', 'A website redesign checklist that protects your rankings: audits, redirects, content, speed and conversion steps to complete before and after launch.')
+
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'article',
+        'name' => 'The Ultimate Website Redesign Checklist for 2025: Boost Performance & Conversions',
+        'description' => 'A website redesign checklist that protects your rankings: audits, redirects, content, speed and conversion steps to complete before and after launch.',
+        'breadcrumbs' => [['Blog', route('blog')]],
+        'datePublished' => '2025-11-30',
+    ])
+@endpush
 
 @section('content')
     <section class="banner-section two inner">

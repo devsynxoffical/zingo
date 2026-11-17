@@ -1,8 +1,28 @@
 @extends('layout.main')
 
-@section('title', 'Virtual Property Management Services')
-@section('meta_description', 'ZingoAssist offers virtual property management services, including tenant communication, rent collection, and maintenance coordination for landlords and property owners.')
+@section('title', 'Virtual Property Management Assistant Services | Zingo Assist')
+@section('meta_description', 'Virtual property management assistants for landlords and property managers: tenant communication, rent reminders, screening support and maintenance requests.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'Virtual Property Management Services',
+        'serviceType' => 'Virtual property management',
+        'description' => 'Virtual property management assistants for landlords and property managers: tenant communication, rent reminders, screening support and maintenance requests.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['1. What are virtual property management services?', 'Remote management of rental or commercial properties, including tenant communication, rent collection, maintenance coordination, and administrative tasks.'],
+            ['2. How do ZingoAssist virtual property management services work?', 'We assess your portfolio, assign tasks to skilled virtual assistants, manage operations, and provide detailed reporting for transparency.'],
+            ['3. Can I hire a virtual property manager for multiple properties?', 'Yes, our services are scalable to manage both small and large property portfolios.'],
+            ['4. Are virtual property management services secure?', 'Absolutely. Tenant data, financial records, and property documents are protected with robust security measures.'],
+            ['5. How quickly can I start services?', 'Setup is fast, typically within a few days depending on your portfolio size and complexity.'],
+            ['6. Do you provide customized solutions?', 'Yes, every service is tailored to your property type, management needs, and goals.'],
+            ['7. What tasks can a virtual property management assistant handle?', 'Tasks include rent collection, tenant communication, lease management, maintenance coordination, reporting, and financial tracking.'],
+            ['8. How are services priced?', 'Pricing depends on the number of properties, complexity of tasks, and level of support required.'],
+            ['9. Can I track performance and operations remotely?', 'Yes, ZingoAssist provides detailed reporting and regular updates to keep you informed about property operations.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush
@@ -59,6 +79,7 @@
                 <p class="sp-about-text">
                     Virtual Property Management Services help property owners and managers oversee their rental or commercial properties remotely. These services are especially useful for landlords managing multiple properties, remote real estate investors, or busy property managers who need support with daily tasks.
                 </p>
+                <p class="sp-about-text zingo-related"><strong>Need help beyond rentals? Our <a href="{{ route('service.real_estate_virtual_assistant') }}">real estate virtual assistants</a> also handle CRM, listings and lead follow-up, and our <a href="{{ route('location.tampa_st_petersburg') }}">St. Petersburg team</a> supports Tampa Bay landlords.</strong></p>
                 <p class="sp-about-text">
                     ZingoAssist solves common property management challenges, including:
                 </p>

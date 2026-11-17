@@ -1,8 +1,26 @@
 @extends('layout.main')
 
-@section('title', 'Real Estate Cold Calling Services | ZingoAssist')
-@section('meta_description', 'Boost sales with ZingoAssist real estate cold calling services. Expert B2B and B2C cold calling for high-quality leads, appointments, and conversions.')
+@section('title', 'Real Estate Cold Calling Services for Agents | Zingo Assist')
+@section('meta_description', 'Real estate cold calling services for agents and brokers: expired, FSBO and circle prospecting calls, appointment setting and CRM updates. Free 2-day trial.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'Real Estate Cold Calling Services',
+        'serviceType' => 'Real estate cold calling',
+        'description' => 'Real estate cold calling services for agents and brokers: expired, FSBO and circle prospecting calls, appointment setting and CRM updates. Free 2-day trial.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['What are cold calling services?', 'Cold calling services involve reaching out to potential clients directly to generate leads, appointments, or sales opportunities.'],
+            ['How does ZingoAssist handle real estate cold calling?', 'We use professional scripts, targeted lists, and skilled agents to generate qualified leads for real estate agents and brokers.'],
+            ['Do you provide B2B cold calling services?', 'Yes, our B2B cold calling services help businesses connect with other companies and generate high-quality leads.'],
+            ['How do you ensure lead quality?', 'We qualify leads using buyer personas, call scoring, and strict criteria to ensure only relevant contacts are delivered.'],
+            ['Can you integrate with my CRM system?', 'Absolutely. Our services include seamless CRM integration for efficient lead management.'],
+            ['How quickly can I see results?', 'Most clients see measurable results within 4–6 weeks of campaign launch.'],
+            ['What industries do you serve?', 'We serve real estate, finance, B2B, e-commerce, and professional services.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush
@@ -56,6 +74,7 @@
                 <p class="sp-about-text">
                     Cold calling services involve reaching out to potential clients who may not yet be aware of your services or products. At ZingoAssist, we specialize in real estate cold calling services that help agents and businesses generate qualified leads, set appointments, and close deals faster.
                 </p>
+                <p class="sp-about-text zingo-related"><strong>Calling for investors or wholesalers? See our <a href="{{ route('service.wholesale_cold_calling') }}">wholesale real estate cold calling services</a>. Calling Florida numbers? Read our <a href="{{ route('blog.florida_cold_calling_laws') }}">Florida cold calling laws guide</a>.</strong></p>
                 <p class="sp-about-text">
                     Cold calling remains one of the most direct ways to connect with prospects. It allows your business to engage potential clients personally, answer questions immediately, and create meaningful conversations that can turn into long-term relationships.
                 </p>

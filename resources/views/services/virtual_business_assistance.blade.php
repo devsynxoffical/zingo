@@ -1,8 +1,29 @@
 @extends('layout.main')
 
 @section('title', 'Virtual Business Assistant Services | Zingo Assist')
-@section('meta_description', 'ZingoAssist provides professional virtual business assistant services, small business virtual assistant support, and task management to improve productivity and efficiency.')
+@section('meta_description', 'Virtual business assistant services for small businesses: email, scheduling, data entry, customer support and operations handled by a trained remote assistant.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'Virtual Business Assistant Services',
+        'serviceType' => 'Virtual Business Assistant Services',
+        'description' => 'Virtual business assistant services for small businesses: email, scheduling, data entry, customer support and operations handled by a trained remote assistant.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['1. What are Virtual Business Assistant Services?', 'Professional remote support for administrative, operational, and communication tasks to improve efficiency and productivity.'],
+            ['2. How do ZingoAssist virtual assistant services work?', 'We assess your needs, prioritize tasks, assign them to dedicated virtual assistants, and provide reporting for continuous optimization.'],
+            ['3. Can I hire a virtual assistant for small business needs?', 'Yes. Our small business virtual assistant services cater to entrepreneurs, startups, and small teams.'],
+            ['4. Are virtual assistants available full-time?', 'Yes. Services can be part-time or full-time based on your business requirements.'],
+            ['5. How do you ensure confidentiality?', 'All tasks are handled with discretion, and sensitive information is protected under strict privacy protocols.'],
+            ['6. How quickly can I get started?', 'Setup is fast, usually within a few days, depending on your scope and requirements.'],
+            ['7. Do you offer task-specific support?', 'Yes. Tasks ranging from email management to project coordination and research can be handled by our team.'],
+            ['8. Can I scale services as my business grows?', 'Absolutely. Our services are flexible and scalable to meet growing business demands.'],
+            ['9. How are virtual assistant services priced?', 'Pricing is based on hours required, task complexity, and level of support needed.'],
+            ['10. What industries do you serve?', 'We support entrepreneurs and businesses across multiple sectors, including tech, consulting, healthcare, retail, and professional services.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush
@@ -59,6 +80,7 @@
                 <p class="sp-about-text">
                     Virtual Business Assistant Services are professional support services that help businesses and professionals manage administrative, operational, and communication tasks remotely. Instead of hiring in-house staff, companies can leverage skilled virtual assistants to handle daily responsibilities efficiently.
                 </p>
+                <p class="sp-about-text zingo-related"><strong>Working in real estate? See our dedicated <a href="{{ route('service.real_estate_virtual_assistant') }}">real estate virtual assistant services</a>, or read <a href="{{ route('blog.re_va_cost') }}">how much a virtual assistant costs</a>.</strong></p>
                 <p class="sp-about-text">
                     ZingoAssist's services are tailored to meet the needs of busy entrepreneurs and small businesses. Common challenges our business assistant services solve include:
                 </p>

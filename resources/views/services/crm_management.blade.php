@@ -1,8 +1,25 @@
 @extends('layout.main')
 
-@section('title', 'CRM Management Services | ZingoAssist')
-@section('meta_description', 'ZingoAssist provides professional CRM Management Services, including automation and CRM consulting, to optimize your business operations.')
+@section('title', 'CRM Management Services | Virtual CRM Admin | Zingo Assist')
+@section('meta_description', 'CRM management services: data cleanup, pipeline setup, automation and daily CRM administration for HubSpot, Salesforce, Follow Up Boss and kvCORE users.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'CRM Management Services',
+        'serviceType' => 'CRM Management Services',
+        'description' => 'CRM management services: data cleanup, pipeline setup, automation and daily CRM administration for HubSpot, Salesforce, Follow Up Boss and kvCORE users.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['What are CRM Management Services?', 'It helps businesses manage customer relationships, streamline workflows, and automate key processes to improve operational efficiency and customer satisfaction.'],
+            ['What is included in your CRM Managed Services?', 'We provide system setup, customization, data migration, workflow automation, integration, reporting, field service management, training, and ongoing support.'],
+            ['Can you customize a CRM for my business?', 'Yes, we tailor every CRM setup to match your business processes, goals, and industry needs.'],
+            ['How does CRM Field Service Management work?', 'CRM Field Service Management allows businesses to schedule, track, and manage field operations, work orders, and employee activities directly within the CRM system.'],
+            ['Do you provide training and support?', 'Yes, we provide comprehensive training programs and ongoing support to ensure your team maximizes the benefits of CRM.'],
+            ['How quickly can we implement CRM Management Services?', 'Implementation timelines depend on your business size and complexity, but most projects are completed within 4 to 8 weeks.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush

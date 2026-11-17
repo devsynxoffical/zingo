@@ -1,8 +1,29 @@
 @extends('layout.main')
 
-@section('title', 'Personal Assistance Services | ZingoAssist')
-@section('meta_description', 'Zingo Assist provides professional personal assistant services & virtual personal assistant services to manage tasks and communications efficiently.')
+@section('title', 'Virtual Personal Assistant Services | Zingo Assist')
+@section('meta_description', 'Hire a virtual personal assistant to manage your inbox, calendar, travel, errands and follow-ups so you can focus on work that grows your business.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'Personal Assistance Services',
+        'serviceType' => 'Personal Assistance Services',
+        'description' => 'Hire a virtual personal assistant to manage your inbox, calendar, travel, errands and follow-ups so you can focus on work that grows your business.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['1. What are personal assistance services?', 'Professional support that helps manage scheduling, communications, administrative tasks, and personal responsibilities efficiently.'],
+            ['2. How do ZingoAssist services work?', 'We assess your needs, delegate tasks, manage communications, and provide ongoing support for streamlined operations.'],
+            ['3. Are virtual personal assistant services available?', 'Yes. Our virtual personal assistant services offer remote support for scheduling, emails, research, and administrative tasks.'],
+            ['4. Can you manage confidential tasks?', 'Absolutely. Our team handles all responsibilities with discretion and professionalism.'],
+            ['5. How quickly can I start services?', 'Setup is typically within a few days, depending on task complexity and scope.'],
+            ['6. Are services customizable?', 'Yes. Every plan is tailored to your unique workflow, industry, and priorities.'],
+            ['7. How is pricing determined?', 'Pricing is based on the scope of tasks, hours required, and level of support needed.'],
+            ['8. Can your services scale as my business grows?', 'Yes. We provide scalable solutions from part-time support to full-time virtual assistance.'],
+            ['9. Do you provide dedicated support for recurring tasks?', 'Yes. Recurring tasks, follow-ups, and administrative responsibilities are managed consistently for maximum efficiency.'],
+            ['10. How do ZingoAssist personal assistant services improve productivity?', 'By handling routine tasks, emails, scheduling, and administrative duties, clients can focus on high-priority work and decision-making.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush
@@ -56,6 +77,7 @@
                 <p class="sp-about-text">
                     Businesses and professionals today face overwhelming daily demands that often consume time better spent on strategic priorities. Personal assistance services are designed to alleviate these pressures by managing administrative tasks, scheduling, and communications efficiently.
                 </p>
+                <p class="sp-about-text zingo-related"><strong>Working in real estate? See our dedicated <a href="{{ route('service.real_estate_virtual_assistant') }}">real estate virtual assistant services</a>, or read <a href="{{ route('blog.re_va_cost') }}">how much a virtual assistant costs</a>.</strong></p>
                 <p class="sp-about-text">
                     For example, a small business owner may struggle to coordinate meetings, respond to emails promptly, and handle client follow-ups, which can affect growth and customer satisfaction. ZingoAssist resolves these challenges by providing professional personal assistant services that streamline workflows, reduce missed deadlines, and enhance productivity.
                 </p>

@@ -1,6 +1,18 @@
 @extends('layout.main')
 
-@section('title', 'SEO Strategies That Zingo Assist Swears By for Small Businesses | Blog')
+@section('og_type', 'article')
+@section('title', 'SEO Strategies for Small Businesses That Work | Zingo Assist')
+@section('meta_description', 'The SEO strategies Zingo Assist relies on for small businesses: local SEO, search-intent content, technical fixes and link building that compounds.')
+
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'article',
+        'name' => 'SEO Strategies That Zingo Assist Swears By for Small Businesses',
+        'description' => 'The SEO strategies Zingo Assist relies on for small businesses: local SEO, search-intent content, technical fixes and link building that compounds.',
+        'breadcrumbs' => [['Blog', route('blog')]],
+        'datePublished' => '2025-10-05',
+    ])
+@endpush
 
 @section('content')
     <!--~~~~~~~~~~~~ Start Banner ~~~~~~~~-->

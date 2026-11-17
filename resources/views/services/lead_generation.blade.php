@@ -1,8 +1,26 @@
 @extends('layout.main')
 
-@section('title', 'Lead Generation Services | ZingoAssist')
-@section('meta_description', 'Drive qualified leads with ZingoAssist lead generation services. B2B or B2C, we deliver targeted prospects that convert into customers.')
+@section('title', 'B2B & Real Estate Lead Generation Services | Zingo Assist')
+@section('meta_description', 'Lead generation services that research, qualify and nurture prospects for B2B companies and real estate professionals, delivered straight into your CRM.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'Lead Generation Services',
+        'serviceType' => 'Lead Generation Services',
+        'description' => 'Lead generation services that research, qualify and nurture prospects for B2B companies and real estate professionals, delivered straight into your CRM.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['1. What are lead generation services?', 'It helps businesses attract, qualify, and nurture potential customers using marketing strategies, campaigns, and data analysis.'],
+            ['2. How do ZingoAssist lead generation services work?', 'We create targeted campaigns, capture leads through optimized landing pages, nurture prospects with automated workflows, and provide CRM integration for efficient management.'],
+            ['3. Do you provide B2B lead generation services?', 'Yes, our B2B lead generation services are designed to generate qualified leads for businesses that sell products or services to other companies.'],
+            ['4. How do you ensure lead quality?', 'We use buyer personas, lead scoring, and targeted campaigns to ensure only relevant and high-potential prospects are delivered.'],
+            ['5. Can you integrate with my CRM system?', 'Absolutely. Our services include full CRM integration for seamless lead management and follow-ups.'],
+            ['6. How quickly can I see results?', 'Lead generation timelines vary by campaign and industry. Most clients see measurable results within 4–6 weeks of campaign launch.'],
+            ['7. What industries do you serve?', 'We provide services for technology, finance, healthcare, education, retail, and professional services.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush
@@ -56,6 +74,7 @@
                 <p class="sp-about-text">
                     Lead generation services are the backbone of modern marketing. They help businesses identify potential customers, engage them effectively, and guide them through the buying journey. At ZingoAssist, we specialize in creating targeted campaigns that attract prospects most likely to convert into sales.
                 </p>
+                <p class="sp-about-text zingo-related"><strong>Real estate investor? Our <a href="{{ route('service.wholesale_cold_calling') }}">wholesale cold calling team</a> finds and qualifies motivated sellers from your lists.</strong></p>
                 <p class="sp-about-text">
                     Our B2B lead generation services focus on building pipelines for businesses that sell to other companies, while our lead gen services also cater to B2C businesses seeking individual clients. Using a combination of inbound marketing, content creation, paid campaigns, and CRM automation, we ensure every lead is relevant and highly qualified.
                 </p>

@@ -1,6 +1,18 @@
 @extends('layout.main')
 
-@section('title', 'Digital Marketing on a Budget: Zingo\'s 3-Step Guide | Blog')
+@section('og_type', 'article')
+@section('title', 'Digital Marketing on a Budget: 3-Step Guide | Zingo Assist')
+@section('meta_description', 'A simple three-step framework for small businesses to plan, prioritize and measure digital marketing when the budget is tight.')
+
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'article',
+        'name' => 'Digital Marketing on a Budget: Zingo\'s 3-Step Guide',
+        'description' => 'A simple three-step framework for small businesses to plan, prioritize and measure digital marketing when the budget is tight.',
+        'breadcrumbs' => [['Blog', route('blog')]],
+        'datePublished' => '2025-11-02',
+    ])
+@endpush
 
 @section('content')
     <section class="banner-section two inner">

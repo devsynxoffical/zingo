@@ -1,8 +1,26 @@
 @extends('layout.main')
 
-@section('title', 'Real Estate Web Development Services | ZingoAssist')
-@section('meta_description', 'ZingoAssist provides professional real estate web development services, including custom website design, IDX integration, and high-performance site solutions.')
+@section('title', 'Real Estate Web Development Services | Zingo Assist')
+@section('meta_description', 'Custom real estate websites with IDX integration, fast mobile performance and SEO built in, designed to capture buyer and seller leads for agents and brokers.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'Real Estate Web Development Services',
+        'serviceType' => 'Real estate web development',
+        'description' => 'Custom real estate websites with IDX integration, fast mobile performance and SEO built in, designed to capture buyer and seller leads for agents and brokers.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['1. What is included in your Real Estate Web Development Services?', 'We design, develop, optimize, and maintain real estate websites with IDX and branding features.'],
+            ['2. Can you redesign my existing website?', 'Yes. We upgrade outdated sites with modern layouts and updated functionality.'],
+            ['3. Do you provide support after launch?', 'Yes, including updates, security monitoring, and ongoing maintenance.'],
+            ['4. Can you integrate IDX search features?', 'Yes, IDX integration is a primary part of our website development services.'],
+            ['5. How long does a project take?', 'Most projects complete in four to eight weeks.'],
+            ['6. Are the designs custom?', 'Yes, every design is custom created based on your brand.'],
+            ['7. Can my website grow as my business grows?', 'Absolutely, our development structure supports full scalability.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush
@@ -56,6 +74,7 @@
                 <p class="sp-about-text">
                     In today's competitive real estate market, buyers and sellers expect a seamless digital experience. A growing number of businesses rely on website development services to ensure their platforms remain modern, functional, and conversion ready. Yet many real estate professionals struggle with outdated websites, slow load times, missing features, and poor lead generation performance. This is where professional Real Estate Web Development Services make a powerful difference.
                 </p>
+                <p class="sp-about-text zingo-related"><strong>Pair your marketing with a <a href="{{ route('service.real_estate_virtual_assistant') }}">real estate virtual assistant</a> who follows up with every new lead within minutes.</strong></p>
                 <p class="sp-about-text">Most agents face challenges such as:</p>
                 <ul class="sp-about-list">
                     <li><i class="fas fa-check-circle"></i> Website designs that do not reflect their brand or expertise</li>

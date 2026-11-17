@@ -1,8 +1,26 @@
 @extends('layout.main')
 
-@section('title', 'Graphic Design Services | ZingoAssist')
-@section('meta_description', 'Boost your brand with ZingoAssist graphic design services. Custom visuals, print, and digital graphics to attract, engage, and convert your audience.')
+@section('title', 'Graphic Design Services for Small Businesses | Zingo Assist')
+@section('meta_description', 'Graphic design services for brands and real estate pros: logos, social media graphics, listing flyers, presentations and print from a dedicated designer.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'Graphic Design Services',
+        'serviceType' => 'Graphic Design Services',
+        'description' => 'Graphic design services for brands and real estate pros: logos, social media graphics, listing flyers, presentations and print from a dedicated designer.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['What are graphic design services?', 'They involve creating visual content to communicate ideas, promote products, and enhance brand identity.'],
+            ['How do ZingoAssist graphic design services work?', 'We develop custom designs based on your goals, create multiple concepts, refine through feedback, and deliver final assets optimized for digital and print.'],
+            ['Do you provide unlimited graphic design services?', 'Yes, our unlimited service allows you to submit multiple design requests per month, ensuring your campaigns remain fresh and consistent.'],
+            ['Can you create print-ready designs?', 'Absolutely. Every design is optimized for both print and digital use, maintaining quality across all formats.'],
+            ['How do you ensure quality and originality?', 'All designs are created from scratch by our skilled team, ensuring unique visuals that represent your brand accurately.'],
+            ['How quickly can I receive designs?', 'Most standard requests are completed within 48–72 hours, depending on complexity and revisions.'],
+            ['Can you integrate designs with marketing campaigns?', 'Yes. We create graphics that work seamlessly with social media, email marketing, and other digital campaigns to maximize impact.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush
@@ -47,7 +65,7 @@
         <div class="row align-items-center g-5">
             <div class="col-lg-6" data-aos="fade-right" data-aos-duration="700">
                 <div class="sp-about-img">
-                    <img src="{{ asset('assets/images/services/graphic_design.png') }}" alt="Graphic Design Services" />
+                    <img src="{{ asset('assets/images/services/graphic_design.png') }}" alt="Graphic Design Services" loading="lazy" decoding="async" />
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left" data-aos-duration="700">

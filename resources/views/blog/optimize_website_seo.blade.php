@@ -1,6 +1,18 @@
 @extends('layout.main')
 
-@section('title', 'How to Optimize a Website for SEO: A Step-by-Step Guide for 2025 | Blog')
+@section('og_type', 'article')
+@section('title', 'How to Optimize a Website for SEO: Step-by-Step Guide')
+@section('meta_description', 'A step-by-step website SEO checklist covering keyword research, on-page optimization, technical fixes, content and links for small business sites.')
+
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'article',
+        'name' => 'How to Optimize a Website for SEO: A Step-by-Step Guide for 2025',
+        'description' => 'A step-by-step website SEO checklist covering keyword research, on-page optimization, technical fixes, content and links for small business sites.',
+        'breadcrumbs' => [['Blog', route('blog')]],
+        'datePublished' => '2025-12-21',
+    ])
+@endpush
 
 @section('content')
     <section class="banner-section two inner">

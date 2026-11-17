@@ -1,6 +1,18 @@
 @extends('layout.main')
 
-@section('title', 'Top 5 Tasks You Should Outsource to a Virtual Assistant | Blog')
+@section('og_type', 'article')
+@section('title', 'Top 5 Tasks to Outsource to a Virtual Assistant | Zingo Assist')
+@section('meta_description', 'The five tasks that save business owners the most time when outsourced to a virtual assistant, and how to hand them off without losing quality.')
+
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'article',
+        'name' => 'Top 5 Tasks You Should Outsource to a Virtual Assistant',
+        'description' => 'The five tasks that save business owners the most time when outsourced to a virtual assistant, and how to hand them off without losing quality.',
+        'breadcrumbs' => [['Blog', route('blog')]],
+        'datePublished' => '2025-10-19',
+    ])
+@endpush
 
 @section('content')
     <section class="banner-section two inner">
@@ -41,6 +53,8 @@
                             <h1 class="title">Top 5 Tasks You Should Outsource to a Virtual Assistant</h1>
                             
                             <p>In today's fast-paced business environment, time is your most valuable asset. Whether you run a growing startup or a well-established company, managing every operational detail can quickly become overwhelming. That's where outsourcing to a professional <a href="{{ route('service.virtual_business_assistance') }}">virtual assistant (VA)</a> can make all the difference.</p>
+
+                            <p class="zingo-related"><em>In real estate? Here is the full list of <a href="{{ route('service.real_estate_virtual_assistant') }}">tasks a real estate virtual assistant can handle</a>.</em></p>
 
                             <p>Many business owners struggle to balance administrative work, client communication, and marketing tasks while still focusing on growth. <a href="{{ route('service.virtual_business_assistance') }}">Virtual assistants</a> help streamline daily operations, handle repetitive work, and allow you to focus on what truly matters: building your business and achieving long-term goals.</p>
 

@@ -1,8 +1,26 @@
 @extends('layout.main')
 
-@section('title', 'Mobile App Development Services | ZingoAssist')
-@section('meta_description', 'ZingoAssist provides professional mobile app development services, including Android, web, ecommerce, and custom solutions for scalable business growth.')
+@section('title', 'Mobile App Development Services | Zingo Assist')
+@section('meta_description', 'Mobile app development for Android, iOS and the web: custom business apps, ecommerce apps and MVPs built to scale, from planning to launch and support.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'service',
+        'name' => 'Mobile App Development Services',
+        'serviceType' => 'Mobile App Development Services',
+        'description' => 'Mobile app development for Android, iOS and the web: custom business apps, ecommerce apps and MVPs built to scale, from planning to launch and support.',
+        'breadcrumbs' => [['Services', route('service')]],
+        'faqs' => [
+            ['What are mobile app development services?', 'Mobile app development services involve creating applications for mobile devices, including design, development, deployment, and ongoing maintenance.'],
+            ['What platforms do you develop apps for?', 'We offer native Android and iOS apps, web app development services, and custom mobile app solutions.'],
+            ['Can you build custom mobile apps?', 'Yes, our custom mobile app development services ensure your app is tailored to your unique business needs.'],
+            ['Do you provide ecommerce app development services?', 'Absolutely, we develop ecommerce apps with integrated payment gateways, inventory management, and personalized shopping experiences.'],
+            ['How long does it take to develop an app?', 'Project timelines vary based on complexity, but most apps are developed and launched within 8 to 12 weeks.'],
+            ['Will my app be scalable for future growth?', 'Yes, our mobile app development services focus on scalability, allowing you to add features and enhancements over time.'],
+            ['Do you provide post-launch support?', 'Yes, we offer maintenance, updates, and technical support to ensure your app remains optimized and secure.'],
+        ],
+    ])
+@endpush
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
 @endpush

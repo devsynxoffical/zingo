@@ -1,0 +1,64 @@
+/* Components used by the SEO landing pages and long-form guides */
+.sp-answer {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-left: 5px solid #A52673;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(31, 18, 53, .08);
+    padding: 26px 30px;
+}
+.sp-answer-label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #A52673;
+    margin-bottom: 8px;
+}
+.sp-answer p { margin: 0; font-size: 17px; line-height: 1.7; color: #2b2b3a; }
+
+.sp-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 14px; box-shadow: 0 10px 30px rgba(31, 18, 53, .08); background: #fff; }
+.sp-table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 15px; }
+.sp-table th { background: #A52673; color: #fff; font-weight: 600; text-align: left; padding: 14px 18px; }
+.sp-table td { padding: 14px 18px; border-bottom: 1px solid #eee; vertical-align: top; color: #333; }
+.sp-table tr:last-child td { border-bottom: 0; }
+.sp-table tr:nth-child(even) td { background: #fbf6f9; }
+.sp-table-note { font-size: 13px; color: #666; margin-top: 12px; }
+
+.sp-prose { max-width: 900px; margin: 0 auto; }
+.sp-prose p, .sp-prose li { font-size: 16px; line-height: 1.8; color: #3a3a48; }
+.sp-prose ul { padding-left: 20px; margin-bottom: 18px; }
+.sp-prose li { list-style: disc; margin-bottom: 6px; }
+.sp-prose h3 { font-size: 21px; margin: 26px 0 10px; color: #1f1235; }
+
+.sp-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.sp-link-chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 11px 18px; border-radius: 30px;
+    background: #fff; border: 1px solid #ead3e1; color: #A52673;
+    font-weight: 500; font-size: 15px; text-decoration: none; transition: all .25s ease;
+}
+.sp-link-chip:hover { background: #A52673; color: #fff; border-color: #A52673; }
+
+/* Long-form guide (blog) helpers */
+.guide-summary { background: #fbf6f9; border: 1px solid #ead3e1; border-radius: 12px; padding: 22px 26px; margin: 10px 0 30px; }
+.guide-summary h2 { font-size: 20px !important; margin: 0 0 10px !important; }
+.guide-summary ul { margin: 0; padding-left: 20px; }
+.guide-summary li { list-style: disc; margin-bottom: 6px; }
+.guide-table-wrap { overflow-x: auto; margin: 18px 0 26px; }
+.guide-table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 15px; }
+.guide-table th { background: #A52673; color: #fff; text-align: left; padding: 12px 14px; font-weight: 600; }
+.guide-table td { border-bottom: 1px solid #eee; padding: 12px 14px; vertical-align: top; }
+.guide-table tr:nth-child(even) td { background: #fbf6f9; }
+.guide-note { font-size: 14px; color: #666; border-top: 1px solid #eee; padding-top: 14px; margin-top: 30px; }
+.guide-cta { background: linear-gradient(135deg, #A52673, #6b1a4c); color: #fff; border-radius: 14px; padding: 26px 28px; margin: 34px 0; }
+.guide-cta p { color: #fff !important; margin-bottom: 14px; }
+.guide-cta a.btn-guide { display: inline-block; background: #fff; color: #A52673; padding: 11px 24px; border-radius: 25px; font-weight: 600; text-decoration: none; }
+.blog-item.details .blog-content ul.guide-list { padding-left: 20px; margin-bottom: 20px; }
+.blog-item.details .blog-content ul.guide-list li { list-style: disc; margin-bottom: 8px; }
+@media (max-width: 575px) {
+    .sp-answer { padding: 20px; }
+    .sp-answer p { font-size: 16px; }
+}

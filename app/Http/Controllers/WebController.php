@@ -130,11 +130,6 @@ class WebController extends Controller
     {
         return view('blog1');
     }
-    
-     public function blog2()
-    {
-        return view('blog2');
-    }
       public function blog3()
     {
         return view('blog3');
@@ -214,69 +209,112 @@ class WebController extends Controller
         return view('blog.benefits_outsourcing_business_tasks');
     }
 
+    public function real_estate_virtual_assistant()
+    {
+        return view('services.real_estate_virtual_assistant');
+    }
+
+    public function real_estate_va_tampa()
+    {
+        return view('locations.tampa_st_petersburg');
+    }
+
+    public function wholesale_cold_calling()
+    {
+        return view('services.wholesale_cold_calling');
+    }
+
+    public function re_va_cost()
+    {
+        return view('blog.re_va_cost');
+    }
+
+    public function tc_vs_va()
+    {
+        return view('blog.tc_vs_va');
+    }
+
+    public function florida_cold_calling_laws()
+    {
+        return view('blog.florida_cold_calling_laws');
+    }
+
+    /**
+     * XML sitemap. lastmod comes from the view file's modification time so it
+     * only changes when the page content actually changes.
+     */
     public function sitemap()
     {
-        $routes = [
-            'home',
-            'about',
-            'blog',
-            'blog1',
-            'blog2',
-            'blog3',
-            'blog4',
-            'blog.seo_strategies',
-            'blog.free_va_trial',
-            'blog.top_5_tasks',
-            'blog.web_dev_trends_2025',
-            'blog.digital_marketing_budget',
-            'blog.crm_powered_workflow',
-            'blog.va_vs_full_time',
-            'blog.crm_management_2025',
-            'blog.website_redesign_checklist',
-            'blog.seo_vs_ppc',
-            'blog.content_marketing_tips',
-            'blog.optimize_website_seo',
-            'blog.ten_signs_need_virtual_assistant',
-            'blog.benefits_outsourcing_business_tasks',
-            'contact',
-            'service',
-            'faq',
-            'service.digital_marketing',
-            'service.search_seo',
-            'service.web_development',
-            'service.graphic_design',
-            'service.testimonials',
-            'service.app_development',
-            'service.crm_management',
-            'service.it_support',
-            'service.video_editing',
-            'service.personal_assistance',
-            'service.lead_generation',
-            'service.cold_calling',
-            'service.virtual_business_assistance',
-            'service.virtual_property_management',
-            'service.real_estate_transaction_coordinator',
-            'service.bookkeeping_accountant',
-            'terms',
-            'privacy',
+        // route name => [view, priority, changefreq]
+        $pages = [
+            'home' => ['home', '1.0', 'weekly'],
+            'service.real_estate_virtual_assistant' => ['services.real_estate_virtual_assistant', '0.9', 'monthly'],
+            'service' => ['service', '0.9', 'monthly'],
+            'service.cold_calling' => ['services.cold_calling', '0.8', 'monthly'],
+            'service.wholesale_cold_calling' => ['services.wholesale_cold_calling', '0.8', 'monthly'],
+            'service.real_estate_transaction_coordinator' => ['services.real_estate_transaction_coordinator', '0.8', 'monthly'],
+            'service.virtual_property_management' => ['services.virtual_property_management', '0.8', 'monthly'],
+            'service.virtual_business_assistance' => ['services.virtual_business_assistance', '0.8', 'monthly'],
+            'service.personal_assistance' => ['services.personal_assistance', '0.8', 'monthly'],
+            'service.lead_generation' => ['services.lead_generation', '0.8', 'monthly'],
+            'service.bookkeeping_accountant' => ['services.bookkeeping_accountant', '0.8', 'monthly'],
+            'service.crm_management' => ['services.crm_management', '0.8', 'monthly'],
+            'service.digital_marketing' => ['services.digital_marketing', '0.8', 'monthly'],
+            'service.search_seo' => ['services.search_seo', '0.8', 'monthly'],
+            'service.web_development' => ['services.web_development', '0.8', 'monthly'],
+            'service.graphic_design' => ['services.graphic_design', '0.7', 'monthly'],
+            'service.app_development' => ['services.app_dev', '0.7', 'monthly'],
+            'service.it_support' => ['services.it_support', '0.7', 'monthly'],
+            'service.video_editing' => ['services.video_editing', '0.7', 'monthly'],
+            'location.tampa_st_petersburg' => ['locations.tampa_st_petersburg', '0.8', 'monthly'],
+            'about' => ['about', '0.6', 'monthly'],
+            'contact' => ['contact', '0.6', 'yearly'],
+            'faq' => ['faq', '0.6', 'monthly'],
+            'service.testimonials' => ['services.testimonial', '0.4', 'monthly'],
+            'blog' => ['blog', '0.7', 'weekly'],
+            'blog.re_va_cost' => ['blog.re_va_cost', '0.7', 'monthly'],
+            'blog.tc_vs_va' => ['blog.tc_vs_va', '0.7', 'monthly'],
+            'blog.florida_cold_calling_laws' => ['blog.florida_cold_calling_laws', '0.7', 'monthly'],
+            'blog.ten_signs_need_virtual_assistant' => ['blog.ten_signs_need_virtual_assistant', '0.6', 'monthly'],
+            'blog.benefits_outsourcing_business_tasks' => ['blog.benefits_outsourcing_business_tasks', '0.6', 'monthly'],
+            'blog.va_vs_full_time' => ['blog.va_vs_full_time', '0.6', 'monthly'],
+            'blog.top_5_tasks' => ['blog.top_5_tasks', '0.6', 'monthly'],
+            'blog3' => ['blog3', '0.6', 'monthly'],
+            'blog1' => ['blog1', '0.6', 'monthly'],
+            'blog.free_va_trial' => ['blog.free_va_trial', '0.6', 'monthly'],
+            'blog.crm_management_2025' => ['blog.crm_management_2025', '0.6', 'monthly'],
+            'blog.crm_powered_workflow' => ['blog.crm_powered_workflow', '0.6', 'monthly'],
+            'blog.seo_strategies' => ['blog.seo_strategies', '0.6', 'monthly'],
+            'blog.seo_vs_ppc' => ['blog.seo_vs_ppc', '0.6', 'monthly'],
+            'blog.optimize_website_seo' => ['blog.optimize_website_seo', '0.6', 'monthly'],
+            'blog.content_marketing_tips' => ['blog.content_marketing_tips', '0.6', 'monthly'],
+            'blog.digital_marketing_budget' => ['blog.digital_marketing_budget', '0.6', 'monthly'],
+            'blog.web_dev_trends_2025' => ['blog.web_dev_trends_2025', '0.6', 'monthly'],
+            'blog.website_redesign_checklist' => ['blog.website_redesign_checklist', '0.6', 'monthly'],
+            'blog4' => ['blog4', '0.5', 'monthly'],
+            'privacy' => ['static.privacy', '0.2', 'yearly'],
+            'terms' => ['static.terms', '0.2', 'yearly'],
         ];
 
         $xml = '<?xml version="1.0" encoding="UTF-8"?>';
         $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-        
-        foreach ($routes as $route) {
-            if (\Illuminate\Support\Facades\Route::has($route)) {
-                $xml .= '<url>';
-                $xml .= '<loc>' . route($route) . '</loc>';
-                $xml .= '<lastmod>' . date('Y-m-d') . '</lastmod>';
-                $xml .= '<changefreq>' . ($route === 'home' ? 'daily' : 'weekly') . '</changefreq>';
-                $xml .= '<priority>' . ($route === 'home' ? '1.0' : (str_starts_with($route, 'service.') ? '0.8' : '0.6')) . '</priority>';
-                $xml .= '</url>';
+
+        foreach ($pages as $route => [$view, $priority, $freq]) {
+            if (!\Illuminate\Support\Facades\Route::has($route)) {
+                continue;
             }
+            $file = resource_path('views/' . str_replace('.', '/', $view) . '.blade.php');
+            $lastmod = is_file($file) ? date('Y-m-d', filemtime($file)) : date('Y-m-d');
+            $xml .= '<url>';
+            $xml .= '<loc>' . route($route) . '</loc>';
+            $xml .= '<lastmod>' . $lastmod . '</lastmod>';
+            $xml .= '<changefreq>' . $freq . '</changefreq>';
+            $xml .= '<priority>' . $priority . '</priority>';
+            $xml .= '</url>';
         }
-        
+
         $xml .= '</urlset>';
 
-        return response($xml, 200)->header('Content-Type', 'text/xml');
+        return response($xml, 200)->header('Content-Type', 'application/xml; charset=UTF-8');
     }
 }

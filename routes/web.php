@@ -8,10 +8,12 @@ Route::controller(WebController::class)->group(function () {
     Route::get('/', 'home')->name('home');
     Route::get('/about-us', 'about')->name('about');
     Route::get('/blog', 'blog')->name('blog');
-    Route::get('/blog1', 'blog1')->name('blog1');
-    Route::get('/blog2', 'blog2')->name('blog2');
-    Route::get('/blog3', 'blog3')->name('blog3');
-    Route::get('/blog4', 'blog4')->name('blog4');
+    Route::get('/blog/why-your-business-needs-a-virtual-assistant', 'blog1')->name('blog1');
+    Route::get('/blog/tasks-to-outsource-to-a-virtual-assistant', 'blog3')->name('blog3');
+    Route::get('/blog/how-to-become-a-virtual-assistant', 'blog4')->name('blog4');
+    Route::get('/blog/real-estate-virtual-assistant-cost', 're_va_cost')->name('blog.re_va_cost');
+    Route::get('/blog/transaction-coordinator-vs-virtual-assistant', 'tc_vs_va')->name('blog.tc_vs_va');
+    Route::get('/blog/florida-real-estate-cold-calling-laws', 'florida_cold_calling_laws')->name('blog.florida_cold_calling_laws');
     Route::get('/blog/seo-strategies', 'seo_strategies')->name('blog.seo_strategies');
     Route::get('/blog/free-va-trial', 'free_va_trial')->name('blog.free_va_trial');
     Route::get('/blog/top-5-tasks', 'top_5_tasks')->name('blog.top_5_tasks');
@@ -46,6 +48,9 @@ Route::controller(WebController::class)->group(function () {
     Route::get('/virtual-property-management-services', 'virtual_property_management')->name('service.virtual_property_management');
     Route::get('/real-estate-transaction-coordinator-services', 'real_estate_transaction_coordinator')->name('service.real_estate_transaction_coordinator');
     Route::get('/accounting-and-bookkeeping-services', 'bookkeeping_accountant')->name('service.bookkeeping_accountant');
+    Route::get('/real-estate-virtual-assistant', 'real_estate_virtual_assistant')->name('service.real_estate_virtual_assistant');
+    Route::get('/real-estate-virtual-assistant-tampa-st-petersburg-fl', 'real_estate_va_tampa')->name('location.tampa_st_petersburg');
+    Route::get('/wholesale-real-estate-cold-calling', 'wholesale_cold_calling')->name('service.wholesale_cold_calling');
     Route::get('/sitemap.xml', 'sitemap')->name('sitemap');
 });
 
@@ -56,8 +61,13 @@ Route::controller(EmailController::class)->group(function () {
 Route::view('/terms-conditions', 'static.terms')->name('terms');
 Route::view('/privacy-policy', 'static.privacy')->name('privacy');
 
-Route::get('/clear-cache', function () {
-    \Illuminate\Support\Facades\Artisan::call('view:clear');
-    \Illuminate\Support\Facades\Artisan::call('cache:clear');
-    return 'Laravel Cache Cleared successfully!';
-});
+// Permanent redirects for retired / legacy URLs (consolidate ranking signals).
+Route::permanentRedirect('/blog1', '/blog/why-your-business-needs-a-virtual-assistant');
+Route::permanentRedirect('/blog2', '/blog/10-signs-you-need-a-virtual-assistant');
+Route::permanentRedirect('/blog3', '/blog/tasks-to-outsource-to-a-virtual-assistant');
+Route::permanentRedirect('/blog4', '/blog/how-to-become-a-virtual-assistant');
+Route::permanentRedirect('/cold-calling-services', '/real-estate-cold-calling-services');
+Route::permanentRedirect('/web-design', '/real-estate-web-development-services');
+Route::permanentRedirect('/services', '/our-services');
+Route::permanentRedirect('/about', '/about-us');
+Route::permanentRedirect('/contact', '/contact-us');

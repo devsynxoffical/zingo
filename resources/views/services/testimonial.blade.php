@@ -1,6 +1,16 @@
 @extends('layout.main')
 
-@section('title', 'Zingo - Assist Testimonials')
+@section('title', 'Client Testimonials & Reviews | Zingo Assist')
+@section('meta_description', 'Read what business owners and real estate professionals say about working with Zingo Assist virtual assistants, cold callers and marketing specialists.')
+
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'page',
+        'name' => 'Client Testimonials',
+        'description' => 'Read what business owners and real estate professionals say about working with Zingo Assist virtual assistants, cold callers and marketing specialists.',
+        'breadcrumbs' => [['Services', route('service')]],
+    ])
+@endpush
 
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
@@ -48,7 +58,7 @@
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
                 <div class="sp-testimonial">
                     <div class="d-flex align-items-center gap-3 mb-3">
-                        <img src="{{ asset('assets/images/client/client-1.png') }}" alt="Marlon Guzman" style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+                        <img src="{{ asset('assets/images/client/client-1.png') }}" alt="Marlon Guzman" style="width:50px; height:50px; border-radius:50%; object-fit:cover;" loading="lazy" decoding="async">
                         <div>
                             <p class="sp-testimonial-author mb-0">Marlon Guzman</p>
                             <span class="text-warning">
@@ -62,7 +72,7 @@
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="80">
                 <div class="sp-testimonial">
                     <div class="d-flex align-items-center gap-3 mb-3">
-                        <img src="{{ asset('assets/images/client/client-2.png') }}" alt="Lindsey Mancur" style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+                        <img src="{{ asset('assets/images/client/client-2.png') }}" alt="Lindsey Mancur" style="width:50px; height:50px; border-radius:50%; object-fit:cover;" loading="lazy" decoding="async">
                         <div>
                             <p class="sp-testimonial-author mb-0">Lindsey Mancur</p>
                             <span class="text-warning">
@@ -76,7 +86,7 @@
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
                 <div class="sp-testimonial">
                     <div class="d-flex align-items-center gap-3 mb-3">
-                        <img src="{{ asset('assets/images/client/client-3.png') }}" alt="Saleha Safdar" style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+                        <img src="{{ asset('assets/images/client/client-3.png') }}" alt="Saleha Safdar" style="width:50px; height:50px; border-radius:50%; object-fit:cover;" loading="lazy" decoding="async">
                         <div>
                             <p class="sp-testimonial-author mb-0">Saleha Safdar</p>
                             <span class="text-warning">
@@ -90,7 +100,7 @@
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="80">
                 <div class="sp-testimonial">
                     <div class="d-flex align-items-center gap-3 mb-3">
-                        <img src="{{ asset('assets/images/client/client-3.png') }}" alt="Cynthia OC" style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+                        <img src="{{ asset('assets/images/client/client-3.png') }}" alt="Cynthia OC" style="width:50px; height:50px; border-radius:50%; object-fit:cover;" loading="lazy" decoding="async">
                         <div>
                             <p class="sp-testimonial-author mb-0">Cynthia OC</p>
                             <span class="text-warning">

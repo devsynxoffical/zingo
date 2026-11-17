@@ -1,24 +1,37 @@
 @extends('layout.main')
 
-@section('title', 'Why Your Business Needs a Virtual Assistant in 2025 | Zingo Assist')
+@section('og_type', 'article')
+@section('title', 'Why Your Business Needs a Virtual Assistant | Zingo Assist')
+@section('meta_description', 'Why growing businesses hire virtual assistants: lower costs than in-house staff, flexible hours, specialized skills and more time for revenue-generating work.')
+
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'article',
+        'name' => 'Why Your Business Needs a Virtual Assistant',
+        'description' => 'Why growing businesses hire virtual assistants: lower costs than in-house staff, flexible hours, specialized skills and more time for revenue-generating work.',
+        'breadcrumbs' => [['Blog', route('blog')]],
+        'datePublished' => '2025-10-31',
+        'image' => asset('assets/images/element/element-5.png'),
+    ])
+@endpush
 
 @section('content')
     <!--~~~~~~~~~~~~ Start Banner ~~~~~~~~-->
     <section class="banner-section two inner">
         <div class="banner-element-four two">
-            <img src="{{ asset('assets/images/element/element-5.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-5.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-five two">
-            <img src="{{ asset('assets/images/element/element-7.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-7.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-nineteen two">
-            <img src="{{ asset('assets/images/element/element-6.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-6.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-twenty-two two">
-            <img src="{{ asset('assets/images/element/element-69.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-69.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-twenty-three two">
-            <img src="{{ asset('assets/images/element/element-70.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-70.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="container">
             <div class="row justify-content-center align-items-center mb-30-none">
@@ -55,16 +68,18 @@
                         <div class="col-xl-12 mb-60">
                             <div class="blog-item details">
                                 <div class="blog-thumb">
-                                    <img src="{{ asset('assets/images/blog/Virtual Assistant vs In-House Employees Which is Best for Your Business.jpg') }}" alt="Why Your Business Needs a Virtual Assistant in 2025">
+                                    <img src="{{ asset('assets/images/blog/Virtual Assistant vs In-House Employees Which is Best for Your Business.jpg') }}" alt="Why Your Business Needs a Virtual Assistant in 2025" loading="lazy" decoding="async">
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-post-meta">
                                         <span class="user">By : Zingo Assist</span>
                                         <span class="category two">October 31, 2025</span>
                                     </div>
-                                    <h1 class="title">Why Your Business Needs a Virtual Assistant in 2025</h1>
+                                    <h1 class="title">Why Your Business Needs a Virtual Assistant</h1>
                                     
                                     <p>The world of business is changing faster than ever before. With increasing competition, rising operational costs, and the constant demand for efficiency, companies are looking for smarter ways to manage their time and resources. One of the most powerful solutions emerging in recent years is the use of <a href="{{ route('service.virtual_business_assistance') }}">virtual assistants</a>. By 2025, more businesses are expected to integrate them into their daily operations to streamline processes and improve productivity.</p>
+
+                            <p class="zingo-related"><em>Agents and investors: learn about our <a href="{{ route('service.real_estate_virtual_assistant') }}">real estate virtual assistant services</a>.</em></p>
 
                                     <p>Whether you are a small business owner, a startup founder, or managing a growing enterprise, understanding the benefits of <a href="{{ route('service.virtual_business_assistance') }}">virtual assistant support</a> can transform the way you operate. Let's explore why this resource has become a necessity and how it can help your business thrive in the modern marketplace.</p>
 

@@ -1,15 +1,26 @@
 @extends('layout.main')
 
-@section('title', 'Zingo Assist – Premier Virtual Assistant Agency in USA')
-@section('meta_description', 'Zingo Assist is the premier virtual assistant agency in the USA, providing elite virtual assistants, digital marketing, real estate cold calling, SEO, bookkeeping, and web development services to accelerate your business growth.')
+@section('title', 'Virtual Assistant Agency USA | Real Estate VAs | Zingo Assist')
+@section('meta_description', 'Hire trained virtual assistants for real estate and small businesses: cold calling, transaction coordination, lead generation and bookkeeping. Free 2-day trial.')
 
-
-
-<head>
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'page',
+        'name' => 'Zingo Assist',
+        'description' => 'Hire trained virtual assistants for real estate and small businesses: cold calling, transaction coordination, lead generation and bookkeeping. Free 2-day trial.',
+        'faqs' => [
+            ['What services does Zingo Assist provide?', 'We offer a comprehensive range of virtual assistant services, including administrative support, lead generation, cold calling, and software development.'],
+            ['How do I hire a remote assistant?', 'Simply contact Zingo Assist and we will assign a skilled virtual personal assistant or team tailored to your business needs.'],
+            ['Is Zingo Assist available in the USA?', 'Yes, we are a leading virtual assistant agency in the USA, serving clients nationwide.'],
+            ['Can I try your services before hiring?', 'Yes, we provide a two-day free trial to experience our services firsthand.'],
+            ['How is Zingo Assist different from other virtual assistant companies?', 'We offer customized solutions, experienced professionals, 24/7 support, and a proven track record, making us one of the top virtual assistant companies in the USA.'],
+        ],
+    ])
+@endpush
+@push('css_first')
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-</head>
+@endpush
 
 @section('content')
     <!--~~~~~ Start Banner ~~~~~~~-->
@@ -24,65 +35,65 @@
             <img src="{{ asset('assets/images/element/element-4.png') }}" alt="element">
         </div>
         <div class="banner-element-three">
-            <img src="{{ asset('assets/images/element/element-5.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-5.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-four">
-            <img src="{{ asset('assets/images/element/element-6.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-6.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-five">
-            <img src="{{ asset('assets/images/element/element-7.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-7.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-group-shape">
             <div class="banner-group-element-one">
-                <img src="{{ asset('assets/images/element/element-8.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-8.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-two">
-                <img src="{{ asset('assets/images/element/element-9.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-9.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-three">
-                <img src="{{ asset('assets/images/element/element-10.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-10.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-four">
-                <img src="{{ asset('assets/images/element/element-6.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-6.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-five">
-                <img src="{{ asset('assets/images/element/element-5.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-5.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-six">
-                <img src="{{ asset('assets/images/element/element-11.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-11.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-seven">
-                <img src="{{ asset('assets/images/element/element-12.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-12.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-eight">
-                <img src="{{ asset('assets/images/element/element-13.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-13.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-nine">
-                <img src="{{ asset('assets/images/element/element-14.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-14.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-ten">
-                <img src="{{ asset('assets/images/element/element-15.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-15.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-eleven">
-                <img src="{{ asset('assets/images/element/element-16.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-16.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-twelve">
-                <img src="{{ asset('assets/images/element/element-17.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-17.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-thirteen">
-                <img src="{{ asset('assets/images/element/element-18.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-18.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-fourteen">
-                <img src="{{ asset('assets/images/element/element-19.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-19.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-fifteen">
-                <img src="{{ asset('assets/images/element/element-20.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-20.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-sixteen">
-                <img src="{{ asset('assets/images/element/element-21.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-21.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
             <div class="banner-group-element-seventeen">
-                <img src="{{ asset('assets/images/element/element-22.png') }}" alt="element">
+                <img src="{{ asset('assets/images/element/element-22.png') }}" alt="element" loading="lazy" decoding="async">
             </div>
         </div>
         <div class="container custom-container">
@@ -100,13 +111,13 @@
                             <i class="fas fa-chevron-down btn-icon"></i>
                         </button>
                         <div class="banner-arrow">
-                            <img src="{{ asset('assets/images/element/element-1.png') }}" alt="element">
+                            <img src="{{ asset('assets/images/element/element-1.png') }}" alt="element" loading="lazy" decoding="async">
                         </div>
                         <div class="banner-widget">
                             <div class="banner-widget-wrapper">
                                 <div class="banner-widget-left">
                                     <div class="banner-widget-thumb">
-                                        <img src="{{ asset('assets/images/element/element-2.png') }}" alt="element">
+                                        <img src="{{ asset('assets/images/element/element-2.png') }}" alt="element" loading="lazy" decoding="async">
                                     </div>
                                 </div>
                                 <div class="banner-widget-middle">
@@ -152,7 +163,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6 mb-4 mb-lg-0">
                              <div class="service-image-container rounded-3 overflow-hidden shadow-sm">
-                                <img src="{{ asset('assets/images/services/Osama.png') }}" alt="Virtual Assistant Services" class="w-100 service-img">
+                                <img src="{{ asset('assets/images/services/Osama.png') }}" alt="Virtual Assistant Services" class="w-100 service-img" loading="lazy" decoding="async">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -173,7 +184,7 @@
                     <div class="row align-items-center flex-row-reverse">
                         <div class="col-lg-6 mb-4 mb-lg-0">
                              <div class="service-image-container rounded-3 overflow-hidden shadow-sm">
-                                <img src="{{ asset('assets/images/services/tooba.png') }}" alt="Cold Calling Services" class="w-100 service-img">
+                                <img src="{{ asset('assets/images/services/tooba.png') }}" alt="Cold Calling Services" class="w-100 service-img" loading="lazy" decoding="async">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -194,7 +205,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6 mb-4 mb-lg-0">
                              <div class="service-image-container rounded-3 overflow-hidden shadow-sm">
-                                <img src="{{ asset('assets/images/services/arooba.png') }}" alt="Software Development" class="w-100 service-img">
+                                <img src="{{ asset('assets/images/services/arooba.png') }}" alt="Software Development" class="w-100 service-img" loading="lazy" decoding="async">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -215,7 +226,7 @@
                     <div class="row align-items-center flex-row-reverse">
                         <div class="col-lg-6 mb-4 mb-lg-0">
                              <div class="service-image-container rounded-3 overflow-hidden shadow-sm">
-                                <img src="{{ asset('assets/images/services/shaheer.png') }}" alt="Lead Generation" class="w-100 service-img">
+                                <img src="{{ asset('assets/images/services/shaheer.png') }}" alt="Lead Generation" class="w-100 service-img" loading="lazy" decoding="async">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -241,19 +252,19 @@
     <!--~~~~~~~~~~ Start Choose ~~~~~~~~-->
     <section class="choose-section pb-120">
         <div class="choose-element-one" data-aos="fade-left" data-aos-duration="1200">
-            <img src="{{ asset('assets/images/element/element-28.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-28.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="choose-element-two">
-            <img src="{{ asset('assets/images/element/element-29.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-29.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="choose-element-three">
-            <img src="{{ asset('assets/images/element/element-30.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-30.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="choose-element-four">
-            <img src="{{ asset('assets/images/element/element-31.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-31.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="choose-element-five">
-            <img src="{{ asset('assets/images/element/element-32.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-32.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="container">
             <div class="choose-area">
@@ -278,7 +289,7 @@
                         <div class="tab-pane fade" id="software" role="tabpanel" aria-labelledby="software-tab">
                             <div class="choose-item">
                                 <div class="choose-thumb">
-                                    <img src="{{ asset('assets/images/element/element-27.png') }}" alt="element">
+                                    <img src="{{ asset('assets/images/element/element-27.png') }}" alt="element" loading="lazy" decoding="async">
                                 </div>
                                 <div class="choose-content">
                                     <h4 class="title"><span class="text--base">About Zingo Assist</span> Website
@@ -338,7 +349,7 @@
                             aria-labelledby="company-tab">
                             <div class="choose-item">
                                 <div class="choose-thumb">
-                                    <img src="{{ asset('assets/images/element/element-77.png') }}" alt="element">
+                                    <img src="{{ asset('assets/images/element/element-77.png') }}" alt="element" loading="lazy" decoding="async">
                                 </div>
                                 <div class="choose-content">
                                     <h4 class="title"><span class="text--base">About Zingo Assist</span> Digital
@@ -403,7 +414,7 @@
                         <div class="tab-pane fade" id="client" role="tabpanel" aria-labelledby="client-tab">
                             <div class="choose-item">
                                 <div class="choose-thumb">
-                                    <img src="{{ asset('assets/images/element/element-78.png') }}" alt="element">
+                                    <img src="{{ asset('assets/images/element/element-78.png') }}" alt="element" loading="lazy" decoding="async">
                                 </div>
                                 <div class="choose-content">
                                     <h4 class="title"><span class="text--base">About Zingo Assist</span> Client
@@ -545,7 +556,7 @@
     <!--~~~~~~~~~ Start Call to action ~~~~~~~~~~-->
     <section class="call-to-action-section pb-120">
         <div class="call-to-action-element" data-aos="fade-left" data-aos-duration="1200">
-            <img src="{{ asset('assets/images/element/element-33.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-33.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="wrapper demo-text">
             <div class="marquee">
@@ -580,19 +591,19 @@
     <!--~~~~~~~~~ Start About ~~~~~~~~~-->
     <section class="about-section pt-120">
         <div class="about-element-one">
-            <img src="{{ asset('assets/images/element/element-39.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-39.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="about-element-two">
-            <img src="{{ asset('assets/images/element/element-40.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-40.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="about-element-three">
-            <img src="{{ asset('assets/images/element/element-7.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-7.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="about-element-four">
-            <img src="{{ asset('assets/images/element/element-41.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-41.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="about-element-five">
-            <img src="{{ asset('assets/images/element/element-42.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-42.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="container">
             <div class="about-area three">
@@ -602,29 +613,29 @@
                             <div class="box3"></div>
                             <div class="box1">
                                 <div class="box-element-one">
-                                    <img src="{{ asset('assets/images/element/element-14.png') }}" alt="element">
+                                    <img src="{{ asset('assets/images/element/element-14.png') }}" alt="element" loading="lazy" decoding="async">
                                 </div>
                                 <div class="box-element-two">
-                                    <img src="{{ asset('assets/images/element/element-15.png') }}" alt="element">
+                                    <img src="{{ asset('assets/images/element/element-15.png') }}" alt="element" loading="lazy" decoding="async">
                                 </div>
                                 <div class="box-element-three">
-                                    <img src="{{ asset('assets/images/element/element-13.png') }}" alt="element">
+                                    <img src="{{ asset('assets/images/element/element-13.png') }}" alt="element" loading="lazy" decoding="async">
                                 </div>
                                 <div class="box-element-four">
-                                    <img src="{{ asset('assets/images/element/element-6.png') }}" alt="element">
+                                    <img src="{{ asset('assets/images/element/element-6.png') }}" alt="element" loading="lazy" decoding="async">
                                 </div>
                             </div>
                             <div class="box2">
                                 <div class="box-element-five">
-                                    <img src="{{ asset('assets/images/element/element-16.png') }}" alt="element">
+                                    <img src="{{ asset('assets/images/element/element-16.png') }}" alt="element" loading="lazy" decoding="async">
                                 </div>
                                 <div class="box-element-six">
-                                    <img src="{{ asset('assets/images/element/element-7.png') }}" alt="element">
+                                    <img src="{{ asset('assets/images/element/element-7.png') }}" alt="element" loading="lazy" decoding="async">
                                 </div>
                             </div>
                         </div>
                         <div class="about-thumb">
-                            <img src="{{ asset('assets/images/element/element-38.png') }}" alt="element">
+                            <img src="{{ asset('assets/images/element/element-38.png') }}" alt="element" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 mb-30">
@@ -819,15 +830,15 @@
                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <section class="subscribe-section" style="padding: 35px 0;">
         <div class="subscribe-element-one">
-            <img src="{{ asset('assets/images/element/element-51.png') }}" alt="element">
+            <img src="{{ asset('assets/images/element/element-51.png') }}" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="container">
             <div class="subscribe-area">
                 <div class="subscribe-element-two">
-                    <img src="{{ asset('assets/images/element/element-76.png') }}" alt="element">
+                    <img src="{{ asset('assets/images/element/element-76.png') }}" alt="element" loading="lazy" decoding="async">
                 </div>
                 <div class="subscribe-element-three">
-                    <img src="{{ asset('assets/images/element/element-50.png') }}" alt="element">
+                    <img src="{{ asset('assets/images/element/element-50.png') }}" alt="element" loading="lazy" decoding="async">
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-lg-8 offset-xl-5">

@@ -1,6 +1,18 @@
 @extends('layout.main')
 
-@section('title', 'SEO vs PPC: Which Is Better for Your Business Growth in 2025? | Blog')
+@section('og_type', 'article')
+@section('title', 'SEO vs PPC for Small Business: Which Is Better? | Zingo Assist')
+@section('meta_description', 'SEO vs PPC compared for small businesses: cost, speed, long-term value and when to combine both to grow leads without wasting ad spend.')
+
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'article',
+        'name' => 'SEO vs PPC: Which Is Better for Your Business Growth in 2025?',
+        'description' => 'SEO vs PPC compared for small businesses: cost, speed, long-term value and when to combine both to grow leads without wasting ad spend.',
+        'breadcrumbs' => [['Blog', route('blog')]],
+        'datePublished' => '2025-12-07',
+    ])
+@endpush
 
 @section('content')
     <section class="banner-section two inner">

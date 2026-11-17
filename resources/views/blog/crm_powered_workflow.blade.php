@@ -1,6 +1,18 @@
 @extends('layout.main')
 
-@section('title', 'From Lead Generation to Sales: Zingo\'s CRM-Powered Workflow | Blog')
+@section('og_type', 'article')
+@section('title', 'From Lead to Sale: A CRM-Powered Workflow | Zingo Assist')
+@section('meta_description', 'How Zingo Assist uses a CRM-powered workflow to move leads from first contact to closed sale, with the steps you can copy in your own business.')
+
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'article',
+        'name' => 'From Lead Generation to Sales: Zingo\'s CRM-Powered Workflow',
+        'description' => 'How Zingo Assist uses a CRM-powered workflow to move leads from first contact to closed sale, with the steps you can copy in your own business.',
+        'breadcrumbs' => [['Blog', route('blog')]],
+        'datePublished' => '2025-11-09',
+    ])
+@endpush
 
 @section('content')
     <section class="banner-section two inner">

@@ -1,24 +1,36 @@
 @extends('layout.main')
 
-@section('title', 'Zingo - assist blog')
+@section('og_type', 'article')
+@section('title', 'How to Become a Virtual Assistant: Step-by-Step Guide')
+@section('meta_description', 'A practical guide to becoming a virtual assistant: choosing your services, building skills, setting up tools and finding your first clients.')
+
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'article',
+        'name' => 'How to Become a Virtual Assistant: A Step-by-Step Guide',
+        'description' => 'A practical guide to becoming a virtual assistant: choosing your services, building skills, setting up tools and finding your first clients.',
+        'breadcrumbs' => [['Blog', route('blog')]],
+        'datePublished' => '2025-12-15',
+    ])
+@endpush
 
 @section('content')
     <!--~~~~~~~~~~~~ Start Banner ~~~~~~~~-->
     <section class="banner-section two inner">
         <div class="banner-element-four two">
-            <img src="assets/images/element/element-5.png" alt="element">
+            <img src="assets/images/element/element-5.png" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-five two">
-            <img src="assets/images/element/element-7.png" alt="element">
+            <img src="assets/images/element/element-7.png" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-nineteen two">
-            <img src="assets/images/element/element-6.png" alt="element">
+            <img src="assets/images/element/element-6.png" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-twenty-two two">
-            <img src="assets/images/element/element-69.png" alt="element">
+            <img src="assets/images/element/element-69.png" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-twenty-three two">
-            <img src="assets/images/element/element-70.png" alt="element">
+            <img src="assets/images/element/element-70.png" alt="element" loading="lazy" decoding="async">
         </div>
         <div class="container">
             <div class="row justify-content-center align-items-center mb-30-none">
@@ -55,14 +67,14 @@
                         <div class="col-xl-12 mb-60">
                             <div class="blog-item details">
                                 <div class="blog-thumb">
-                                    <img src="assets/images/blog/What is Virtual Assistance.jpg" alt="blog">
+                                    <img src="assets/images/blog/What is Virtual Assistance.jpg" alt="blog" loading="lazy" decoding="async">
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-post-meta">
                                         <span class="user">By : Zingo Assist</span>
                                         <span class="category two">December 15, 2025</span>
                                     </div>
-                                    <h3 class="title">How to Become a Virtual Assistant in 2024</h3>
+                                    <h1 class="title">How to Become a Virtual Assistant: A Step-by-Step Guide</h1>
                                     <p>
 
                                   With the rapidly developing corporate outlook and the gaining of emphatic popularity in the entrepreneurial culture, the lives of business owners and entrepreneurs have become ever so busy. In this case, these executives look for qualified people with whom they can diverge their workflows. 
@@ -78,7 +90,7 @@ Another case is when a company hires multiple such virtual assistants from diffe
                                     <h5>What is Virtual Assistance?</h5>
                                     
                                     <div class="blog-thumb">
-                                    <img src="assets/images/blog/What is Virtual Assistance.jpg" alt="blog">
+                                    <img src="assets/images/blog/What is Virtual Assistance.jpg" alt="blog" loading="lazy" decoding="async">
                                 </div>
 
                                    Before becoming a virtual assistant, one must know about this business. Virtual assistance is basically a business to which other businesses, personnel, or organizations outsource their tasks. These VAs not only provide administrative services such as scheduling appointments, handling communications, or calendar management but also include specialized tasks such as lead generation, cold calling, business development, and much more. Knowing what you might be asked of as a VA becomes essential before knowing how to become a virtual assistant. 
@@ -93,7 +105,7 @@ The VA business also depends highly on the network an executive of a business or
                                    Following are listed vital considerations that one should take note of when becoming a virtual assistant.
                                    
                                    <div class="blog-thumb">
-                                    <img src="assets/images/blog/How to Become a Virtual Assistant in 2024.jpg" alt="blog">
+                                    <img src="assets/images/blog/How to Become a Virtual Assistant in 2024.jpg" alt="blog" loading="lazy" decoding="async">
                                 </div>
 
                                     
@@ -106,7 +118,7 @@ The VA business also depends highly on the network an executive of a business or
                                    <h6>Enroll in Training Courses </h6>
                                    
                                     <div class="blog-thumb">
-                                    <img src="assets/images/blog/Enroll in Training Courses.jpg" alt="blog">
+                                    <img src="assets/images/blog/Enroll in Training Courses.jpg" alt="blog" loading="lazy" decoding="async">
                                 </div>
 
                                    <p>The second step involves studying and analyzing a particular job's specific requirements. Once you have done that, you analyze where you lack. To compensate, you need to acquire the skills you might not have. 
@@ -126,7 +138,7 @@ This can be done by enrolling in online courses or taking physical classes. Luck
                                    <p>In today’s world, having an online presence is very important. 
                                    
                                     <div class="blog-thumb">
-                                    <img src="assets/images/blog/Develop an Online Presence.jpg" alt="blog">
+                                    <img src="assets/images/blog/Develop an Online Presence.jpg" alt="blog" loading="lazy" decoding="async">
                                 </div>
                                    
                                    Whether on the web or social media, you must be present to keep up. To become a virtual assistant in 2024, you must have an online presence for your business that highlights your skills, past experiences, and more. Your profile is your billboard. The profile should clearly illustrate the services you provide and appeal to the audience you are going for. </p>
@@ -173,12 +185,12 @@ This can be done by enrolling in online courses or taking physical classes. Luck
                                     <!--    <div class="row justify-content-center mb-20-none">-->
                                     <!--        <div class="col-xl-6 col-lg-6 col-md-6 mb-20">-->
                                     <!--            <div class="blog-widget-thumb">-->
-                                    <!--                <img src="assets/images/blog/blog-6.png" alt="blog">-->
+                                    <!--                <img src="assets/images/blog/blog-6.png" alt="blog" loading="lazy" decoding="async">-->
                                     <!--            </div>-->
                                     <!--        </div>-->
                                     <!--        <div class="col-xl-6 col-lg-6 col-md-6 mb-20">-->
                                     <!--            <div class="blog-widget-thumb">-->
-                                    <!--                <img src="assets/images/blog/blog-5.png" alt="blog">-->
+                                    <!--                <img src="assets/images/blog/blog-5.png" alt="blog" loading="lazy" decoding="async">-->
                                     <!--                <div class="blog-widget-video">-->
                                     <!--                    <div class="video-main">-->
                                     <!--                        <div class="promo-video">-->
@@ -238,7 +250,7 @@ This can be done by enrolling in online courses or taking physical classes. Luck
                                     <!--                        <div class="swiper-slide">-->
                                     <!--                            <div class="blog-item">-->
                                     <!--                                <div class="blog-thumb">-->
-                                    <!--                                    <img src="assets/images/blog/blog-8.png"-->
+                                    <!--                                    <img src="assets/images/blog/blog-8.png"-- loading="lazy" decoding="async">
                                     <!--                                        alt="blog">-->
                                     <!--                                </div>-->
                                     <!--                                <div class="blog-content">-->
@@ -257,7 +269,7 @@ This can be done by enrolling in online courses or taking physical classes. Luck
                                     <!--                        <div class="swiper-slide">-->
                                     <!--                            <div class="blog-item">-->
                                     <!--                                <div class="blog-thumb">-->
-                                    <!--                                    <img src="assets/images/blog/blog-11.png"-->
+                                    <!--                                    <img src="assets/images/blog/blog-11.png"-- loading="lazy" decoding="async">
                                     <!--                                        alt="blog">-->
                                     <!--                                </div>-->
                                     <!--                                <div class="blog-content">-->

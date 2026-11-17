@@ -1,8 +1,16 @@
 @extends('layout.main')
 
-@section('title', 'Terms & Conditions | Zingo Assist VA & Digital Solutions')
-@section('meta_description', 'Read the Terms & Conditions of Zingo Assist, the leading virtual assistance & digital solutions agency in the USA. Learn about our policies and user guidelines.')
+@section('title', 'Terms & Conditions | Zingo Assist')
+@section('meta_description', 'The terms and conditions that apply to using the Zingo Assist website and our virtual assistant and digital services.')
 
+@push('schema')
+    @include('partials.schema-page', [
+        'type' => 'page',
+        'name' => 'Terms & Conditions',
+        'description' => 'The terms and conditions that apply to using the Zingo Assist website and our virtual assistant and digital services.',
+        'breadcrumbs' => [],
+    ])
+@endpush
 @push('css')
     <link rel="stylesheet" href="{{ asset('assets/css/legal-pages.css') }}?v={{ time() }}">
     <style>.header-section { background: #A52673; }</style>
