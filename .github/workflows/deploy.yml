@@ -32,7 +32,8 @@ jobs:
           # Folder on the server that contains artisan, app/, public/ ... (must end with /)
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
           dry-run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
-          log-level: standard
+          log-level: verbose
+          timeout: 120000
           # Never upload secrets, server-only state, build tooling or the malware files.
           exclude: |
             **/.git*
