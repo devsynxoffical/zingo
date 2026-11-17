@@ -41,3 +41,6 @@
 </script>
 
 <script src="{{ asset('assets/custom/trail.js') }}"></script>
+
+<!-- OmniChat Universal Live Chat & AI Bot Widget -->
+<script src="https://chat.zingoassist.us/widget/chat-widget.js" data-site="zingo-assist" data-server="https://chat.zingoassist.us"></script>
