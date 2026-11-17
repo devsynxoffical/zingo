@@ -52,3 +52,4 @@ jobs:
             public/error_log
             tests/**
             README.md
+            docs/**
