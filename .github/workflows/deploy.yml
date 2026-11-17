@@ -1,0 +1,54 @@
+name: Deploy to zingoassist.us (FTP)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (list what would upload, change nothing)"
+        type: boolean
+        default: true
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload changed files over FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftps
+          # Folder on the server that contains artisan, app/, public/ ... (must end with /)
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          dry-run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+          log-level: standard
+          # Never upload secrets, server-only state, build tooling or the malware files.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            **/node_modules/**
+            vendor/**
+            storage/**
+            bootstrap/cache/**
+            .env
+            .env.*
+            composer.phar
+            *.ps1
+            shell.php
+            update_service_pages.php
+            public/SS.zip
+            public/error_log
+            tests/**
+            README.md
