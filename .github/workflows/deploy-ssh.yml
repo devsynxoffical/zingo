@@ -1,0 +1,75 @@
+name: Deploy to zingoassist.us (SSH)
+
+# Pushes the site to the server over SSH on every push to main.
+# Required repository secrets:
+#   SSH_HOST         server hostname or IP (from cPanel > SSH Access / host welcome email)
+#   SSH_USER         cPanel username (e.g. alphaahe)
+#   SSH_PRIVATE_KEY  private key whose public key is authorized in cPanel > SSH Access
+# Optional secrets:
+#   SSH_PORT         SSH port (default 22; many shared hosts use a custom port)
+#   SSH_TARGET_DIR   live app folder relative to home or absolute (default: zingoassist.us)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SSH_HOST: ${{ secrets.SSH_HOST }}
+      SSH_USER: ${{ secrets.SSH_USER }}
+      SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+      TARGET: ${{ secrets.SSH_TARGET_DIR || 'zingoassist.us' }}
+    steps:
+      - name: Check SSH secrets
+        id: cfg
+        run: |
+          if [ -z "$SSH_HOST" ] || [ -z "$SSH_USER" ]; then
+            echo "SSH secrets not set yet; skipping deploy."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout
+        if: steps.cfg.outputs.ready == 'true'
+        uses: actions/checkout@v4
+
+      - name: Set up SSH key
+        if: steps.cfg.outputs.ready == 'true'
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          ssh-keyscan -T 30 -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
+          printf 'Host deploy\n  HostName %s\n  User %s\n  Port %s\n  IdentityFile ~/.ssh/id_deploy\n  StrictHostKeyChecking accept-new\n  ConnectTimeout 60\n  ServerAliveInterval 20\n' \
+            "$SSH_HOST" "$SSH_USER" "$SSH_PORT" > ~/.ssh/config
+
+      - name: Test connection
+        if: steps.cfg.outputs.ready == 'true'
+        run: |
+          ssh deploy "echo connected as \$(whoami) on \$(hostname); test -f '$TARGET/artisan' && echo 'target ok' || { echo 'artisan not found in $TARGET'; exit 1; }"
+
+      - name: Upload site files
+        if: steps.cfg.outputs.ready == 'true'
+        run: |
+          tar czf - \
+            --exclude='./.git' --exclude='./.github' --exclude='./.env' --exclude='./.env.*' \
+            --exclude='./vendor' --exclude='./storage' --exclude='./bootstrap/cache' \
+            --exclude='./node_modules' --exclude='./tests' --exclude='./docs' \
+            --exclude='./scripts' --exclude='./.cpanel.yml' --exclude='./composer.phar' \
+            --exclude='*.ps1' --exclude='./README.md' --exclude='error_log' \
+            . | ssh deploy "tar xzf - -C '$TARGET'"
+
+      - name: Clear Laravel caches
+        if: steps.cfg.outputs.ready == 'true'
+        run: |
+          ssh deploy "cd '$TARGET' && (php artisan optimize:clear || (php artisan view:clear; php artisan route:clear; php artisan config:clear)) || true"
+          echo "Deployed $(git rev-parse --short HEAD) to $SSH_HOST:$TARGET"
