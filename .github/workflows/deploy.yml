@@ -1,18 +1,12 @@
 name: Deploy to zingoassist.us (FTP)
 
-# Deploys every push to main over FTPS with lftp (auto-reconnect + retries).
-# Only files changed since the last successful deploy are uploaded: the deployed
-# commit is stored on the server in .deploy-sha (outside public/). If it is missing,
-# all site files are uploaded. Files are never deleted by this workflow.
+# Deploys every push to main over FTPS (server: FTP_SERVER secret), TLS verified.
+# The action keeps a sync-state file on the server, so only changed files are uploaded.
+# A second attempt runs automatically if the host drops the first connection.
 on:
   push:
     branches: [main]
   workflow_dispatch:
-    inputs:
-      full:
-        description: "Upload all site files (ignore last deployed commit)"
-        type: boolean
-        default: false
 
 concurrency:
   group: deploy-production
@@ -22,79 +16,90 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 40
-    env:
-      HOST: ${{ secrets.FTP_SERVER }}
-      USER: ${{ secrets.FTP_USERNAME }}
-      PASS: ${{ secrets.FTP_PASSWORD }}
-      DIR: ${{ secrets.FTP_SERVER_DIR }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Upload changed files over FTPS (attempt 1)
+        id: attempt1
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          fetch-depth: 0
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftps
+          security: strict
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          log-level: standard
+          timeout: 120000
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            **/node_modules/**
+            vendor/**
+            storage/**
+            bootstrap/cache/**
+            .env
+            .env.*
+            composer.phar
+            *.ps1
+            shell.php
+            update_service_pages.php
+            public/SS.zip
+            public/error_log
+            tests/**
+            README.md
+            docs/**
+            public/assets/sass/**
+            public/favicon.ico
+            scripts/**
+            .cpanel.yml
+            deploy-package/**
 
-      - name: Install lftp
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+      - name: Wait before retry
+        if: steps.attempt1.outcome == 'failure'
+        run: sleep 60
 
-      - name: Configure lftp
-        run: |
-          cat > "$HOME/.lftprc" <<'RC'
-          set ftp:ssl-force true
-          set ftp:ssl-protect-data true
-          set ssl:verify-certificate true
-          set net:timeout 45
-          set net:max-retries 8
-          set net:reconnect-interval-base 10
-          set net:reconnect-interval-max 60
-          set net:persist-retries 5
-          set cmd:fail-exit true
-          RC
-          printf 'open -u "%s","%s" -p 21 "%s"\ncd "%s"\n' "$USER" "$PASS" "$HOST" "${DIR:-./}" > "$HOME/open.lftp"
-
-      - name: Work out which files to upload
-        id: files
-        run: |
-          set +e
-          for i in 1 2 3; do
-            lftp -c "source $HOME/open.lftp; cat .deploy-sha" > last-sha.txt 2>/dev/null && break
-            echo "(no previous deploy marker or connection retry $i)"; sleep 5
-          done
-          set -e
-          LAST=$(tr -dc '0-9a-f' < last-sha.txt | head -c 40)
-          if [ "${{ github.event_name == 'workflow_dispatch' && inputs.full }}" = "true" ] || ! git cat-file -e "$LAST^{commit}" 2>/dev/null; then
-            echo "Full upload (no usable previous deploy marker)"
-            git ls-files > candidates.txt
-          else
-            echo "Uploading changes since $LAST"
-            git diff --name-only --diff-filter=AMR "$LAST" HEAD > candidates.txt
-          fi
-          # Never upload secrets, tooling, docs or server-only state.
-          grep -vE '^(\.git|\.github/|\.env|vendor/|storage/|bootstrap/cache/|node_modules/|tests/|docs/|scripts/|deploy-package/|public/assets/sass/|\.cpanel\.yml$|composer\.phar$|README\.md$|.*\.ps1$|shell\.php$|update_service_pages\.php$|public/SS\.zip$|public/error_log$)' candidates.txt \
-            | while read -r f; do [ -f "$f" ] && echo "$f"; done > upload.txt || true
-          echo "count=$(wc -l < upload.txt)" >> "$GITHUB_OUTPUT"
-          echo "Files to upload: $(wc -l < upload.txt)"; head -50 upload.txt
-
-      - name: Upload over FTPS
-        if: steps.files.outputs.count != '0'
-        run: |
-          {
-            echo "source $HOME/open.lftp"
-            sed 's#/[^/]*$##' upload.txt | grep '/' | sort -u | while read -r d; do echo "mkdir -p -f \"$d\""; done
-            while read -r f; do echo "put \"$f\" -o \"$f\""; done < upload.txt
-          } > upload.lftp
-          ok=0
-          for attempt in 1 2 3; do
-            echo "== attempt $attempt"
-            if lftp -f upload.lftp; then ok=1; break; fi
-            sleep $((attempt * 30))
-          done
-          [ "$ok" = 1 ] || { echo "Upload failed after 3 attempts"; exit 1; }
-
-      - name: Record deployed commit and clear Laravel view cache
-        run: |
-          git rev-parse HEAD > .deploy-sha
-          lftp -c "source $HOME/open.lftp; put .deploy-sha -o .deploy-sha; set cmd:fail-exit false; cd storage/framework/views && mrm -f *.php" || true
-          echo "Deployed $(git rev-parse --short HEAD) ($(wc -l < upload.txt) files)"
+      - name: Upload changed files over FTPS (attempt 2)
+        if: steps.attempt1.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftps
+          security: strict
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          log-level: standard
+          timeout: 120000
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            **/node_modules/**
+            vendor/**
+            storage/**
+            bootstrap/cache/**
+            .env
+            .env.*
+            composer.phar
+            *.ps1
+            shell.php
+            update_service_pages.php
+            public/SS.zip
+            public/error_log
+            tests/**
+            README.md
+            docs/**
+            public/assets/sass/**
+            public/favicon.ico
+            scripts/**
+            .cpanel.yml
+            deploy-package/**
 
       - name: Notify search engines (IndexNow + Google sitemap)
         if: success()
