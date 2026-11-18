@@ -14,3 +14,5 @@
 error_log
 database/database.sqlite
 /deploy-package
+__pycache__/
+*.pyc
