@@ -32,3 +32,15 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
   - Verify step: no suspicious files left in the checked folders; root is clean of the known files.
 - **Owner to review:** unknown root items `.a`, `.ab`, `php_portable/`, `devsynx/`, `build/`, `__MACOSX/` and a stray file named `D:\xampp\htdocs\zingo-assist\database\database.sqlite`.
 - **Note:** some GitHub runners time out connecting to the host (likely IP filtering). Deploys retry automatically.
+
+## 2026-11-18 12:45 UTC: 12-hour run #1
+- **Deployment:** live. The last deploy (#14) succeeded and there are no pending failures.
+- **Search Console:** no new data. Results still end on Nov 15 (2–3 day lag), so performance is unchanged from the baseline: brand queries only, and the homepage is #1.5 for "zingo assist".
+- **Indexing changes:**
+  - **Tampa/St. Pete page is indexed** (crawled 11:42 UTC today; breadcrumb rich result valid).
+  - `/real-estate-isa-services` moved from unknown to "Discovered – not indexed".
+  - Other new pages are still unknown.
+  - `/faq` still shows the July noindex crawl.
+- **Evidence:** Google is discovering URLs through the sitemap but crawling few of them. The homepage is the strongest indexed page, yet its body linked only to the four older services.
+- **Change:** added a real estate intro line and in-content links on the homepage ("Our Core Services") to `/real-estate-virtual-assistant`, `/real-estate-isa-services`, `/wholesale-real-estate-cold-calling`, `/real-estate-transaction-coordinator-services` and `/real-estate-virtual-assistant-tampa-st-petersburg-fl`. Verified: 48/48 URLs pass, 0 broken links or images, desktop and mobile screenshots.
+- **Next run:** check whether the homepage is recrawled and the linked pages move to crawled or indexed. Look for the first GSC data after Nov 15.

@@ -155,6 +155,16 @@
                     <p style="max-width: 800px; margin: 20px auto 0; font-size: 1.1rem; line-height: 1.8; color: #666;">
                         Discover our comprehensive range of virtual assistant services designed to help your business grow and succeed.
                     </p>
+                    <p style="max-width: 800px; margin: 14px auto 18px; font-size: 1rem; line-height: 1.7; color: #666;">
+                        Real estate is our core specialty: dedicated assistants, inside sales agents and cold callers for agents, teams, investors and property managers.
+                    </p>
+                    <div class="sp-links">
+                        <a class="sp-link-chip" href="{{ route('service.real_estate_virtual_assistant') }}">Real Estate Virtual Assistant <i class="fas fa-arrow-right"></i></a>
+                        <a class="sp-link-chip" href="{{ route('service.real_estate_isa') }}">Real Estate ISA Services <i class="fas fa-arrow-right"></i></a>
+                        <a class="sp-link-chip" href="{{ route('service.wholesale_cold_calling') }}">Wholesale Cold Calling <i class="fas fa-arrow-right"></i></a>
+                        <a class="sp-link-chip" href="{{ route('service.real_estate_transaction_coordinator') }}">Transaction Coordinator <i class="fas fa-arrow-right"></i></a>
+                        <a class="sp-link-chip" href="{{ route('location.tampa_st_petersburg') }}">Tampa &amp; St. Petersburg <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="row g-5">

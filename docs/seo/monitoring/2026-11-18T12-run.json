@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-11-18T12:45Z",
+  "gsc_data_through": "2026-11-15 (unchanged since baseline; normal 2-3 day lag)",
+  "last_7_days": {"range": "2026-11-09..2026-11-15", "rows": [
+    {"query": "zingo assist", "page": "/", "clicks": 1, "impressions": 4, "position": 1.5},
+    {"query": "zingo assist", "page": "/personal-assistance-services", "clicks": 0, "impressions": 4, "position": 6.5},
+    {"query": "zingo assist", "page": "/about-us", "clicks": 0, "impressions": 2, "position": 2},
+    {"query": "zingo company", "page": "/", "clicks": 0, "impressions": 1, "position": 4},
+    {"query": "zingo search engine", "page": "/", "clicks": 0, "impressions": 1, "position": 7},
+    {"query": "travail", "page": "/", "clicks": 0, "impressions": 1, "position": 4}
+  ]},
+  "last_28_days_pages": "identical to baseline (data through 2026-11-15)",
+  "index_status": {
+    "/": "Submitted and indexed (last crawl 2026-11-16)",
+    "/real-estate-virtual-assistant-tampa-st-petersburg-fl": "Submitted and indexed (crawled 2026-11-18 11:42Z; breadcrumbs rich result PASS)  <- NEW",
+    "/real-estate-isa-services": "Discovered - currently not indexed  <- was unknown",
+    "/real-estate-virtual-assistant": "URL is unknown to Google",
+    "/wholesale-real-estate-cold-calling": "URL is unknown to Google",
+    "/blog/real-estate-virtual-assistant-cost": "URL is unknown to Google",
+    "/blog/unlicensed-real-estate-assistant-florida": "URL is unknown to Google",
+    "/faq": "Excluded by noindex (stale crawl 2026-07-31)",
+    "/our-services": "Discovered - currently not indexed",
+    "/real-estate-cold-calling-services": "Discovered - currently not indexed"
+  }
+}
