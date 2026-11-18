@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-11-18T08:40Z",
+  "source": "Google Search Console via OpenSEO (property https://zingoassist.us/)",
+  "last_28_days": {"range": "2026-10-19..2026-11-15", "pages": [
+    {"page": "/", "clicks": 8, "impressions": 57, "ctr": 0.1404, "position": 3.8},
+    {"page": "/about-us", "clicks": 0, "impressions": 17, "ctr": 0, "position": 3.9},
+    {"page": "/personal-assistance-services", "clicks": 0, "impressions": 33, "ctr": 0, "position": 6.9},
+    {"page": "/business-it-support-services", "clicks": 0, "impressions": 9, "ctr": 0, "position": 5.7},
+    {"page": "/graphic-design-services", "clicks": 0, "impressions": 8, "ctr": 0, "position": 6.0},
+    {"page": "/privacy-policy", "clicks": 0, "impressions": 7, "ctr": 0, "position": 5.0},
+    {"page": "/blog", "clicks": 0, "impressions": 3, "ctr": 0, "position": 7.0}
+  ], "queries": [
+    {"query": "zingo assist", "note": "branded; spread over /, /about-us, /personal-assistance-services, /business-it-support-services, /graphic-design-services"},
+    {"query": "zingo company", "impressions": 2, "position": 3.5},
+    {"query": "zingo search engine", "impressions": 1, "position": 7}
+  ], "non_brand_queries_positions_4_20": []},
+  "index_status": {
+    "/": "Submitted and indexed",
+    "/about-us": "Submitted and indexed",
+    "/blog": "Submitted and indexed",
+    "/personal-assistance-services": "Submitted and indexed",
+    "/faq": "Excluded by noindex (crawled 2026-07-31; fixed in code, not deployed)",
+    "/blog/top-5-tasks": "Duplicate, Google chose www canonical (301 added in code, not deployed)",
+    "/real-estate-virtual-assistant": "URL is unknown to Google (not deployed)"
+  },
+  "deployment": "Nov 17-18 changes NOT live; FTP from GitHub blocked by host; SSH secrets not set; manual upload package provided"
+}
