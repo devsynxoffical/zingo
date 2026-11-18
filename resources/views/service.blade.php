@@ -12,7 +12,7 @@
     ])
 @endpush
 @push('css')
-    <link rel="stylesheet" href="{{ asset('assets/css/our-services.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/our-services.css') }}?v={{ @filemtime(public_path('assets/css/our-services.css')) }}">
     <style>.header-section { background: #A52673; }</style>
 @endpush
 
@@ -405,16 +405,16 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
-                    <a href="{{ route('location.tampa_st_petersburg') }}" class="os-service-card">
+                    <a href="{{ route('service.real_estate_isa') }}" class="os-service-card">
                         <div class="os-card-accent"></div>
                         <div class="os-card-header">
                             <div class="os-card-icon">
-                                <img src="{{ asset('assets/images/icon2/crm_managemnt.png') }}" alt="Tampa &amp; St. Petersburg Real Estate VAs" loading="lazy" decoding="async">
+                                <img src="{{ asset('assets/images/icon2/lead_generation.png') }}" alt="Real Estate ISA Services" loading="lazy" decoding="async">
                             </div>
                             <span class="os-card-number">18</span>
                         </div>
-                        <h3 class="os-card-title">Tampa &amp; St. Petersburg Real Estate VAs</h3>
-                        <p class="os-card-text">Our St. Petersburg-based team supports Tampa Bay agents, investors and property managers with Eastern Time assistants who understand Florida transactions and calling rules.</p>
+                        <h3 class="os-card-title">Real Estate ISA Services</h3>
+                        <p class="os-card-text">Outsourced inside sales agents who call your new leads fast, qualify buyers and sellers, nurture your database and book appointments directly into your agents&#39; calendars.</p>
                         <div class="os-card-footer">
                             <span class="os-card-link">Learn More</span>
                             <span class="os-card-arrow"><i class="fas fa-arrow-right"></i></span>
@@ -869,7 +869,7 @@
 
 </div><!-- /.os-page -->
 
-<a href="#" class="scrollToTop"><i class="las la-angle-double-up"></i></a>
+<a href="#" class="scrollToTop" aria-label="Scroll to top"><i class="las la-angle-double-up"></i></a>
 
 @include('partials.trail')
 

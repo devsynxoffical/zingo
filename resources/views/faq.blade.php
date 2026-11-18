@@ -249,19 +249,19 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <section class="banner-section two inner">
         <div class="banner-element-four two">
-            <img src="assets/images/element/element-5.png" alt="element" loading="lazy" decoding="async">
+            <img src="{{ asset('assets/images/element/element-5.png') }}" alt="" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-five two">
-            <img src="assets/images/element/element-7.png" alt="element" loading="lazy" decoding="async">
+            <img src="{{ asset('assets/images/element/element-7.png') }}" alt="" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-nineteen two">
-            <img src="assets/images/element/element-6.png" alt="element" loading="lazy" decoding="async">
+            <img src="{{ asset('assets/images/element/element-6.png') }}" alt="" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-twenty-two two">
-            <img src="assets/images/element/element-69.png" alt="element" loading="lazy" decoding="async">
+            <img src="{{ asset('assets/images/element/element-69.png') }}" alt="" loading="lazy" decoding="async">
         </div>
         <div class="banner-element-twenty-three two">
-            <img src="assets/images/element/element-70.png" alt="element" loading="lazy" decoding="async">
+            <img src="{{ asset('assets/images/element/element-70.png') }}" alt="" loading="lazy" decoding="async">
         </div>
         <div class="container">
             <div class="row justify-content-center align-items-center mb-30-none">
@@ -291,7 +291,7 @@
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Scroll-To-Top
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-    <a href="#" class="scrollToTop"><i class="las la-angle-double-up"></i></a>
+    <a href="#" class="scrollToTop" aria-label="Scroll to top"><i class="las la-angle-double-up"></i></a>
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     End Scroll-To-Top
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->

@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('og_type', 'article')
+@section('og_image', asset('assets/images/element/element-5.png'))
 @section('title', 'Why Your Business Needs a Virtual Assistant | Zingo Assist')
 @section('meta_description', 'Why growing businesses hire virtual assistants: lower costs than in-house staff, flexible hours, specialized skills and more time for revenue-generating work.')
 
@@ -57,7 +58,7 @@
     <!--~~~~~~~~ End Banner~~~~~~~~~-->
 
     <!--~~~~~~~ Start Scroll-To-Top~~~~~~-->
-    <a href="#" class="scrollToTop"><i class="las la-angle-double-up"></i></a>
+    <a href="#" class="scrollToTop" aria-label="Scroll to top"><i class="las la-angle-double-up"></i></a>
     <!--~~~~~ End Scroll-To-Top~~~~~~-->
 
     <section class="blog-section ptb-120">
@@ -72,7 +73,7 @@
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-post-meta">
-                                        <span class="user">By : Zingo Assist</span>
+                                        <span class="user">By : <a href="{{ route('editorial') }}">Zingo Assist Editorial Team</a></span>
                                         <span class="category two">October 31, 2025</span>
                                     </div>
                                     <h1 class="title">Why Your Business Needs a Virtual Assistant</h1>
@@ -185,4 +186,5 @@
         </div>
     </section>
 
+    @include('partials.blog-footer')
 @endsection

@@ -38,16 +38,19 @@
         </div>
     </section>
 
-    <a href="#" class="scrollToTop"><i class="las la-angle-double-up"></i></a>
+    <a href="#" class="scrollToTop" aria-label="Scroll to top"><i class="las la-angle-double-up"></i></a>
 
     <section class="blog-section ptb-120">
         <div class="container">
             <div class="row justify-content-center mb-60-none">
                 <div class="col-xl-8 col-lg-8 mb-60">
                     <div class="blog-item details">
+                        <div class="blog-thumb">
+                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="Digital Marketing on a Budget: Zingo's 3-Step Guide" fetchpriority="high" decoding="async">
+                        </div>
                         <div class="blog-content">
                             <div class="blog-post-meta">
-                                <span class="user">By : Zingo Assist</span>
+                                <span class="user">By : <a href="{{ route('editorial') }}">Zingo Assist Editorial Team</a></span>
                                 <span class="category two">November 02, 2025</span>
                             </div>
                             <h1 class="title">Digital Marketing on a Budget: Zingo's 3-Step Guide</h1>
@@ -191,4 +194,5 @@
         </div>
     </section>
 
+    @include('partials.blog-footer')
 @endsection

@@ -10,12 +10,10 @@
 @extends('layout.main')
 
 @section('og_type', 'article')
+@section('og_image', asset('assets/images/blog/Research.jpg'))
 @section('title', 'Transaction Coordinator vs Virtual Assistant: Which to Hire?')
 @section('meta_description', 'Transaction coordinator vs virtual assistant in real estate: duties, licensing, pricing and when to hire each, with a side-by-side comparison table.')
 
-@push('css')
-<link rel="stylesheet" href="{{ asset('assets/css/seo-pages.css') }}">
-@endpush
 
 @push('schema')
     @include('partials.schema-page', [
@@ -58,9 +56,12 @@
             <div class="row justify-content-center mb-60-none">
                 <div class="col-xl-8 col-lg-10 mb-60">
                     <div class="blog-item details">
+                        <div class="blog-thumb">
+                            <img src="{{ asset('assets/images/blog/Research.jpg') }}" alt="Transaction Coordinator vs Virtual Assistant: Which Do You Need?" fetchpriority="high" decoding="async">
+                        </div>
                         <div class="blog-content">
                             <div class="blog-post-meta">
-                                <span class="user">By : Zingo Assist Editorial Team</span>
+                                <span class="user">By : <a href="{{ route('editorial') }}">Zingo Assist Editorial Team</a></span>
                                 <span class="category two">November 17, 2026</span>
                             </div>
                             <h1 class="title">Transaction Coordinator vs Virtual Assistant: Which Do You Need?</h1>
@@ -111,7 +112,7 @@
                             <p>Learn more about our <a href="{{ route('service.real_estate_virtual_assistant') }}">real estate virtual assistant services</a>.</p>
 
                             <h2>Licensing: what each role can legally do</h2>
-                            <p>Both roles support the licensed agent; neither should negotiate, give opinions on value or interpret contract terms for clients. Whether a TC needs a license depends on your state and the exact tasks, and many brokerages set their own policy. Before you hire, confirm with your broker which activities an unlicensed assistant or TC may perform.</p>
+                            <p>Both roles support the licensed agent; neither should negotiate, give opinions on value or interpret contract terms for clients. Whether a TC needs a license depends on your state and the exact tasks, and many brokerages set their own policy. Before you hire, confirm with your broker which activities an unlicensed assistant or TC may perform. Florida agents can check the FREC list in our guide to <a href="{{ route('blog.unlicensed_assistant_florida') }}">what an unlicensed real estate assistant can do in Florida</a>.</p>
 
                             <h2>Cost comparison</h2>
                             <p>Because TCs are often paid per closed file, their cost rises and falls with your volume, which suits agents with uneven closings. A VA is a fixed weekly or monthly cost that covers many kinds of work. At around eight or more closings a month, many teams find a dedicated assistant who handles transaction coordination alongside other tasks costs less than paying per file. For detailed numbers, read our <a href="{{ route('blog.re_va_cost') }}">real estate virtual assistant cost guide</a>.</p>
@@ -134,6 +135,13 @@
                                 <p>{{ $f[1] }}</p>
                             @endforeach
 
+                            <h2>Sources</h2>
+                            <ul class="guide-list">
+                                <li><a href="https://floridarealtors.org/law-ethics/library/unlicensed-assistants" target="_blank" rel="noopener">Florida Realtors: Unlicensed assistants</a></li>
+                                <li><a href="https://www.listedkit.com/transaction-coordinator-cost-calculator" target="_blank" rel="noopener">ListedKit: Transaction coordinator cost calculator</a></li>
+                                <li><a href="https://www.paperlesspipeline.com/blog/how-to-start-a-real-estate-transaction-coordinator-business" target="_blank" rel="noopener">Paperless Pipeline: How to start a transaction coordinator business</a></li>
+                            </ul>
+
                             <p class="guide-note">Pricing ranges are typical market benchmarks for budgeting only. Licensing rules vary by state; confirm with your broker. Last reviewed November 17, 2026.</p>
                         </div>
                     </div>
@@ -141,4 +149,5 @@
             </div>
         </div>
     </section>
+    @include('partials.blog-footer')
 @endsection

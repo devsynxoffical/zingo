@@ -141,7 +141,7 @@
 
 
     <!--~~~~~~~~ Start Scroll-To-Top ~~~~~~~~~-->
-    <a href="#" class="scrollToTop"><i class="las la-angle-double-up"></i></a>
+    <a href="#" class="scrollToTop" aria-label="Scroll to top"><i class="las la-angle-double-up"></i></a>
     <!--~~~~~ End Scroll-To-Top ~~~~~~~~-->
 
 
@@ -174,7 +174,7 @@
                             <p class="text-secondary mb-4" style="line-height: 1.8;">
                                 By hiring a virtual personal assistant through Zingo Assist, businesses can focus on core strategic goals while we manage routine administrative tasks. Our virtual assistants are trained to work across multiple tools, software, and platforms, ensuring seamless integration with your existing workflows.
                             </p>
-                            <a href="{{ route('service.virtual_business_assistance') }}" class="btn--base">Learn More</a>
+                            <a href="{{ route('service.virtual_business_assistance') }}" class="btn--base">Learn More<span class="za-sr-only"> about virtual assistant services</span></a>
                         </div>
                     </div>
                 </div>
@@ -195,7 +195,7 @@
                             <p class="text-secondary mb-4" style="line-height: 1.8;">
                                 Our team uses a results-driven approach, combining research, personalized communication, and follow-ups to convert potential leads into loyal customers. By leveraging our cold calling services, businesses can significantly improve sales performance while minimizing time and resource expenditure.
                             </p>
-                            <a href="{{ route('service.cold_calling') }}" class="btn--base">Learn More</a>
+                            <a href="{{ route('service.cold_calling') }}" class="btn--base">Learn More<span class="za-sr-only"> about cold calling services</span></a>
                         </div>
                     </div>
                 </div>
@@ -216,7 +216,7 @@
                             <p class="text-secondary mb-4" style="line-height: 1.8;">
                                 We ensure that every solution we develop is tailored to your business processes, helping you automate tasks, improve operational workflow, and provide a seamless experience for clients. Partnering with our software development team means gaining access to expert developers committed to delivering high-quality, innovative technology solutions.
                             </p>
-                            <a href="{{ route('service.web_development') }}" class="btn--base">Learn More</a>
+                            <a href="{{ route('service.web_development') }}" class="btn--base">Learn More<span class="za-sr-only"> about software and web development</span></a>
                         </div>
                     </div>
                 </div>
@@ -237,7 +237,7 @@
                             <p class="text-secondary mb-4" style="line-height: 1.8;">
                                 We help businesses identify the most promising opportunities and nurture potential clients into paying customers. By outsourcing lead generation to our experienced team, companies can focus on closing deals while we handle the research and initial engagement.
                             </p>
-                            <a href="{{ route('service.lead_generation') }}" class="btn--base">Learn More</a>
+                            <a href="{{ route('service.lead_generation') }}" class="btn--base">Learn More<span class="za-sr-only"> about lead generation services</span></a>
                         </div>
                     </div>
                 </div>

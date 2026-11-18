@@ -5,7 +5,7 @@
                 <div class="header-menu-content">
                     <nav class="navbar navbar-expand-xl p-0">
                         <a class="site-logo site-title" href="{{ route('home') }}">
-                            <img src="{{ asset('assets/images/zingo assist logo png.png') }}" alt="Zingo Assist Logo">
+                            <img src="{{ asset('assets/images/zingo-assist-logo-sm.png') }}" alt="Zingo Assist" width="336" height="121" style="height:auto">
                         </a>
 
                         <button class="navbar-toggler custom-navbar-toggler" type="button" aria-label="Toggle navigation">
@@ -29,6 +29,7 @@
                                     <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                                         <li><a class="dropdown-item" href="{{ route('service') }}">All Services</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.real_estate_virtual_assistant') }}">Real Estate Virtual Assistant</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('service.real_estate_isa') }}">Real Estate ISA Services</a></li>
                                         <li><hr class="dropdown-divider"></li>
                                         <li><a class="dropdown-item" href="{{ route('service.it_support') }}">IT Support</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.cold_calling') }}">Real Estate Cold Calling</a></li>
@@ -57,7 +58,7 @@
                             </div>
                             <div class="header-action-area">
                                 <div class="header-action">
-                                    <a class="btn--base" onclick="showPopup()">Book Free consultation</a>
+                                    <a class="btn--base" href="{{ route('contact') }}" onclick="showPopup(); return false;">Book Free consultation</a>
                                 </div>
                             </div>
                         </div>

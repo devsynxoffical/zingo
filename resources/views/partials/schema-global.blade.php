@@ -1,5 +1,5 @@
 @php
-    $siteUrl = rtrim(url('/'), '/');
+    $siteUrl = rtrim(config('seo.base_url', url('/')), '/');
     $globalSchema = [
         '@context' => 'https://schema.org',
         '@graph' => [
@@ -19,6 +19,7 @@
                 'description' => 'Zingo Assist is a US virtual assistant agency providing real estate virtual assistants, cold calling, transaction coordination, lead generation, bookkeeping, CRM management and digital marketing services.',
                 'telephone' => '+1-424-542-7170',
                 'priceRange' => '$$',
+                'publishingPrinciples' => $siteUrl . '/editorial-policy',
                 'address' => [
                     '@type' => 'PostalAddress',
                     'streetAddress' => '7901 4th St N Ste 23684',

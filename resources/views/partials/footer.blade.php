@@ -33,7 +33,7 @@
                     <div class="footer-column">
                         <div class="company-info">
                             <div class="footer-logo">
-                                <img src="{{ asset('assets/images/zingo assist logo png.png') }}" alt="Zingo Assist" class="logo-img" loading="lazy" decoding="async">
+                                <img src="{{ asset('assets/images/zingo-assist-logo-sm.png') }}" alt="Zingo Assist" class="logo-img" loading="lazy" decoding="async">
                             </div>
                             <p class="footer-description">
                                 Your trusted partner for virtual assistance and digital solutions. We help businesses grow with innovative services.
@@ -79,6 +79,7 @@
                             <li><a href="{{ route('contact') }}"><i class="fas fa-arrow-right"></i>Contact</a></li>
                             <li><a href="{{ route('terms') }}"><i class="fas fa-arrow-right"></i>Terms of service</a></li>
                             <li><a href="{{ route('privacy') }}"><i class="fas fa-arrow-right"></i>Privacy policy</a></li>
+                            <li><a href="{{ route('editorial') }}"><i class="fas fa-arrow-right"></i>Editorial policy</a></li>
                         </ul>
                     </div>
                 </div>

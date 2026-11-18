@@ -149,11 +149,6 @@ class WebController extends Controller
         return view('blog.free_va_trial');
     }
     
-    public function top_5_tasks()
-    {
-        return view('blog.top_5_tasks');
-    }
-    
     public function web_dev_trends_2025()
     {
         return view('blog.web_dev_trends_2025');
@@ -224,6 +219,16 @@ class WebController extends Controller
         return view('services.wholesale_cold_calling');
     }
 
+    public function real_estate_isa()
+    {
+        return view('services.real_estate_isa');
+    }
+
+    public function unlicensed_assistant_florida()
+    {
+        return view('blog.unlicensed_assistant_florida');
+    }
+
     public function re_va_cost()
     {
         return view('blog.re_va_cost');
@@ -250,6 +255,7 @@ class WebController extends Controller
             'home' => ['home', '1.0', 'weekly'],
             'service.real_estate_virtual_assistant' => ['services.real_estate_virtual_assistant', '0.9', 'monthly'],
             'service' => ['service', '0.9', 'monthly'],
+            'service.real_estate_isa' => ['services.real_estate_isa', '0.9', 'monthly'],
             'service.cold_calling' => ['services.cold_calling', '0.8', 'monthly'],
             'service.wholesale_cold_calling' => ['services.wholesale_cold_calling', '0.8', 'monthly'],
             'service.real_estate_transaction_coordinator' => ['services.real_estate_transaction_coordinator', '0.8', 'monthly'],
@@ -270,15 +276,14 @@ class WebController extends Controller
             'about' => ['about', '0.6', 'monthly'],
             'contact' => ['contact', '0.6', 'yearly'],
             'faq' => ['faq', '0.6', 'monthly'],
-            'service.testimonials' => ['services.testimonial', '0.4', 'monthly'],
             'blog' => ['blog', '0.7', 'weekly'],
             'blog.re_va_cost' => ['blog.re_va_cost', '0.7', 'monthly'],
             'blog.tc_vs_va' => ['blog.tc_vs_va', '0.7', 'monthly'],
             'blog.florida_cold_calling_laws' => ['blog.florida_cold_calling_laws', '0.7', 'monthly'],
+            'blog.unlicensed_assistant_florida' => ['blog.unlicensed_assistant_florida', '0.7', 'monthly'],
             'blog.ten_signs_need_virtual_assistant' => ['blog.ten_signs_need_virtual_assistant', '0.6', 'monthly'],
             'blog.benefits_outsourcing_business_tasks' => ['blog.benefits_outsourcing_business_tasks', '0.6', 'monthly'],
             'blog.va_vs_full_time' => ['blog.va_vs_full_time', '0.6', 'monthly'],
-            'blog.top_5_tasks' => ['blog.top_5_tasks', '0.6', 'monthly'],
             'blog3' => ['blog3', '0.6', 'monthly'],
             'blog1' => ['blog1', '0.6', 'monthly'],
             'blog.free_va_trial' => ['blog.free_va_trial', '0.6', 'monthly'],
@@ -292,9 +297,12 @@ class WebController extends Controller
             'blog.web_dev_trends_2025' => ['blog.web_dev_trends_2025', '0.6', 'monthly'],
             'blog.website_redesign_checklist' => ['blog.website_redesign_checklist', '0.6', 'monthly'],
             'blog4' => ['blog4', '0.5', 'monthly'],
+            'editorial' => ['static.editorial', '0.3', 'yearly'],
             'privacy' => ['static.privacy', '0.2', 'yearly'],
             'terms' => ['static.terms', '0.2', 'yearly'],
         ];
+
+        $base = rtrim(config('seo.base_url', url('/')), '/');
 
         $xml = '<?xml version="1.0" encoding="UTF-8"?>';
         $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
@@ -306,7 +314,8 @@ class WebController extends Controller
             $file = resource_path('views/' . str_replace('.', '/', $view) . '.blade.php');
             $lastmod = is_file($file) ? date('Y-m-d', filemtime($file)) : date('Y-m-d');
             $xml .= '<url>';
-            $xml .= '<loc>' . route($route) . '</loc>';
+            $path = parse_url(route($route), PHP_URL_PATH) ?: '/';
+            $xml .= '<loc>' . $base . $path . '</loc>';
             $xml .= '<lastmod>' . $lastmod . '</lastmod>';
             $xml .= '<changefreq>' . $freq . '</changefreq>';
             $xml .= '<priority>' . $priority . '</priority>';

@@ -74,7 +74,7 @@
                 <p class="sp-about-text">
                     Lead generation services are the backbone of modern marketing. They help businesses identify potential customers, engage them effectively, and guide them through the buying journey. At ZingoAssist, we specialize in creating targeted campaigns that attract prospects most likely to convert into sales.
                 </p>
-                <p class="sp-about-text zingo-related"><strong>Real estate investor? Our <a href="{{ route('service.wholesale_cold_calling') }}">wholesale cold calling team</a> finds and qualifies motivated sellers from your lists.</strong></p>
+                <p class="sp-about-text zingo-related"><strong>Real estate team with more leads than time? Our <a href="{{ route('service.real_estate_isa') }}">real estate ISAs</a> call and qualify them. Real estate investor? Our <a href="{{ route('service.wholesale_cold_calling') }}">wholesale cold calling team</a> finds and qualifies motivated sellers from your lists.</strong></p>
                 <p class="sp-about-text">
                     Our B2B lead generation services focus on building pipelines for businesses that sell to other companies, while our lead gen services also cater to B2C businesses seeking individual clients. Using a combination of inbound marketing, content creation, paid campaigns, and CRM automation, we ensure every lead is relevant and highly qualified.
                 </p>

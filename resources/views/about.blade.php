@@ -12,7 +12,7 @@
     ])
 @endpush
 @push('css')
-<link rel="stylesheet" href="{{ asset('assets/css/about-page.css') }}?v={{ time() }}">
+<link rel="stylesheet" href="{{ asset('assets/css/about-page.css') }}?v={{ @filemtime(public_path('assets/css/about-page.css')) }}">
 @endpush
 
 @section('content')

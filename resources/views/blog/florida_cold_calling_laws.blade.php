@@ -11,12 +11,10 @@
 @extends('layout.main')
 
 @section('og_type', 'article')
+@section('og_image', asset('assets/images/blog/Managing Customer Relations.jpg'))
 @section('title', 'Florida Cold Calling Laws for Real Estate: TCPA, FTSA & DNC')
 @section('meta_description', 'Florida real estate cold calling rules explained: 8 a.m.–8 p.m. calling hours, 3-call limit, Florida and national Do Not Call lists, auto-dialers and penalties.')
 
-@push('css')
-<link rel="stylesheet" href="{{ asset('assets/css/seo-pages.css') }}">
-@endpush
 
 @push('schema')
     @include('partials.schema-page', [
@@ -59,9 +57,12 @@
             <div class="row justify-content-center mb-60-none">
                 <div class="col-xl-8 col-lg-10 mb-60">
                     <div class="blog-item details">
+                        <div class="blog-thumb">
+                            <img src="{{ asset('assets/images/blog/Managing Customer Relations.jpg') }}" alt="Florida Real Estate Cold Calling Laws: TCPA, FTSA & Do Not Call Guide" fetchpriority="high" decoding="async">
+                        </div>
                         <div class="blog-content">
                             <div class="blog-post-meta">
-                                <span class="user">By : Zingo Assist Editorial Team</span>
+                                <span class="user">By : <a href="{{ route('editorial') }}">Zingo Assist Editorial Team</a></span>
                                 <span class="category two">November 17, 2026</span>
                             </div>
                             <h1 class="title">Florida Real Estate Cold Calling Laws: TCPA, FTSA &amp; Do Not Call Guide</h1>
@@ -135,13 +136,26 @@
                                 <a class="btn-guide" href="{{ route('service.cold_calling') }}">Real estate cold calling services</a>
                             </div>
 
-                            <p>Investors and wholesalers can also see our <a href="{{ route('service.wholesale_cold_calling') }}">wholesale real estate cold calling services</a>, and Tampa Bay agents can learn about our <a href="{{ route('location.tampa_st_petersburg') }}">local St. Petersburg team</a>.</p>
+                            <p>Using an assistant to make calls? Read <a href="{{ route('blog.unlicensed_assistant_florida') }}">what an unlicensed real estate assistant can do in Florida</a>, or see our <a href="{{ route('service.real_estate_isa') }}">real estate ISA services</a>. Investors and wholesalers can also see our <a href="{{ route('service.wholesale_cold_calling') }}">wholesale real estate cold calling services</a>, and Tampa Bay agents can learn about our <a href="{{ route('location.tampa_st_petersburg') }}">local St. Petersburg team</a>.</p>
 
                             <h2>Frequently asked questions</h2>
                             @foreach ($faqs as $f)
                                 <h3>{{ $f[0] }}</h3>
                                 <p>{{ $f[1] }}</p>
                             @endforeach
+
+                            <h2>Sources</h2>
+                            <ul class="guide-list">
+                                <li><a href="https://www.fcc.gov/general/telemarketing-and-robocalls" target="_blank" rel="noopener">FCC: Telemarketing and robocalls (TCPA consumer guide)</a></li>
+                                <li><a href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-B/part-64/subpart-L/section-64.1200" target="_blank" rel="noopener">47 C.F.R. § 64.1200: Delivery restrictions (eCFR)</a></li>
+                                <li><a href="https://docs.fcc.gov/public/attachments/FCC-24-17A1.pdf" target="_blank" rel="noopener">FCC Declaratory Ruling FCC 24-17: AI-generated voices under the TCPA</a></li>
+                                <li><a href="https://www.ftc.gov/legal-library/browse/rules/telemarketing-sales-rule" target="_blank" rel="noopener">FTC: Telemarketing Sales Rule</a></li>
+                                <li><a href="https://telemarketing.donotcall.gov/" target="_blank" rel="noopener">National Do Not Call Registry: access for telemarketers</a></li>
+                                <li><a href="https://www.flsenate.gov/Laws/Statutes/2024/501.059" target="_blank" rel="noopener">Florida Statutes § 501.059: Telephone solicitation</a></li>
+                                <li><a href="https://www.flsenate.gov/Laws/Statutes/2024/501.616" target="_blank" rel="noopener">Florida Statutes § 501.616: Unlawful acts and practices (telemarketing)</a></li>
+                                <li><a href="https://www.flsenate.gov/Committees/billsummaries/2023/html/761" target="_blank" rel="noopener">Florida Senate: HB 761 (2023) bill summary</a></li>
+                                <li><a href="https://www.floridarealtors.org/law-ethics/library/do-not-call" target="_blank" rel="noopener">Florida Realtors: Do Not Call rules</a></li>
+                            </ul>
 
                             <p class="guide-note">This guide is for general information only and is not legal advice. It reflects our understanding of federal and Florida rules as of November 17, 2026. Statutes, regulations and court decisions change frequently; verify current requirements with the FCC, FTC, Florida Statutes and a qualified attorney.</p>
                         </div>
@@ -150,4 +164,5 @@
             </div>
         </div>
     </section>
+    @include('partials.blog-footer')
 @endsection

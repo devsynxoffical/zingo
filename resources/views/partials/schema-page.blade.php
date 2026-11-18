@@ -12,12 +12,13 @@
     ])
 --}}
 @php
-    $siteUrl = rtrim(url('/'), '/');
-    $pageUrl = url()->current();
+    $siteUrl = rtrim(config('seo.base_url', url('/')), '/');
+    $pageUrl = $siteUrl . (request()->path() === '/' ? '/' : '/' . request()->path());
+    $canon = fn ($u) => is_string($u) ? preg_replace('#^https?://[^/]+#', $siteUrl, $u) : $u;
     $graph = [];
 
     $crumbs = [['Home', $siteUrl . '/']];
-    foreach (($breadcrumbs ?? []) as $c) { $crumbs[] = $c; }
+    foreach (($breadcrumbs ?? []) as $c) { $crumbs[] = [$c[0], $canon($c[1])]; }
     $crumbs[] = [$name, $pageUrl];
     $items = [];
     foreach ($crumbs as $i => $c) {
@@ -48,7 +49,7 @@
             'image' => $image ?? asset('assets/images/zingo-assist-og.jpg'),
             'datePublished' => $datePublished ?? null,
             'dateModified' => $dateModified ?? ($datePublished ?? null),
-            'author' => ['@type' => 'Organization', 'name' => 'Zingo Assist Editorial Team', 'url' => $siteUrl . '/about-us'],
+            'author' => ['@type' => 'Organization', 'name' => 'Zingo Assist Editorial Team', 'url' => $siteUrl . '/editorial-policy', 'parentOrganization' => ['@id' => $siteUrl . '/#organization']],
             'publisher' => ['@id' => $siteUrl . '/#organization'],
             'inLanguage' => 'en-US',
         ];

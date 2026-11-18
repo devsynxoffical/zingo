@@ -102,7 +102,6 @@
 
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/seo-pages.css') }}">
 @endpush
 
 @push('schema')

@@ -56,7 +56,7 @@
 <li><strong>Insurance and flood questions:</strong> collecting flood-zone information, elevation certificates and insurance quotes buyers need before they commit.</li>
 <li><strong>Seasonal demand:</strong> scheduling and follow-up that keeps up with the winter season and out-of-state buyers.</li>
 </ul>
-<p>Your assistant supports you; licensed activities such as negotiating or advising on contracts stay with you and your broker.</p>',
+<p>Your assistant supports you; licensed activities such as negotiating or advising on contracts stay with you and your broker. See <a href="' . route('blog.unlicensed_assistant_florida') . '">what an unlicensed real estate assistant can do in Florida</a>.</p>',
         ],
         'faqs' => [
             ['Do you have real estate virtual assistants in Tampa?', 'Yes. Zingo Assist is based in St. Petersburg and provides remote real estate virtual assistants to agents, teams, investors and property managers throughout Tampa, St. Petersburg, Clearwater and the rest of Tampa Bay.'],
@@ -70,6 +70,7 @@
             'title' => 'Popular Services for Tampa Bay Clients',
             'items' => [
                 ['Real Estate Virtual Assistant', route('service.real_estate_virtual_assistant')],
+                ['Real Estate ISA Services', route('service.real_estate_isa')],
                 ['Real Estate Cold Calling', route('service.cold_calling')],
                 ['Wholesale Cold Calling', route('service.wholesale_cold_calling')],
                 ['Transaction Coordinator', route('service.real_estate_transaction_coordinator')],
@@ -91,7 +92,6 @@
 
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/seo-pages.css') }}">
 @endpush
 
 @push('schema')

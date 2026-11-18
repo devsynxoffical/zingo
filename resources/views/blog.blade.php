@@ -12,7 +12,7 @@
     ])
 @endpush
 @push('css')
-    <link rel="stylesheet" href="{{ asset('assets/css/blog-page.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/blog-page.css') }}?v={{ @filemtime(public_path('assets/css/blog-page.css')) }}">
     <style>.header-section { background: #A52673; }</style>
 @endpush
 
@@ -192,19 +192,19 @@
                     </a>
                 </div>
 
-                <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <a href="{{ route('blog4') }}" class="bp-post-card">
+                <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('blog.unlicensed_assistant_florida') }}" class="bp-post-card">
                         <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/What is Virtual Assistance.jpg') }}" alt="How to Become a Virtual Assistant in 2024" loading="lazy">
-                            <div class="bp-post-category">Career</div>
+                            <img src="{{ asset('assets/images/blog/Handling Administrative Tasks.jpg') }}" alt="What Can an Unlicensed Real Estate Assistant Do in Florida?" loading="lazy">
+                            <div class="bp-post-category">Real Estate</div>
                         </div>
                         <div class="bp-post-body">
                             <div class="bp-post-meta-sm">
-                                <span><i class="fas fa-calendar"></i> Dec 15, 2025</span>
-                                <span><i class="fas fa-clock"></i> 8 min read</span>
+                                <span><i class="fas fa-calendar"></i> Nov 18, 2026</span>
+                                <span><i class="fas fa-clock"></i> 7 min read</span>
                             </div>
-                            <h3 class="bp-post-title">How to Become a Virtual Assistant in 2024</h3>
-                            <p class="bp-post-excerpt">A complete guide to starting your career as a virtual assistant — skills, tools, and strategies.</p>
+                            <h3 class="bp-post-title">What Can an Unlicensed Real Estate Assistant Do in Florida?</h3>
+                            <p class="bp-post-excerpt">The FREC list of tasks unlicensed assistants may and may not perform, including showings, open houses, calls and pay.</p>
                             <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </a>
@@ -241,24 +241,6 @@
                             </div>
                             <h3 class="bp-post-title">Free 2-Day VA Trial: What to Expect from Zingo Assist</h3>
                             <p class="bp-post-excerpt">Try our virtual assistant services risk-free and see the results for yourself before committing.</p>
-                            <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <a href="{{ route('blog.top_5_tasks') }}" class="bp-post-card">
-                        <div class="bp-post-img">
-                            <img src="{{ asset('assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg') }}" alt="Top 5 Tasks You Should Outsource to a Virtual Assistant" loading="lazy">
-                            <div class="bp-post-category">Outsourcing</div>
-                        </div>
-                        <div class="bp-post-body">
-                            <div class="bp-post-meta-sm">
-                                <span><i class="fas fa-calendar"></i> Oct 19, 2025</span>
-                                <span><i class="fas fa-clock"></i> 5 min read</span>
-                            </div>
-                            <h3 class="bp-post-title">Top 5 Tasks You Should Outsource to a Virtual Assistant</h3>
-                            <p class="bp-post-excerpt">Maximize efficiency by offloading these critical tasks to professional virtual assistants.</p>
                             <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
                         </div>
                     </a>
@@ -448,7 +430,7 @@
 
 </div><!-- /.bp-page -->
 
-<a href="#" class="scrollToTop"><i class="las la-angle-double-up"></i></a>
+<a href="#" class="scrollToTop" aria-label="Scroll to top"><i class="las la-angle-double-up"></i></a>
 
 @include('partials.trail')
 

@@ -1,9 +1,13 @@
 @php
     $seoTitle = trim($__env->yieldContent('title')) ?: 'Zingo Assist | Virtual Assistant Agency in the USA';
     $seoDescription = trim($__env->yieldContent('meta_description')) ?: 'Zingo Assist provides US businesses and real estate professionals with skilled virtual assistants, cold calling, lead generation, bookkeeping and digital marketing support.';
-    $seoCanonical = trim($__env->yieldContent('canonical')) ?: url()->current();
-    $seoImage = trim($__env->yieldContent('og_image')) ?: asset('assets/images/zingo-assist-og.jpg');
-    $seoType = trim($__env->yieldContent('og_type')) ?: 'website';
+    $seoBase = rtrim(config('seo.base_url', url('/')), '/');
+    $seoPath = request()->path();
+    $seoCanonical = trim($__env->yieldContent('canonical')) ?: $seoBase . ($seoPath === '/' ? '/' : '/' . $seoPath);
+    $seoPost = collect(config('blog.posts', []))->firstWhere('route', \Illuminate\Support\Facades\Route::currentRouteName());
+    $seoImage = trim($__env->yieldContent('og_image')) ?: ($seoPost ? asset($seoPost['image']) : asset('assets/images/zingo-assist-og.jpg'));
+    $seoType = $seoPost ? 'article' : null;
+    $seoType = trim($__env->yieldContent('og_type')) ?: ($seoType ?? 'website');
     $assetVersion = function ($path) {
         $file = public_path($path);
         return asset($path) . (is_file($file) ? '?v=' . filemtime($file) : '');
@@ -38,6 +42,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="{{ asset('assets/images/zingo-assist-logo-sm.png') }}">
     <link
         href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -52,19 +57,19 @@
     <!-- swipper css link -->
     <link rel="stylesheet" href="{{ asset('assets/css/swiper.min.css') }}">
     <!-- lightcase css links -->
-    <link rel="stylesheet" href="{{ asset('assets/css/lightcase.css') }}">
+    <link rel="preload" as="style" href="{{ asset('assets/css/lightcase.css') }}" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="{{ asset('assets/css/lightcase.css') }}"></noscript>
     <!-- odometer css link -->
-    <link rel="stylesheet" href="{{ asset('assets/css/odometer.css') }}">
+    <link rel="preload" as="style" href="{{ asset('assets/css/odometer.css') }}" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="{{ asset('assets/css/odometer.css') }}"></noscript>
     <!-- line-awesome-icon css -->
-    <link rel="stylesheet" href="{{ asset('assets/css/icomoon.css') }}">
+    <link rel="preload" as="style" href="{{ asset('assets/css/icomoon.css') }}" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="{{ asset('assets/css/icomoon.css') }}"></noscript>
     <!-- line-awesome-icon css -->
-    <link rel="stylesheet" href="{{ asset('assets/css/line-awesome.min.css') }}">
+    <link rel="preload" as="style" href="{{ asset('assets/css/line-awesome.min.css') }}" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="{{ asset('assets/css/line-awesome.min.css') }}"></noscript>
     <!-- animate.css -->
-    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="preload" as="style" href="{{ asset('assets/css/animate.css') }}" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}"></noscript>
     <!-- aos.css -->
     <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
     <!-- nice select css -->
-    <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
+    <link rel="preload" as="style" href="{{ asset('assets/css/nice-select.css') }}" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}"></noscript>
     <!-- main style css link -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
@@ -75,6 +80,7 @@
 
     <!-- Hero Section Fix CSS -->
     <link rel="stylesheet" href="{{ $assetVersion('assets/css/hero-fix.css') }}">
+    <link rel="stylesheet" href="{{ $assetVersion('assets/css/seo-pages.css') }}">
 
     @stack('css')
 

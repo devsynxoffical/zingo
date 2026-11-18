@@ -12,7 +12,7 @@
     ])
 @endpush
 @push('css')
-    <link rel="stylesheet" href="{{ asset('assets/css/legal-pages.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/legal-pages.css') }}?v={{ @filemtime(public_path('assets/css/legal-pages.css')) }}">
     <style>.header-section { background: #A52673; }</style>
 @endpush
 

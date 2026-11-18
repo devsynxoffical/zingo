@@ -10,12 +10,10 @@
 @extends('layout.main')
 
 @section('og_type', 'article')
+@section('og_image', asset('assets/images/blog/need a VA.jpg'))
 @section('title', 'Real Estate Virtual Assistant Cost in 2026: Rates & ROI')
 @section('meta_description', 'How much does a real estate virtual assistant cost in 2026? Hourly and monthly rates for offshore and US-based VAs, what drives price, hidden costs and ROI math.')
 
-@push('css')
-<link rel="stylesheet" href="{{ asset('assets/css/seo-pages.css') }}">
-@endpush
 
 @push('schema')
     @include('partials.schema-page', [
@@ -58,9 +56,12 @@
             <div class="row justify-content-center mb-60-none">
                 <div class="col-xl-8 col-lg-10 mb-60">
                     <div class="blog-item details">
+                        <div class="blog-thumb">
+                            <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="How Much Does a Real Estate Virtual Assistant Cost in 2026?" fetchpriority="high" decoding="async">
+                        </div>
                         <div class="blog-content">
                             <div class="blog-post-meta">
-                                <span class="user">By : Zingo Assist Editorial Team</span>
+                                <span class="user">By : <a href="{{ route('editorial') }}">Zingo Assist Editorial Team</a></span>
                                 <span class="category two">November 17, 2026</span>
                             </div>
                             <h1 class="title">How Much Does a Real Estate Virtual Assistant Cost in 2026?</h1>
@@ -143,6 +144,14 @@
                                 <p>{{ $f[1] }}</p>
                             @endforeach
 
+                            <h2>Sources</h2>
+                            <ul class="guide-list">
+                                <li><a href="https://wingassistant.com/blog/virtual-assistant-pricing/" target="_blank" rel="noopener">Wing Assistant: Virtual assistant pricing</a></li>
+                                <li><a href="https://www.myoutdesk.com/blog/virtual-assistant-cost/" target="_blank" rel="noopener">MyOutDesk: Virtual assistant cost</a></li>
+                                <li><a href="https://www.listedkit.com/transaction-coordinator-cost-calculator" target="_blank" rel="noopener">ListedKit: Transaction coordinator cost calculator</a></li>
+                                <li><a href="https://floridarealtors.org/law-ethics/library/unlicensed-assistants" target="_blank" rel="noopener">Florida Realtors: Unlicensed assistants</a></li>
+                            </ul>
+
                             <p class="guide-note">Rates are typical market ranges observed in 2026 and are provided for budgeting purposes only. They are not a quote. Last reviewed November 17, 2026.</p>
                         </div>
                     </div>
@@ -150,4 +159,5 @@
             </div>
         </div>
     </section>
+    @include('partials.blog-footer')
 @endsection

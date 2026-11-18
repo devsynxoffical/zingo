@@ -12,7 +12,7 @@
     ])
 @endpush
 @push('css')
-    <link rel="stylesheet" href="{{ asset('assets/css/contact-page.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/contact-page.css') }}?v={{ @filemtime(public_path('assets/css/contact-page.css')) }}">
     <style>.header-section { background: #A52673; }</style>
 @endpush
 
@@ -311,7 +311,7 @@
 
 </div><!-- /.cp-page -->
 
-<a href="#" class="scrollToTop"><i class="las la-angle-double-up"></i></a>
+<a href="#" class="scrollToTop" aria-label="Scroll to top"><i class="las la-angle-double-up"></i></a>
 
     @include('partials.trail')
 

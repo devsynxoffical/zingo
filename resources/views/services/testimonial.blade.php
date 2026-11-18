@@ -1,5 +1,6 @@
 @extends('layout.main')
 
+@section('robots', 'noindex, follow')
 @section('title', 'Client Testimonials & Reviews | Zingo Assist')
 @section('meta_description', 'Read what business owners and real estate professionals say about working with Zingo Assist virtual assistants, cold callers and marketing specialists.')
 
