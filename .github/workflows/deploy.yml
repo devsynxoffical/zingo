@@ -95,3 +95,14 @@ jobs:
           git rev-parse HEAD > .deploy-sha
           lftp -c "source $HOME/open.lftp; put .deploy-sha -o .deploy-sha; set cmd:fail-exit false; cd storage/framework/views && mrm -f *.php" || true
           echo "Deployed $(git rev-parse --short HEAD) ($(wc -l < upload.txt) files)"
+
+      - name: Notify search engines (IndexNow + Google sitemap)
+        if: success()
+        env:
+          SITE_URL: https://zingoassist.us
+          INDEXNOW_KEY: 597dc5249af24dc69b88a11d6e03e22b
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: |
+          pip install -q requests google-auth
+          sleep 20
+          python3 scripts/seo_ping.py
