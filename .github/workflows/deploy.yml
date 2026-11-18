@@ -1,7 +1,6 @@
 name: Deploy to zingoassist.us (FTP)
 
 # Deploys every push to main over FTPS (server: FTP_SERVER secret). scripts/deploy.sh is an optional pull-based alternative.
-# This FTP workflow is kept as a manual fallback only.
 on:
   push:
     branches: [main]
