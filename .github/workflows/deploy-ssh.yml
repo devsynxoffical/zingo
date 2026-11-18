@@ -9,9 +9,9 @@ name: Deploy to zingoassist.us (SSH)
 #   SSH_PORT         SSH port (default 22; many shared hosts use a custom port)
 #   SSH_TARGET_DIR   live app folder relative to home or absolute (default: zingoassist.us)
 
+# Manual only while FTP deploys are in use (it shares the deploy queue and would
+# otherwise cancel pending FTP deploys). Add `push: branches: [main]` to automate.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 concurrency:
