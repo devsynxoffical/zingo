@@ -1,13 +1,13 @@
 name: Server cleanup (malware + Laravel cache)
 
-# Manual, one-off maintenance over FTPS using the same secrets as the deploy.
+# Manual, one-off maintenance over FTPS (curl, TLS certificate verified, hard timeouts).
 # Deletes only the known malware / retired files listed below, any .php file inside
 # public/assets (no legitimate PHP lives there), and Laravel's compiled caches.
 on:
   workflow_dispatch:
 
 concurrency:
-  group: deploy-production
+  group: server-maintenance
   cancel-in-progress: false
 
 jobs:
@@ -16,58 +16,68 @@ jobs:
     timeout-minutes: 15
     env:
       HOST: ${{ secrets.FTP_SERVER }}
-      USER: ${{ secrets.FTP_USERNAME }}
-      PASS: ${{ secrets.FTP_PASSWORD }}
+      FTPUSER: ${{ secrets.FTP_USERNAME }}
+      FTPPASS: ${{ secrets.FTP_PASSWORD }}
       DIR: ${{ secrets.FTP_SERVER_DIR }}
     steps:
-      - name: Install lftp
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
-
-      - name: Write lftp connection settings
+      - name: Prepare
         run: |
-          cat > "$HOME/.lftprc" <<'RC'
-          set ftp:ssl-force true
-          set ftp:ssl-protect-data true
-          set ssl:verify-certificate true
-          set net:timeout 60
-          set net:max-retries 3
-          set cmd:fail-exit false
-          RC
-          echo "open -u \"$USER\",\"$PASS\" -p 21 \"$HOST\"" > "$HOME/open.lftp"
-          echo "cd \"${DIR:-./}\"" >> "$HOME/open.lftp"
+          D="${DIR:-./}"; D="${D#./}"; D="${D%/}"
+          BASE="ftp://$HOST/${D:+$D/}"
+          echo "BASE=$BASE" >> "$GITHUB_ENV"
+          printf 'machine %s login %s password %s\n' "$HOST" "$FTPUSER" "$FTPPASS" > "$HOME/.netrc"
+          chmod 600 "$HOME/.netrc"
+
+      - name: Connection and certificate check
+        run: |
+          curl -sS --netrc --ssl-reqd --connect-timeout 30 --max-time 60 --retry 3 --retry-delay 10 \
+               --list-only "$BASE" > root-list.txt
+          echo "Connected with a verified TLS certificate. Root entries:"; cat root-list.txt
 
       - name: Inventory (before)
         run: |
-          lftp -c "source $HOME/open.lftp; echo '== root'; cls -l; echo '== public'; cls -l public/; echo '== php files under public/assets'; find public/assets" | tee "$HOME/before.txt" | grep -Ei '^== |\.php$|\.zip$|error_log|shell|security|style2' || true
+          set +e
+          ls_dir() { curl -sS --netrc --ssl-reqd --connect-timeout 30 --max-time 60 --retry 2 --list-only "$BASE$1/" 2>/dev/null | sed "s#^#$1/#"; }
+          {
+            ls_dir public
+            for d in public/assets public/assets/css public/assets/js public/assets/fonts public/assets/images public/assets/images/blog public/assets/images/gallery; do ls_dir "$d"; done
+          } > inventory.txt
+          echo "== Suspicious files found:"
+          grep -E '\.php$|\.zip$|error_log|\.mhtml$' inventory.txt | grep -v '^public/index\.php$' | tee suspicious.txt
+          grep -E '^(shell\.php|update_service_pages\.php)$' root-list.txt | tee -a suspicious.txt
+          true
 
       - name: Delete malware and retired files
         run: |
+          set +e
           {
-            echo "source $HOME/open.lftp"
-            for f in \
-              shell.php \
-              update_service_pages.php \
-              public/SS.zip \
-              public/error_log \
-              public/style2.php \
-              public/security.php \
-              public/assets/index.blade.php \
-              public/assets/images/CRM.mhtml \
-              resources/views/blog2.blade.php \
-              resources/views/blog/top_5_tasks.blade.php; do
-              echo "rm -f \"$f\""
-            done
-            # any PHP file hidden inside public/assets
-            grep -E '^public/assets/.*\.php$' "$HOME/before.txt" | while read -r f; do echo "rm -f \"$f\""; done
-          } > "$HOME/delete.lftp"
-          echo "Deleting:"; grep '^rm' "$HOME/delete.lftp"
-          lftp -f "$HOME/delete.lftp"
+            printf '%s\n' shell.php update_service_pages.php public/SS.zip public/error_log public/style2.php public/security.php \
+              public/assets/index.blade.php public/assets/images/CRM.mhtml \
+              resources/views/blog2.blade.php resources/views/blog/top_5_tasks.blade.php
+            grep -E '^public/assets/.*\.php$' inventory.txt
+          } | sort -u > delete.txt
+          for f in $(cat delete.txt); do
+            out=$(curl -sS --netrc --ssl-reqd --connect-timeout 30 --max-time 60 -Q "-DELE $f" "$BASE" -o /dev/null 2>&1)
+            if [ -z "$out" ]; then echo "deleted  $f"; else echo "skipped  $f ($(echo "$out" | tail -1 | cut -c1-80))"; fi
+          done
 
       - name: Clear Laravel caches
         run: |
-          lftp -c "source $HOME/open.lftp; cd storage/framework/views && mrm -f *.php; cd ../../../bootstrap/cache && rm -f config.php routes-v7.php routes.php events.php; cd ../..; echo '== views cache now'; cls storage/framework/views/ | head; echo '== bootstrap/cache now'; cls bootstrap/cache/"
+          set +e
+          for f in $(curl -sS --netrc --ssl-reqd --connect-timeout 30 --max-time 60 --list-only "${BASE}storage/framework/views/" | grep '\.php$'); do
+            curl -sS --netrc --ssl-reqd --connect-timeout 30 --max-time 60 -Q "-DELE storage/framework/views/$f" "$BASE" -o /dev/null && n=$((n+1))
+          done
+          echo "Compiled views removed: ${n:-0}"
+          for f in config.php routes-v7.php routes.php events.php; do
+            curl -sS --netrc --ssl-reqd --connect-timeout 30 --max-time 60 -Q "-DELE bootstrap/cache/$f" "$BASE" -o /dev/null 2>/dev/null && echo "removed bootstrap/cache/$f"
+          done
+          true
 
       - name: Verify (after)
         run: |
-          lftp -c "source $HOME/open.lftp; echo '== public'; cls -l public/; echo '== php under public/assets'; find public/assets" | grep -Ei '^== |\.php$|\.zip$|error_log' || true
-          echo "Remaining suspicious files listed above (index.php in public/ is expected)."
+          set +e
+          for d in public public/assets/css public/assets/js public/assets/fonts public/assets/images/blog public/assets/images/gallery; do
+            curl -sS --netrc --ssl-reqd --connect-timeout 30 --max-time 60 --list-only "$BASE$d/" 2>/dev/null | sed "s#^#$d/#"
+          done | grep -E '\.php$|\.zip$|error_log' | grep -v '^public/index\.php$' && echo "^ still present" || echo "No suspicious files left in checked folders."
+          curl -sS --netrc --ssl-reqd --connect-timeout 30 --max-time 60 --list-only "$BASE" | grep -E '^(shell\.php|update_service_pages\.php)$' && echo "^ still present in root" || echo "Root is clean."
+          rm -f "$HOME/.netrc"
