@@ -44,3 +44,18 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
 - **Evidence:** Google is discovering URLs through the sitemap but crawling few of them. The homepage is the strongest indexed page, yet its body linked only to the four older services.
 - **Change:** added a real estate intro line and in-content links on the homepage ("Our Core Services") to `/real-estate-virtual-assistant`, `/real-estate-isa-services`, `/wholesale-real-estate-cold-calling`, `/real-estate-transaction-coordinator-services` and `/real-estate-virtual-assistant-tampa-st-petersburg-fl`. Verified: 48/48 URLs pass, 0 broken links or images, desktop and mobile screenshots.
 - **Next run:** check whether the homepage is recrawled and the linked pages move to crawled or indexed. Look for the first GSC data after Nov 15.
+
+## 2026-11-18 ~20:00 UTC: ad-hoc check (owner request)
+- **Newly indexed today:**
+  - `/real-estate-virtual-assistant` (crawled 15:47)
+  - `/real-estate-isa-services` (15:50)
+  - `/wholesale-real-estate-cold-calling` (15:46)
+  - `/blog/unlicensed-real-estate-assistant-florida` (16:26)
+  - `/blog/florida-real-estate-cold-calling-laws` (19:37)
+  - plus the Tampa page (11:42)
+  - Homepage re-crawled at 10:39. All show valid breadcrumb rich results.
+- **Still pending:**
+  - `/blog/real-estate-virtual-assistant-cost`: unknown
+  - `/our-services`, `/real-estate-cold-calling-services`: discovered, not indexed
+  - `/faq`: stale July noindex, not re-crawled yet
+- **GSC impressions** (fresh, partial data): Nov 15: 4, Nov 16: 5, Nov 17: 5, Nov 18: 1. Still brand queries plus "sowingo" (irrelevant, position 52). No non-brand impressions yet.
