@@ -1,0 +1,25 @@
+{
+  "run": "2026-11-19T12:41Z",
+  "gsc_7d": {"range": "2026-11-10..2026-11-16", "rows": [
+    {"query": "zingo assist", "page": "/", "clicks": 1, "impressions": 5, "position": 1.4},
+    {"query": "zingo assist", "page": "/personal-assistance-services", "clicks": 0, "impressions": 5, "position": 5.6},
+    {"query": "zingo assist", "page": "/about-us", "clicks": 0, "impressions": 3, "position": 2},
+    {"query": "sowingo", "page": "/", "clicks": 0, "impressions": 1, "position": 52},
+    {"query": "travail", "page": "/", "clicks": 0, "impressions": 1, "position": 4},
+    {"query": "zingo company", "page": "/", "clicks": 0, "impressions": 1, "position": 4},
+    {"query": "zingo search engine", "page": "/", "clicks": 0, "impressions": 1, "position": 7}
+  ]},
+  "gsc_daily": {"2026-11-15": [1, 4], "2026-11-16": [0, 5], "2026-11-17": [0, 5], "2026-11-18": [0, 8], "2026-11-19": [0, 0]},
+  "inspection": {
+    "/faq": "Excluded by noindex (stale crawl 2026-07-31)",
+    "/our-services": "URL is unknown to Google (was: discovered - not indexed)",
+    "/real-estate-cold-calling-services": "Discovered - currently not indexed",
+    "/real-estate-transaction-coordinator-services": "URL is unknown to Google (was: discovered - not indexed)",
+    "/virtual-property-management-services": "Submitted and indexed (crawled 2026-11-19 08:25)",
+    "/blog/transaction-coordinator-vs-virtual-assistant": "Crawled - currently not indexed (crawled 2026-11-19 02:13)",
+    "/listing-coordinator-virtual-assistant": "URL is unknown to Google",
+    "/expired-fsbo-cold-calling-services": "Submitted and indexed (crawled 2026-11-19 08:46)",
+    "/real-estate-va-roi-calculator": "Submitted and indexed (crawled 2026-11-19 08:53)",
+    "/blog/tasks-to-outsource-to-a-virtual-assistant": "URL is unknown to Google"
+  }
+}

@@ -72,3 +72,19 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
 - **Change:** none. There's no query data to act on, and the remaining items are Google's crawl queue, not on-page problems, so editing pages now would just be churn.
 - **Owner action:** in Search Console, open URL Inspection and click "Request indexing" for `/faq` first (this clears the stale noindex), then `/our-services`, `/real-estate-cold-calling-services`, `/real-estate-transaction-coordinator-services`, `/virtual-property-management-services`.
 - **Next:** watch for the first non-brand impressions on the indexed real estate pages. Act on titles or snippets once there is CTR or position data.
+
+## 2026-11-19 12:41 UTC: 12-hour run #3
+- **Deployment:** live. `5c96f46` (new pages and lead forms) deployed at 07:18 UTC. The live audit at 07:19 confirmed http → https 301, single-escaped titles, and the new pages return 200 and are index/follow. IndexNow accepted 17 URLs.
+- **Search Console:**
+  - Last 7 final days (Nov 10–16): 1 click / 17 impressions, all brand plus noise ("sowingo", "travail", "zingo search engine").
+  - Daily impressions: Nov 17: 5, Nov 18: 8 (position 1.5).
+  - Still no non-brand query rows. Nothing to optimise for CTR or position yet.
+- **Indexing:**
+  - **Newly indexed:** `/expired-fsbo-cold-calling-services` (08:46), `/real-estate-va-roi-calculator` (08:53), both about 90 minutes after deploy; `/virtual-property-management-services` (08:25, previously discovered – not indexed).
+  - **New issue:** `/blog/transaction-coordinator-vs-virtual-assistant` is "Crawled – currently not indexed" after its first crawl (02:13). It is 1,067 words and linked from 6 pages. A single crawl on a young domain is not enough evidence to rewrite it; re-check next run.
+  - `/listing-coordinator-virtual-assistant`: not yet known to Google.
+  - `/our-services` and `/real-estate-transaction-coordinator-services` now report "unknown" (were "discovered"). This is API state noise, not a site change.
+  - `/faq`: still the stale July noindex (owner action pending).
+- **Change:** none. There's no query data to act on, and the new pages were already deployed today. Following the no-churn rule.
+- **Owner action (unchanged):** in Search Console URL Inspection, click "Request indexing" for `/faq` first, then `/listing-coordinator-virtual-assistant`, `/real-estate-cold-calling-services`, `/real-estate-transaction-coordinator-services`, `/our-services`.
+- **Next:** if the TC-vs-VA post is still crawled-not-indexed, compare its overlap with `/real-estate-transaction-coordinator-services` and differentiate it. Watch for first non-brand impressions on the indexed real estate pages.
