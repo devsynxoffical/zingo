@@ -59,3 +59,16 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
   - `/our-services`, `/real-estate-cold-calling-services`: discovered, not indexed
   - `/faq`: stale July noindex, not re-crawled yet
 - **GSC impressions** (fresh, partial data): Nov 15: 4, Nov 16: 5, Nov 17: 5, Nov 18: 1. Still brand queries plus "sowingo" (irrelevant, position 52). No non-brand impressions yet.
+
+## 2026-11-19 00:45 UTC: 12-hour run #2
+- **Deployment:** live. No new deploys since `ed46580` (success).
+- **Search Console:** Nov 15–18 = 1 click / 16 impressions, still brand-only plus "sowingo" (irrelevant, position 52). No non-brand impressions yet; the newly indexed pages are less than a day old.
+- **Indexing:**
+  - **Newly indexed:** `/blog/real-estate-virtual-assistant-cost` (21:01 UTC), `/editorial-policy` (18:10 UTC).
+  - **Total new real estate URLs indexed since go-live:** 8 (real estate VA, ISA, wholesale, Tampa, cost guide, unlicensed-assistant guide, FL calling laws, editorial policy).
+  - **Still "Discovered – not indexed":** `/our-services`, `/real-estate-cold-calling-services`, `/real-estate-transaction-coordinator-services`, `/virtual-property-management-services`, `/blog/transaction-coordinator-vs-virtual-assistant`.
+  - `/blog/tasks-to-outsource-to-a-virtual-assistant`: unknown.
+  - `/faq`: still the stale July noindex.
+- **Change:** none. There's no query data to act on, and the remaining items are Google's crawl queue, not on-page problems, so editing pages now would just be churn.
+- **Owner action:** in Search Console, open URL Inspection and click "Request indexing" for `/faq` first (this clears the stale noindex), then `/our-services`, `/real-estate-cold-calling-services`, `/real-estate-transaction-coordinator-services`, `/virtual-property-management-services`.
+- **Next:** watch for the first non-brand impressions on the indexed real estate pages. Act on titles or snippets once there is CTR or position data.

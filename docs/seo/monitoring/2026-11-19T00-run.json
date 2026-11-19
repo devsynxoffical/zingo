@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-11-19T00:45Z",
+  "gsc_daily": {"2026-11-15": {"clicks": 1, "impressions": 4}, "2026-11-16": {"clicks": 0, "impressions": 5}, "2026-11-17": {"clicks": 0, "impressions": 5}, "2026-11-18": {"clicks": 0, "impressions": 2, "note": "partial"}},
+  "queries_nov12_19": [
+    {"query": "zingo assist", "pages": ["/", "/about-us", "/personal-assistance-services"], "positions": [1, 2, 2]},
+    {"query": "zingo search engine", "page": "/", "position": 7},
+    {"query": "sowingo", "page": "/", "position": 52, "note": "irrelevant"}
+  ],
+  "non_brand_queries": [],
+  "index_status": {
+    "/blog/real-estate-virtual-assistant-cost": "Submitted and indexed (crawled 2026-11-18 21:01Z)  <- NEW",
+    "/editorial-policy": "Submitted and indexed (crawled 2026-11-18 18:10Z)  <- NEW",
+    "/faq": "Excluded by noindex (stale crawl 2026-07-31)",
+    "/our-services": "Discovered - currently not indexed",
+    "/real-estate-cold-calling-services": "Discovered - currently not indexed",
+    "/real-estate-transaction-coordinator-services": "Discovered - currently not indexed",
+    "/virtual-property-management-services": "Discovered - currently not indexed",
+    "/blog/transaction-coordinator-vs-virtual-assistant": "Discovered - currently not indexed",
+    "/blog/tasks-to-outsource-to-a-virtual-assistant": "URL is unknown to Google",
+    "/about-us": "Submitted and indexed (last crawl 2026-10-28)"
+  }
+}
