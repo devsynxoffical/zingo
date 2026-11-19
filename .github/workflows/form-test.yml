@@ -1,0 +1,31 @@
+name: Live form test (manual)
+
+# Sends ONE clearly labelled test submission to each live lead endpoint.
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Forms present on pages
+        run: |
+          for p in /contact-us /listing-coordinator-virtual-assistant /real-estate-virtual-assistant; do
+            curl -s "https://zingoassist.us$p" > p.html
+            echo "$p | lead-form: $(grep -c 'class="lead-form' p.html) | contact form: $(grep -c 'id="contactForm\|id=\"contact-form' p.html) | trial popup: $(grep -c 'id="trail_email"' p.html) | send_email url: $(grep -c 'api/send_email' p.html)"
+          done
+      - name: Validation check (no email sent)
+        run: |
+          curl -s -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{}' https://zingoassist.us/api/send_email; echo
+          curl -s -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{}' https://zingoassist.us/api/trail_mail; echo
+      - name: Real test submissions (1 email each to sales@)
+        run: |
+          echo "contact/lead form:"
+          curl -s -w "\nHTTP %{http_code} in %{time_total}s\n" -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' \
+            -d '{"name":"TEST - website form check","email":"test@example.com","phone":"+1 000-000-0000","service":"Listing Coordinator","message":"TEST SUBMISSION - automated check that the website booking form delivers. Please ignore. [Page: /listing-coordinator-virtual-assistant]"}' \
+            https://zingoassist.us/api/send_email | head -c 600; echo
+          echo "free trial popup:"
+          curl -s -w "\nHTTP %{http_code} in %{time_total}s\n" -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' \
+            -d '{"email":"test@example.com","phone":"+1 000-000-0000","message":"TEST SUBMISSION - automated check of the free trial popup. Please ignore."}' \
+            https://zingoassist.us/api/trail_mail | head -c 600; echo
