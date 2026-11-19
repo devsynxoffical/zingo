@@ -1,0 +1,46 @@
+name: Live site audit (read-only)
+
+# Fetches the live site from GitHub's network: status codes, server timing, live
+# metadata, redirects, and Google PageSpeed Insights (lab + real-user field data).
+on:
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Status, timing and live metadata
+        run: |
+          UA="Mozilla/5.0 (compatible; zingo-audit/1.0)"
+          for p in / /real-estate-virtual-assistant /real-estate-isa-services /real-estate-cold-calling-services /wholesale-real-estate-cold-calling /real-estate-transaction-coordinator-services /virtual-property-management-services /our-services /contact-us /faq /blog/real-estate-virtual-assistant-cost /sitemap.xml /robots.txt /llms.txt; do
+            curl -s -o page.html -A "$UA" -w "%{http_code} ttfb=%{time_starttransfer}s total=%{time_total}s size=%{size_download}B enc=%header{content-encoding} cache=%header{cache-control}" "https://zingoassist.us$p" > meta.txt
+            title=$(grep -o '<title>[^<]*' page.html | head -1 | sed 's/<title>//')
+            robots=$(grep -o '<meta name="robots" content="[^"]*"' page.html | head -1 | sed 's/.*content="//;s/"$//')
+            canon=$(grep -o '<link rel="canonical" href="[^"]*"' page.html | head -1 | sed 's/.*href="//;s/"$//')
+            echo "$p | $(cat meta.txt) | title=$title | robots=$robots | canonical=$canon"
+          done
+          echo "== gzip check"; curl -s -o /dev/null -H 'Accept-Encoding: gzip' -w "home gzip: %header{content-encoding} size=%{size_download}\n" https://zingoassist.us/
+          echo "== redirects"
+          for u in http://zingoassist.us/ https://www.zingoassist.us/ http://www.zingoassist.us/faq https://zingoassist.us/blog2 https://zingoassist.us/blog/top-5-tasks; do
+            curl -s -o /dev/null -w "$u -> %{http_code} %{redirect_url}\n" "$u"
+          done
+          echo "== suspicious content check (spam/cloaking keywords as Googlebot)"
+          curl -s -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" https://zingoassist.us/ | grep -ioE "casino|slot|viagra|cialis|betting|togel|gacor|judi|pharmacy|loan" | sort | uniq -c || echo "none found"
+
+      - name: PageSpeed Insights (mobile)
+        run: |
+          for p in / /real-estate-virtual-assistant /blog/real-estate-virtual-assistant-cost; do
+            curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https%3A%2F%2Fzingoassist.us${p}&strategy=mobile&category=performance&category=seo" > psi.json
+            python3 - "$p" <<'PY'
+          import json,sys
+          p=sys.argv[1]
+          try: d=json.load(open('psi.json'))
+          except Exception as e: print(p,'PSI parse error',e); sys.exit()
+          if 'error' in d: print(p,'PSI error:',d['error'].get('message','')[:200]); sys.exit()
+          lh=d['lighthouseResult']; a=lh['audits']; c=lh['categories']
+          print(f"{p}: perf={round(c['performance']['score']*100)} seo={round(c['seo']['score']*100)} LCP={a['largest-contentful-paint']['displayValue']} TBT={a['total-blocking-time']['displayValue']} CLS={a['cumulative-layout-shift']['displayValue']} FCP={a['first-contentful-paint']['displayValue']} TTFB={a.get('server-response-time',{}).get('displayValue','?')} weight={a['total-byte-weight']['displayValue']}")
+          fe=d.get('loadingExperience',{})
+          print('   field data (CrUX):', fe.get('overall_category','NONE - not enough real-user data'))
+          PY
+          done
