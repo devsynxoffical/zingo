@@ -69,11 +69,13 @@ jobs:
               setk('MAIL_MAILER', 'smtp'); setk('MAIL_HOST', h); setk('MAIL_PORT', '465'); setk('MAIL_ENCRYPTION', 'ssl')
               print('Mail switched to SMTP via', h)
           else:
-              print('Mail left unchanged (no SMTP host authenticated)')
+              # No working SMTP login: use the host's local sendmail (cPanel/Exim), no password needed
+              setk('MAIL_MAILER', 'sendmail'); setk('MAIL_SENDMAIL_PATH', '"/usr/sbin/sendmail -bs -i"')
+              print('No SMTP login authenticated; mail switched to local sendmail')
           open('env.new', 'w').write(s)
           PY
           c -T env.new "${BASE}.env" && echo ".env uploaded"
           echo "== new non-secret values"
-          grep -E '^(APP_ENV|APP_DEBUG|APP_URL|LOG_LEVEL|DB_CONNECTION|DB_DATABASE|MAIL_MAILER|MAIL_HOST|MAIL_PORT|MAIL_ENCRYPTION|MAIL_FROM_ADDRESS)=' env.new
+          grep -E '^(APP_ENV|APP_DEBUG|APP_URL|LOG_LEVEL|DB_CONNECTION|DB_DATABASE|MAIL_MAILER|MAIL_HOST|MAIL_PORT|MAIL_ENCRYPTION|MAIL_FROM_ADDRESS|MAIL_SENDMAIL_PATH)=' env.new
           for f in config.php routes-v7.php; do c -Q "-DELE bootstrap/cache/$f" "$BASE" -o /dev/null 2>/dev/null && echo "removed cached $f" || true; done
           rm -f env.orig env.new err.txt "$HOME/.netrc"

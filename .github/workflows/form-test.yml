@@ -8,6 +8,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    env:
+      HOST: ${{ secrets.FTP_SERVER }}
+      FTPUSER: ${{ secrets.FTP_USERNAME }}
+      FTPPASS: ${{ secrets.FTP_PASSWORD }}
+      DIR: ${{ secrets.FTP_SERVER_DIR }}
     steps:
       - name: Forms present on pages
         run: |
@@ -29,3 +34,12 @@ jobs:
           curl -s -w "\nHTTP %{http_code} in %{time_total}s\n" -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' \
             -d '{"email":"test@example.com","phone":"+1 000-000-0000","message":"TEST SUBMISSION - automated check of the free trial popup. Please ignore."}' \
             https://zingoassist.us/api/trail_mail | head -c 600; echo
+      - name: Server log result for the test leads
+        run: |
+          set +e
+          sleep 5
+          D="${DIR:-./}"; D="${D#./}"; D="${D%/}"; BASE="ftp://$HOST/${D:+$D/}"
+          printf 'machine %s login %s password %s\n' "$HOST" "$FTPUSER" "$FTPPASS" > "$HOME/.netrc"; chmod 600 "$HOME/.netrc"
+          curl -sS --netrc --ssl-reqd --connect-timeout 30 --max-time 60 -r -60000 "${BASE}storage/logs/laravel.log" -o tail.log
+          grep -E "Website lead|Lead DB save failed|Lead email failed" tail.log | tail -6 | sed -E 's/("email":")[^"]*/\1…/' | cut -c1-260
+          rm -f "$HOME/.netrc" tail.log
