@@ -1,6 +1,8 @@
 @php
-    $seoTitle = trim($__env->yieldContent('title')) ?: 'Zingo Assist | Virtual Assistant Agency in the USA';
-    $seoDescription = trim($__env->yieldContent('meta_description')) ?: 'Zingo Assist provides US businesses and real estate professionals with skilled virtual assistants, cold calling, lead generation, bookkeeping and digital marketing support.';
+    // @section('x', 'value') stores an already-escaped string; decode it once so {{ }} below escapes exactly once.
+    $seoDecode = fn ($v) => html_entity_decode(trim($v), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    $seoTitle = $seoDecode($__env->yieldContent('title')) ?: 'Zingo Assist | Virtual Assistant Agency in the USA';
+    $seoDescription = $seoDecode($__env->yieldContent('meta_description')) ?: 'Zingo Assist provides US businesses and real estate professionals with skilled virtual assistants, cold calling, lead generation, bookkeeping and digital marketing support.';
     $seoBase = rtrim(config('seo.base_url', url('/')), '/');
     $seoPath = request()->path();
     $seoCanonical = trim($__env->yieldContent('canonical')) ?: $seoBase . ($seoPath === '/' ? '/' : '/' . $seoPath);
@@ -83,6 +85,16 @@
     <link rel="stylesheet" href="{{ $assetVersion('assets/css/seo-pages.css') }}">
 
     @stack('css')
+
+    @if (config('seo.ga4_measurement_id'))
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('seo.ga4_measurement_id') }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', @json(config('seo.ga4_measurement_id')));
+    </script>
+    @endif
 
     @include('partials.schema-global')
     @stack('schema')

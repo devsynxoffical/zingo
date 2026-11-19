@@ -69,10 +69,10 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
                     <div class="cp-option-card">
                         <div class="cp-option-icon"><i class="fas fa-comments"></i></div>
-                        <h4>Live Chat</h4>
-                        <p>Chat with our team instantly</p>
+                        <h4>Message Us</h4>
+                        <p>Send your question and get a reply within 24 hours</p>
                         <button class="cp-option-link" onclick="openLiveChat()">
-                            Start Chat
+                            Send a Message
                             <i class="fas fa-arrow-right"></i>
                         </button>
                             </div>
@@ -318,13 +318,15 @@
     <script>
         const sendEmailRoute = @json(route('api.send_email'));
 
-        function openLiveChat() {
-            alert('Live chat feature coming soon! For now, please call us or send an email.');
+        // Both options lead to the consultation form instead of a "coming soon" dead end.
+        function focusContactForm() {
+            var form = document.getElementById('contact-form');
+            if (!form) return;
+            form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(function () { var n = document.getElementById('name'); if (n) n.focus(); }, 600);
         }
-
-        function openBooking() {
-            alert('Booking system coming soon! For now, please call us to schedule a consultation.');
-        }
+        function openLiveChat() { window.zingoTrack && window.zingoTrack('cta_click', { cta: 'chat' }); focusContactForm(); }
+        function openBooking() { window.zingoTrack && window.zingoTrack('cta_click', { cta: 'book_consultation' }); focusContactForm(); }
     </script>
 
     <script src="{{ asset('assets/custom/custom.js') }}"></script>

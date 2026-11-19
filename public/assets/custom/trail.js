@@ -57,12 +57,16 @@ trailElement.addEventListener('submit', async function(e) {
             </div>`;
         }
         if (result.success) {
+            window.zingoTrack && window.zingoTrack('generate_lead', { form_id: 'free_trial', page_path: location.pathname });
 
             emailElement.value = '';
             phoneElement.value = '';
             messageElement.value = '';
 
-            hidePopup();
+            alertElement.innerHTML = `<div class="alert alert-success" role="alert">
+            <strong>Thank you!</strong> Your free trial request was received. Our team will contact you within 24 hours.
+            </div>`;
+            setTimeout(function () { alertElement.innerHTML = ''; hidePopup(); }, 4000);
         }
 
         if (result.failure) {

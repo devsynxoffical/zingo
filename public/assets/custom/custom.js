@@ -75,6 +75,7 @@ contactFormElement.addEventListener('submit', async function (event) {
             </div>`;
         }
         if (result.success) {
+            window.zingoTrack && window.zingoTrack('generate_lead', { form_id: 'contact', service: serviceElement.value, page_path: location.pathname });
 
             nameElement.value = '';
             emailElement.value = '';

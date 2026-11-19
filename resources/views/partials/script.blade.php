@@ -1,3 +1,15 @@
+<script>
+    // Lead tracking helper: sends GA4 events when GA4 is configured, otherwise does nothing.
+    window.zingoTrack = function (name, params) {
+        try { if (typeof window.gtag === 'function') { window.gtag('event', name, params || {}); } } catch (e) {}
+    };
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest ? e.target.closest('a[href^="tel:"], a[href^="mailto:"]') : null;
+        if (!a) return;
+        var tel = a.getAttribute('href').indexOf('tel:') === 0;
+        window.zingoTrack(tel ? 'click_to_call' : 'click_email', { page_path: location.pathname });
+    });
+</script>
 <!-- jquery -->
 <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
 <!-- bootstrap js -->
