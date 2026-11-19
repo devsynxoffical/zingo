@@ -1,5 +1,6 @@
 @php
     $page = [
+        'form_service' => 'Wholesale Cold Calling',
         'h1' => ['Wholesale Real Estate', 'Cold Calling Services'],
         'hero' => [
             'Trained cold callers who find motivated sellers for real estate wholesalers and investors. Zingo Assist callers work your lists, qualify sellers on condition, timeline, motivation and price, and hand hot leads to your acquisitions team with clean notes in your CRM.',
@@ -7,6 +8,8 @@
         ],
         'answer' => '<strong>Wholesale real estate cold calling</strong> means calling property owners from targeted lists, such as absentee owners, tired landlords, pre-foreclosures, probate and vacant properties, to find people motivated to sell off-market. A cold caller qualifies each seller on condition, motivation, timeline and asking price, then passes warm leads to the investor or acquisitions manager. Zingo Assist provides trained wholesale cold callers to US investors, with a free 2-day trial.',
         'overview' => [
+            'image' => 'assets/images/services/lead_generation.jpg',
+            'image_alt' => 'Cold caller qualifying motivated sellers for a real estate investor',
             'icon' => 'fa-phone-volume',
             'label' => 'For Wholesalers & Investors',
             'title' => 'Keep Your Pipeline Full Without Dialing All Day',

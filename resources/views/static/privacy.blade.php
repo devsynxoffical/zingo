@@ -267,7 +267,6 @@
 
 </div>
 
-@include('partials.trail')
 
 <script>
 // Table of Contents active state on scroll

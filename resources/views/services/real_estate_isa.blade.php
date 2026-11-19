@@ -1,5 +1,6 @@
 @php
     $page = [
+        'form_service' => 'Real Estate ISA',
         'h1' => ['Real Estate', 'ISA Services'],
         'hero' => [
             'Outsourced real estate inside sales agents (ISAs) who call your new leads fast, qualify buyers and sellers, nurture your database and book appointments straight into your calendar, so your agents spend their time in front of clients instead of on the phone.',
@@ -7,6 +8,8 @@
         ],
         'answer' => 'A <strong>real estate ISA (inside sales agent)</strong> is a phone-based specialist who converts leads into appointments for agents. The ISA calls new online leads quickly, qualifies their timeline, motivation and financing, follows up with older leads on a schedule, and books qualified buyers and sellers with an agent. An <strong>outsourced ISA service</strong> provides a trained remote ISA so a team does not need to recruit, train and manage one in-house.',
         'overview' => [
+            'image' => 'assets/images/services/virtual_assistant.jpg',
+            'image_alt' => 'Inside sales agent with headset calling new real estate leads',
             'icon' => 'fa-headset',
             'label' => 'Inside Sales',
             'title' => 'Why Real Estate Teams Use an ISA',

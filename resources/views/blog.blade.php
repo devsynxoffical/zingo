@@ -432,6 +432,5 @@
 
 <a href="#" class="scrollToTop" aria-label="Scroll to top"><i class="las la-angle-double-up"></i></a>
 
-@include('partials.trail')
 
 @endsection

@@ -62,6 +62,9 @@ Route::controller(EmailController::class)->group(function () {
 Route::view('/terms-conditions', 'static.terms')->name('terms');
 Route::view('/privacy-policy', 'static.privacy')->name('privacy');
 Route::view('/editorial-policy', 'static.editorial')->name('editorial');
+Route::view('/listing-coordinator-virtual-assistant', 'services.listing_coordinator')->name('service.listing_coordinator');
+Route::view('/expired-fsbo-cold-calling-services', 'services.expired_fsbo_calling')->name('service.expired_fsbo_calling');
+Route::view('/real-estate-va-roi-calculator', 'tools.va_roi_calculator')->name('tool.va_roi_calculator');
 
 // Permanent redirects for retired / legacy URLs (consolidate ranking signals).
 Route::permanentRedirect('/blog1', '/blog/why-your-business-needs-a-virtual-assistant');

@@ -7,6 +7,8 @@
         ],
         'answer' => 'Zingo Assist provides remote <strong>real estate virtual assistants to agents, teams, investors and property managers in Tampa, St. Petersburg, Clearwater and the wider Tampa Bay area</strong>. Our St. Petersburg-based team handles CRM and lead follow-up, listing coordination for Stellar MLS, Florida transaction paperwork, compliant cold calling and property management support, with a free 2-day trial.',
         'overview' => [
+            'image' => 'assets/images/services/Real estate solution.jpg',
+            'image_alt' => 'Florida real estate growth illustration for Tampa Bay agents',
             'icon' => 'fa-map-marker-alt',
             'label' => 'Local Team',
             'title' => 'A Tampa Bay Team for Tampa Bay Agents',

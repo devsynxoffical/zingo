@@ -1,13 +1,13 @@
 const trailElement = document.querySelector('#trail_form');
 
-const alertElement = document.querySelector('#alert');
+const alertElement = document.querySelector('#trail_alert');
 
-trailElement.addEventListener('submit', async function(e) {
+if (trailElement) trailElement.addEventListener('submit', async function(e) {
     e.preventDefault();
 
-    const emailElement = document.querySelector('#email');
-    const phoneElement = document.querySelector('#phone');
-    const messageElement = document.querySelector('#message');
+    const emailElement = trailElement.querySelector('#trail_email');
+    const phoneElement = trailElement.querySelector('#trail_phone');
+    const messageElement = trailElement.querySelector('#trail_message');
 
     let emailElementValue = emailElement.value;
     let phoneElementValue = phoneElement.value;

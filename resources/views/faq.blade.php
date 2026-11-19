@@ -320,7 +320,6 @@
     </section>
 
 
-    @include('partials.trail')
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

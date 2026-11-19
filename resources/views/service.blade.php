@@ -421,6 +421,60 @@
                         </div>
                     </a>
                 </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('service.listing_coordinator') }}" class="os-service-card">
+                        <div class="os-card-accent"></div>
+                        <div class="os-card-header">
+                            <div class="os-card-icon">
+                                <img src="{{ asset('assets/images/icon2/crm_managemnt.png') }}" alt="Listing Coordinator Virtual Assistant" loading="lazy" decoding="async">
+                            </div>
+                            <span class="os-card-number">19</span>
+                        </div>
+                        <h3 class="os-card-title">Listing Coordinator Virtual Assistant</h3>
+                        <p class="os-card-text">A virtual listing coordinator for MLS input, photos and signage, listing copy, showing feedback and weekly seller updates, from signed listing to accepted offer.</p>
+                        <div class="os-card-footer">
+                            <span class="os-card-link">Learn More</span>
+                            <span class="os-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('service.expired_fsbo_calling') }}" class="os-service-card">
+                        <div class="os-card-accent"></div>
+                        <div class="os-card-header">
+                            <div class="os-card-icon">
+                                <img src="{{ asset('assets/images/icon2/cold_calling.png') }}" alt="Expired &amp; FSBO Cold Calling" loading="lazy" decoding="async">
+                            </div>
+                            <span class="os-card-number">20</span>
+                        </div>
+                        <h3 class="os-card-title">Expired &amp; FSBO Cold Calling</h3>
+                        <p class="os-card-text">Trained callers work your expired, withdrawn and FSBO lists every day, follow up consistently and book listing appointments into your calendar.</p>
+                        <div class="os-card-footer">
+                            <span class="os-card-link">Learn More</span>
+                            <span class="os-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('tool.va_roi_calculator') }}" class="os-service-card">
+                        <div class="os-card-accent"></div>
+                        <div class="os-card-header">
+                            <div class="os-card-icon">
+                                <img src="{{ asset('assets/images/icon2/lead_generation.png') }}" alt="Real Estate VA ROI Calculator" loading="lazy" decoding="async">
+                            </div>
+                            <span class="os-card-number">21</span>
+                        </div>
+                        <h3 class="os-card-title">Real Estate VA ROI Calculator</h3>
+                        <p class="os-card-text">A free tool to estimate what an assistant costs per month, how many hours you get back and how many extra closings it takes to pay for itself.</p>
+                        <div class="os-card-footer">
+                            <span class="os-card-link">Learn More</span>
+                            <span class="os-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -871,7 +925,6 @@
 
 <a href="#" class="scrollToTop" aria-label="Scroll to top"><i class="las la-angle-double-up"></i></a>
 
-@include('partials.trail')
 
 <script>
     // Smooth scroll to services section

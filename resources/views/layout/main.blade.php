@@ -28,6 +28,8 @@
     @include('partials.footer')
     <!--~~~~~~~ End Footer ~~~~~~~~~~~-->
 
+    @include('partials.trail')
+
     @include('partials.script')
 
 </body>

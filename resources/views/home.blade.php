@@ -878,7 +878,6 @@
 
     {{-- <button class="btn-show-popup" onclick="showPopup()">Open Form</button> --}}
 
-    @include('partials.trail')
 
     <script>
         function toggleHeroText() {

@@ -117,6 +117,7 @@
                             </ul>
 
                             <h2>Is a real estate VA worth it? A simple ROI check</h2>
+                            <p><strong>Try it with your own numbers:</strong> use our free <a href="{{ route('tool.va_roi_calculator') }}">real estate VA ROI calculator</a>.</p>
                             <p>Use this quick calculation before you hire:</p>
                             <ol class="guide-list" style="padding-left:20px;">
                                 <li style="list-style:decimal;">Estimate the hours a week your assistant will free up (most agents start with 15 to 20).</li>

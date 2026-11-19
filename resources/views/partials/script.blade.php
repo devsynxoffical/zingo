@@ -32,18 +32,26 @@
 <script src="{{ asset('assets/js/TweenMax.min.js') }}"></script>
 <!-- main -->
 <script src="{{ asset('assets/js/main.js') }}"></script>
+<script>
+    // Lead forms use a native <select>; undo the theme's global nice-select styling on them.
+    jQuery(function ($) { if ($.fn.niceSelect) { $('.lead-form select').niceSelect('destroy'); } });
+</script>
 
 
 
 <script>
     // Show the popup form
     function showPopup() {
-        document.getElementById("popupWrapper").style.display = "flex";
+        var w = document.getElementById("popupWrapper");
+        if (!w) { window.location.href = @json(route('contact')); return; }
+        w.style.display = "flex";
+        window.zingoTrack && window.zingoTrack('cta_click', { cta: 'header_free_consultation' });
     }
 
     // Hide the popup form
     function hidePopup() {
-        document.getElementById("popupWrapper").style.display = "none";
+        var w = document.getElementById("popupWrapper");
+        if (w) w.style.display = "none";
     }
 </script>
 

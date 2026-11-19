@@ -98,6 +98,7 @@
                             <li><a href="{{ route('service.lead_generation') }}"><i class="fas fa-arrow-right"></i>Lead Generation</a></li>
                             <li><a href="{{ route('service.real_estate_transaction_coordinator') }}"><i class="fas fa-arrow-right"></i>Transaction Coordinator</a></li>
                             <li><a href="{{ route('location.tampa_st_petersburg') }}"><i class="fas fa-arrow-right"></i>Tampa &amp; St. Pete VAs</a></li>
+                            <li><a href="{{ route('tool.va_roi_calculator') }}"><i class="fas fa-arrow-right"></i>VA ROI Calculator</a></li>
                         </ul>
                     </div>
                 </div>

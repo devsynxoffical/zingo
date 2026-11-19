@@ -77,7 +77,7 @@
                 <p class="sp-about-text">
                     Real estate professionals deal with countless tasks behind the scenes. From drafting files to meeting contractual deadlines and managing client communication, the workload can be overwhelming. This is where Real Estate Transaction Coordinator services become essential.
                 </p>
-                <p class="sp-about-text zingo-related"><strong>Not sure whether you need a TC or a broader assistant? Compare them in <a href="{{ route('blog.tc_vs_va') }}">transaction coordinator vs virtual assistant</a>, or explore our <a href="{{ route('service.real_estate_virtual_assistant') }}">real estate virtual assistant services</a>.</strong></p>
+                <p class="sp-about-text zingo-related"><strong>Need help before the offer, too? See our <a href="{{ route('service.listing_coordinator') }}">listing coordinator virtual assistants</a>. Not sure whether you need a TC or a broader assistant? Compare them in <a href="{{ route('blog.tc_vs_va') }}">transaction coordinator vs virtual assistant</a>, or explore our <a href="{{ route('service.real_estate_virtual_assistant') }}">real estate virtual assistant services</a>.</strong></p>
                 <p class="sp-about-text">
                     For example, an agent managing multiple active listings may struggle with constant emails, inspection scheduling, disclosure tracking, and compliance requirements. These challenges can lead to missed deadlines, delayed closings, and unhappy clients. ZingoAssist solves these issues by providing structured coordination support, ensuring every step of the transaction is handled efficiently.
                 </p>

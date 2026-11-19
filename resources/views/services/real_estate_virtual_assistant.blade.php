@@ -7,6 +7,8 @@
         ],
         'answer' => 'A <strong>real estate virtual assistant</strong> is a remote professional who handles the administrative, marketing and lead-management work behind a real estate business, such as CRM updates, lead follow-up calls, listing input, showing scheduling, transaction paperwork and social media, so the licensed agent can focus on clients, appointments and negotiations. Zingo Assist provides trained real estate VAs to US agents, teams, brokers, investors and property managers, with a free 2-day trial.',
         'overview' => [
+            'image' => 'assets/images/services/arooba.png',
+            'image_alt' => 'Zingo Assist real estate virtual assistant working in a client CRM',
             'icon' => 'fa-home',
             'label' => 'Overview',
             'title' => 'Why Agents Hire a Real Estate VA',
@@ -87,6 +89,9 @@
             'title' => 'Explore More Real Estate Services',
             'items' => [
                 ['Real Estate ISA Services', route('service.real_estate_isa')],
+                ['Listing Coordinator', route('service.listing_coordinator')],
+                ['Expired & FSBO Calling', route('service.expired_fsbo_calling')],
+                ['VA ROI Calculator', route('tool.va_roi_calculator')],
                 ['Real Estate Cold Calling', route('service.cold_calling')],
                 ['Wholesale Cold Calling', route('service.wholesale_cold_calling')],
                 ['Transaction Coordinator', route('service.real_estate_transaction_coordinator')],

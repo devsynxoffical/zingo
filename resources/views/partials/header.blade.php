@@ -30,6 +30,8 @@
                                         <li><a class="dropdown-item" href="{{ route('service') }}">All Services</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.real_estate_virtual_assistant') }}">Real Estate Virtual Assistant</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.real_estate_isa') }}">Real Estate ISA Services</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('service.listing_coordinator') }}">Listing Coordinator</a></li>
+                                        <li><a class="dropdown-item" href="{{ route('service.expired_fsbo_calling') }}">Expired &amp; FSBO Calling</a></li>
                                         <li><hr class="dropdown-divider"></li>
                                         <li><a class="dropdown-item" href="{{ route('service.it_support') }}">IT Support</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.cold_calling') }}">Real Estate Cold Calling</a></li>
