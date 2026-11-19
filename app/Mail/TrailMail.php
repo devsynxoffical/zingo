@@ -27,7 +27,8 @@ class TrailMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: '2 Days Free Trail Email',
+            subject: 'New free 2-day trial request - ' . ($this->mail_data['email'] ?? ''),
+            replyTo: filter_var($this->mail_data['email'] ?? '', FILTER_VALIDATE_EMAIL) ? [new \Illuminate\Mail\Mailables\Address($this->mail_data['email'], $this->mail_data['name'] ?? null)] : [],
         );
     }
 

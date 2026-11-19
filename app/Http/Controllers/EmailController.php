@@ -39,14 +39,9 @@ class EmailController extends Controller
             ]);
         }
 
-        $adminEmail = "sales@zingoassist.us";
+        [$emailDatabase, $mail] = $this->deliver('contact', $data, fn () => Email::create($data), new CompanyMail($data));
 
-        $emailDatabase = Email::create($data);
-
-        $mail = Mail::to($adminEmail)->send(new CompanyMail($data));
-
-
-        if ($mail && $emailDatabase) {
+        if ($mail || $emailDatabase) {
             return response()->json([
                 'success' => 'Successfully stored info!'
             ]);
@@ -104,14 +99,9 @@ class EmailController extends Controller
             ]);
         }
 
-        $adminEmail = "sales@zingoassist.us";
+        [$emailDatabase, $mail] = $this->deliver('trial', $data, fn () => Trail::create($data), new TrailMail($data));
 
-        $emailDatabase = Trail::create($data);
-
-        $mail = Mail::to($adminEmail)->send(new TrailMail($data));
-
-
-        if ($mail && $emailDatabase) {
+        if ($mail || $emailDatabase) {
             return response()->json([
                 'success' => 'Successfully stored info!'
             ]);
@@ -120,5 +110,31 @@ class EmailController extends Controller
                 'failure' => 'Oops, Operation Failed!'
             ]);
         }
+    }
+
+    /**
+     * Store a lead and email it to sales. Either step may fail on its own
+     * (database or SMTP problem) without losing the lead: every lead is also
+     * written to the log, and the visitor gets success if it was stored or sent.
+     */
+    private function deliver(string $type, array $data, callable $store, $mailable): array
+    {
+        \Illuminate\Support\Facades\Log::info("Website lead ($type)", $data);
+
+        $stored = null;
+        try {
+            $stored = $store();
+        } catch (\Throwable $e) {
+            \Illuminate\Support\Facades\Log::error("Lead DB save failed ($type): " . $e->getMessage());
+        }
+
+        $sent = null;
+        try {
+            $sent = Mail::to('sales@zingoassist.us')->send($mailable);
+        } catch (\Throwable $e) {
+            \Illuminate\Support\Facades\Log::error("Lead email failed ($type): " . $e->getMessage());
+        }
+
+        return [$stored, $sent];
     }
 }

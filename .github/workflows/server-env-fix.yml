@@ -1,0 +1,79 @@
+name: Server .env production fix (manual)
+
+# Fixes production settings in the server .env over FTPS:
+#   APP_ENV=production, APP_DEBUG=false, APP_URL, absolute DB_DATABASE path,
+#   and switches MAIL_MAILER from "log" to working SMTP *only if* the existing
+#   mailbox login authenticates against a candidate host.
+# A backup (.env.backup-<timestamp>) is uploaded first. Secrets are never printed.
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: server-maintenance
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      HOST: ${{ secrets.FTP_SERVER }}
+      FTPUSER: ${{ secrets.FTP_USERNAME }}
+      FTPPASS: ${{ secrets.FTP_PASSWORD }}
+      DIR: ${{ secrets.FTP_SERVER_DIR }}
+      APP_ROOT: /home/alphaahe/zingoassist.us
+    steps:
+      - name: Fix .env
+        run: |
+          set -e
+          D="${DIR:-./}"; D="${D#./}"; D="${D%/}"; BASE="ftp://$HOST/${D:+$D/}"
+          printf 'machine %s login %s password %s\n' "$HOST" "$FTPUSER" "$FTPPASS" > "$HOME/.netrc"; chmod 600 "$HOME/.netrc"
+          c() { curl -sS --netrc --ssl-reqd --connect-timeout 30 --max-time 60 "$@"; }
+          umask 077
+          c -o env.orig "${BASE}.env"
+          TS=$(date -u +%Y%m%d%H%M%S)
+          c -T env.orig "${BASE}.env.backup-$TS" && echo "Backup uploaded: .env.backup-$TS"
+
+          MU=$(grep -E '^MAIL_USERNAME=' env.orig | cut -d= -f2- | sed 's/^"//;s/"$//')
+          MP=$(grep -E '^MAIL_PASSWORD=' env.orig | cut -d= -f2- | sed 's/^"//;s/"$//')
+          [ -n "$MP" ] && echo "::add-mask::$MP"
+          [ -n "$MU" ] && echo "::add-mask::$MU"
+          echo "Mail username domain: ${MU#*@}"
+
+          SMTP_HOST=""
+          for h in mail.zingoassist.us zingoassist.us s4549.lon1.stableserver.net; do
+            if curl -sS --ssl-reqd --connect-timeout 20 --max-time 40 --url "smtps://$h:465" --user "$MU:$MP" -X NOOP -o /dev/null 2>err.txt; then
+              echo "SMTP auth OK: $h:465"; SMTP_HOST=$h; break
+            else
+              echo "SMTP $h:465 failed: $(tail -1 err.txt | cut -c1-120)"
+            fi
+          done
+
+          SMTP_HOST="$SMTP_HOST" python3 - <<'PY'
+          import os, re
+          s = open('env.orig').read()
+          def setk(k, v):
+              global s
+              line = f'{k}={v}'
+              if re.search(rf'^{k}=.*$', s, flags=re.M):
+                  s = re.sub(rf'^{k}=.*$', lambda m: line, s, flags=re.M)
+              else:
+                  s += ('' if s.endswith('\n') else '\n') + line + '\n'
+          setk('APP_ENV', 'production')
+          setk('APP_DEBUG', 'false')
+          setk('APP_URL', 'https://zingoassist.us')
+          setk('LOG_LEVEL', 'info')
+          setk('DB_DATABASE', os.environ['APP_ROOT'] + '/database/database.sqlite')
+          h = os.environ.get('SMTP_HOST')
+          if h:
+              setk('MAIL_MAILER', 'smtp'); setk('MAIL_HOST', h); setk('MAIL_PORT', '465'); setk('MAIL_ENCRYPTION', 'ssl')
+              print('Mail switched to SMTP via', h)
+          else:
+              print('Mail left unchanged (no SMTP host authenticated)')
+          open('env.new', 'w').write(s)
+          PY
+          c -T env.new "${BASE}.env" && echo ".env uploaded"
+          echo "== new non-secret values"
+          grep -E '^(APP_ENV|APP_DEBUG|APP_URL|LOG_LEVEL|DB_CONNECTION|DB_DATABASE|MAIL_MAILER|MAIL_HOST|MAIL_PORT|MAIL_ENCRYPTION|MAIL_FROM_ADDRESS)=' env.new
+          for f in config.php routes-v7.php; do c -Q "-DELE bootstrap/cache/$f" "$BASE" -o /dev/null 2>/dev/null && echo "removed cached $f" || true; done
+          rm -f env.orig env.new err.txt "$HOME/.netrc"

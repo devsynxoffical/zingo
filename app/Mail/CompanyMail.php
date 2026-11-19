@@ -29,7 +29,8 @@ class CompanyMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Company Mail',
+            subject: 'New website lead: ' . ($this->mail_data['service'] ?? 'Enquiry') . ' - ' . ($this->mail_data['name'] ?? ''),
+            replyTo: filter_var($this->mail_data['email'] ?? '', FILTER_VALIDATE_EMAIL) ? [new \Illuminate\Mail\Mailables\Address($this->mail_data['email'], $this->mail_data['name'] ?? null)] : [],
         );
     }
 
