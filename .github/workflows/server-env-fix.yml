@@ -7,6 +7,11 @@ name: Server .env production fix (manual)
 # A backup (.env.backup-<timestamp>) is uploaded first. Secrets are never printed.
 on:
   workflow_dispatch:
+    inputs:
+      mail_password:
+        description: 'New mailbox password (optional; masked, written only to the server .env)'
+        required: false
+        type: string
 
 concurrency:
   group: server-maintenance
@@ -34,21 +39,28 @@ jobs:
           TS=$(date -u +%Y%m%d%H%M%S)
           c -T env.orig "${BASE}.env.backup-$TS" && echo "Backup uploaded: .env.backup-$TS"
 
+          NEWPASS=$(jq -r '.inputs.mail_password // empty' "$GITHUB_EVENT_PATH")
+          [ -n "$NEWPASS" ] && echo "::add-mask::$NEWPASS"
           MU=$(grep -E '^MAIL_USERNAME=' env.orig | cut -d= -f2- | sed 's/^"//;s/"$//')
           MP=$(grep -E '^MAIL_PASSWORD=' env.orig | cut -d= -f2- | sed 's/^"//;s/"$//')
+          if [ -n "$NEWPASS" ]; then MP="$NEWPASS"; echo "Using the new mailbox password from the workflow input"; fi
+          export NEWPASS
           [ -n "$MP" ] && echo "::add-mask::$MP"
           [ -n "$MU" ] && echo "::add-mask::$MU"
           echo "Mail username domain: ${MU#*@}"
 
-          SMTP_HOST=""
-          for h in mail.zingoassist.us zingoassist.us s4549.lon1.stableserver.net; do
-            if curl -sS --ssl-reqd --connect-timeout 20 --max-time 40 --url "smtps://$h:465" --user "$MU:$MP" -X NOOP -o /dev/null 2>err.txt; then
-              echo "SMTP auth OK: $h:465"; SMTP_HOST=$h; break
-            else
-              echo "SMTP $h:465 failed: $(tail -1 err.txt | cut -c1-120)"
-            fi
+          SMTP_HOST=""; SMTP_USER=""
+          for u in "$MU" "sales@zingoassist.us"; do
+            [ -z "$u" ] && continue
+            for h in mail.zingoassist.us zingoassist.us s4549.lon1.stableserver.net; do
+              if curl -sS --ssl-reqd --connect-timeout 20 --max-time 40 --url "smtps://$h:465" --user "$u:$MP" -X NOOP -o /dev/null 2>err.txt; then
+                echo "SMTP auth OK: $h:465 (user ${u%%@*}@…)"; SMTP_HOST=$h; SMTP_USER=$u; break 2
+              else
+                echo "SMTP $h:465 user ${u%%@*}@… failed: $(tail -1 err.txt | cut -c1-100)"
+              fi
+            done
           done
-
+          export SMTP_USER
           SMTP_HOST="$SMTP_HOST" python3 - <<'PY'
           import os, re
           s = open('env.orig').read()
@@ -65,6 +77,10 @@ jobs:
           setk('LOG_LEVEL', 'info')
           setk('DB_DATABASE', os.environ['APP_ROOT'] + '/database/database.sqlite')
           h = os.environ.get('SMTP_HOST')
+          if h and os.environ.get('SMTP_USER'):
+              setk('MAIL_USERNAME', os.environ['SMTP_USER'])
+          if h and os.environ.get('NEWPASS'):
+              setk('MAIL_PASSWORD', '"' + os.environ['NEWPASS'].replace('"', '\\"') + '"')
           if h:
               setk('MAIL_MAILER', 'smtp'); setk('MAIL_HOST', h); setk('MAIL_PORT', '465'); setk('MAIL_ENCRYPTION', 'ssl')
               print('Mail switched to SMTP via', h)
@@ -76,6 +92,6 @@ jobs:
           PY
           c -T env.new "${BASE}.env" && echo ".env uploaded"
           echo "== new non-secret values"
-          grep -E '^(APP_ENV|APP_DEBUG|APP_URL|LOG_LEVEL|DB_CONNECTION|DB_DATABASE|MAIL_MAILER|MAIL_HOST|MAIL_PORT|MAIL_ENCRYPTION|MAIL_FROM_ADDRESS|MAIL_SENDMAIL_PATH)=' env.new
+          grep -E '^(APP_ENV|APP_DEBUG|APP_URL|LOG_LEVEL|DB_CONNECTION|DB_DATABASE|MAIL_MAILER|MAIL_HOST|MAIL_PORT|MAIL_ENCRYPTION|MAIL_FROM_ADDRESS|MAIL_SENDMAIL_PATH|MAIL_USERNAME)=' env.new
           for f in config.php routes-v7.php; do c -Q "-DELE bootstrap/cache/$f" "$BASE" -o /dev/null 2>/dev/null && echo "removed cached $f" || true; done
           rm -f env.orig env.new err.txt "$HOME/.netrc"
