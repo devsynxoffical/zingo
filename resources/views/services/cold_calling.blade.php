@@ -1,3 +1,47 @@
+@php
+    $x = [
+        'quote_href' => '#lead-final',
+        'pricing' => [
+            'label' => 'Pricing',
+            'title' => 'Real Estate Cold Calling Pricing',
+            'desc' => 'What a dedicated real estate cold caller typically costs per hour and per month in 2026.',
+            'plans' => [
+                ['Part-time caller', '$8 – $15 / hr', '≈ $640 – $1,200 / month (80 hrs)', 'A daily 4-hour calling block on your best lists.'],
+                ['Full-time caller', '$8 – $15 / hr', '≈ $1,300 – $2,400 / month (160 hrs)', 'A dedicated caller working your lists and follow-ups every day.', 'Most common'],
+                ['US-based caller', '$25 – $45 / hr', '≈ $4,000 – $7,200 / month (160 hrs)', 'Native US caller for markets where local voices convert better.'],
+            ],
+            'note' => 'Typical US market ranges in 2026, not a Zingo Assist price list. Budget separately for a dialer seat and data such as expired, FSBO and skip-traced lists (often $50 – $300 / month). We quote after a free consultation; see the <a href="' . route('blog.re_va_cost') . '">real estate VA cost guide</a>.',
+        ],
+        'day' => [
+            'label' => 'A typical day',
+            'title' => 'A Day With Your Real Estate Cold Caller',
+            'desc' => 'A sample calling day, scheduled inside legal calling hours for each lead&#39;s time zone.',
+            'items' => [
+                ['8:30', '<strong>List prep:</strong> load fresh expired, FSBO and circle-prospecting lists, already scrubbed against Do Not Call.'],
+                ['9:00', '<strong>Power hour:</strong> first calling block on the newest leads, when sellers are most reachable.'],
+                ['11:00', '<strong>Follow-ups:</strong> call back everyone who asked for a call today.'],
+                ['1:00', '<strong>CRM logging:</strong> notes, motivation, timeline and next call date on every contact.'],
+                ['3:00', '<strong>Second block:</strong> past clients, sphere and geographic farm calls.'],
+                ['5:00', '<strong>Evening block:</strong> homeowners who work days, until local calling-hour limits.'],
+                ['6:30', '<strong>Daily scorecard:</strong> dials, conversations, appointments booked and opt-outs logged.'],
+            ],
+        ],
+        'tools' => [
+            'label' => 'Tools',
+            'title' => 'Cold Calling Tools We Work In',
+            'items' => [
+                ['Mojo', 'Triple-line dialing and expired/FSBO data'],
+                ['Vulcan7', 'Expired and FSBO leads with dialer'],
+                ['REDX', 'Expired, FSBO and pre-foreclosure data'],
+                ['BatchDialer', 'Power dialing for investor and agent lists'],
+                ['PhoneBurner', 'Dialing sessions and voicemail drops'],
+                ['Follow Up Boss', 'Call logging and follow-up tasks'],
+                ['kvCORE / BoldTrail', 'Lead notes and appointment tracking'],
+                ['Google Calendar', 'Listing appointments booked for you'],
+            ],
+        ],
+    ];
+@endphp
 @extends('layout.main')
 
 @section('title', 'Real Estate Cold Calling Services for Agents | Zingo Assist')
@@ -48,7 +92,7 @@
             </p>
 
             <div class="sp-hero-actions" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
-                <a href="{{ route('contact') }}" class="sp-btn sp-btn--white">
+                <a href="#lead-final" class="sp-btn sp-btn--white">
                     Get a Free Consultation <i class="fas fa-arrow-right"></i>
                 </a>
                 <a href="{{ route('contact') }}" class="sp-btn sp-btn--outline">
@@ -496,6 +540,8 @@
     </div>
 </section>
 
+@include('partials.role-extras', ['x' => $x])
+
 <!-- ===================== FAQ ===================== -->
 <section class="sp-section">
     <div class="container">
@@ -571,31 +617,7 @@
     </div>
 </section>
 
-<!-- ===================== CTA ===================== -->
-<section class="sp-section" style="padding-bottom: 100px;">
-    <div class="container">
-        <div class="sp-cta" data-aos="fade-up" data-aos-duration="700">
-            <h2 class="sp-cta-title">Get Started with ZingoAssist</h2>
-            <p class="sp-cta-text">
-                If you're looking for real estate cold calling services or general cold calling services, ZingoAssist delivers campaigns that generate measurable results. Partner with us to:
-            </p>
-            <ul class="sp-cta-list">
-                <li><i class="fas fa-check-circle"></i> Drive high-quality leads</li>
-                <li><i class="fas fa-check-circle"></i> Increase conversions</li>
-                <li><i class="fas fa-check-circle"></i> Expand your client base</li>
-                <li><i class="fas fa-check-circle"></i> Maximize ROI</li>
-            </ul>
-            <div class="sp-hero-actions">
-                <a href="{{ route('contact') }}" class="sp-btn sp-btn--white">
-                    Start Your Cold Calling Campaign <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="{{ route('contact') }}" class="sp-btn sp-btn--outline">
-                    Request a Free Consultation <i class="fas fa-paper-plane"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.lead-final', ['final' => ['title' => 'Fill Your Calendar With Listing Appointments', 'text' => 'Tell us your market, lists and dialer. We will set up a trained real estate cold caller, starting with a free 2-day trial.', 'list' => ['Daily calling blocks', 'Appointments in your calendar', 'DNC-aware calling', 'Weekly results by list']], 'formService' => 'Real Estate Cold Calling'])
 
 </div><!-- .sp-page -->
 

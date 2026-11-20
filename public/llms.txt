@@ -2,7 +2,7 @@
 
 > Zingo Assist is a US virtual assistant agency (office: 7901 4th St N Ste 23684, St. Petersburg, FL 33702; phone +1 424-542-7170) that supplies trained remote assistants to real estate agents, brokers, investors, property managers and small businesses. Every engagement can start with a free 2-day trial.
 
-Core specialties: real estate virtual assistants, real estate cold calling (agents, wholesalers, investors), transaction coordination, virtual property management, lead generation, CRM management, bookkeeping, and real estate digital marketing / SEO / web development.
+Core specialties: real estate virtual assistants, real estate cold calling (agents, wholesalers, investors), transaction coordination, virtual property management, lead generation, CRM management, and real estate digital marketing / SEO / web development.
 
 ## Real estate services
 - [Real Estate Virtual Assistant](https://zingoassist.us/real-estate-virtual-assistant): dedicated VAs for agents and teams (admin, CRM, listings, ISA calling, transaction support).
@@ -22,7 +22,6 @@ Core specialties: real estate virtual assistants, real estate cold calling (agen
 - [Personal Assistance](https://zingoassist.us/personal-assistance-services)
 - [Lead Generation](https://zingoassist.us/lead-generation-services)
 - [CRM Management](https://zingoassist.us/crm-management-services)
-- [Accounting & Bookkeeping](https://zingoassist.us/accounting-and-bookkeeping-services)
 - [All services](https://zingoassist.us/our-services)
 
 ## Guides

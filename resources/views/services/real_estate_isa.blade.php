@@ -1,7 +1,7 @@
 @php
     $page = [
         'form_service' => 'Real Estate ISA',
-        'h1' => ['Real Estate', 'ISA Services'],
+        'h1' => ['Real Estate Inside Sales', 'Agent (ISA) Services'],
         'hero' => [
             'Outsourced real estate inside sales agents (ISAs) who call your new leads fast, qualify buyers and sellers, nurture your database and book appointments straight into your calendar, so your agents spend their time in front of clients instead of on the phone.',
             'Zingo Assist ISAs work your CRM, your scripts and your lead sources. Start with a free 2-day trial.',
@@ -76,6 +76,47 @@
                 ['Weekly review', 'We review the funnel metrics with you and adjust scripts, schedules and lead priorities.'],
             ],
         ],
+        'extras' => [
+            'pricing' => [
+                'label' => 'Pricing',
+                'title' => 'Real Estate ISA Pricing',
+                'desc' => 'What an outsourced inside sales agent typically costs per hour and per month in 2026.',
+                'plans' => [
+                    ['Part-time ISA', '$8 – $15 / hr', '≈ $640 – $1,200 / month (80 hrs)', 'Speed-to-lead and nurture calls in your peak lead hours.'],
+                    ['Full-time ISA', '$8 – $15 / hr', '≈ $1,300 – $2,400 / month (160 hrs)', 'A dedicated caller working every new and aged lead in your CRM.', 'Most common'],
+                    ['US-based ISA', '$25 – $45 / hr', '≈ $4,000 – $7,200 / month (160 hrs)', 'Native US caller for teams that want local accents on every call.'],
+                ],
+                'note' => 'Typical US market ranges in 2026, not a Zingo Assist price list. Strong spoken English and objection handling sit at the top of each range. Budget separately for a dialer seat and data (often $50 – $300 / month). We quote after a free consultation; see the <a href="' . route('blog.re_va_cost') . '">real estate VA cost guide</a>.',
+            ],
+            'day' => [
+                'label' => 'A typical day',
+                'title' => 'A Day in the Life of Your Real Estate ISA',
+                'desc' => 'A sample full-time ISA schedule in your time zone, built around when leads actually answer.',
+                'items' => [
+                    ['8:00', '<strong>New leads first:</strong> call every overnight web, portal and Zillow lead within minutes of the shift starting.'],
+                    ['9:00', '<strong>Appointment confirmations:</strong> confirm today&#39;s buyer and listing appointments and reschedule no-shows.'],
+                    ['10:00', '<strong>Nurture block:</strong> follow up with 30–90 day leads using your approved scripts.'],
+                    ['12:30', '<strong>CRM updates:</strong> notes, tags, stage changes and next follow-up date on every contact in Follow Up Boss or kvCORE.'],
+                    ['2:00', '<strong>Aged-lead revival:</strong> call 6–12 month old leads with a market update or new listings.'],
+                    ['4:00', '<strong>Live hand-offs:</strong> warm-transfer hot leads to the agent on duty and book appointments into calendars.'],
+                    ['5:30', '<strong>Daily scorecard:</strong> dials, conversations, appointments set and appointments kept.'],
+                ],
+            ],
+            'tools' => [
+                'label' => 'Tools',
+                'title' => 'ISA Tools We Work In',
+                'items' => [
+                    ['Follow Up Boss', 'Call logging, action plans, smart lists'],
+                    ['kvCORE / BoldTrail', 'Lead follow-up and appointment tracking'],
+                    ['Lofty', 'Lead routing and nurture'],
+                    ['Mojo / BatchDialer', 'Power dialing and call recording'],
+                    ['PhoneBurner', 'Dialing sessions and voicemail drops'],
+                    ['Zillow Premier Agent', 'Lead response and status updates'],
+                    ['Google Calendar', 'Appointment booking for each agent'],
+                    ['Slack / Teams', 'Live hand-offs to the agent on duty'],
+                ],
+            ],
+        ],
         'faqs' => [
             ['What does a real estate ISA do?', 'A real estate ISA (inside sales agent) calls and texts leads, qualifies buyers and sellers on timeline, motivation and financing, nurtures older leads, and books appointments for agents. ISAs focus on converting leads into appointments rather than on showing property or negotiating.'],
             ['Does a real estate ISA need a license?', 'It depends on the state and on what the ISA does. Setting appointments and sharing approved information usually does not require a license, but discussing terms, advising on value or showing property does. Check your state rules and brokerage policy; Florida teams can read our <a href="' . route('blog.unlicensed_assistant_florida') . '">Florida unlicensed assistant guide</a>.'],
@@ -104,7 +145,7 @@
 @endphp
 @extends('layout.main')
 
-@section('title', 'Real Estate ISA Services | Outsourced Inside Sales Agents')
+@section('title', 'Real Estate Inside Sales Agent (ISA) Services | Zingo Assist')
 @section('meta_description', 'Outsourced real estate ISA services: inside sales agents who call new leads fast, qualify buyers and sellers and book appointments. Free 2-day trial.')
 
 @push('css')

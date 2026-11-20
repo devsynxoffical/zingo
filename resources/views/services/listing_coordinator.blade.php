@@ -62,6 +62,46 @@
             ],
             'note' => 'Many teams use one Zingo Assist assistant for both roles. Read <a href="' . route('blog.tc_vs_va') . '">transaction coordinator vs virtual assistant</a>.',
         ],
+        'extras' => [
+            'pricing' => [
+                'label' => 'Pricing',
+                'title' => 'Virtual Listing Coordinator Pricing',
+                'desc' => 'What a listing coordinator typically costs per hour and per month in 2026.',
+                'plans' => [
+                    ['Part-time coordinator', '$8 – $15 / hr', '≈ $640 – $1,200 / month (80 hrs)', 'Covers a steady flow of listings for a solo agent.'],
+                    ['Full-time coordinator', '$8 – $15 / hr', '≈ $1,300 – $2,400 / month (160 hrs)', 'One coordinator for every listing on a team, from pre-listing to under contract.', 'Most common'],
+                    ['US-based coordinator', '$25 – $45 / hr', '≈ $4,000 – $7,200 / month (160 hrs)', 'Native US coordinator for heavy seller communication.'],
+                ],
+                'note' => 'Typical US market ranges in 2026, not a Zingo Assist price list. Some coordinators charge per listing; an hourly coordinator is usually cheaper once you carry several listings at once. We quote after a free consultation; see the <a href="' . route('blog.re_va_cost') . '">real estate VA cost guide</a>.',
+            ],
+            'day' => [
+                'label' => 'A typical day',
+                'title' => 'A Day With Your Listing Coordinator',
+                'desc' => 'A sample schedule for a coordinator handling several active listings.',
+                'items' => [
+                    ['8:30', '<strong>Showing feedback:</strong> request and log feedback from yesterday&#39;s showing agents.'],
+                    ['9:30', '<strong>New listing prep:</strong> collect seller documents and disclosures, book photos, video and signs.'],
+                    ['11:00', '<strong>MLS:</strong> draft MLS input, photos and showing instructions for your review, then check syndication.'],
+                    ['1:00', '<strong>Marketing:</strong> listing description, feature sheet, just-listed posts and email blast for approval.'],
+                    ['2:30', '<strong>Seller updates:</strong> send each seller their weekly activity report: showings, feedback and views.'],
+                    ['4:00', '<strong>Status changes:</strong> price changes, open houses and under-contract hand-off to your transaction coordinator.'],
+                ],
+            ],
+            'tools' => [
+                'label' => 'Tools',
+                'title' => 'Listing Tools We Work In',
+                'items' => [
+                    ['Your MLS', 'Listing input and updates for your approval'],
+                    ['ShowingTime', 'Showing requests and feedback'],
+                    ['dotloop', 'Listing agreements and seller documents'],
+                    ['SkySlope', 'Listing checklists and compliance'],
+                    ['Follow Up Boss', 'Seller contacts and listing tasks'],
+                    ['Canva', 'Flyers, feature sheets and social posts'],
+                    ['Mailchimp', 'Just-listed email campaigns'],
+                    ['Google Workspace', 'Seller report templates and shared files'],
+                ],
+            ],
+        ],
         'faqs' => [
             ['What does a real estate listing coordinator do?', 'A listing coordinator manages listing tasks from signed agreement to accepted offer: collecting seller documents, preparing MLS input, scheduling photos and signage, drafting listing copy for agent approval, collecting showing feedback and sending sellers regular updates.'],
             ['Can a virtual assistant be a listing coordinator?', 'Yes. Nearly all listing-coordination work is administrative and can be done remotely. The licensed agent approves listing content and handles advice, pricing and negotiation.'],

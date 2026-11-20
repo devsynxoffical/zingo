@@ -1,7 +1,7 @@
 @extends('layout.main')
 
-@section('title', 'Virtual Assistant Agency USA | Real Estate VAs | Zingo Assist')
-@section('meta_description', 'Hire trained virtual assistants for real estate and small businesses: cold calling, transaction coordination, lead generation and bookkeeping. Free 2-day trial.')
+@section('title', 'Zingo Assist | Virtual Assistants for Real Estate Agents & Teams')
+@section('meta_description', 'Trained virtual assistants for US real estate agents, teams and investors: transaction coordination, ISA calls, listing coordination and cold calling. Free 2-day trial.')
 
 @push('schema')
     @include('partials.schema-page', [
@@ -100,9 +100,9 @@
             <div class="row align-items-end mb-30-none">
                 <div class="col-xl-7 col-lg-7 mb-30">
                     <div class="banner-content" data-aos="fade-right" data-aos-duration="1800">
-                        <h1 class="title">Zingo Assist – Premier Virtual Assistant Agency in USA</h1>
+                        <h1 class="title">Real Estate Virtual Assistants for US Agents and Teams</h1>
                         <span class="sub-title text-light">Your Trusted Virtual Assistant Company</span>
-                        <p>Welcome to Zingo Assist, your trusted virtual assistant agency dedicated to helping businesses and entrepreneurs achieve operational excellence. As a leading virtual assistant company in the USA, we specialize in providing innovative virtual assistant services that streamline business processes, enhance productivity, and ensure your company stays ahead of the competition.</p>
+                        <p>Zingo Assist provides trained <a href="{{ route('service.real_estate_virtual_assistant') }}" style="color:inherit;text-decoration:underline;">real estate virtual assistants</a> for US agents, teams and investors: transaction coordinators, inside sales agents, listing coordinators and cold callers who work inside your CRM and tools, managed by our team in St. Petersburg, Florida.</p>
                         <div class="hero-expandable-text" id="heroExpandText">
                             <p style="margin-top: 15px;">With over 500 satisfied clients across multiple countries, Zingo Assist has established itself as the go-to virtual assistant agency for businesses seeking skilled, reliable, and professional support. Our mission is to empower businesses of all sizes by offering flexible, scalable, and cost-effective virtual solutions tailored to each client's unique needs.</p>
                         </div>

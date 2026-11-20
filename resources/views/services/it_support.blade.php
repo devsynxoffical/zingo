@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('title', 'Business IT Support Services | Zingo Assist')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'Remote business IT support: help desk, network management, cloud and email administration, security and IT consulting for small and mid-sized businesses.')
 
 @push('schema')

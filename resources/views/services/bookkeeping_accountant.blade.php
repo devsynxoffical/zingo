@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('title', 'Accounting & Bookkeeping Services | Zingo Assist')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'Virtual bookkeeping and accounting services: transaction categorization, reconciliations, payroll support and monthly financial reports for small businesses.')
 
 @push('schema')

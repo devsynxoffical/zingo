@@ -1,16 +1,61 @@
+@php
+    $x = [
+        'quote_href' => '#lead-final',
+        'pricing' => [
+            'label' => 'Pricing',
+            'title' => 'Virtual Transaction Coordinator Pricing',
+            'desc' => 'How transaction coordination is typically priced in 2026: per closed file or by the hour.',
+            'plans' => [
+                ['Per-file coordinator', '$300 – $600', 'per closed transaction', 'Pay only when a deal closes. Simple for agents with a few files a month.', 'Most common'],
+                ['Hourly virtual TC', '$8 – $15 / hr', '≈ $640 – $1,200 / month (80 hrs)', 'One assistant for every file. Usually cheaper than per-file once you close 4+ deals a month.'],
+                ['US-based TC', '$25 – $45 / hr', '≈ $4,000 – $7,200 / month (160 hrs)', 'Native US coordinator for high-touch client communication.'],
+            ],
+            'note' => 'Typical US market ranges in 2026, not a Zingo Assist price list. Zingo Assist works hourly or monthly, so one coordinator can run all of your files. We quote after a free consultation; compare models in <a href="' . route('blog.tc_vs_va') . '">transaction coordinator vs virtual assistant</a>.',
+        ],
+        'day' => [
+            'label' => 'A typical day',
+            'title' => 'A Day With Your Virtual Transaction Coordinator',
+            'desc' => 'A sample schedule for a coordinator managing several files from contract to close.',
+            'items' => [
+                ['8:30', '<strong>Deadline check:</strong> review every open file for today&#39;s and this week&#39;s contingency dates.'],
+                ['9:30', '<strong>New contracts:</strong> open the file, build the timeline, send intro emails to clients, lender and title.'],
+                ['11:00', '<strong>Documents:</strong> request missing signatures and disclosures and upload them to dotloop or SkySlope.'],
+                ['1:00', '<strong>Inspections and appraisal:</strong> schedule, confirm access and share reports with the agent.'],
+                ['2:30', '<strong>Status updates:</strong> send clients and co-op agents a clear update on where the deal stands.'],
+                ['4:00', '<strong>Compliance:</strong> run the broker checklist so the file is complete and ready to close.'],
+                ['5:00', '<strong>Daily report:</strong> deadlines met, issues found and anything that needs the agent&#39;s decision.'],
+            ],
+        ],
+        'tools' => [
+            'label' => 'Tools',
+            'title' => 'Transaction Tools We Work In',
+            'items' => [
+                ['dotloop', 'Loops, document collection and e-signatures'],
+                ['SkySlope', 'Transaction files and broker compliance'],
+                ['DocuSign', 'Signatures on addenda and disclosures'],
+                ['Lone Wolf Transactions', 'zipForm contracts and transaction files'],
+                ['Brokermint', 'Back-office checklists and commissions'],
+                ['Open to Close', 'Timelines and automated task lists'],
+                ['Follow Up Boss', 'Client contacts and closing tasks'],
+                ['Google Workspace', 'Calendars, shared folders and email'],
+            ],
+        ],
+    ];
+@endphp
 @extends('layout.main')
 
-@section('title', 'Real Estate Transaction Coordinator Services | Zingo Assist')
-@section('meta_description', 'Virtual real estate transaction coordinator services: contract-to-close paperwork, deadline tracking and communication with clients, lenders and title.')
+@section('title', 'Virtual Transaction Coordinator Services | Zingo Assist')
+@section('meta_description', 'Virtual transaction coordinator services for real estate agents: contract-to-close deadlines, documents, lender and title updates. Pricing, tools and free trial.')
 
 @push('schema')
     @include('partials.schema-page', [
         'type' => 'service',
-        'name' => 'Real Estate Transaction Coordinator Services',
+        'name' => 'Virtual Transaction Coordinator Services',
         'serviceType' => 'Real estate transaction coordination',
         'description' => 'Virtual real estate transaction coordinator services: contract-to-close paperwork, deadline tracking and communication with clients, lenders and title.',
         'breadcrumbs' => [['Services', route('service')]],
         'faqs' => [
+            ['How much does a virtual transaction coordinator cost?', 'Transaction coordinators commonly charge about $300 to $600 per closed file, while an hourly virtual transaction coordinator usually costs about $8 to $15 per hour offshore or $25 to $45 per hour in the US. Hourly support is usually cheaper once you close four or more deals a month. Zingo Assist quotes after a free consultation.'],
             ['1. What are Real Estate Transaction Coordinator services?', 'They include managing paperwork, timelines, communication, and compliance from contract to close.'],
             ['2. What do transaction coordinator companies do?', 'They manage disclosures, deadlines, client communication, and file preparation for agents and brokers.'],
             ['3. Do you offer remote coordination support?', 'Yes. We provide virtual coordination for agents, brokers, and investors nationwide.'],
@@ -40,7 +85,7 @@
     <div class="container">
         <div class="sp-hero-inner">
             <h1 class="sp-hero-title" data-aos="fade-up" data-aos-duration="700">
-                Real Estate Transaction <span class="sp-hero-title-highlight">Coordinator Services</span>
+                Virtual Transaction <span class="sp-hero-title-highlight">Coordinator Services</span>
             </h1>
 
             <p class="sp-hero-desc" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700">
@@ -51,7 +96,7 @@
             </p>
 
             <div class="sp-hero-actions" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
-                <a href="{{ route('contact') }}" class="sp-btn sp-btn--white">
+                <a href="#lead-final" class="sp-btn sp-btn--white">
                     Get a Free Consultation <i class="fas fa-arrow-right"></i>
                 </a>
                 <a href="{{ route('contact') }}" class="sp-btn sp-btn--outline">
@@ -373,6 +418,8 @@
     </div>
 </section>
 
+@include('partials.role-extras', ['x' => $x])
+
 <!-- ===================== FAQ ===================== -->
 <section class="sp-section">
     <div class="container">
@@ -381,6 +428,15 @@
             <h2 class="sp-section-title">FAQs</h2>
         </div>
         <div class="sp-faq-wrap" data-aos="fade-up" data-aos-delay="100">
+            <div class="sp-faq">
+                <div class="sp-faq-header">
+                    <h4 class="sp-faq-q">How much does a virtual transaction coordinator cost?</h4>
+                    <span class="sp-faq-toggle"><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="sp-faq-body">
+                    <div class="sp-faq-body-inner">Transaction coordinators commonly charge about $300 to $600 per closed file, while an hourly virtual transaction coordinator usually costs about $8 to $15 per hour offshore or $25 to $45 per hour in the US. Hourly support is usually cheaper once you close four or more deals a month. See <a href="#pricing">pricing</a> above or <a href="#lead-final">request your quote</a>.</div>
+                </div>
+            </div>
             <div class="sp-faq">
                 <div class="sp-faq-header">
                     <h4 class="sp-faq-q">1. What are Real Estate Transaction Coordinator services?</h4>
@@ -475,31 +531,7 @@
     </div>
 </section>
 
-<!-- ===================== CTA ===================== -->
-<section class="sp-section" style="padding-bottom: 100px;">
-    <div class="container">
-        <div class="sp-cta" data-aos="fade-up" data-aos-duration="700">
-            <h2 class="sp-cta-title">Get Started with ZingoAssist</h2>
-            <p class="sp-cta-text">
-                Whether you need full support or assistance with select tasks, ZingoAssist provides professional Real Estate Transaction Coordinator services that help you stay organized, improve client satisfaction, and close deals faster.
-            </p>
-            <ul class="sp-cta-list">
-                <li><i class="fas fa-check-circle"></i> Streamline your transaction process</li>
-                <li><i class="fas fa-check-circle"></i> Reduce paperwork stress</li>
-                <li><i class="fas fa-check-circle"></i> Deliver a seamless closing experience</li>
-                <li><i class="fas fa-check-circle"></i> Focus on income-producing tasks</li>
-            </ul>
-            <div class="sp-hero-actions">
-                <a href="{{ route('contact') }}" class="sp-btn sp-btn--white">
-                    Start Your Coordination Services Today <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="{{ route('contact') }}" class="sp-btn sp-btn--outline">
-                    Request a Free Consultation <i class="fas fa-paper-plane"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.lead-final', ['final' => ['title' => 'Close Every Deal On Time, Without the Paperwork', 'text' => 'Tell us how many files you close each month and which platform you use. We will set up a trained virtual transaction coordinator, starting with a free 2-day trial.', 'list' => ['Every deadline tracked', 'Documents collected and signed', 'Clients updated without you', 'A clean, compliant file']], 'formService' => 'Transaction Coordinator'])
 
 </div><!-- .sp-page -->
 
