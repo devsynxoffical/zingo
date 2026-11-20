@@ -88,3 +88,18 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
 - **Change:** none. There's no query data to act on, and the new pages were already deployed today. Following the no-churn rule.
 - **Owner action (unchanged):** in Search Console URL Inspection, click "Request indexing" for `/faq` first, then `/listing-coordinator-virtual-assistant`, `/real-estate-cold-calling-services`, `/real-estate-transaction-coordinator-services`, `/our-services`.
 - **Next:** if the TC-vs-VA post is still crawled-not-indexed, compare its overlap with `/real-estate-transaction-coordinator-services` and differentiate it. Watch for first non-brand impressions on the indexed real estate pages.
+
+## 2026-11-20 00:41 UTC: 12-hour run #4
+- **Deployment:** live. Since the last run, `0bc8a34` (resilient lead forms) deployed successfully. The server `.env` was fixed (production mode, debug off, correct DB path, SMTP via mail.zingoassist.us). The owner confirmed the test lead emails arrived in sales@.
+- **Search Console (fresh, incomplete):**
+  - Nov 18: 1 click / 9 impressions. Nov 19: 0 clicks / 11 impressions (the highest day so far).
+  - **First non-brand impressions:**
+    - "unlicensed assistant real estate" → FL unlicensed assistant guide, **position 5**
+    - "what can an unlicensed assistant do in real estate" → same guide, position 63
+    - "real estate cold calling services for wholesalers" → wholesale page, position 37
+    - "outsourced isa services for real estate teams" → ISA page, position 45
+  - All have 1 impression each: too little data to judge CTR or position trends.
+- **Indexing:** no change for the pages checked. `/faq` still has the stale noindex; listing coordinator page unknown; TC-vs-VA post still "Crawled – not indexed" (not recrawled since Nov 19 02:13); cold calling page discovered; TC services page unknown. The second inspection batch timed out.
+- **Change:** none. The guide already answers the general question (H1, quick answer and task list). With 1 impression per query, editing titles now would be churn.
+- **Next:** if "unlicensed assistant real estate" keeps showing at positions 3–10 with 10+ impressions, test a title that covers the general (non-Florida) intent. Re-check the TC-vs-VA post.
+- **Owner action (unchanged):** request indexing in Search Console for `/faq`, `/listing-coordinator-virtual-assistant`, `/real-estate-transaction-coordinator-services`, `/real-estate-cold-calling-services`.
