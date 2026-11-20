@@ -6,6 +6,8 @@ return [
         ['route' => 'blog1', 'title' => "Why Your Business Needs a Virtual Assistant", 'image' => 'assets/images/blog/Virtual Assistant vs In-House Employees Which is Best for Your Business.jpg', 'topic' => 'va'],
         ['route' => 'blog3', 'title' => "10 Tasks to Outsource to a Virtual Assistant Today", 'image' => 'assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg', 'topic' => 'va'],
         ['route' => 'blog4', 'title' => "How to Become a Virtual Assistant: A Step-by-Step Guide", 'image' => 'assets/images/blog/What is Virtual Assistance.jpg', 'topic' => 'va'],
+        ['route' => 'blog.tc_checklist', 'title' => "Transaction Coordinator Checklist: Contract to Close", 'image' => 'assets/images/blog/Need Help with specific Business Operations.jpg', 'topic' => 're'],
+        ['route' => 'blog.speed_to_lead', 'title' => "Speed to Lead in Real Estate: How Fast Should You Respond?", 'image' => 'assets/images/blog/Handling Email Communication.jpg', 'topic' => 're'],
         ['route' => 'blog.isa_scripts_expired_fsbo', 'title' => "ISA Scripts for Expired and FSBO Leads", 'image' => 'assets/images/blog/Organizing Meetings and Appointments.jpg', 'topic' => 're'],
         ['route' => 'blog.follow_up_boss_va', 'title' => "How Top Teams Use a Virtual Assistant in Follow Up Boss", 'image' => 'assets/images/blog/Report Preparations and Presentations.jpg', 'topic' => 're'],
         ['route' => 'blog.re_va_tasks_checklist', 'title' => "Real Estate Virtual Assistant Tasks Checklist (Free PDF)", 'image' => 'assets/images/blog/Feel Swamped With Work.jpg', 'topic' => 're'],

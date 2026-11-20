@@ -12,6 +12,8 @@ Route::controller(WebController::class)->group(function () {
     Route::get('/blog/tasks-to-outsource-to-a-virtual-assistant', 'blog3')->name('blog3');
     Route::get('/blog/how-to-become-a-virtual-assistant', 'blog4')->name('blog4');
     Route::get('/blog/real-estate-virtual-assistant-cost', 're_va_cost')->name('blog.re_va_cost');
+    Route::get('/blog/transaction-coordinator-checklist', 'tc_checklist')->name('blog.tc_checklist');
+    Route::get('/blog/speed-to-lead-real-estate', 'speed_to_lead')->name('blog.speed_to_lead');
     Route::get('/blog/isa-scripts-expired-fsbo-leads', 'isa_scripts_expired_fsbo')->name('blog.isa_scripts_expired_fsbo');
     Route::get('/blog/follow-up-boss-virtual-assistant', 'follow_up_boss_va')->name('blog.follow_up_boss_va');
     Route::get('/blog/real-estate-virtual-assistant-tasks-checklist', 're_va_tasks_checklist')->name('blog.re_va_tasks_checklist');

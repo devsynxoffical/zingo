@@ -234,6 +234,16 @@ class WebController extends Controller
         return view('blog.re_va_cost');
     }
 
+    public function tc_checklist()
+    {
+        return view('blog.tc_checklist');
+    }
+
+    public function speed_to_lead()
+    {
+        return view('blog.speed_to_lead');
+    }
+
     public function isa_scripts_expired_fsbo()
     {
         return view('blog.isa_scripts_expired_fsbo');
@@ -294,6 +304,8 @@ class WebController extends Controller
             'faq' => ['faq', '0.6', 'monthly'],
             'blog' => ['blog', '0.7', 'weekly'],
             'blog.re_va_cost' => ['blog.re_va_cost', '0.7', 'monthly'],
+            'blog.tc_checklist' => ['blog.tc_checklist', '0.7', 'monthly'],
+            'blog.speed_to_lead' => ['blog.speed_to_lead', '0.7', 'monthly'],
             'blog.isa_scripts_expired_fsbo' => ['blog.isa_scripts_expired_fsbo', '0.7', 'monthly'],
             'blog.follow_up_boss_va' => ['blog.follow_up_boss_va', '0.7', 'monthly'],
             'blog.re_va_tasks_checklist' => ['blog.re_va_tasks_checklist', '0.7', 'monthly'],

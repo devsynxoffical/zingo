@@ -292,3 +292,6 @@ body { overflow-x: hidden; }
 .ck-list--agent li { display: flex; gap: 12px; align-items: flex-start; background: #fff8e6; border: 1px solid #f5e1a8; border-radius: 12px; padding: 12px 14px; font-size: 15.5px; line-height: 1.55; }
 .ck-list--agent i { color: #b07c00; margin-top: 4px; }
 .ck-h-icon { color: #A52673; font-size: .8em; margin-right: 6px; }
+
+/* Two-column guide tables fit on phones without side-scrolling */
+.guide-table:not(:has(th:nth-child(3))) { min-width: 0; }

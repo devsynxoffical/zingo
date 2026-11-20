@@ -25,7 +25,7 @@ Source: *Zingo Assist SEO Plan* and *Keyword Map* (20 Nov 2026, DEVSYNX).
 4. **Reviews:** ask clients for Google and Trustpilot reviews.
 5. **Search Console:** request indexing for the upgraded pages (TC, ISA, listing coordinator, cold calling, hub) and `/faq`.
 
-## Content plan: all five posts are live (published 20 Nov at the owner's request)
+## Content plan: all five planned posts plus two extra posts are live (published 20 Nov at the owner's request)
 
 | Post | URL | Supports |
 |---|---|---|
@@ -34,6 +34,8 @@ Source: *Zingo Assist SEO Plan* and *Keyword Map* (20 Nov 2026, DEVSYNX).
 | ISA scripts for expired and FSBO leads | `/blog/isa-scripts-expired-fsbo-leads` | ISA, expired & FSBO pages |
 | How top teams use a VA in Follow Up Boss | `/blog/follow-up-boss-virtual-assistant` | hub, ISA |
 | Real estate VA tasks checklist, interactive + PDF | `/blog/real-estate-virtual-assistant-tasks-checklist` (PDF: `/assets/downloads/real-estate-va-tasks-checklist.pdf`) | hub; link-earning asset for outreach |
+| Transaction coordinator checklist: contract to close (interactive) | `/blog/transaction-coordinator-checklist` | TC page ("virtual transaction coordinator", P1) |
+| Speed to lead in real estate | `/blog/speed-to-lead-real-estate` | ISA page ("inside sales agent real estate", P1) |
 
 The checklist PDF is generated from `resources/data/re-va-checklist.json`. Run `node scripts/build_checklist_pdf.cjs` after editing the list. Choose new topics from Search Console queries as they appear.
 

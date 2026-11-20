@@ -128,6 +128,7 @@
         'links' => [
             'title' => 'Related Real Estate Services',
             'items' => [
+                ['Speed to Lead Guide', route('blog.speed_to_lead')],
                 ['ISA Scripts for Expired & FSBO', route('blog.isa_scripts_expired_fsbo')],
                 ['VA in Follow Up Boss', route('blog.follow_up_boss_va')],
                 ['Real Estate Virtual Assistant', route('service.real_estate_virtual_assistant')],

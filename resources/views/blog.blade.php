@@ -121,6 +121,42 @@
                 </div>
 
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('blog.tc_checklist') }}" class="bp-post-card">
+                        <div class="bp-post-img">
+                            <img src="{{ asset('assets/images/blog/Need Help with specific Business Operations.jpg') }}" alt="Transaction Coordinator Checklist: Contract to Close" loading="lazy">
+                            <div class="bp-post-category">Real Estate</div>
+                        </div>
+                        <div class="bp-post-body">
+                            <div class="bp-post-meta-sm">
+                                <span><i class="fas fa-calendar"></i> Nov 20, 2026</span>
+                                <span><i class="fas fa-clock"></i> 7 min read</span>
+                            </div>
+                            <h3 class="bp-post-title">Transaction Coordinator Checklist: Contract to Close</h3>
+                            <p class="bp-post-excerpt">Every step from accepted contract to closing in six stages, with an interactive checklist and a weekly client update template.</p>
+                            <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <a href="{{ route('blog.speed_to_lead') }}" class="bp-post-card">
+                        <div class="bp-post-img">
+                            <img src="{{ asset('assets/images/blog/Handling Email Communication.jpg') }}" alt="Speed to Lead in Real Estate: How Fast Should You Respond?" loading="lazy">
+                            <div class="bp-post-category">Real Estate</div>
+                        </div>
+                        <div class="bp-post-body">
+                            <div class="bp-post-meta-sm">
+                                <span><i class="fas fa-calendar"></i> Nov 20, 2026</span>
+                                <span><i class="fas fa-clock"></i> 7 min read</span>
+                            </div>
+                            <h3 class="bp-post-title">Speed to Lead in Real Estate: How Fast Should You Respond?</h3>
+                            <p class="bp-post-excerpt">What the research says, a 5-minute response workflow, a first-call script, the first-week follow-up plan and the numbers to track.</p>
+                            <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                     <a href="{{ route('blog.re_va_tasks_checklist') }}" class="bp-post-card">
                         <div class="bp-post-img">
                             <img src="{{ asset('assets/images/blog/Feel Swamped With Work.jpg') }}" alt="Real Estate Virtual Assistant Tasks Checklist (Free PDF)" loading="lazy">
