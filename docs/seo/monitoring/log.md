@@ -103,3 +103,22 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
 - **Change:** none. The guide already answers the general question (H1, quick answer and task list). With 1 impression per query, editing titles now would be churn.
 - **Next:** if "unlicensed assistant real estate" keeps showing at positions 3–10 with 10+ impressions, test a title that covers the general (non-Florida) intent. Re-check the TC-vs-VA post.
 - **Owner action (unchanged):** request indexing in Search Console for `/faq`, `/listing-coordinator-virtual-assistant`, `/real-estate-transaction-coordinator-services`, `/real-estate-cold-calling-services`.
+
+## 2026-11-20 12:41 UTC: 12-hour run #5
+- **Search Console:** Nov 19 is now **46 impressions** (the earlier partial figure was 11), the best day so far. Average position 13.1, because most impressions are now non-brand. Still 0 non-brand clicks.
+- **New non-brand queries (13 total, 1 impression each):**
+  - **Unlicensed-assistant cluster:** the FL guide now ranks for 6 queries:
+    - "unlicensed real estate assistant": **position 1**
+    - "can an unlicensed real estate assistant show property": **position 2**
+    - "unlicensed assistant real estate": **position 5**
+    - MLS login-sharing question: **position 10**
+    - "what can (an) unlicensed … do": positions 63 and 65
+  - **Cost guide:** "property management VA cost" (44), "virtual TC pricing" (44), "real estate VA pricing" (76).
+  - **Service pages:** wholesale (37), ISA (45).
+- **Indexing:** `/real-estate-transaction-coordinator-services` moved from unknown to discovered. Otherwise unchanged: `/faq` still has the stale noindex, listing coordinator page unknown, TC-vs-VA post crawled-not-indexed, cold calling page discovered.
+- **Change (C9):** added a direct FAQ answer, "Can an MLS subscriber share their user ID and login credentials with an unlicensed assistant?", to `/blog/unlicensed-real-estate-assistant-florida`. It is also included in the FAQPage schema (now 6 items).
+  - **Reason:** a real query ranks at position 10 and the page only touched on this in a bullet.
+  - **Title kept:** the head queries already rank 1–2.
+  - **Validation:** position and impressions for that query over the next 14 days.
+  - **Local checks:** 51/51 URLs return 200, no duplicate titles, no orphans, valid FAQ JSON-LD.
+- **Next:** watch whether the "what can … do" general-intent queries stay at 60+. If they do with more impressions, test a title that covers general intent without losing the Florida rankings.
