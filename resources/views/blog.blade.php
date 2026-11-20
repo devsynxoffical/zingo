@@ -121,6 +121,60 @@
                 </div>
 
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('blog.re_va_tasks_checklist') }}" class="bp-post-card">
+                        <div class="bp-post-img">
+                            <img src="{{ asset('assets/images/blog/Feel Swamped With Work.jpg') }}" alt="Real Estate Virtual Assistant Tasks Checklist (Free PDF)" loading="lazy">
+                            <div class="bp-post-category">Real Estate</div>
+                        </div>
+                        <div class="bp-post-body">
+                            <div class="bp-post-meta-sm">
+                                <span><i class="fas fa-calendar"></i> Nov 20, 2026</span>
+                                <span><i class="fas fa-clock"></i> 6 min read</span>
+                            </div>
+                            <h3 class="bp-post-title">Real Estate Virtual Assistant Tasks Checklist (Free PDF)</h3>
+                            <p class="bp-post-excerpt">38 daily, weekly, listing and transaction tasks to delegate, plus what stays with the agent. Interactive checklist and printable PDF.</p>
+                            <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <a href="{{ route('blog.isa_scripts_expired_fsbo') }}" class="bp-post-card">
+                        <div class="bp-post-img">
+                            <img src="{{ asset('assets/images/blog/Organizing Meetings and Appointments.jpg') }}" alt="ISA Scripts for Expired and FSBO Leads" loading="lazy">
+                            <div class="bp-post-category">Real Estate</div>
+                        </div>
+                        <div class="bp-post-body">
+                            <div class="bp-post-meta-sm">
+                                <span><i class="fas fa-calendar"></i> Nov 20, 2026</span>
+                                <span><i class="fas fa-clock"></i> 8 min read</span>
+                            </div>
+                            <h3 class="bp-post-title">ISA Scripts for Expired and FSBO Leads</h3>
+                            <p class="bp-post-excerpt">Openers, discovery questions, objection handlers, voicemails and a compliant follow-up cadence for expired and FSBO calls.</p>
+                            <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <a href="{{ route('blog.follow_up_boss_va') }}" class="bp-post-card">
+                        <div class="bp-post-img">
+                            <img src="{{ asset('assets/images/blog/Report Preparations and Presentations.jpg') }}" alt="How Top Teams Use a Virtual Assistant in Follow Up Boss" loading="lazy">
+                            <div class="bp-post-category">Real Estate</div>
+                        </div>
+                        <div class="bp-post-body">
+                            <div class="bp-post-meta-sm">
+                                <span><i class="fas fa-calendar"></i> Nov 20, 2026</span>
+                                <span><i class="fas fa-clock"></i> 7 min read</span>
+                            </div>
+                            <h3 class="bp-post-title">How Top Teams Use a Virtual Assistant in Follow Up Boss</h3>
+                            <p class="bp-post-excerpt">User access, daily smart lists, stages and tags, action plans, deals and reporting: a playbook for your VA in Follow Up Boss.</p>
+                            <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                     <a href="{{ route('blog.re_va_cost') }}" class="bp-post-card">
                         <div class="bp-post-img">
                             <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="How Much Does a Real Estate Virtual Assistant Cost in 2026?" loading="lazy">

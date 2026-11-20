@@ -12,6 +12,9 @@ Route::controller(WebController::class)->group(function () {
     Route::get('/blog/tasks-to-outsource-to-a-virtual-assistant', 'blog3')->name('blog3');
     Route::get('/blog/how-to-become-a-virtual-assistant', 'blog4')->name('blog4');
     Route::get('/blog/real-estate-virtual-assistant-cost', 're_va_cost')->name('blog.re_va_cost');
+    Route::get('/blog/isa-scripts-expired-fsbo-leads', 'isa_scripts_expired_fsbo')->name('blog.isa_scripts_expired_fsbo');
+    Route::get('/blog/follow-up-boss-virtual-assistant', 'follow_up_boss_va')->name('blog.follow_up_boss_va');
+    Route::get('/blog/real-estate-virtual-assistant-tasks-checklist', 're_va_tasks_checklist')->name('blog.re_va_tasks_checklist');
     Route::get('/blog/transaction-coordinator-vs-virtual-assistant', 'tc_vs_va')->name('blog.tc_vs_va');
     Route::get('/blog/unlicensed-real-estate-assistant-florida', 'unlicensed_assistant_florida')->name('blog.unlicensed_assistant_florida');
     Route::get('/blog/florida-real-estate-cold-calling-laws', 'florida_cold_calling_laws')->name('blog.florida_cold_calling_laws');

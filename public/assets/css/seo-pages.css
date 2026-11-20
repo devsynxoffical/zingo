@@ -272,3 +272,23 @@
 /* Prevent the off-canvas mobile menu from creating horizontal page scroll */
 body { overflow-x: hidden; }
 @supports (overflow: clip) { body { overflow-x: clip; } }
+
+/* ===== Checklist post ===== */
+.ck-download { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; background: linear-gradient(135deg, #2a1236, #6b1a4c 55%, #A52673); border-radius: 16px; padding: 22px 26px; margin: 6px 0 28px; }
+.ck-download-title { color: #fff !important; font-weight: 700; font-size: 18px; margin: 0 0 4px !important; }
+.ck-download-text { color: rgba(255,255,255,.88) !important; font-size: 15px; margin: 0 !important; }
+.ck-download-btn { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #A52673 !important; font-weight: 700; padding: 12px 22px; border-radius: 30px; text-decoration: none; white-space: nowrap; }
+.ck-download-btn:hover { background: #fbf6f9; }
+.ck-progress { display: flex; align-items: center; gap: 14px; margin: 10px 0 6px; font-size: 14px; font-weight: 600; color: #6b1a4c; }
+.ck-progress-bar { flex: 1; height: 10px; background: #f0e6ee; border-radius: 10px; overflow: hidden; }
+.ck-progress-bar span { display: block; height: 100%; width: 0; background: #A52673; border-radius: 10px; transition: width .3s; }
+.blog-item.details .blog-content ul.ck-list { list-style: none; padding: 0; margin: 0 0 22px; display: grid; gap: 8px; }
+.blog-item.details .blog-content ul.ck-list li { list-style: none; margin: 0; }
+.ck-list label { display: flex; gap: 12px; align-items: flex-start; background: #fff; border: 1px solid #f0e6ee; border-radius: 12px; padding: 12px 14px; cursor: pointer; margin: 0; font-size: 15.5px; line-height: 1.55; color: #3a3a48; transition: border-color .2s, background .2s; }
+.ck-list label:hover { border-color: #ead3e1; }
+.ck-box { flex: 0 0 auto; width: 20px; height: 20px; margin-top: 2px; accent-color: #A52673; cursor: pointer; }
+.ck-box:checked + span { color: #8a8a96; text-decoration: line-through; }
+.ck-list label:has(.ck-box:checked) { background: #fbf6f9; }
+.ck-list--agent li { display: flex; gap: 12px; align-items: flex-start; background: #fff8e6; border: 1px solid #f5e1a8; border-radius: 12px; padding: 12px 14px; font-size: 15.5px; line-height: 1.55; }
+.ck-list--agent i { color: #b07c00; margin-top: 4px; }
+.ck-h-icon { color: #A52673; font-size: .8em; margin-right: 6px; }

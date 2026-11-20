@@ -146,6 +146,7 @@
         'links' => [
             'title' => 'Explore More Real Estate Services',
             'items' => [
+                ['VA Tasks Checklist (PDF)', route('blog.re_va_tasks_checklist')],
                 ['Real Estate ISA Services', route('service.real_estate_isa')],
                 ['Listing Coordinator', route('service.listing_coordinator')],
                 ['Expired & FSBO Calling', route('service.expired_fsbo_calling')],

@@ -1,0 +1,91 @@
+{
+  "title": "Real Estate Virtual Assistant Tasks Checklist",
+  "updated": "November 2026",
+  "groups": [
+    {
+      "id": "daily",
+      "icon": "fa-sun",
+      "name": "Daily tasks",
+      "items": [
+        "Call and text every new lead (web, portal, Zillow) within minutes of it arriving",
+        "Log every call, text and email in the CRM with a next follow-up date",
+        "Clear overdue CRM tasks and work the follow-up smart lists",
+        "Triage the inbox and draft routine replies for agent approval",
+        "Confirm today's showings, listing appointments and buyer consultations",
+        "Check transaction deadlines due in the next 72 hours",
+        "Schedule today's social media posts",
+        "Send the agent an end-of-day report: leads, appointments, hot leads, blockers"
+      ]
+    },
+    {
+      "id": "weekly",
+      "icon": "fa-calendar-week",
+      "name": "Weekly tasks",
+      "items": [
+        "Nurture calls to leads who are 30 to 90 days out",
+        "Send each seller their weekly activity report (showings, feedback, views)",
+        "Request and log showing feedback from buyer agents",
+        "CRM clean-up: stages, tags, duplicates and missing phone numbers",
+        "Send the newsletter or a market update email",
+        "Review action plans and automations, and pause any that no longer fit",
+        "Post an update and photos to the Google Business Profile",
+        "Weekly scorecard: new leads, conversations, appointments set and kept, by source"
+      ]
+    },
+    {
+      "id": "monthly",
+      "icon": "fa-calendar-alt",
+      "name": "Monthly tasks",
+      "items": [
+        "Check-in calls or messages to past clients and sphere",
+        "Track commissions and expenses for the bookkeeper",
+        "Report on lead sources: cost and appointments per source",
+        "Refresh the listing presentation and buyer packet",
+        "Send birthday and home-anniversary messages from the database",
+        "Ask recent closings for a Google review"
+      ]
+    },
+    {
+      "id": "listing",
+      "icon": "fa-sign",
+      "name": "For every new listing",
+      "items": [
+        "Collect seller documents, disclosures and HOA or condo information",
+        "Book photography, video, floor plans and staging",
+        "Order the sign, lockbox and print materials",
+        "Prepare MLS input and photos for the agent's approval",
+        "Draft the listing description and feature sheet",
+        "Create just-listed social posts and the email blast",
+        "Set up the showing service and showing instructions",
+        "Schedule open houses and order open-house materials"
+      ]
+    },
+    {
+      "id": "transaction",
+      "icon": "fa-file-signature",
+      "name": "For every transaction",
+      "items": [
+        "Open the file and build the contract timeline",
+        "Send intro emails to clients, lender, title and the other agent",
+        "Track every contingency deadline in the calendar",
+        "Collect signatures and documents and upload them to the transaction platform",
+        "Schedule inspection, appraisal and final walk-through access",
+        "Send clients a status update every week until closing",
+        "Run the broker compliance checklist before closing",
+        "Arrange the closing gift and ask for a review after closing"
+      ]
+    },
+    {
+      "id": "agent",
+      "icon": "fa-user-tie",
+      "name": "Keep with the licensed agent",
+      "items": [
+        "Pricing advice and opinions of value",
+        "Negotiating offers, terms and commission",
+        "Explaining or interpreting contracts",
+        "Showings and open-house discussions about the property (unless the assistant is licensed)",
+        "Anything your state or brokerage reserves for licensees"
+      ]
+    }
+  ]
+}

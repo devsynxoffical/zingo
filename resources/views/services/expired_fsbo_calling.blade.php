@@ -72,6 +72,7 @@
         'links' => [
             'title' => 'Related Services',
             'items' => [
+                ['Expired & FSBO Scripts', route('blog.isa_scripts_expired_fsbo')],
                 ['Real Estate Cold Calling', route('service.cold_calling')],
                 ['Real Estate ISA Services', route('service.real_estate_isa')],
                 ['Listing Coordinator VA', route('service.listing_coordinator')],

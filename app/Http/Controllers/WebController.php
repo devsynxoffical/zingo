@@ -234,6 +234,21 @@ class WebController extends Controller
         return view('blog.re_va_cost');
     }
 
+    public function isa_scripts_expired_fsbo()
+    {
+        return view('blog.isa_scripts_expired_fsbo');
+    }
+
+    public function follow_up_boss_va()
+    {
+        return view('blog.follow_up_boss_va');
+    }
+
+    public function re_va_tasks_checklist()
+    {
+        return view('blog.re_va_tasks_checklist');
+    }
+
     public function tc_vs_va()
     {
         return view('blog.tc_vs_va');
@@ -279,6 +294,9 @@ class WebController extends Controller
             'faq' => ['faq', '0.6', 'monthly'],
             'blog' => ['blog', '0.7', 'weekly'],
             'blog.re_va_cost' => ['blog.re_va_cost', '0.7', 'monthly'],
+            'blog.isa_scripts_expired_fsbo' => ['blog.isa_scripts_expired_fsbo', '0.7', 'monthly'],
+            'blog.follow_up_boss_va' => ['blog.follow_up_boss_va', '0.7', 'monthly'],
+            'blog.re_va_tasks_checklist' => ['blog.re_va_tasks_checklist', '0.7', 'monthly'],
             'blog.tc_vs_va' => ['blog.tc_vs_va', '0.7', 'monthly'],
             'blog.florida_cold_calling_laws' => ['blog.florida_cold_calling_laws', '0.7', 'monthly'],
             'blog.unlicensed_assistant_florida' => ['blog.unlicensed_assistant_florida', '0.7', 'monthly'],

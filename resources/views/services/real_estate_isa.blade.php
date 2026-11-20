@@ -128,6 +128,8 @@
         'links' => [
             'title' => 'Related Real Estate Services',
             'items' => [
+                ['ISA Scripts for Expired & FSBO', route('blog.isa_scripts_expired_fsbo')],
+                ['VA in Follow Up Boss', route('blog.follow_up_boss_va')],
                 ['Real Estate Virtual Assistant', route('service.real_estate_virtual_assistant')],
                 ['Real Estate Cold Calling', route('service.cold_calling')],
                 ['Wholesale Cold Calling', route('service.wholesale_cold_calling')],

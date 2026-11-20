@@ -112,6 +112,7 @@
         'links' => [
             'title' => 'Related Services',
             'items' => [
+                ['VA Tasks Checklist (PDF)', route('blog.re_va_tasks_checklist')],
                 ['Real Estate Virtual Assistant', route('service.real_estate_virtual_assistant')],
                 ['Transaction Coordinator', route('service.real_estate_transaction_coordinator')],
                 ['Real Estate ISA Services', route('service.real_estate_isa')],

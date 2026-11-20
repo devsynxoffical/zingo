@@ -25,16 +25,17 @@ Source: *Zingo Assist SEO Plan* and *Keyword Map* (20 Nov 2026, DEVSYNX).
 4. **Reviews:** ask clients for Google and Trustpilot reviews.
 5. **Search Console:** request indexing for the upgraded pages (TC, ISA, listing coordinator, cold calling, hub) and `/faq`.
 
-## Content calendar (weeks 5–12, 1–2 posts a week)
+## Content plan: all five posts are live (published 20 Nov at the owner's request)
 
-Already published: *Real estate virtual assistant cost in 2026* (`/blog/real-estate-virtual-assistant-cost`) and *Transaction coordinator vs virtual assistant* (`/blog/transaction-coordinator-vs-virtual-assistant`).
-
-| Week | Post | Supports |
+| Post | URL | Supports |
 |---|---|---|
-| 5 | ISA scripts for expired and FSBO leads | ISA, expired & FSBO pages |
-| 6 | How top teams use a VA in Follow Up Boss | hub, ISA |
-| 7 | Real estate VA tasks checklist (downloadable PDF) | hub; link-earning asset |
-| 8+ | Topics chosen from Search Console queries as they appear | — |
+| Real estate virtual assistant cost in 2026 | `/blog/real-estate-virtual-assistant-cost` | hub, pricing |
+| Transaction coordinator vs real estate assistant | `/blog/transaction-coordinator-vs-virtual-assistant` | TC page |
+| ISA scripts for expired and FSBO leads | `/blog/isa-scripts-expired-fsbo-leads` | ISA, expired & FSBO pages |
+| How top teams use a VA in Follow Up Boss | `/blog/follow-up-boss-virtual-assistant` | hub, ISA |
+| Real estate VA tasks checklist, interactive + PDF | `/blog/real-estate-virtual-assistant-tasks-checklist` (PDF: `/assets/downloads/real-estate-va-tasks-checklist.pdf`) | hub; link-earning asset for outreach |
+
+The checklist PDF is generated from `resources/data/re-va-checklist.json`. Run `node scripts/build_checklist_pdf.cjs` after editing the list. Choose new topics from Search Console queries as they appear.
 
 ## How results are measured
 
