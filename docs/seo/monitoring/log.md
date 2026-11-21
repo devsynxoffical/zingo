@@ -145,3 +145,22 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
   - The `GSC_SERVICE_ACCOUNT_JSON` secret is not set, so deploys do not resubmit the sitemap to Google.
 - **Change:** none. One-impression signals are not enough evidence, and the pages changed yesterday need time to be recrawled.
 - **Owner action:** in Search Console, request indexing for `/listing-coordinator-virtual-assistant`, `/real-estate-transaction-coordinator-services`, `/faq` and the 5 new posts. Alternatively, add the `GSC_SERVICE_ACCOUNT_JSON` secret so every deploy resubmits the sitemap.
+
+## 2026-11-21 12:41 UTC: 12-hour run #7
+- **Search Console:** Nov 20 is now **49 impressions** (average position 22.8), a new best day after Nov 19's 46. Still 0 non-brand clicks.
+- **New queries, with 3 in striking distance:**
+  - "isa virtual assistant for realtors pricing" → cost guide, **position 10**
+  - "real estate virtual assistant service rates" → cost guide, **position 11**
+  - "tasks to outsource to real estate virtual assistant" → the generic tasks post, **position 10**
+  - "can an unlicensed assistant call leads texas" → FL guide, position 68
+- **Movers:**
+  - "real estate virtual assistant pricing" improved from 76 to 58.7 (3 impressions).
+  - "unlicensed assistant real estate" averaged 37 over 2 impressions (it was 5 on one impression). This is noise at this volume.
+- **Cannibalization:** pricing queries show both the cost guide and the ROI calculator. Expected; the guide ranks higher and links to the calculator.
+- **Indexing:** the 3 posts checked from 20 Nov, plus the listing coordinator page, are unknown to Google. The TC services page is "discovered" again.
+- **Change (C10):** added an ISA pricing answer to `/blog/real-estate-virtual-assistant-cost`. It is a new FAQ in FAQPage schema (now 6 items) plus concrete numbers in the "Cost by role" ISA bullet, linking to `/real-estate-isa-services`. "Last reviewed" was updated to 21 Nov.
+  - **Reason:** a real ISA pricing query ranks at position 10, but the guide only said ISAs cost "a premium".
+  - **Validation:** position for "isa virtual assistant for realtors pricing" and "service rates" over the next 14 days.
+  - **Local checks:** 54/54 URLs return 200, no duplicate titles, no orphans.
+- **Next:** "tasks to outsource to real estate virtual assistant" lands on the generic tasks post. If it repeats, link that post to the real estate tasks checklist, or retarget.
+- **Owner:** request indexing for the 5 posts from 20 Nov and `/listing-coordinator-virtual-assistant`.

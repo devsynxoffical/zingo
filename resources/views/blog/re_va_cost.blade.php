@@ -1,6 +1,7 @@
 @php
     $faqs = [
         ['How much does a real estate virtual assistant cost per hour?', 'Offshore real estate virtual assistants commonly cost about $8 to $15 per hour, while US-based assistants typically cost about $25 to $45 per hour. Specialized roles such as experienced ISAs or transaction coordinators sit at the higher end of each range.'],
+        ['How much does a real estate ISA virtual assistant cost?', 'An offshore inside sales agent (ISA) through a managed agency commonly costs about $8 to $15 per hour, with strong spoken English and objection handling at the top of that range: roughly $640 to $1,200 a month part-time (80 hours) or $1,300 to $2,400 a month full-time. A US-based ISA usually costs $25 to $45 per hour. Budget another $50 to $300 a month for a dialer seat and data.'],
         ['How much does a full-time real estate VA cost per month?', 'A full-time (about 160 hours a month) offshore real estate VA through a managed agency commonly costs around $1,300 to $2,400 per month. A full-time US-based assistant usually costs $4,000 or more per month.'],
         ['Is a real estate virtual assistant worth it?', 'For most active agents, yes. If an assistant frees 15 to 20 hours a week that you reinvest in prospecting, appointments and client service, closing even one additional transaction a quarter typically covers the cost many times over.'],
         ['Is it cheaper to hire a VA or an in-house assistant?', 'A VA is usually cheaper because you avoid payroll taxes, benefits, office space and equipment, and you pay only for the hours you need. An in-house assistant can make sense when the role requires being physically present in the office.'],
@@ -92,7 +93,7 @@
                             <p>The work you delegate matters as much as where the assistant lives. Specialized roles take longer to train and carry more responsibility, so they cost more.</p>
                             <ul class="guide-list">
                                 <li><strong>General real estate admin VA:</strong> CRM updates, inbox and calendar, listing prep, social media. This is usually the lowest rate in each band.</li>
-                                <li><strong>Inside sales agent (ISA) / cold caller:</strong> lead follow-up, appointment setting and prospecting calls. Expect a premium for strong spoken English and objection handling, and budget for a dialer and data. See our <a href="{{ route('service.cold_calling') }}">real estate cold calling services</a>.</li>
+                                <li><strong>Inside sales agent (ISA) / cold caller:</strong> lead follow-up, appointment setting and prospecting calls. Expect a premium for strong spoken English and objection handling: a managed offshore ISA typically runs at the top of the $8 to $15 per hour range (about $1,300 to $2,400 a month full-time), and a US-based ISA $25 to $45 per hour. Budget $50 to $300 a month for a dialer and data. See <a href="{{ route('service.real_estate_isa') }}">real estate ISA services</a> and <a href="{{ route('service.cold_calling') }}">real estate cold calling services</a>.</li>
                                 <li><strong>Transaction coordinator:</strong> often billed per file instead of per hour, commonly around $300 to $600 per closed transaction. Compare the models in <a href="{{ route('blog.tc_vs_va') }}">transaction coordinator vs virtual assistant</a>.</li>
                                 <li><strong>Marketing VA:</strong> graphics, video edits, email newsletters and listing marketing. Rates rise with design and video skill.</li>
                             </ul>
@@ -153,7 +154,7 @@
                                 <li><a href="https://floridarealtors.org/law-ethics/library/unlicensed-assistants" target="_blank" rel="noopener">Florida Realtors: Unlicensed assistants</a></li>
                             </ul>
 
-                            <p class="guide-note">Rates are typical market ranges observed in 2026 and are provided for budgeting purposes only. They are not a quote. Last reviewed November 17, 2026.</p>
+                            <p class="guide-note">Rates are typical market ranges observed in 2026 and are provided for budgeting purposes only. They are not a quote. Last reviewed November 21, 2026.</p>
                         </div>
                     </div>
                 </div>

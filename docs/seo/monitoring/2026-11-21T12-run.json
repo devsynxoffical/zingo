@@ -1,0 +1,26 @@
+{
+  "run": "2026-11-21T12:41Z",
+  "gsc_daily": {"2026-11-17": [0, 5], "2026-11-18": [1, 9], "2026-11-19": [0, 46], "2026-11-20": [0, 49]},
+  "new_queries": [
+    {"query": "isa virtual assistant for realtors pricing", "page": "/blog/real-estate-virtual-assistant-cost", "impressions": 1, "position": 10},
+    {"query": "real estate virtual assistant service rates", "page": "/blog/real-estate-virtual-assistant-cost", "impressions": 1, "position": 11},
+    {"query": "tasks to outsource to real estate virtual assistant", "page": "/blog/tasks-to-outsource-to-a-virtual-assistant", "impressions": 1, "position": 10},
+    {"query": "can an unlicensed assistant call leads texas", "page": "/blog/unlicensed-real-estate-assistant-florida", "impressions": 2, "position": 68},
+    {"query": "property management virtual assistant cost", "page": "/real-estate-va-roi-calculator", "impressions": 1, "position": 47},
+    {"query": "how to be a virtual assistant", "page": "/blog/how-to-become-a-virtual-assistant", "impressions": 1, "position": 45}
+  ],
+  "movers": [
+    {"query": "real estate virtual assistant pricing", "page": "/blog/real-estate-virtual-assistant-cost", "before": "1 impr, pos 76", "now": "3 impr, pos 58.7"},
+    {"query": "can an unlicensed real estate assistant show property", "before": "pos 2", "now": "2 impr, pos 3"},
+    {"query": "unlicensed assistant real estate", "before": "pos 5", "now": "2 impr, pos 37 (avg)"},
+    {"query": "how to become a virtual assistant", "before": "2 impr", "now": "7 impr, pos 42.1"}
+  ],
+  "inspection": {
+    "/blog/isa-scripts-expired-fsbo-leads": "URL is unknown to Google",
+    "/blog/real-estate-virtual-assistant-tasks-checklist": "URL is unknown to Google",
+    "/blog/transaction-coordinator-checklist": "URL is unknown to Google",
+    "/listing-coordinator-virtual-assistant": "URL is unknown to Google",
+    "/real-estate-transaction-coordinator-services": "Discovered - currently not indexed"
+  },
+  "change": "C10: ISA pricing FAQ + numbers in the ISA bullet of /blog/real-estate-virtual-assistant-cost"
+}
