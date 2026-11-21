@@ -295,3 +295,12 @@ body { overflow-x: hidden; }
 
 /* Two-column guide tables fit on phones without side-scrolling */
 .guide-table:not(:has(th:nth-child(3))) { min-width: 0; }
+
+/* ===== Google "preferred source" button ===== */
+.gps-btn { display: inline-flex !important; align-items: center; gap: 10px; background: #1a73e8; color: #fff !important; font-family: Roboto, Arial, sans-serif; font-size: 14px; font-weight: 500; line-height: 1.3; padding: 9px 16px 9px 9px; border-radius: 8px; text-decoration: none !important; box-shadow: 0 1px 3px rgba(26,115,232,.35); transition: background .2s, box-shadow .2s; }
+.gps-btn:hover, .gps-btn:focus { background: #1765cc; color: #fff !important; box-shadow: 0 3px 8px rgba(26,115,232,.4); }
+.gps-g { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; background: #fff; display: inline-flex; align-items: center; justify-content: center; }
+.gps-footer { margin-top: 18px; }
+.gps-post { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; border: 1px solid #d2e3fc; background: #f4f8fe; border-radius: 14px; padding: 18px 22px; margin: 26px 0; }
+.gps-post-text { margin: 0 !important; flex: 1 1 280px; font-size: 15px; color: #3a3a48; }
+@media (max-width: 575px) { .gps-btn { font-size: 13.5px; } }

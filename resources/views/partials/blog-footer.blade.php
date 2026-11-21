@@ -41,6 +41,11 @@
                     </div>
                 </div>
 
+                <div class="gps-post">
+                    <p class="gps-post-text"><strong>Found this useful?</strong> Add Zingo Assist as a preferred source on Google to see more of our real estate guides in your search results.</p>
+                    @include('partials.google-preferred-source', ['where' => 'post'])
+                </div>
+
                 @if (count($services))
                 <div class="blog-related-services">
                     <h2 class="blog-after-title">Related services</h2>

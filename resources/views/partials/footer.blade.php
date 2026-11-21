@@ -62,6 +62,9 @@
                                     <i class="fab fa-twitter"></i>
                                 </a>
                             </div>
+                            <div class="gps-footer">
+                                @include('partials.google-preferred-source', ['where' => 'footer'])
+                            </div>
                         </div>
                     </div>
                 </div>
