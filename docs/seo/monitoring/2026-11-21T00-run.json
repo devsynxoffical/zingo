@@ -1,0 +1,19 @@
+{
+  "run": "2026-11-21T00:41Z",
+  "deploy": "run 22 success (9ee578e, 2026-11-20 14:21 UTC)",
+  "gsc_daily": {"2026-11-16": [0, 5], "2026-11-17": [0, 5], "2026-11-18": [1, 9], "2026-11-19": [0, 46], "2026-11-20": [0, 15]},
+  "new_queries_since_last_run": [
+    {"query": "virtual assistant roi", "page": "/real-estate-va-roi-calculator", "impressions": 1, "position": 38},
+    {"query": "virtual assistant roi", "page": "/blog/real-estate-virtual-assistant-cost", "impressions": 1, "position": 44},
+    {"query": "how to become an online virtual assistant", "page": "/blog/how-to-become-a-virtual-assistant", "impressions": 1, "position": 37}
+  ],
+  "unchanged_queries": "unlicensed real estate assistant (1), can an unlicensed RE assistant show property (2), unlicensed assistant real estate (5), MLS login sharing (10), wholesale (37), ISA (45), cost guide queries (44-76)",
+  "inspection": {
+    "/listing-coordinator-virtual-assistant": "URL is unknown to Google",
+    "/real-estate-transaction-coordinator-services": "URL is unknown to Google (was: discovered on 20 Nov; API state varies)",
+    "/real-estate-cold-calling-services": "Discovered - currently not indexed",
+    "/blog/transaction-coordinator-vs-virtual-assistant": "Crawled - currently not indexed (no recrawl since 19 Nov 02:13)",
+    "/faq": "Excluded by noindex (stale crawl 31 Jul)"
+  },
+  "change": "none"
+}

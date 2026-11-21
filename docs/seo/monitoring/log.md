@@ -122,3 +122,26 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
   - **Validation:** position and impressions for that query over the next 14 days.
   - **Local checks:** 51/51 URLs return 200, no duplicate titles, no orphans, valid FAQ JSON-LD.
 - **Next:** watch whether the "what can … do" general-intent queries stay at 60+. If they do with more impressions, test a title that covers general intent without losing the Florida rankings.
+
+## 2026-11-21 00:41 UTC: 12-hour run #6
+- **Deployment:** live; deploy run 22 (`9ee578e`, the 5 new posts) succeeded on 20 Nov at 14:21 UTC.
+- **Search Console:**
+  - Nov 20 is now 15 impressions at average position 18.7 (still incomplete). The higher average position means mostly non-brand impressions.
+  - Nov 19 confirmed at 46.
+  - **New queries:**
+    - "virtual assistant roi": ROI calculator at position 38 and cost guide at 44. This is the first time the calculator has appeared.
+    - "how to become an online virtual assistant": job-seeker intent, 37.
+  - The unlicensed-assistant cluster holds positions 1, 2, 5 and 10.
+  - All new queries have 1 impression each.
+- **Cannibalization watch:** "virtual assistant roi" shows two URLs (the calculator and the cost guide). With 1 impression each this is not actionable yet; the cost guide already links to the calculator.
+- **Indexing:**
+  - Listing coordinator: still unknown to Google.
+  - TC services: reports unknown again, after discovered yesterday.
+  - Cold calling: discovered.
+  - TC-vs-VA: crawled-not-indexed, no recrawl since 19 Nov.
+  - `/faq`: stale noindex.
+  - The 5 posts from 20 Nov are not checked yet.
+  - The site-side work is done: in the sitemap and linked from every page. Google's crawl queue is the bottleneck.
+  - The `GSC_SERVICE_ACCOUNT_JSON` secret is not set, so deploys do not resubmit the sitemap to Google.
+- **Change:** none. One-impression signals are not enough evidence, and the pages changed yesterday need time to be recrawled.
+- **Owner action:** in Search Console, request indexing for `/listing-coordinator-virtual-assistant`, `/real-estate-transaction-coordinator-services`, `/faq` and the 5 new posts. Alternatively, add the `GSC_SERVICE_ACCOUNT_JSON` secret so every deploy resubmits the sitemap.
