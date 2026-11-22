@@ -1,0 +1,24 @@
+{
+  "run": "2026-11-22T12:41Z",
+  "deploy": "run 25 success (e56ebac)",
+  "gsc_daily": {"2026-11-18": [1, 9], "2026-11-19": [0, 46], "2026-11-20": [0, 49], "2026-11-21": [0, 33]},
+  "new_queries": [
+    {"query": "25 tasks you can outsource to a virtual assistant", "page": "/blog/tasks-to-outsource-to-a-virtual-assistant", "impressions": 1, "position": 15},
+    {"query": "outsource tasks to virtual assistants", "page": "/blog/tasks-to-outsource-to-a-virtual-assistant", "impressions": 1, "position": 26},
+    {"query": "how do you become a virtual assistant", "page": "/blog/how-to-become-a-virtual-assistant", "impressions": 1, "position": 47}
+  ],
+  "movers": [
+    {"query": "can an unlicensed assistant call leads texas", "impressions": "3 -> 5", "position": 65.4},
+    {"query": "real estate virtual assistant pricing", "impressions": "3 -> 4", "position": "58.7 -> 54.5"},
+    {"query": "property management virtual assistant cost", "impressions": "1 -> 2", "position": "44 -> 43"},
+    {"query": "how to become a virtual assistant", "impressions": "11 -> 12", "position": 41.7}
+  ],
+  "inspection": {
+    "/listing-coordinator-virtual-assistant": "URL is unknown to Google",
+    "/real-estate-transaction-coordinator-services": "URL is unknown to Google (state flips between unknown and discovered)",
+    "/real-estate-cold-calling-services": "Discovered - currently not indexed",
+    "/faq": "Excluded by noindex (stale 31 Jul)",
+    "/real-estate-virtual-assistant": "Indexed; last crawl 18 Nov (20 Nov pricing/roles upgrade not yet recrawled)"
+  },
+  "change": "none"
+}

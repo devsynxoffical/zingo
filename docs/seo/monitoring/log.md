@@ -191,3 +191,24 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
   - **Validation:** whether the checklist starts appearing for real estate task queries.
   - **Local checks:** 54/54 URLs return 200, no duplicate titles; desktop and mobile screenshots taken; 0 JS errors.
 - **Owner:** request indexing for `/listing-coordinator-virtual-assistant`, `/real-estate-transaction-coordinator-services`, `/real-estate-cold-calling-services` and `/faq`. These are the only key pages Google has not crawled.
+
+## 2026-11-22 12:41 UTC: 12-hour run #9
+- **Deployment:** live; run 25 (`e56ebac`) succeeded.
+- **Search Console:**
+  - Nov 21 is now 33 impressions (average position 31.3, still filling in).
+  - Nov 19–21 are the three best days on record: 46 / 49 / 33.
+  - Still 0 non-brand clicks.
+  - **New queries:** all hit the generic tasks post, plus job-seeker variants:
+    - "25 tasks you can outsource to a virtual assistant" (15)
+    - "outsource tasks to virtual assistants" (26)
+  - **Movers:**
+    - "real estate virtual assistant pricing": 4 impressions, improved from 58.7 to 54.5.
+    - "can an unlicensed assistant call leads texas": 5 impressions, position 65.
+    - "property management VA cost": 2 impressions, position 43.
+  - **Texas query:** the Florida guide does not answer Texas rules. A Texas section would need verified TREC sources, so it is noted rather than written from memory.
+- **Indexing:** no change for the money pages. Listing coordinator and TC services: unknown. Cold calling: discovered. `/faq`: stale noindex. The hub `/real-estate-virtual-assistant` is indexed but last crawled 18 Nov, so Google has not yet seen the 20 Nov pricing and roles sections.
+- **Change:** none. Yesterday's internal-link change and the 20 Nov page upgrades need a recrawl before they can be measured, and no query has new striking-distance evidence.
+- **Next:**
+  - If the Texas query keeps growing, research TREC rules for unlicensed assistants from primary sources and decide on a short, sourced section or a separate state guide.
+  - Watch the cost guide for the ISA pricing query.
+- **Owner:** request indexing for `/listing-coordinator-virtual-assistant`, `/real-estate-transaction-coordinator-services`, `/real-estate-cold-calling-services`, `/faq`, and re-request `/real-estate-virtual-assistant` so Google sees its new pricing sections.
