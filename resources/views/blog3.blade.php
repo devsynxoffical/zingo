@@ -77,6 +77,9 @@
                                     <h1 class="title">10 Tasks to Outsource to a Virtual Assistant Today.</h1>
                                     <p>Running a business alone in today’s busy routines is not easy. With entrepreneurial culture on the rise, people are always looking to enhance productivity. One way to improve productivity is to delegate tasks to the right people. One golden rule of delegating tasks is to find the right person for the right job.</p>
                                     <p>This entrepreneurial culture has given rise to businesses that offer virtual assistance services. These businesses hire people capable of performing time-consuming tasks. These businesses get tasks for virtual assistants delegated by entrepreneurs. The advantage of this task delegation is that it puts more money in your hands and enhances productivity by many folds.</p>
+                                    <div class="guide-summary">
+                                        <p style="margin:0;"><strong>Real estate agent or team?</strong> Use our <a href="{{ route('blog.re_va_tasks_checklist') }}">real estate virtual assistant tasks checklist</a>: 38 daily, weekly, listing and transaction tasks you can outsource, what stays with the licensed agent, and a free printable PDF.</p>
+                                    </div>
                                     <h2>Top 10 Essential Tasks for Virtual Assistants</h2>
                                     <p>Listed below are some of the most commonly delegated tasks to virtual Assistants.</p>
                                    <h3>Report Preparations and Presentations</h3>

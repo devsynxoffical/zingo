@@ -1,0 +1,24 @@
+{
+  "run": "2026-11-22T00:41Z",
+  "deploy": "run 24 success (2bffd77, preferred-source button)",
+  "gsc_daily": {"2026-11-18": [1, 9], "2026-11-19": [0, 46], "2026-11-20": [0, 49], "2026-11-21": [0, 14]},
+  "queries_changed": [
+    {"query": "how to become a virtual assistant", "impressions": 11, "position": 41.6, "note": "job-seeker intent, growing"},
+    {"query": "can an unlicensed assistant call leads texas", "impressions": 3, "position": 67.7},
+    {"query": "what can an unlicensed assistant do in real estate", "impressions": 3, "position": 64},
+    {"query": "unlicensed assistant real estate", "impressions": 3, "position": 47}
+  ],
+  "inspection": {
+    "/blog/isa-scripts-expired-fsbo-leads": "Submitted and indexed (crawled 2026-11-21 23:21)",
+    "/blog/follow-up-boss-virtual-assistant": "Submitted and indexed (23:28)",
+    "/blog/real-estate-virtual-assistant-tasks-checklist": "Submitted and indexed (23:14)",
+    "/blog/transaction-coordinator-checklist": "Submitted and indexed (23:24)",
+    "/blog/speed-to-lead-real-estate": "Submitted and indexed (23:17)",
+    "/blog/transaction-coordinator-vs-virtual-assistant": "Submitted and indexed (23:31), was crawled-not-indexed",
+    "/listing-coordinator-virtual-assistant": "URL is unknown to Google",
+    "/real-estate-transaction-coordinator-services": "Discovered - currently not indexed",
+    "/real-estate-cold-calling-services": "Discovered - currently not indexed",
+    "/faq": "Excluded by noindex (stale 31 Jul)"
+  },
+  "change": "C11: real estate checklist callout on /blog/tasks-to-outsource-to-a-virtual-assistant"
+}

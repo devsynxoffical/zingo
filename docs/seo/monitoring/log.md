@@ -164,3 +164,30 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
   - **Local checks:** 54/54 URLs return 200, no duplicate titles, no orphans.
 - **Next:** "tasks to outsource to real estate virtual assistant" lands on the generic tasks post. If it repeats, link that post to the real estate tasks checklist, or retarget.
 - **Owner:** request indexing for the 5 posts from 20 Nov and `/listing-coordinator-virtual-assistant`.
+
+## 2026-11-22 00:41 UTC: 12-hour run #8
+- **Deployment:** live; run 24 (`2bffd77`, Google preferred-source button) succeeded.
+- **Indexing (big step):** all 5 posts from 20 Nov are **indexed**, crawled on 21 Nov between 23:14 and 23:28 UTC:
+  - ISA scripts
+  - Follow Up Boss VA
+  - VA tasks checklist
+  - TC checklist
+  - speed to lead
+
+  `/blog/transaction-coordinator-vs-virtual-assistant` moved from crawled-not-indexed to **indexed** (23:31).
+
+  Still waiting:
+  - `/listing-coordinator-virtual-assistant`: unknown to Google.
+  - `/real-estate-transaction-coordinator-services` and `/real-estate-cold-calling-services`: discovered, never crawled. Each is linked from all 54 pages, so this is Google's crawl priority, not linking.
+  - `/faq`: stale noindex.
+- **Search Console:**
+  - Nov 21: 14 impressions (incomplete), average position 38.2.
+  - Nov 19 and Nov 20 confirmed at 46 and 49.
+  - "how to become a virtual assistant" is growing (11 impressions, position 41.6); it is job-seeker intent, not buyers.
+  - The unlicensed-assistant cluster is steady (positions 1–3 on two queries); general-intent variants sit at 47–68.
+  - No new striking-distance queries since the last run.
+- **Change (C11):** added a callout to `/blog/tasks-to-outsource-to-a-virtual-assistant` linking to `/blog/real-estate-virtual-assistant-tasks-checklist`.
+  - **Reason:** "tasks to outsource to real estate virtual assistant" ranks the generic post at position 10, while the dedicated real estate checklist had only 3 internal links.
+  - **Validation:** whether the checklist starts appearing for real estate task queries.
+  - **Local checks:** 54/54 URLs return 200, no duplicate titles; desktop and mobile screenshots taken; 0 JS errors.
+- **Owner:** request indexing for `/listing-coordinator-virtual-assistant`, `/real-estate-transaction-coordinator-services`, `/real-estate-cold-calling-services` and `/faq`. These are the only key pages Google has not crawled.
