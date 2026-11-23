@@ -1,0 +1,18 @@
+{
+  "run": "2026-11-23T00:41Z",
+  "deploy": "run 25 success (e56ebac); no new deploys",
+  "gsc_daily": {"2026-11-19": [0, 46], "2026-11-20": [0, 49], "2026-11-21": [0, 33], "2026-11-22": [0, 6]},
+  "new_queries": [
+    {"query": "common tasks to outsource to freelance virtual assistant", "page": "/blog/tasks-to-outsource-to-a-virtual-assistant", "impressions": 1, "position": 88},
+    {"query": "transaction coordinator and virtual assistant resumes", "page": "/blog/transaction-coordinator-vs-virtual-assistant", "impressions": 1, "position": 29}
+  ],
+  "movers": [{"query": "how to become a virtual assistant", "impressions": "12 -> 14", "position": 41.6}],
+  "inspection": {
+    "/listing-coordinator-virtual-assistant": "URL is unknown to Google",
+    "/real-estate-transaction-coordinator-services": "Discovered - currently not indexed",
+    "/real-estate-cold-calling-services": "Discovered - currently not indexed",
+    "/faq": "Excluded by noindex (stale 31 Jul)",
+    "/real-estate-virtual-assistant": "Indexed; last crawl 18 Nov"
+  },
+  "change": "none"
+}

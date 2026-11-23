@@ -212,3 +212,19 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
   - If the Texas query keeps growing, research TREC rules for unlicensed assistants from primary sources and decide on a short, sourced section or a separate state guide.
   - Watch the cost guide for the ISA pricing query.
 - **Owner:** request indexing for `/listing-coordinator-virtual-assistant`, `/real-estate-transaction-coordinator-services`, `/real-estate-cold-calling-services`, `/faq`, and re-request `/real-estate-virtual-assistant` so Google sees its new pricing sections.
+
+## 2026-11-23 00:41 UTC: 12-hour run #10
+- **Deployment:** live; there have been no new deploys since run 25.
+- **Search Console:**
+  - Nov 22: 6 impressions so far (a Sunday, still incomplete). Nov 19–21 stay at 46 / 49 / 33.
+  - First non-brand-blog appearance for the TC-vs-VA post: "transaction coordinator and virtual assistant resumes" (29, job-seeker intent).
+  - Other new query: "common tasks to outsource to freelance VA" (88).
+  - "how to become a virtual assistant": 14 impressions at 41.6.
+  - No new striking-distance queries.
+- **Indexing:** unchanged.
+  - Listing coordinator: unknown.
+  - TC services and cold calling: discovered.
+  - `/faq`: stale noindex.
+  - Hub: last crawled 18 Nov.
+- **Change:** none. No new evidence, and recent changes still await a recrawl.
+- **Owner:** request indexing for the 4 pages listed in run #9 plus the hub.
