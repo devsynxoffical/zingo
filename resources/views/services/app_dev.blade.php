@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('title', 'Mobile App Development Services | Zingo Assist')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'Mobile app development for Android, iOS and the web: custom business apps, ecommerce apps and MVPs built to scale, from planning to launch and support.')
 
 @push('schema')

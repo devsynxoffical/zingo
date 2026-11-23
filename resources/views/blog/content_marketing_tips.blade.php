@@ -2,6 +2,7 @@
 
 @section('og_type', 'article')
 @section('title', '10 Content Marketing Tips for Startups | Zingo Assist')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'Ten practical content marketing tips startups can use to build brand awareness, earn search traffic and turn readers into leads on a lean budget.')
 
 @push('schema')

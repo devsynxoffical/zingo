@@ -2,6 +2,7 @@
 
 @section('og_type', 'article')
 @section('title', 'Digital Marketing on a Budget: 3-Step Guide | Zingo Assist')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'A simple three-step framework for small businesses to plan, prioritize and measure digital marketing when the budget is tight.')
 
 @push('schema')

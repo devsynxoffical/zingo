@@ -2,6 +2,7 @@
 
 @section('og_type', 'article')
 @section('title', 'SEO vs PPC for Small Business: Which Is Better? | Zingo Assist')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'SEO vs PPC compared for small businesses: cost, speed, long-term value and when to combine both to grow leads without wasting ad spend.')
 
 @push('schema')

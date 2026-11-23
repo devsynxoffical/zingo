@@ -5,6 +5,7 @@
         ['Can an unlicensed real estate assistant be paid a commission in Florida?', 'No. An unlicensed assistant should not be paid a commission, closing bonus or any compensation based on a real estate transaction. A fixed hourly wage or salary that is not tied to transactions is the usual arrangement; confirm the setup with your broker or a Florida real estate attorney.'],
         ['Can an unlicensed assistant make cold calls in Florida?', 'Assistants commonly make scripted calls to set appointments and gather information for the licensee, but they may not discuss terms, give opinions on value or negotiate. Every call must also follow the TCPA, the National and Florida Do Not Call lists and Florida calling-hour limits.'],
         ['Can an MLS subscriber share their user ID and login credentials with an unlicensed assistant?', 'Generally no. MLS rules typically prohibit subscribers from sharing their user ID and password with anyone, including their own assistant, and many MLSs fine violations. Instead, ask your MLS whether it offers a separate assistant or clerical login that you sponsor and supervise. With that access, an unlicensed assistant can enter and update listings for your approval, which FREC guidance permits under your supervision.'],
+        ['Are the rules the same in other states?', 'No. Each state sets its own rules. Texas, for example, does not allow unlicensed assistants to make prospecting calls, while California allows limited general-interest calls with the broker&#39;s consent. Compare Texas, Florida, California, Georgia, Arizona and North Carolina in our guide <a href="' . route('blog.unlicensed_assistant_rules') . '">what can an unlicensed real estate assistant do?</a>'],
         ['Can a virtual assistant do these tasks remotely?', 'Yes. Most permitted tasks, such as answering and forwarding calls, MLS input, scheduling, preparing ads and flyers for approval, assembling closing documents and following up on loan commitments, can be done remotely by a trained virtual assistant under the licensee&#39;s supervision.'],
     ];
 @endphp
@@ -23,7 +24,7 @@
         'breadcrumbs' => [['Blog', route('blog')]],
         'datePublished' => '2026-11-18',
         'image' => asset('assets/images/blog/Handling Administrative Tasks.jpg'),
-        'faqs' => array_map(fn ($f) => [$f[0], html_entity_decode($f[1], ENT_QUOTES)], $faqs),
+        'faqs' => array_map(fn ($f) => [$f[0], html_entity_decode(strip_tags($f[1]), ENT_QUOTES)], $faqs),
     ])
 @endpush
 

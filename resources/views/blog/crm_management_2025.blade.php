@@ -2,6 +2,7 @@
 
 @section('og_type', 'article')
 @section('title', 'What Is CRM Management and Why Your Business Needs It')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'What CRM management is, what a CRM administrator does day to day, and how clean CRM data helps small businesses and real estate teams close more deals.')
 
 @push('schema')

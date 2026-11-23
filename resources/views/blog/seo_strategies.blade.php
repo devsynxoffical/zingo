@@ -2,6 +2,7 @@
 
 @section('og_type', 'article')
 @section('title', 'SEO Strategies for Small Businesses That Work | Zingo Assist')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'The SEO strategies Zingo Assist relies on for small businesses: local SEO, search-intent content, technical fixes and link building that compounds.')
 
 @push('schema')

@@ -2,6 +2,7 @@
 
 @section('og_type', 'article')
 @section('title', 'From Lead to Sale: A CRM-Powered Workflow | Zingo Assist')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'How Zingo Assist uses a CRM-powered workflow to move leads from first contact to closed sale, with the steps you can copy in your own business.')
 
 @push('schema')

@@ -2,6 +2,7 @@
 
 @section('og_type', 'article')
 @section('title', 'Website Redesign Checklist: SEO-Safe Steps | Zingo Assist')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'A website redesign checklist that protects your rankings: audits, redirects, content, speed and conversion steps to complete before and after launch.')
 
 @push('schema')

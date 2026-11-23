@@ -121,6 +121,42 @@
                 </div>
 
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('blog.unlicensed_assistant_rules') }}" class="bp-post-card">
+                        <div class="bp-post-img">
+                            <img src="{{ asset('assets/images/blog/Observing Industry News.jpg') }}" alt="What Can an Unlicensed Real Estate Assistant Do?" loading="lazy">
+                            <div class="bp-post-category">Real Estate</div>
+                        </div>
+                        <div class="bp-post-body">
+                            <div class="bp-post-meta-sm">
+                                <span><i class="fas fa-calendar"></i> Nov 23, 2026</span>
+                                <span><i class="fas fa-clock"></i> 7 min read</span>
+                            </div>
+                            <h3 class="bp-post-title">What Can an Unlicensed Real Estate Assistant Do?</h3>
+                            <p class="bp-post-excerpt">Calls, showings, scheduling, MLS and paperwork: what unlicensed assistants may do, with rules for TX, FL, CA, GA, AZ and NC.</p>
+                            <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <a href="{{ route('blog.texas_unlicensed_cold_calls') }}" class="bp-post-card">
+                        <div class="bp-post-img">
+                            <img src="{{ asset('assets/images/blog/No Time for New Projects.jpg') }}" alt="Can an Unlicensed Assistant Make Cold Calls in Texas?" loading="lazy">
+                            <div class="bp-post-category">Real Estate</div>
+                        </div>
+                        <div class="bp-post-body">
+                            <div class="bp-post-meta-sm">
+                                <span><i class="fas fa-calendar"></i> Nov 23, 2026</span>
+                                <span><i class="fas fa-clock"></i> 5 min read</span>
+                            </div>
+                            <h3 class="bp-post-title">Can an Unlicensed Assistant Make Cold Calls in Texas?</h3>
+                            <p class="bp-post-excerpt">What TREC allows on the phone: no prospecting calls, but showing appointments and advertised listing facts are allowed.</p>
+                            <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                     <a href="{{ route('blog.tc_checklist') }}" class="bp-post-card">
                         <div class="bp-post-img">
                             <img src="{{ asset('assets/images/blog/Need Help with specific Business Operations.jpg') }}" alt="Transaction Coordinator Checklist: Contract to Close" loading="lazy">

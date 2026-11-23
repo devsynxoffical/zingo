@@ -1,7 +1,20 @@
+@php
+    $pmFaqs = [
+        ['How much does a property management virtual assistant cost?', 'A property management virtual assistant through a managed offshore agency typically costs about $8 to $15 per hour, or roughly $640 to $1,200 a month part-time and $1,300 to $2,400 a month full-time. A US-based assistant usually costs $25 to $45 per hour. These are 2026 market ranges, not a Zingo Assist price list; we quote after a free consultation. See the <a href="' . route('blog.re_va_cost') . '">real estate virtual assistant cost guide</a>.'],
+        ['Can a virtual assistant handle tenant calls?', 'Yes. A virtual assistant can answer and return tenant calls, log maintenance requests, send rent reminders and follow up with applicants using your approved scripts, with every call recorded in your property management software. Decisions on applicants, lease terms and disputes stay with you or your licensed manager, and scripts should follow Fair Housing rules.'],
+        ['Which property management software do your assistants use?', 'Our assistants work inside the software you already use, including AppFolio, Buildium, Rent Manager and Yardi, plus Google Workspace, email and your phone system. You give them role-based access instead of sharing your login.'],
+        ['Can a virtual assistant show units?', 'No. A virtual assistant works remotely, so in-person showings stay with you, your leasing agent or a self-showing system. In many states, showing or leasing property for others also requires a real estate or property management license. Your assistant can schedule showings, confirm them and follow up with prospects afterwards.'],
+        ['How fast can I start?', 'Most clients start within 24 to 48 hours of being matched with an assistant, beginning with a free 2-day trial so you can judge the work before you commit.'],
+        ['What are virtual property management services?', 'Remote support for rental property owners and managers, including tenant communication, rent reminders, maintenance coordination, data entry and owner reporting.'],
+        ['Can I use a virtual assistant for multiple properties?', 'Yes. One assistant can support a few doors or a large portfolio, and you can add hours or a second assistant as you grow.'],
+        ['Are tenant data and documents kept secure?', 'Assistants sign confidentiality agreements and work with role-based access in your systems, so you control what they can see and can remove access at any time.'],
+        ['Can I track the work remotely?', 'Yes. Your assistant sends daily or weekly reports on calls handled, work orders opened and closed, rent reminders sent and anything that needs your decision.'],
+    ];
+@endphp
 @extends('layout.main')
 
-@section('title', 'Virtual Property Management Assistant Services | Zingo Assist')
-@section('meta_description', 'Virtual property management assistants for landlords and property managers: tenant communication, rent reminders, screening support and maintenance requests.')
+@section('title', 'Property Management Virtual Assistants | Zingo Assist')
+@section('meta_description', 'Property management virtual assistants for US landlords and PM firms: tenant calls, maintenance tickets, rent reminders and AppFolio or Buildium updates.')
 
 @push('schema')
     @include('partials.schema-page', [
@@ -10,17 +23,7 @@
         'serviceType' => 'Virtual property management',
         'description' => 'Virtual property management assistants for landlords and property managers: tenant communication, rent reminders, screening support and maintenance requests.',
         'breadcrumbs' => [['Services', route('service')]],
-        'faqs' => [
-            ['1. What are virtual property management services?', 'Remote management of rental or commercial properties, including tenant communication, rent collection, maintenance coordination, and administrative tasks.'],
-            ['2. How do ZingoAssist virtual property management services work?', 'We assess your portfolio, assign tasks to skilled virtual assistants, manage operations, and provide detailed reporting for transparency.'],
-            ['3. Can I hire a virtual property manager for multiple properties?', 'Yes, our services are scalable to manage both small and large property portfolios.'],
-            ['4. Are virtual property management services secure?', 'Absolutely. Tenant data, financial records, and property documents are protected with robust security measures.'],
-            ['5. How quickly can I start services?', 'Setup is fast, typically within a few days depending on your portfolio size and complexity.'],
-            ['6. Do you provide customized solutions?', 'Yes, every service is tailored to your property type, management needs, and goals.'],
-            ['7. What tasks can a virtual property management assistant handle?', 'Tasks include rent collection, tenant communication, lease management, maintenance coordination, reporting, and financial tracking.'],
-            ['8. How are services priced?', 'Pricing depends on the number of properties, complexity of tasks, and level of support required.'],
-            ['9. Can I track performance and operations remotely?', 'Yes, ZingoAssist provides detailed reporting and regular updates to keep you informed about property operations.'],
-        ],
+        'faqs' => array_map(fn ($f) => [$f[0], html_entity_decode(strip_tags($f[1]), ENT_QUOTES)], $pmFaqs),
     ])
 @endpush
 @push('css')
@@ -402,87 +405,17 @@
             <h2 class="sp-section-title">FAQs</h2>
         </div>
         <div class="sp-faq-wrap" data-aos="fade-up" data-aos-delay="100">
+            @foreach ($pmFaqs as $f)
             <div class="sp-faq">
                 <div class="sp-faq-header">
-                    <h4 class="sp-faq-q">1. What are virtual property management services?</h4>
+                    <h3 class="sp-faq-q" style="font-size: 17px;">{{ $f[0] }}</h3>
                     <span class="sp-faq-toggle"><i class="fas fa-plus"></i></span>
                 </div>
                 <div class="sp-faq-body">
-                    <div class="sp-faq-body-inner">Remote management of rental or commercial properties, including tenant communication, rent collection, maintenance coordination, and administrative tasks.</div>
+                    <div class="sp-faq-body-inner">{!! $f[1] !!}</div>
                 </div>
             </div>
-            <div class="sp-faq">
-                <div class="sp-faq-header">
-                    <h4 class="sp-faq-q">2. How do ZingoAssist virtual property management services work?</h4>
-                    <span class="sp-faq-toggle"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="sp-faq-body">
-                    <div class="sp-faq-body-inner">We assess your portfolio, assign tasks to skilled virtual assistants, manage operations, and provide detailed reporting for transparency.</div>
-                </div>
-            </div>
-            <div class="sp-faq">
-                <div class="sp-faq-header">
-                    <h4 class="sp-faq-q">3. Can I hire a virtual property manager for multiple properties?</h4>
-                    <span class="sp-faq-toggle"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="sp-faq-body">
-                    <div class="sp-faq-body-inner">Yes, our services are scalable to manage both small and large property portfolios.</div>
-                </div>
-            </div>
-            <div class="sp-faq">
-                <div class="sp-faq-header">
-                    <h4 class="sp-faq-q">4. Are virtual property management services secure?</h4>
-                    <span class="sp-faq-toggle"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="sp-faq-body">
-                    <div class="sp-faq-body-inner">Absolutely. Tenant data, financial records, and property documents are protected with robust security measures.</div>
-                </div>
-            </div>
-            <div class="sp-faq">
-                <div class="sp-faq-header">
-                    <h4 class="sp-faq-q">5. How quickly can I start services?</h4>
-                    <span class="sp-faq-toggle"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="sp-faq-body">
-                    <div class="sp-faq-body-inner">Setup is fast, typically within a few days depending on your portfolio size and complexity.</div>
-                </div>
-            </div>
-            <div class="sp-faq">
-                <div class="sp-faq-header">
-                    <h4 class="sp-faq-q">6. Do you provide customized solutions?</h4>
-                    <span class="sp-faq-toggle"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="sp-faq-body">
-                    <div class="sp-faq-body-inner">Yes, every service is tailored to your property type, management needs, and goals.</div>
-                </div>
-            </div>
-            <div class="sp-faq">
-                <div class="sp-faq-header">
-                    <h4 class="sp-faq-q">7. What tasks can a virtual property management assistant handle?</h4>
-                    <span class="sp-faq-toggle"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="sp-faq-body">
-                    <div class="sp-faq-body-inner">Tasks include rent collection, tenant communication, lease management, maintenance coordination, reporting, and financial tracking.</div>
-                </div>
-            </div>
-            <div class="sp-faq">
-                <div class="sp-faq-header">
-                    <h4 class="sp-faq-q">8. How are services priced?</h4>
-                    <span class="sp-faq-toggle"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="sp-faq-body">
-                    <div class="sp-faq-body-inner">Pricing depends on the number of properties, complexity of tasks, and level of support required.</div>
-                </div>
-            </div>
-            <div class="sp-faq">
-                <div class="sp-faq-header">
-                    <h4 class="sp-faq-q">9. Can I track performance and operations remotely?</h4>
-                    <span class="sp-faq-toggle"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="sp-faq-body">
-                    <div class="sp-faq-body-inner">Yes, ZingoAssist provides detailed reporting and regular updates to keep you informed about property operations.</div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

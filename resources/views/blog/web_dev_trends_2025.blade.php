@@ -2,6 +2,7 @@
 
 @section('og_type', 'article')
 @section('title', 'Web Development Trends to Watch | Zingo Assist')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'The web development trends shaping business websites: performance, AI features, headless builds, accessibility and security, and what to adopt first.')
 
 @push('schema')

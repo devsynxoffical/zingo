@@ -3,7 +3,8 @@
     $allPosts = collect(config('blog.posts', []))->filter(fn ($p) => \Illuminate\Support\Facades\Route::has($p['route']));
     $current = $allPosts->firstWhere('route', $currentRoute);
     $topic = $current['topic'] ?? 'va';
-    $others = $allPosts->reject(fn ($p) => $p['route'] === $currentRoute);
+    // Off-topic posts are noindexed, so they are not suggested as related reading.
+    $others = $allPosts->reject(fn ($p) => $p['route'] === $currentRoute || !empty($p['noindex']));
     // Same-topic posts first; real estate guides are the next-best fallback because they match the core services.
     $related = $others->where('topic', $topic)
         ->merge($others->where('topic', 're')->where('topic', '!=', $topic))

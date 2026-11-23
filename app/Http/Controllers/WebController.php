@@ -234,6 +234,16 @@ class WebController extends Controller
         return view('blog.re_va_cost');
     }
 
+    public function unlicensed_assistant_rules()
+    {
+        return view('blog.unlicensed_assistant_rules');
+    }
+
+    public function texas_unlicensed_cold_calls()
+    {
+        return view('blog.texas_unlicensed_cold_calls');
+    }
+
     public function tc_checklist()
     {
         return view('blog.tc_checklist');
@@ -295,8 +305,6 @@ class WebController extends Controller
             'service.digital_marketing' => ['services.digital_marketing', '0.8', 'monthly'],
             'service.search_seo' => ['services.search_seo', '0.8', 'monthly'],
             'service.web_development' => ['services.web_development', '0.8', 'monthly'],
-            'service.graphic_design' => ['services.graphic_design', '0.7', 'monthly'],
-            'service.app_development' => ['services.app_dev', '0.7', 'monthly'],
             'service.video_editing' => ['services.video_editing', '0.7', 'monthly'],
             'location.tampa_st_petersburg' => ['locations.tampa_st_petersburg', '0.8', 'monthly'],
             'about' => ['about', '0.6', 'monthly'],
@@ -304,6 +312,8 @@ class WebController extends Controller
             'faq' => ['faq', '0.6', 'monthly'],
             'blog' => ['blog', '0.7', 'weekly'],
             'blog.re_va_cost' => ['blog.re_va_cost', '0.7', 'monthly'],
+            'blog.unlicensed_assistant_rules' => ['blog.unlicensed_assistant_rules', '0.7', 'monthly'],
+            'blog.texas_unlicensed_cold_calls' => ['blog.texas_unlicensed_cold_calls', '0.7', 'monthly'],
             'blog.tc_checklist' => ['blog.tc_checklist', '0.7', 'monthly'],
             'blog.speed_to_lead' => ['blog.speed_to_lead', '0.7', 'monthly'],
             'blog.isa_scripts_expired_fsbo' => ['blog.isa_scripts_expired_fsbo', '0.7', 'monthly'],
@@ -318,15 +328,6 @@ class WebController extends Controller
             'blog3' => ['blog3', '0.6', 'monthly'],
             'blog1' => ['blog1', '0.6', 'monthly'],
             'blog.free_va_trial' => ['blog.free_va_trial', '0.6', 'monthly'],
-            'blog.crm_management_2025' => ['blog.crm_management_2025', '0.6', 'monthly'],
-            'blog.crm_powered_workflow' => ['blog.crm_powered_workflow', '0.6', 'monthly'],
-            'blog.seo_strategies' => ['blog.seo_strategies', '0.6', 'monthly'],
-            'blog.seo_vs_ppc' => ['blog.seo_vs_ppc', '0.6', 'monthly'],
-            'blog.optimize_website_seo' => ['blog.optimize_website_seo', '0.6', 'monthly'],
-            'blog.content_marketing_tips' => ['blog.content_marketing_tips', '0.6', 'monthly'],
-            'blog.digital_marketing_budget' => ['blog.digital_marketing_budget', '0.6', 'monthly'],
-            'blog.web_dev_trends_2025' => ['blog.web_dev_trends_2025', '0.6', 'monthly'],
-            'blog.website_redesign_checklist' => ['blog.website_redesign_checklist', '0.6', 'monthly'],
             'blog4' => ['blog4', '0.5', 'monthly'],
             'editorial' => ['static.editorial', '0.3', 'yearly'],
             'privacy' => ['static.privacy', '0.2', 'yearly'],

@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('title', 'Graphic Design Services for Small Businesses | Zingo Assist')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'Graphic design services for brands and real estate pros: logos, social media graphics, listing flyers, presentations and print from a dedicated designer.')
 
 @push('schema')

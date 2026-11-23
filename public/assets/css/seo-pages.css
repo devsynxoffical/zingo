@@ -304,3 +304,9 @@ body { overflow-x: hidden; }
 .gps-post { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; border: 1px solid #d2e3fc; background: #f4f8fe; border-radius: 14px; padding: 18px 22px; margin: 26px 0; }
 .gps-post-text { margin: 0 !important; flex: 1 1 280px; font-size: 15px; color: #3a3a48; }
 @media (max-width: 575px) { .gps-btn { font-size: 13.5px; } }
+
+/* Phones: 2 and 3 column guide tables fit the screen; 4+ columns keep horizontal scroll */
+@media (max-width: 575px) {
+    .guide-table:not(:has(th:nth-child(4))) { min-width: 0; font-size: 13.5px; }
+    .guide-table:not(:has(th:nth-child(4))) th, .guide-table:not(:has(th:nth-child(4))) td { padding: 8px 7px; }
+}

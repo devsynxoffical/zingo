@@ -2,6 +2,7 @@
 
 @section('og_type', 'article')
 @section('title', 'How to Optimize a Website for SEO: Step-by-Step Guide')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'A step-by-step website SEO checklist covering keyword research, on-page optimization, technical fixes, content and links for small business sites.')
 
 @push('schema')
