@@ -1,52 +1,7 @@
 @php
-    $phases = [
-        ['contract', 'fa-file-signature', 'Contract accepted (day 0–1)', [
-            'Get the fully executed contract with all signatures, initials and addenda',
-            'Confirm the effective date and build the deadline calendar from the contract',
-            'Send intro emails to buyer, seller, both agents, lender and title or escrow',
-            'Confirm the earnest money deposit was delivered and get the receipt',
-            'Send the contract to the lender and title company',
-            'Order HOA or condo documents and any required association approval',
-            'Open the file in the transaction platform and start the broker checklist',
-        ]],
-        ['inspection', 'fa-search', 'Inspection period', [
-            'Schedule the home inspection and any specialist inspections (WDO/termite, roof, pool, sewer)',
-            'Confirm access with the listing side and share times with the buyer',
-            'Send reports to the agent as soon as they arrive',
-            'Track the inspection deadline and remind the agent two days before it',
-            'Prepare repair requests or amendments for the agent to review and send',
-            'Remind the buyer to get insurance quotes early',
-        ]],
-        ['financing', 'fa-university', 'Financing and appraisal', [
-            'Confirm the buyer applied for the loan within the contract deadline',
-            'Track appraisal ordered, scheduled and received',
-            'Flag a low appraisal to the agent the same day',
-            'Track the loan approval or commitment deadline and get written confirmation',
-            'Check in with the lender weekly for missing conditions',
-        ]],
-        ['title', 'fa-landmark', 'Title, survey and HOA', [
-            'Get the title commitment and send it to the agent for review',
-            'Order or confirm the survey if required',
-            'Track open permits, liens or HOA violations that must be cleared',
-            'Confirm HOA or condo approval if the association requires it',
-        ]],
-        ['final', 'fa-flag-checkered', 'Final week', [
-            'Confirm "clear to close" with the lender',
-            'Confirm the buyer received the Closing Disclosure at least three business days before closing',
-            'Schedule the final walk-through',
-            'Send the closing time, location and what to bring to every party',
-            'Remind clients to verify wire instructions by phone with the title company (wire fraud warning)',
-            'Remind clients to transfer utilities',
-        ]],
-        ['closing', 'fa-key', 'Closing day and after', [
-            'Confirm the closing is funded and recorded',
-            'Get the signed settlement statement and closing documents for the file',
-            'Update the MLS to sold and the CRM to closed',
-            'Complete the broker compliance file and commission paperwork',
-            'Send the closing gift and ask for a review',
-            'Set post-closing reminders: 30-day check-in and home anniversary',
-        ]],
-    ];
+    $tcData = json_decode(file_get_contents(resource_path('data/tc-checklist.json')), true);
+    $phases = array_map(fn ($g) => [$g['id'], $g['icon'], $g['name'], $g['items']], $tcData['groups']);
+    $pdf = 'assets/downloads/transaction-coordinator-checklist-template.pdf';
     $total = array_sum(array_map(fn ($p) => count($p[3]), $phases));
     $faqs = [
         ['What does a transaction coordinator checklist include?', 'A transaction coordinator checklist covers every step from accepted contract to closing: opening the file, calendaring contract deadlines, earnest money, inspections, financing and appraisal, title and HOA, the final walk-through, closing and the broker compliance file.'],
@@ -59,8 +14,8 @@
 
 @section('og_type', 'article')
 @section('og_image', asset('assets/images/blog/Need Help with specific Business Operations.jpg'))
-@section('title', 'Transaction Coordinator Checklist: Contract to Close')
-@section('meta_description', 'A step-by-step transaction coordinator checklist from accepted contract to closing: deadlines, earnest money, inspections, financing, title, final walk-through and compliance.')
+@section('title', 'Transaction Coordinator Checklist & Template (Free PDF)')
+@section('meta_description', 'Free transaction coordinator checklist and contract-to-close template: 34 steps from accepted contract to closing, interactive online or as a printable PDF.')
 
 @push('schema')
     @include('partials.schema-page', [
@@ -119,6 +74,14 @@
                             </div>
 
                             <p>Most deals that go wrong do not fall apart over price. They slip on a missed inspection deadline, an appraisal nobody chased or a wire sent to the wrong account. A checklist removes memory from the process. Use the one below for every file; tick the boxes as you go and your progress is saved in this browser.</p>
+
+                            <div class="ck-download">
+                                <div>
+                                    <p class="ck-download-title"><i class="fas fa-file-pdf"></i> Free contract-to-close template</p>
+                                    <p class="ck-download-text">All {{ $total }} steps on a printable PDF with checkboxes. Use one copy per file.</p>
+                                </div>
+                                <a class="ck-download-btn" href="{{ asset($pdf) }}" download data-track="tc_checklist_download"><i class="fas fa-download"></i> Download the template</a>
+                            </div>
 
                             <div class="ck-progress" aria-live="polite"><span class="ck-progress-bar"><span id="ckBar"></span></span><span id="ckCount">0 of {{ $total }} done</span></div>
 
@@ -205,6 +168,8 @@
         b.addEventListener('change', function () { saved[b.dataset.key] = b.checked; try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} update(); });
     });
     update();
+    var dl = document.querySelector('[data-track="tc_checklist_download"]');
+    if (dl) dl.addEventListener('click', function () { if (window.zingoTrack) window.zingoTrack('file_download', { file_name: 'transaction-coordinator-checklist-template.pdf' }); });
 })();
 </script>
 @endsection

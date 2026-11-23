@@ -228,3 +228,33 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
   - Hub: last crawled 18 Nov.
 - **Change:** none. No new evidence, and recent changes still await a recrawl.
 - **Owner:** request indexing for the 4 pages listed in run #9 plus the hub.
+
+## 2026-11-23 12:41 UTC: 12-hour run #11
+- **Search Console:**
+  - **Nov 22 is a new record:** 50 impressions and 1 click, at average position 24.3. Nov 21 rose to 39.
+  - **The posts published on 20 Nov are already earning impressions:**
+    - TC checklist: "closing checklist template for transaction coordinators" at **position 11**, and "contract to close workflow template…" at **14**.
+    - Speed to lead: "speed to lead real estate zanus" at **4** (3 impressions; this includes a third-party brand name), "lead response time real estate" at 29, and "real estate lead response time" at 52.
+  - **Other new queries:**
+    - Florida cold calling guide: "florida do not call registry" at **11**.
+    - Cost guide: "real estate isa virtual assistant pricing" at 17, and "real estate virtual assistant rates" at 31.
+    - TC vs VA: "transaction coordinator vs assistant" at 22.
+    - ISA page: "real estate isa services" at 39.
+  - **Movers:**
+    - "outsource tasks to virtual assistants": 4 impressions, improved from 26 to 20.8.
+    - MLS login-sharing query: improved from 10 to 8.5 (FAQ added on 20 Nov).
+    - Texas unlicensed-assistant query: 7 impressions at 62.4.
+- **Indexing:** the money pages are unchanged.
+  - Listing coordinator: unknown.
+  - TC services: discovered.
+  - Cold calling: reports unknown again (the state flips).
+  - `/faq`: stale noindex.
+  - Hub: last crawled 18 Nov.
+- **Change (C12):**
+  - Added a free printable **contract-to-close template PDF** to `/blog/transaction-coordinator-checklist` (`/assets/downloads/transaction-coordinator-checklist-template.pdf`, with property, client and date fields).
+  - Retitled the post "Transaction Coordinator Checklist & Template (Free PDF)" and updated the meta description.
+  - The checklist data moved to `resources/data/tc-checklist.json`, so the page and the PDF share one source. `scripts/build_checklist_pdf.cjs` now builds both checklist PDFs.
+  - **Reason:** both TC queries ask for a "template" and rank at 11 and 14.
+  - **Validation:** position for those two queries over 14 days.
+  - **Local checks:** 54/54 URLs return 200, no duplicate titles; desktop and mobile tested; checkboxes still save; 0 JS errors.
+- **Next:** the Florida DNC query at 11 is close to page 1; check whether the Florida guide answers "how to register / check the Florida DNC list" directly.

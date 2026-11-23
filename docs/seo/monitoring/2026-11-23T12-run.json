@@ -1,0 +1,31 @@
+{
+  "run": "2026-11-23T12:41Z",
+  "gsc_daily": {"2026-11-19": [0, 46], "2026-11-20": [0, 49], "2026-11-21": [0, 39], "2026-11-22": [1, 50]},
+  "new_queries": [
+    {"query": "closing checklist template for transaction coordinators", "page": "/blog/transaction-coordinator-checklist", "impressions": 1, "position": 11},
+    {"query": "contract to close workflow template for transaction coordinators", "page": "/blog/transaction-coordinator-checklist", "impressions": 1, "position": 14},
+    {"query": "florida do not call registry", "page": "/blog/florida-real-estate-cold-calling-laws", "impressions": 1, "position": 11},
+    {"query": "speed to lead real estate zanus", "page": "/blog/speed-to-lead-real-estate", "impressions": 3, "position": 4},
+    {"query": "outsource blog post task to a virtual assistant", "page": "/blog/tasks-to-outsource-to-a-virtual-assistant", "impressions": 1, "position": 17},
+    {"query": "real estate isa virtual assistant pricing", "page": "/blog/real-estate-virtual-assistant-cost", "impressions": 1, "position": 17},
+    {"query": "transaction coordinator vs assistant", "page": "/blog/transaction-coordinator-vs-virtual-assistant", "impressions": 1, "position": 22},
+    {"query": "lead response time real estate", "page": "/blog/speed-to-lead-real-estate", "impressions": 1, "position": 29},
+    {"query": "real estate virtual assistant rates", "page": "/blog/real-estate-virtual-assistant-cost", "impressions": 1, "position": 31},
+    {"query": "real estate isa services", "page": "/real-estate-isa-services", "impressions": 1, "position": 39},
+    {"query": "real estate lead response time", "page": "/blog/speed-to-lead-real-estate", "impressions": 1, "position": 52}
+  ],
+  "movers": [
+    {"query": "outsource tasks to virtual assistants", "impressions": "1 -> 4", "position": "26 -> 20.8"},
+    {"query": "MLS login sharing question", "impressions": "1 -> 2", "position": "10 -> 8.5"},
+    {"query": "real estate virtual assistant pricing", "impressions": "4 -> 6", "position": "54.5 -> 61"},
+    {"query": "can an unlicensed assistant call leads texas", "impressions": "5 -> 7", "position": "65.4 -> 62.4"}
+  ],
+  "inspection": {
+    "/listing-coordinator-virtual-assistant": "URL is unknown to Google",
+    "/real-estate-transaction-coordinator-services": "Discovered - currently not indexed",
+    "/real-estate-cold-calling-services": "URL is unknown to Google (state flips)",
+    "/faq": "Excluded by noindex (stale 31 Jul)",
+    "/real-estate-virtual-assistant": "Indexed; last crawl 18 Nov"
+  },
+  "change": "C12: downloadable TC contract-to-close template PDF + title 'Transaction Coordinator Checklist & Template (Free PDF)'"
+}

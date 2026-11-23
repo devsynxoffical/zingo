@@ -1,0 +1,82 @@
+{
+  "title": "Transaction Coordinator Checklist: Contract to Close",
+  "updated": "November 2026",
+  "groups": [
+    {
+      "id": "contract",
+      "icon": "fa-file-signature",
+      "name": "Contract accepted (day 0–1)",
+      "items": [
+        "Get the fully executed contract with all signatures, initials and addenda",
+        "Confirm the effective date and build the deadline calendar from the contract",
+        "Send intro emails to buyer, seller, both agents, lender and title or escrow",
+        "Confirm the earnest money deposit was delivered and get the receipt",
+        "Send the contract to the lender and title company",
+        "Order HOA or condo documents and any required association approval",
+        "Open the file in the transaction platform and start the broker checklist"
+      ]
+    },
+    {
+      "id": "inspection",
+      "icon": "fa-search",
+      "name": "Inspection period",
+      "items": [
+        "Schedule the home inspection and any specialist inspections (WDO/termite, roof, pool, sewer)",
+        "Confirm access with the listing side and share times with the buyer",
+        "Send reports to the agent as soon as they arrive",
+        "Track the inspection deadline and remind the agent two days before it",
+        "Prepare repair requests or amendments for the agent to review and send",
+        "Remind the buyer to get insurance quotes early"
+      ]
+    },
+    {
+      "id": "financing",
+      "icon": "fa-university",
+      "name": "Financing and appraisal",
+      "items": [
+        "Confirm the buyer applied for the loan within the contract deadline",
+        "Track appraisal ordered, scheduled and received",
+        "Flag a low appraisal to the agent the same day",
+        "Track the loan approval or commitment deadline and get written confirmation",
+        "Check in with the lender weekly for missing conditions"
+      ]
+    },
+    {
+      "id": "title",
+      "icon": "fa-landmark",
+      "name": "Title, survey and HOA",
+      "items": [
+        "Get the title commitment and send it to the agent for review",
+        "Order or confirm the survey if required",
+        "Track open permits, liens or HOA violations that must be cleared",
+        "Confirm HOA or condo approval if the association requires it"
+      ]
+    },
+    {
+      "id": "final",
+      "icon": "fa-flag-checkered",
+      "name": "Final week",
+      "items": [
+        "Confirm \"clear to close\" with the lender",
+        "Confirm the buyer received the Closing Disclosure at least three business days before closing",
+        "Schedule the final walk-through",
+        "Send the closing time, location and what to bring to every party",
+        "Remind clients to verify wire instructions by phone with the title company (wire fraud warning)",
+        "Remind clients to transfer utilities"
+      ]
+    },
+    {
+      "id": "closing",
+      "icon": "fa-key",
+      "name": "Closing day and after",
+      "items": [
+        "Confirm the closing is funded and recorded",
+        "Get the signed settlement statement and closing documents for the file",
+        "Update the MLS to sold and the CRM to closed",
+        "Complete the broker compliance file and commission paperwork",
+        "Send the closing gift and ask for a review",
+        "Set post-closing reminders: 30-day check-in and home anniversary"
+      ]
+    }
+  ]
+}
