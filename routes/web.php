@@ -12,6 +12,7 @@ Route::controller(WebController::class)->group(function () {
     Route::get('/blog/tasks-to-outsource-to-a-virtual-assistant', 'blog3')->name('blog3');
     Route::get('/blog/how-to-become-a-virtual-assistant', 'blog4')->name('blog4');
     Route::get('/blog/real-estate-virtual-assistant-cost', 're_va_cost')->name('blog.re_va_cost');
+    Route::get('/sitemap', 'html_sitemap')->name('html_sitemap');
     Route::get('/blog/what-can-an-unlicensed-real-estate-assistant-do', 'unlicensed_assistant_rules')->name('blog.unlicensed_assistant_rules');
     Route::get('/blog/can-an-unlicensed-assistant-make-cold-calls-in-texas', 'texas_unlicensed_cold_calls')->name('blog.texas_unlicensed_cold_calls');
     Route::get('/blog/transaction-coordinator-checklist', 'tc_checklist')->name('blog.tc_checklist');

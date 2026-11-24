@@ -33,20 +33,14 @@
                                         <li><a class="dropdown-item" href="{{ route('service.listing_coordinator') }}">Listing Coordinator</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.expired_fsbo_calling') }}">Expired &amp; FSBO Calling</a></li>
                                         <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="{{ route('service.it_support') }}">IT Support</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.cold_calling') }}">Real Estate Cold Calling</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.wholesale_cold_calling') }}">Wholesale Cold Calling</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.search_seo') }}">SEO Services</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.video_editing') }}">Video Editing</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.crm_management') }}">CRM Management</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.web_development') }}">Web Development</a></li>
-                                        <li><a class="dropdown-item" href="{{ route('service.graphic_design') }}">Graphic Design</a></li>
-                                        <li><a class="dropdown-item" href="{{ route('service.app_development') }}">App Development</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.lead_generation') }}">Lead Generation</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.digital_marketing') }}">Digital Marketing</a></li>
-                                        <li><a class="dropdown-item" href="{{ route('service.personal_assistance') }}">Personal Assistance</a></li>
-                                        <li><a class="dropdown-item" href="{{ route('service.bookkeeping_accountant') }}">Bookkeeping & Accountant</a></li>
-                                        <li><a class="dropdown-item" href="{{ route('service.virtual_business_assistance') }}">Virtual Business Assistance</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.virtual_property_management') }}">Virtual Property Management</a></li>
                                         <li><a class="dropdown-item" href="{{ route('service.real_estate_transaction_coordinator') }}">Real Estate Transaction Coordinator</a></li>
                                     </ul>

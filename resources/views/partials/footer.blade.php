@@ -83,6 +83,7 @@
                             <li><a href="{{ route('terms') }}"><i class="fas fa-arrow-right"></i>Terms of service</a></li>
                             <li><a href="{{ route('privacy') }}"><i class="fas fa-arrow-right"></i>Privacy policy</a></li>
                             <li><a href="{{ route('editorial') }}"><i class="fas fa-arrow-right"></i>Editorial policy</a></li>
+                            <li><a href="{{ route('html_sitemap') }}"><i class="fas fa-arrow-right"></i>Site map</a></li>
                         </ul>
                     </div>
                 </div>
@@ -93,7 +94,7 @@
                         <h5 class="column-title">Our Services</h5>
                         <ul class="footer-links">
                             <li><a href="{{ route('service.real_estate_virtual_assistant') }}"><i class="fas fa-arrow-right"></i>Real Estate Virtual Assistant</a></li>
-                            <li><a href="{{ route('service.virtual_business_assistance') }}"><i class="fas fa-arrow-right"></i>Virtual Assistance</a></li>
+                            <li><a href="{{ route('service.virtual_property_management') }}"><i class="fas fa-arrow-right"></i>Property Management VA</a></li>
                             <li><a href="{{ route('service.web_development') }}"><i class="fas fa-arrow-right"></i>Web & App Development</a></li>
                             <li><a href="{{ route('service.crm_management') }}"><i class="fas fa-arrow-right"></i>CRM & MLS Management</a></li>
                             <li><a href="{{ route('service.digital_marketing') }}"><i class="fas fa-arrow-right"></i>Digital Marketing & Branding</a></li>

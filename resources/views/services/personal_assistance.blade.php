@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('title', 'Virtual Personal Assistant Services | Zingo Assist')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'Hire a virtual personal assistant to manage your inbox, calendar, travel, errands and follow-ups so you can focus on work that grows your business.')
 
 @push('schema')

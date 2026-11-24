@@ -5,7 +5,7 @@ return [
     'posts' => [
         ['route' => 'blog1', 'title' => "Why Your Business Needs a Virtual Assistant", 'image' => 'assets/images/blog/Virtual Assistant vs In-House Employees Which is Best for Your Business.jpg', 'topic' => 'va'],
         ['route' => 'blog3', 'title' => "10 Tasks to Outsource to a Virtual Assistant Today", 'image' => 'assets/images/blog/10 Tasks to Outsource to a Virtual Assistant Today.jpg', 'topic' => 'va'],
-        ['route' => 'blog4', 'title' => "How to Become a Virtual Assistant: A Step-by-Step Guide", 'image' => 'assets/images/blog/What is Virtual Assistance.jpg', 'topic' => 'va'],
+        ['route' => 'blog4', 'title' => "How to Become a Virtual Assistant: A Step-by-Step Guide", 'image' => 'assets/images/blog/What is Virtual Assistance.jpg', 'topic' => 'va', 'noindex' => true],
         ['route' => 'blog.unlicensed_assistant_rules', 'title' => "What Can an Unlicensed Real Estate Assistant Do? (Rules by State)", 'image' => 'assets/images/blog/Observing Industry News.jpg', 'topic' => 're'],
         ['route' => 'blog.texas_unlicensed_cold_calls', 'title' => "Can an Unlicensed Assistant Make Cold Calls in Texas?", 'image' => 'assets/images/blog/No Time for New Projects.jpg', 'topic' => 're'],
         ['route' => 'blog.tc_checklist', 'title' => "Transaction Coordinator Checklist: Contract to Close", 'image' => 'assets/images/blog/Need Help with specific Business Operations.jpg', 'topic' => 're'],

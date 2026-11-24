@@ -1,6 +1,7 @@
 @extends('layout.main')
 
 @section('title', 'Virtual Business Assistant Services | Zingo Assist')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'Virtual business assistant services for small businesses: email, scheduling, data entry, customer support and operations handled by a trained remote assistant.')
 
 @push('schema')

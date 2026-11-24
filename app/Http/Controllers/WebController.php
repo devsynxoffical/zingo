@@ -283,10 +283,13 @@ class WebController extends Controller
      * XML sitemap. lastmod comes from the view file's modification time so it
      * only changes when the page content actually changes.
      */
-    public function sitemap()
+    /**
+     * Indexable pages: route name => [view, priority, changefreq].
+     * Shared by the XML sitemap and the HTML site map so they never drift apart.
+     */
+    private function sitemapPages(): array
     {
-        // route name => [view, priority, changefreq]
-        $pages = [
+        return [
             'home' => ['home', '1.0', 'weekly'],
             'service.real_estate_virtual_assistant' => ['services.real_estate_virtual_assistant', '0.9', 'monthly'],
             'service' => ['service', '0.9', 'monthly'],
@@ -298,8 +301,6 @@ class WebController extends Controller
             'service.wholesale_cold_calling' => ['services.wholesale_cold_calling', '0.8', 'monthly'],
             'service.real_estate_transaction_coordinator' => ['services.real_estate_transaction_coordinator', '0.8', 'monthly'],
             'service.virtual_property_management' => ['services.virtual_property_management', '0.8', 'monthly'],
-            'service.virtual_business_assistance' => ['services.virtual_business_assistance', '0.8', 'monthly'],
-            'service.personal_assistance' => ['services.personal_assistance', '0.8', 'monthly'],
             'service.lead_generation' => ['services.lead_generation', '0.8', 'monthly'],
             'service.crm_management' => ['services.crm_management', '0.8', 'monthly'],
             'service.digital_marketing' => ['services.digital_marketing', '0.8', 'monthly'],
@@ -328,11 +329,16 @@ class WebController extends Controller
             'blog3' => ['blog3', '0.6', 'monthly'],
             'blog1' => ['blog1', '0.6', 'monthly'],
             'blog.free_va_trial' => ['blog.free_va_trial', '0.6', 'monthly'],
-            'blog4' => ['blog4', '0.5', 'monthly'],
             'editorial' => ['static.editorial', '0.3', 'yearly'],
             'privacy' => ['static.privacy', '0.2', 'yearly'],
             'terms' => ['static.terms', '0.2', 'yearly'],
+            'html_sitemap' => ['static.sitemap', '0.2', 'monthly'],
         ];
+    }
+
+    public function sitemap()
+    {
+        $pages = $this->sitemapPages();
 
         $base = rtrim(config('seo.base_url', url('/')), '/');
 
@@ -357,5 +363,32 @@ class WebController extends Controller
         $xml .= '</urlset>';
 
         return response($xml, 200)->header('Content-Type', 'application/xml; charset=UTF-8');
+    }
+
+    /** HTML site map: every indexable page, grouped, labelled with its page title. */
+    public function html_sitemap()
+    {
+        $groups = ['Real estate services' => [], 'Tools' => [], 'Locations' => [], 'Guides' => [], 'Company' => []];
+        foreach ($this->sitemapPages() as $route => [$view]) {
+            if ($route === 'html_sitemap' || !\Illuminate\Support\Facades\Route::has($route)) {
+                continue;
+            }
+            $file = resource_path('views/' . str_replace('.', '/', $view) . '.blade.php');
+            $label = $route;
+            if (is_file($file) && preg_match("/@section\\('title',\\s*'((?:[^'\\\\]|\\\\.)*)'/", file_get_contents($file), $m)) {
+                $label = trim(preg_replace('/\\s*\\|.*$/', '', stripslashes($m[1])));
+            }
+            $label = ['home' => 'Home', 'service' => 'All services', 'blog' => 'Blog'][$route] ?? $label;
+            $group = match (true) {
+                str_starts_with($route, 'service') => 'Real estate services',
+                str_starts_with($route, 'tool.') => 'Tools',
+                str_starts_with($route, 'location.') => 'Locations',
+                str_starts_with($route, 'blog') && $route !== 'blog' => 'Guides',
+                default => 'Company',
+            };
+            $groups[$group][] = [$label, route($route)];
+        }
+
+        return view('static.sitemap', ['groups' => array_filter($groups)]);
     }
 }

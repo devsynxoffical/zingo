@@ -2,6 +2,7 @@
 
 @section('og_type', 'article')
 @section('title', 'How to Become a Virtual Assistant: Step-by-Step Guide')
+@section('robots', 'noindex, follow')
 @section('meta_description', 'A practical guide to becoming a virtual assistant: choosing your services, building skills, setting up tools and finding your first clients.')
 
 @push('schema')
