@@ -272,3 +272,24 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
   - Listing coordinator: unknown. TC services and cold calling: discovered.
 - **Change:** none. Yesterday's batch (11 noindexes, 2 new guides, property management FAQs) needs a crawl first. The property management rewrite is scheduled for 24 Nov 13:30 UTC under the 7-day rule.
 - **Owner:** request indexing for the 2 new guides plus the pages listed in run #9.
+
+## 2026-11-24 12:40 UTC: 12-hour run #13
+- **Deployment:** live; run 29 (`b28e77e`, 24 Nov structure plan) succeeded and its URLs were submitted to IndexNow.
+- **Search Console:**
+  - **Nov 23: 90 impressions and 4 clicks, the best day so far** (Nov 22: 51 and 1). Clicks went to the homepage (2), graphic design (1) and the Tampa page (1).
+  - **New in the top 30:**
+    - "follow up boss virtual assistant" → FUB post, position 14.
+    - "expired & fsbo leads" → ISA scripts post, 14.
+    - "real estate assistant pricing" → cost guide, 16.
+  - **Steady:** MLS login query at 8; Florida DNC at 11; TC checklist template queries at 11 and 14.
+  - GSC still reports the old Florida and generic rules post URLs. They now 301 to the rules pages, so data should move over in the coming days.
+- **Indexing:**
+  - Rules hub and Florida rules page: unknown (new today).
+  - Property management page: indexed, recrawled 24 Nov 08:44, after the rewrite was deployed.
+  - TC services: discovered. Listing coordinator: unknown.
+- **Change (C18):**
+  - Two links with the generic anchor "what an unlicensed real estate assistant can do" pointed to the Florida rules page after the merge. They now point to the rules hub `/real-estate-assistant-rules`. Pages: the ISA scripts post and the VA tasks checklist.
+  - Links whose anchor text says "in Florida" stay on the Florida page.
+  - **Checks:** both pages return 200, and the `#cold-calling-laws` anchor exists on the Florida page.
+- **Next:** let today's large batch get crawled; watch the redirected Florida queries move to `/real-estate-assistant-rules/florida`.
+- **Owner:** request indexing in GSC for `/real-estate-assistant-rules`, `/real-estate-assistant-rules/florida`, `/real-estate-investor-virtual-assistant`, TC services and listing coordinator. Owner decisions are in `docs/seo/2026-11-24-structure-plan.md`.

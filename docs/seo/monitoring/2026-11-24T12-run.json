@@ -1,0 +1,22 @@
+{
+  "run": "2026-11-24T12:40Z #13",
+  "deploy": {"run": 29, "sha": "b28e77e", "status": "success", "note": "24 Nov structure plan, weeks 1 to 8"},
+  "gsc_daily": {"2026-11-19": {"impressions": 46}, "2026-11-20": {"impressions": 49}, "2026-11-21": {"impressions": 39}, "2026-11-22": {"impressions": 51, "clicks": 1}, "2026-11-23": {"impressions": 90, "clicks": 4}},
+  "nov23_clicks_by_page": {"/": 2, "/graphic-design-services": 1, "/real-estate-virtual-assistant-tampa-st-petersburg-fl": 1},
+  "new_queries_top30": [
+    ["follow up boss virtual assistant", "FUB post", 14],
+    ["expired & fsbo leads", "ISA scripts post", 14],
+    ["real estate assistant pricing", "cost guide", 16],
+    ["MLS login sharing query", "MLS post", 8],
+    ["Florida DNC", "Florida cold calling (now rules/florida)", 11],
+    ["TC checklist template", "TC checklist", "11 and 14"]
+  ],
+  "inspection": {
+    "/real-estate-assistant-rules": "unknown (new)",
+    "/real-estate-assistant-rules/florida": "unknown (new)",
+    "/real-estate-transaction-coordinator-services": "discovered, not indexed",
+    "/virtual-property-management-services": "indexed, crawled 2026-11-24 08:44",
+    "/real-estate-listing-coordinator-services": "unknown"
+  },
+  "change": "C18: 2 internal links with generic anchor 'what an unlicensed real estate assistant can do' pointed to the Florida rules page after the merge; now point to /real-estate-assistant-rules"
+}

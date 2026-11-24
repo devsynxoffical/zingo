@@ -80,7 +80,7 @@
                                 <li><strong>Identify yourself and the agent</strong> at the start of every call, and log an opt-out the moment someone asks.</li>
                                 <li><strong>Stay in the ISA lane:</strong> ask questions and book appointments. Do not give opinions on value, discuss commission or interpret contracts.</li>
                             </ul>
-                            <p>For the details, read our <a href="{{ route('rules.state', 'florida') . '#cold-calling-laws' }}">Florida cold calling laws guide</a> and <a href="{{ route('rules.state', 'florida') }}">what an unlicensed real estate assistant can do</a>.</p>
+                            <p>For the details, read our <a href="{{ route('rules.state', 'florida') . '#cold-calling-laws' }}">Florida cold calling laws guide</a> and <a href="{{ route('rules.hub') }}">what an unlicensed real estate assistant can do</a>.</p>
 
                             <h2>Expired listing script</h2>
                             <p>Expired sellers are often frustrated and are getting many calls the same morning. Be brief, be human and lead with a question, not a pitch.</p>
