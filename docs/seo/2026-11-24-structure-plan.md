@@ -34,14 +34,14 @@ Checks: 43/43 URLs return 200 with one H1 each; titles are unique and under 60 c
 
 | Week (Monday) | Work | Condition |
 |---|---|---|
-| 2 (1 Dec) | Push `/real-estate-transaction-coordinator-services` for "transaction coordinator" (2,900, KD 11) and "virtual transaction coordinator" (260, KD 3). The property management rewrite was already scheduled for 24 Nov. | none |
-| 3 (8 Dec) | Rules hub `/real-estate-assistant-rules` (absorbs `/blog/what-can-an-unlicensed-real-estate-assistant-do` with a 301). `/real-estate-assistant-rules/florida` merges the 2 Florida posts with 301s. | Cite FREC; carry the strongest current Florida content over intact, because that post ranks 1 to 3. |
-| 4 (15 Dec) | `/real-estate-assistant-rules/texas` (merge the Texas post with a 301) and `/real-estate-assistant-rules/california` | Cite TREC and DRE |
-| 5 (22 Dec) | `/locations` hub and `/real-estate-virtual-assistant-florida` | **Owner must confirm** the St. Petersburg office, Florida clients, and the MLS/CRM list |
-| 6 (29 Dec) | Georgia and North Carolina rules pages | Cite GREC and NCREC from official pages |
-| 7 (5 Jan) | Arizona, New York and Colorado rules pages | Cite ADRE, NYS DOS and Colorado DRE |
-| 8 (12 Jan) | `/real-estate-investor-virtual-assistant`; tools page `/tools/transaction-coordinator-checklist` (moved, with a 301) | none |
-| 9 to 12 | Texas and California service pages; directories; own phone number and Google Business Profile; monthly review | Service pages **only if the owner confirms clients there** |
+| 2 (30 Nov) | Push `/real-estate-transaction-coordinator-services` for "transaction coordinator" (2,900, KD 11) and "virtual transaction coordinator" (260, KD 3). The property management rewrite was already scheduled for 24 Nov. | none |
+| 3 (7 Dec) | Rules hub `/real-estate-assistant-rules` (absorbs `/blog/what-can-an-unlicensed-real-estate-assistant-do` with a 301). `/real-estate-assistant-rules/florida` merges the 2 Florida posts with 301s. | Cite FREC; carry the strongest current Florida content over intact, because that post ranks 1 to 3. |
+| 4 (14 Dec) | `/real-estate-assistant-rules/texas` (merge the Texas post with a 301) and `/real-estate-assistant-rules/california` | Cite TREC and DRE |
+| 5 (21 Dec) | `/locations` hub and `/real-estate-virtual-assistant-florida` | **Owner must confirm** the St. Petersburg office, Florida clients, and the MLS/CRM list |
+| 6 (28 Dec) | Georgia and North Carolina rules pages | Cite GREC and NCREC from official pages |
+| 7 (4 Jan) | Arizona, New York and Colorado rules pages | Cite ADRE, NYS DOS and Colorado DRE |
+| 8 (11 Jan) | `/real-estate-investor-virtual-assistant`; tools page `/tools/transaction-coordinator-checklist` (moved, with a 301) | none |
+| 9 to 12 (18 Jan to 8 Feb) | Texas and California service pages; directories; own phone number and Google Business Profile; monthly review | Service pages **only if the owner confirms clients there** |
 
 Header target, once the rules hub and locations exist: Services, Roles, Rules by State, Locations, Pricing, Contact.
 
