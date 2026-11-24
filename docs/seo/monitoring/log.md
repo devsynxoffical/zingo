@@ -258,3 +258,17 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
   - **Validation:** position for those two queries over 14 days.
   - **Local checks:** 54/54 URLs return 200, no duplicate titles; desktop and mobile tested; checkboxes still save; 0 JS errors.
 - **Next:** the Florida DNC query at 11 is close to page 1; check whether the Florida guide answers "how to register / check the Florida DNC list" directly.
+
+## 2026-11-24 00:41 UTC: 12-hour run #12
+- **Deployment:** live; run 27 (`d727e45`, 23 Nov plan work) succeeded and its URLs were submitted to IndexNow.
+- **Search Console:**
+  - Nov 22 is final-ish at 51 impressions and 1 click, the best day so far. Nov 23 shows 19 (incomplete).
+  - **New in the top 30:**
+    - "how to outsource marketing tasks to virtual assistants" → generic tasks post, position 10.
+    - "real estate assistant cost" → cost guide, 27.5 (2 impressions).
+  - **Steady:** "speed to lead real estate zanus" at 6 impressions, position 3.8. TC checklist template queries at 11 and 14; Florida DNC at 11; ISA pricing at 10.
+- **Indexing:**
+  - The 2 new guides from 23 Nov are not known to Google yet (expected, 1 day old).
+  - Listing coordinator: unknown. TC services and cold calling: discovered.
+- **Change:** none. Yesterday's batch (11 noindexes, 2 new guides, property management FAQs) needs a crawl first. The property management rewrite is scheduled for 24 Nov 13:30 UTC under the 7-day rule.
+- **Owner:** request indexing for the 2 new guides plus the pages listed in run #9.
