@@ -87,6 +87,7 @@
             <h1 class="sp-hero-title" data-aos="fade-up" data-aos-duration="700">
                 Virtual Transaction <span class="sp-hero-title-highlight">Coordinator Services</span>
             </h1>
+            <p class="sp-hero-updated" data-aos="fade-up">Updated: November 2026</p>
 
             <p class="sp-hero-desc" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700">
                 Managing real estate paperwork, deadlines, and compliance can quickly overwhelm even the most experienced agents. ZingoAssist provides reliable Real Estate Transaction Coordinator services that streamline every step of the transaction process, from contract to close. Whether you are an agent, broker, or real estate investor, our team ensures every document, disclosure, and milestone is completed accurately and on time.
@@ -104,6 +105,20 @@
                 </a>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- ===================== WHAT IS A TC ===================== -->
+<section class="sp-section" style="padding-bottom: 0;">
+    <div class="container">
+        <div class="row justify-content-center"><div class="col-lg-10" data-aos="fade-up">
+            <div class="lp-answer" style="border-left:4px solid #A52673;background:#fff;border-radius:14px;padding:24px 28px;box-shadow:0 10px 30px rgba(31,18,53,.06);">
+                <span class="sp-label" style="margin-bottom:8px;display:inline-block;">Quick answer</span>
+                <h2 style="font-size:22px;margin:0 0 10px;color:#1f1235;">What does a transaction coordinator do?</h2>
+                <p style="margin:0 0 10px;">A <strong>transaction coordinator</strong> manages a real estate deal from accepted contract to closing: building the deadline calendar from the contract, collecting signatures and documents, scheduling inspections and appraisals, keeping clients, lender and title updated, and completing the broker&#39;s compliance file. A <strong>virtual transaction coordinator</strong> does the same work remotely in your transaction platform, under the supervision of the licensed agent.</p>
+                <p style="margin:0;">See every step in our free <a href="{{ route('blog.tc_checklist') }}">transaction coordinator checklist and template</a>, compare roles in <a href="{{ route('blog.tc_vs_va') }}">transaction coordinator vs virtual assistant</a>, or check what unlicensed staff may do in your state: <a href="{{ route('rules.hub') }}">real estate assistant rules by state</a>.</p>
+            </div>
+        </div></div>
     </div>
 </section>
 
@@ -330,31 +345,31 @@
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
                 <div class="sp-testimonial">
                     <p class="sp-testimonial-text">"ZingoAssist completely transformed my workload. Their Real Estate Transaction Coordinator services helped me close more deals without feeling overwhelmed. Every deadline was handled professionally."</p>
-                    <p class="sp-testimonial-author">— John D., Real Estate Agent</p>
+                    <p class="sp-testimonial-author">John D., Real Estate Agent</p>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="80">
                 <div class="sp-testimonial">
                     <p class="sp-testimonial-text">"Our brokerage uses ZingoAssist for all closings. Their transaction coordinator services ensure that nothing falls through the cracks. Clients appreciate the consistent communication."</p>
-                    <p class="sp-testimonial-author">— Sarah P., Brokerage Owner</p>
+                    <p class="sp-testimonial-author">Sarah P., Brokerage Owner</p>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
                 <div class="sp-testimonial">
                     <p class="sp-testimonial-text">"As an investor with multiple properties, I needed help tracking paperwork and closing timelines. ZingoAssist provided exceptional transaction coordination support."</p>
-                    <p class="sp-testimonial-author">— Michael R., Investor</p>
+                    <p class="sp-testimonial-author">Michael R., Investor</p>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="80">
                 <div class="sp-testimonial">
                     <p class="sp-testimonial-text">"Their team handled all communications, disclosures, and vendor coordination for my listings. It made my job so much easier and improved my client reviews."</p>
-                    <p class="sp-testimonial-author">— Emily T., Realtor</p>
+                    <p class="sp-testimonial-author">Emily T., Realtor</p>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
                 <div class="sp-testimonial">
                     <p class="sp-testimonial-text">"Thanks to their organized process, our closings are smoother and more efficient. I recommend them to any agent needing reliable coordination support."</p>
-                    <p class="sp-testimonial-author">— Kevin L., Agent</p>
+                    <p class="sp-testimonial-author">Kevin L., Agent</p>
                 </div>
             </div>
         </div>

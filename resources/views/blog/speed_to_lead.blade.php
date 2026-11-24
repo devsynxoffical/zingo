@@ -110,7 +110,7 @@
                                 <li><strong>Day 3–4:</strong> call and email.</li>
                                 <li><strong>Day 7:</strong> final call of the first week, then move to a nurture plan.</li>
                             </ul>
-                            <p>Spread attempts across mornings, lunchtimes and early evenings, stay within legal calling hours and honor opt-outs immediately. In Florida that means 8 a.m. to 8 p.m. and no more than three calls in 24 hours on the same subject; see our <a href="{{ route('blog.florida_cold_calling_laws') }}">Florida calling laws guide</a>.</p>
+                            <p>Spread attempts across mornings, lunchtimes and early evenings, stay within legal calling hours and honor opt-outs immediately. In Florida that means 8 a.m. to 8 p.m. and no more than three calls in 24 hours on the same subject; see our <a href="{{ route('rules.state', 'florida') . '#cold-calling-laws' }}">Florida calling laws guide</a>.</p>
 
                             <h2>Covering leads when you can&#39;t pick up</h2>
                             <ul class="guide-list">

@@ -46,6 +46,9 @@
                                     </ul>
                                 </div>
                                 <div class="nav-item">
+                                    <a class="nav-link" href="{{ route('rules.hub') }}">Rules by State</a>
+                                </div>
+                                <div class="nav-item">
                                     <a class="nav-link" href="{{ route('blog') }}">Blog</a>
                                 </div>
                                 <div class="nav-item">

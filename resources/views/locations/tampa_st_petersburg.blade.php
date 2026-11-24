@@ -52,13 +52,13 @@
             'title' => 'Florida-Specific Details Our Assistants Handle',
             'html' => '<p>Florida transactions and marketing come with rules and paperwork that generic assistants miss. Our Tampa Bay assistants are trained to keep these on your checklist:</p>
 <ul>
-<li><strong>Calling rules:</strong> Florida limits commercial solicitation calls to 8 a.m. to 8 p.m. local time and to three calls per 24 hours on the same subject, and maintains its own state Do Not Call list in addition to the national registry. Read our <a href="' . route('blog.florida_cold_calling_laws') . '">Florida cold calling laws guide</a>.</li>
+<li><strong>Calling rules:</strong> Florida limits commercial solicitation calls to 8 a.m. to 8 p.m. local time and to three calls per 24 hours on the same subject, and maintains its own state Do Not Call list in addition to the national registry. Read our <a href="' . route('rules.state', 'florida') . '#cold-calling-laws' . '">Florida cold calling laws guide</a>.</li>
 <li><strong>Contract deadlines:</strong> inspection, financing, appraisal and closing dates on Florida Realtors/Florida Bar contracts are tracked in your CRM or transaction platform with reminders to every party.</li>
 <li><strong>Condo and HOA documents:</strong> requesting association approvals, estoppel letters and condo documents early, which matters for Tampa Bay&#39;s large condo market.</li>
 <li><strong>Insurance and flood questions:</strong> collecting flood-zone information, elevation certificates and insurance quotes buyers need before they commit.</li>
 <li><strong>Seasonal demand:</strong> scheduling and follow-up that keeps up with the winter season and out-of-state buyers.</li>
 </ul>
-<p>Your assistant supports you; licensed activities such as negotiating or advising on contracts stay with you and your broker. See <a href="' . route('blog.unlicensed_assistant_florida') . '">what an unlicensed real estate assistant can do in Florida</a>.</p>',
+<p>Your assistant supports you; licensed activities such as negotiating or advising on contracts stay with you and your broker. See <a href="' . route('rules.state', 'florida') . '">what an unlicensed real estate assistant can do in Florida</a>.</p>',
         ],
         'faqs' => [
             ['Do you have real estate virtual assistants in Tampa?', 'Yes. Zingo Assist is based in St. Petersburg and provides remote real estate virtual assistants to agents, teams, investors and property managers throughout Tampa, St. Petersburg, Clearwater and the rest of Tampa Bay.'],

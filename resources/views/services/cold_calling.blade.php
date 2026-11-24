@@ -83,6 +83,7 @@
             <h1 class="sp-hero-title" data-aos="fade-up" data-aos-duration="700">
                 Real Estate <span class="sp-hero-title-highlight">Cold Calling Services</span>
             </h1>
+            <p class="sp-hero-updated" data-aos="fade-up">Updated: November 2026</p>
 
             <p class="sp-hero-desc" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700">
                 Looking to increase sales and connect with potential clients directly? Our real estate cold calling services at ZingoAssist are designed to help businesses, particularly in the real estate sector, generate high-quality leads and boost conversions. Whether you are a real estate agent, broker, or a B2B company, our expert cold calling team ensures that your outreach is professional, efficient, and results-driven.
@@ -118,7 +119,7 @@
                 <p class="sp-about-text">
                     Cold calling services involve reaching out to potential clients who may not yet be aware of your services or products. At ZingoAssist, we specialize in real estate cold calling services that help agents and businesses generate qualified leads, set appointments, and close deals faster.
                 </p>
-                <p class="sp-about-text zingo-related"><strong>Want only listing leads? See our <a href="{{ route('service.expired_fsbo_calling') }}">expired &amp; FSBO calling service</a>. Need someone to follow up with inbound leads? See our <a href="{{ route('service.real_estate_isa') }}">real estate ISA services</a>. Calling for investors or wholesalers? See our <a href="{{ route('service.wholesale_cold_calling') }}">wholesale real estate cold calling services</a>. Calling Florida numbers? Read our <a href="{{ route('blog.florida_cold_calling_laws') }}">Florida cold calling laws guide</a>.</strong></p>
+                <p class="sp-about-text zingo-related"><strong>Want only listing leads? See our <a href="{{ route('service.expired_fsbo_calling') }}">expired &amp; FSBO calling service</a>. Need someone to follow up with inbound leads? See our <a href="{{ route('service.real_estate_isa') }}">real estate ISA services</a>. Calling for investors or wholesalers? See our <a href="{{ route('service.wholesale_cold_calling') }}">wholesale real estate cold calling services</a>. Calling Florida numbers? Read our <a href="{{ route('rules.state', 'florida') . '#cold-calling-laws' }}">Florida cold calling laws guide</a>.</strong></p>
                 <p class="sp-about-text">
                     Cold calling remains one of the most direct ways to connect with prospects. It allows your business to engage potential clients personally, answer questions immediately, and create meaningful conversations that can turn into long-term relationships.
                 </p>

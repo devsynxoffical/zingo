@@ -121,7 +121,7 @@
                 </div>
 
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
-                    <a href="{{ route('blog.unlicensed_assistant_rules') }}" class="bp-post-card">
+                    <a href="{{ route('rules.hub') }}" class="bp-post-card">
                         <div class="bp-post-img">
                             <img src="{{ asset('assets/images/blog/Observing Industry News.jpg') }}" alt="What Can an Unlicensed Real Estate Assistant Do?" loading="lazy">
                             <div class="bp-post-category">Real Estate</div>
@@ -139,7 +139,7 @@
                 </div>
 
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <a href="{{ route('blog.texas_unlicensed_cold_calls') }}" class="bp-post-card">
+                    <a href="{{ route('rules.state', 'texas') }}" class="bp-post-card">
                         <div class="bp-post-img">
                             <img src="{{ asset('assets/images/blog/No Time for New Projects.jpg') }}" alt="Can an Unlicensed Assistant Make Cold Calls in Texas?" loading="lazy">
                             <div class="bp-post-category">Real Estate</div>
@@ -283,7 +283,7 @@
                 </div>
 
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
-                    <a href="{{ route('blog.florida_cold_calling_laws') }}" class="bp-post-card">
+                    <a href="{{ route('rules.state', 'florida') . '#cold-calling-laws' }}" class="bp-post-card">
                         <div class="bp-post-img">
                             <img src="{{ asset('assets/images/blog/Managing Customer Relations.jpg') }}" alt="Florida Real Estate Cold Calling Laws: TCPA, FTSA & DNC Guide" loading="lazy">
                             <div class="bp-post-category">Cold Calling</div>
@@ -319,7 +319,7 @@
                 </div>
 
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
-                    <a href="{{ route('blog.unlicensed_assistant_florida') }}" class="bp-post-card">
+                    <a href="{{ route('rules.state', 'florida') }}" class="bp-post-card">
                         <div class="bp-post-img">
                             <img src="{{ asset('assets/images/blog/Handling Administrative Tasks.jpg') }}" alt="What Can an Unlicensed Real Estate Assistant Do in Florida?" loading="lazy">
                             <div class="bp-post-category">Real Estate</div>

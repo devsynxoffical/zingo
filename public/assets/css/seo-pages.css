@@ -310,3 +310,19 @@ body { overflow-x: hidden; }
     .guide-table:not(:has(th:nth-child(4))) { min-width: 0; font-size: 13.5px; }
     .guide-table:not(:has(th:nth-child(4))) th, .guide-table:not(:has(th:nth-child(4))) td { padding: 8px 7px; }
 }
+
+/* "Updated" line under service page H1s */
+.sp-hero-updated { color: rgba(255,255,255,.85); font-size: 14px; margin: -4px 0 14px; letter-spacing: .2px; }
+
+/* ===== Assistant rules pages ===== */
+.rl-badge { display: inline-block; font-size: 12.5px; font-weight: 700; padding: 3px 9px; border-radius: 20px; white-space: nowrap; }
+.rl-yes { background: #e6f4ea; color: #1e6b34; }
+.rl-lim { background: #fff4d6; color: #8a5a00; }
+.rl-no { background: #fde7e9; color: #a3172a; }
+.rl-na { background: #eef0f3; color: #4a5160; }
+.rl-states { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 6px 0 26px; }
+.rl-state { display: flex !important; flex-direction: column; gap: 4px; padding: 16px 16px 14px; border: 1px solid #f0e6ee; border-radius: 14px; background: #fff; text-decoration: none !important; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.rl-state:hover { border-color: #ead3e1; box-shadow: 0 10px 24px rgba(165,38,115,.1); transform: translateY(-2px); }
+.rl-state-name { font-weight: 700; color: #1f1235; font-size: 17px; }
+.rl-state-reg { font-size: 13px; color: #6b1a4c; }
+.rl-state-go { margin-top: 6px; font-size: 13.5px; font-weight: 600; color: #A52673; }

@@ -80,7 +80,7 @@
                                 <li><strong>Identify yourself and the agent</strong> at the start of every call, and log an opt-out the moment someone asks.</li>
                                 <li><strong>Stay in the ISA lane:</strong> ask questions and book appointments. Do not give opinions on value, discuss commission or interpret contracts.</li>
                             </ul>
-                            <p>For the details, read our <a href="{{ route('blog.florida_cold_calling_laws') }}">Florida cold calling laws guide</a> and <a href="{{ route('blog.unlicensed_assistant_florida') }}">what an unlicensed real estate assistant can do</a>.</p>
+                            <p>For the details, read our <a href="{{ route('rules.state', 'florida') . '#cold-calling-laws' }}">Florida cold calling laws guide</a> and <a href="{{ route('rules.state', 'florida') }}">what an unlicensed real estate assistant can do</a>.</p>
 
                             <h2>Expired listing script</h2>
                             <p>Expired sellers are often frustrated and are getting many calls the same morning. Be brief, be human and lead with a question, not a pitch.</p>
@@ -180,7 +180,7 @@
                             <ul class="guide-list">
                                 <li><a href="https://telemarketing.donotcall.gov/" target="_blank" rel="noopener">National Do Not Call Registry for telemarketers (FTC)</a></li>
                                 <li><a href="https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts" target="_blank" rel="noopener">FCC: Stop unwanted robocalls and texts (TCPA)</a></li>
-                                <li><a href="{{ route('blog.florida_cold_calling_laws') }}">Zingo Assist: Florida real estate cold calling laws</a></li>
+                                <li><a href="{{ route('rules.state', 'florida') . '#cold-calling-laws' }}">Zingo Assist: Florida real estate cold calling laws</a></li>
                             </ul>
 
                             <p class="guide-note">These scripts are general templates, not legal advice. Calling rules differ by state and change over time; confirm your campaign with your broker or an attorney. Last reviewed November 20, 2026.</p>

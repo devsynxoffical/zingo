@@ -1,4 +1,46 @@
 @php
+    $pmExtras = [
+        'quote_href' => '#lead-final',
+        'day' => [
+            'label' => 'A typical day',
+            'title' => 'A Day With Your Property Management Assistant',
+            'desc' => 'A sample schedule for an assistant supporting a portfolio of rentals, in your time zone.',
+            'items' => [
+                ['8:00', '<strong>Overnight messages:</strong> return tenant and applicant calls, triage emergencies to your on-call contact.'],
+                ['9:00', '<strong>Maintenance:</strong> open work orders, dispatch approved vendors, confirm access with tenants.'],
+                ['10:30', '<strong>Leasing:</strong> answer listing inquiries, pre-screen applicants with your criteria, book showings.'],
+                ['12:30', '<strong>Software:</strong> enter new leases, renewals, move-ins and vendor bills in AppFolio or Buildium.'],
+                ['2:00', '<strong>Rent:</strong> send reminders, log promises to pay, flag late accounts for your decision.'],
+                ['3:30', '<strong>Ticket follow-up:</strong> chase open work orders and update tenants on progress.'],
+                ['5:00', '<strong>Daily report:</strong> calls handled, tickets opened and closed, anything that needs you.'],
+            ],
+        ],
+        'pricing' => [
+            'label' => 'Pricing',
+            'title' => 'Property Management Virtual Assistant Pricing',
+            'desc' => 'What a property management virtual assistant typically costs per hour and per month in 2026.',
+            'plans' => [
+                ['Part-time assistant', '$8 – $15 / hr', '≈ $640 – $1,200 / month (80 hrs)', 'Calls, tickets and rent reminders for a smaller portfolio.'],
+                ['Full-time assistant', '$8 – $15 / hr', '≈ $1,300 – $2,400 / month (160 hrs)', 'One dedicated assistant for tenant calls, maintenance, leasing support and data entry.', 'Most common'],
+                ['US-based assistant', '$25 – $45 / hr', '≈ $4,000 – $7,200 / month (160 hrs)', 'Native US assistant for high-touch tenant and owner communication.'],
+            ],
+            'note' => 'Typical US market ranges in 2026, not a Zingo Assist price list. We quote after a free consultation; see the <a href="' . route('blog.re_va_cost') . '">real estate virtual assistant cost guide</a>.',
+        ],
+        'tools' => [
+            'label' => 'Tools',
+            'title' => 'Property Management Software We Work In',
+            'items' => [
+                ['AppFolio', 'Work orders, leases, tenant ledgers, owner statements'],
+                ['Buildium', 'Tenant and vendor records, rent tracking, reports'],
+                ['Rent Manager', 'Service issues, leasing and accounting data'],
+                ['Yardi', 'Resident records, maintenance and leasing'],
+                ['Google Workspace', 'Shared inbox, calendars and documents'],
+                ['Your phone system', 'Tenant lines, voicemail and call logging'],
+            ],
+        ],
+    ];
+@endphp
+@php
     $pmFaqs = [
         ['How much does a property management virtual assistant cost?', 'A property management virtual assistant through a managed offshore agency typically costs about $8 to $15 per hour, or roughly $640 to $1,200 a month part-time and $1,300 to $2,400 a month full-time. A US-based assistant usually costs $25 to $45 per hour. These are 2026 market ranges, not a Zingo Assist price list; we quote after a free consultation. See the <a href="' . route('blog.re_va_cost') . '">real estate virtual assistant cost guide</a>.'],
         ['Can a virtual assistant handle tenant calls?', 'Yes. A virtual assistant can answer and return tenant calls, log maintenance requests, send rent reminders and follow up with applicants using your approved scripts, with every call recorded in your property management software. Decisions on applicants, lease terms and disputes stay with you or your licensed manager, and scripts should follow Fair Housing rules.'],
@@ -42,21 +84,18 @@
     <div class="container">
         <div class="sp-hero-inner">
             <h1 class="sp-hero-title" data-aos="fade-up" data-aos-duration="700">
-                Virtual Property <span class="sp-hero-title-highlight">Management Services</span>
+                Property Management Virtual Assistants <span class="sp-hero-title-highlight">for US Landlords and PM Companies</span>
             </h1>
 
             <p class="sp-hero-desc" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700">
-                Managing rental properties can be time-consuming, stressful, and complex. ZingoAssist provides professional Virtual Property Management Services to support property owners, real estate professionals, and property managers by handling administrative, tenant, and operational tasks remotely. Our solutions allow seamless property oversight, enabling you to focus on growing your portfolio and improving tenant satisfaction.
+                Trained virtual assistants for landlords, property managers and PM companies. They answer tenant and applicant calls, open and chase maintenance tickets, send rent reminders, keep AppFolio or Buildium up to date and prepare owner reports, so you can manage more doors without hiring in-house.
             </p>
             <p class="sp-hero-desc" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
-                Whether you need a property management virtual assistant, a virtual property manager, or a dedicated virtual property management assistant, ZingoAssist delivers reliable, professional, and customizable support.
-            </p>
-            <p class="sp-hero-desc" data-aos="fade-up" data-aos-delay="250" data-aos-duration="700">
-                With our expert team, advanced technology, and proven processes, we ensure your property operations run efficiently and effectively.
+                Start with a free 2-day trial. Your assistant works in your software, on your schedule, with role-based access.
             </p>
 
             <div class="sp-hero-actions" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
-                <a href="{{ route('contact') }}" class="sp-btn sp-btn--white">
+                <a href="#lead-final" class="sp-btn sp-btn--white">
                     Get a Free Consultation <i class="fas fa-arrow-right"></i>
                 </a>
                 <a href="{{ route('contact') }}" class="sp-btn sp-btn--outline">
@@ -104,61 +143,55 @@
     </div>
 </section>
 
-<!-- ===================== CORE FEATURES ===================== -->
+<!-- ===================== TASKS COVERED ===================== -->
 <section class="sp-section sp-section--gray">
     <div class="container">
         <div class="sp-section-header" data-aos="fade-up">
-            <span class="sp-label">Key Features</span>
-            <h2 class="sp-section-title">Core Components of Our Virtual Property Management Services</h2>
+            <span class="sp-label">Tasks covered</span>
+            <h2 class="sp-section-title">What Your Property Management Virtual Assistant Handles</h2>
+            <p class="sp-section-desc">Pick the tasks that take most of your week. Your assistant follows your processes and escalates anything that needs a manager&#39;s decision.</p>
         </div>
         <div class="row g-4">
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                 <div class="sp-card">
-                    <div class="sp-card-icon"><i class="fas fa-comments"></i></div>
-                    <h3 class="sp-card-title">1. Tenant Communication & Support</h3>
-                    <p class="sp-card-text">Our team manages all tenant interactions professionally. We respond to inquiries, complaints, and maintenance requests promptly, ensuring tenants feel valued. For instance, if a tenant reports a plumbing issue, our virtual property manager coordinates the repair, schedules the vendor, and follows up until the issue is resolved.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="80">
-                <div class="sp-card">
-                    <div class="sp-card-icon"><i class="fas fa-file-contract"></i></div>
-                    <h3 class="sp-card-title">2. Lease & Document Management</h3>
-                    <p class="sp-card-text">We handle lease agreements, renewals, and legal documentation. This ensures compliance with local regulations and reduces administrative errors. ZingoAssist keeps digital records organized, enabling property owners to access important documents anytime.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="160">
-                <div class="sp-card">
-                    <div class="sp-card-icon"><i class="fas fa-money-bill-wave"></i></div>
-                    <h3 class="sp-card-title">3. Rent Collection & Payment Tracking</h3>
-                    <p class="sp-card-text">Rent collection can be time-consuming, especially with multiple tenants. We monitor payments, send reminders, and maintain accurate financial records. Owners enjoy consistent cash flow while tenants receive timely communication and transparent billing.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
-                <div class="sp-card">
-                    <div class="sp-card-icon"><i class="fas fa-bullhorn"></i></div>
-                    <h3 class="sp-card-title">4. Property Listings & Marketing</h3>
-                    <p class="sp-card-text">We create and manage property listings across multiple platforms to attract qualified tenants. Our team optimizes listings with high-quality photos, virtual tours, and compelling descriptions, ensuring maximum visibility.</p>
+                    <div class="sp-card-icon"><i class="fas fa-user-check"></i></div>
+                    <h3 class="sp-card-title">Tenant and applicant calls</h3>
+                    <p class="sp-card-text">Answer and return calls, pre-screen applicants with your criteria, book showings for your leasing agent and log every call.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="80">
                 <div class="sp-card">
                     <div class="sp-card-icon"><i class="fas fa-tools"></i></div>
-                    <h3 class="sp-card-title">5. Vendor & Maintenance Coordination</h3>
-                    <p class="sp-card-text">ZingoAssist schedules and oversees maintenance and vendor services, from routine inspections to emergency repairs. Property owners save time while ensuring timely completion of essential tasks.</p>
+                    <h3 class="sp-card-title">Maintenance tickets</h3>
+                    <p class="sp-card-text">Open work orders, dispatch your approved vendors, confirm access with tenants and chase every ticket until it is closed.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="160">
                 <div class="sp-card">
-                    <div class="sp-card-icon"><i class="fas fa-clipboard-check"></i></div>
-                    <h3 class="sp-card-title">6. Inspection & Reporting Services</h3>
-                    <p class="sp-card-text">Our team organizes regular property inspections, documents conditions, and provides detailed reports with recommendations. This proactive approach prevents costly damages and keeps properties in excellent condition.</p>
+                    <div class="sp-card-icon"><i class="fas fa-bell"></i></div>
+                    <h3 class="sp-card-title">Rent reminders and follow-up</h3>
+                    <p class="sp-card-text">Send reminders before and after the due date, log promises to pay and flag late accounts for your decision.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                 <div class="sp-card">
-                    <div class="sp-card-icon"><i class="fas fa-calculator"></i></div>
-                    <h3 class="sp-card-title">7. Accounting & Financial Oversight</h3>
-                    <p class="sp-card-text">We assist with budgeting, expense tracking, and reporting, helping property owners maintain profitability. Our virtual property management services ensure that financial records are accurate and organized for easy access.</p>
+                    <div class="sp-card-icon"><i class="fas fa-database"></i></div>
+                    <h3 class="sp-card-title">AppFolio and Buildium data entry</h3>
+                    <p class="sp-card-text">New leases, renewals, move-ins, move-outs, unit details and vendor bills entered accurately in your software.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="80">
+                <div class="sp-card">
+                    <div class="sp-card-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3 class="sp-card-title">Owner reports</h3>
+                    <p class="sp-card-text">Monthly owner statements prepared for your review, plus occupancy, delinquency and work-order summaries.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="160">
+                <div class="sp-card">
+                    <div class="sp-card-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3 class="sp-card-title">Leasing support</h3>
+                    <p class="sp-card-text">Write and post vacancy listings for your approval, answer listing inquiries and keep the showing calendar full.</p>
                 </div>
             </div>
         </div>
@@ -291,31 +324,31 @@
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
                 <div class="sp-testimonial">
                     <p class="sp-testimonial-text">"ZingoAssist completely transformed our property management approach. Tenants are happier, and our administrative workload has decreased significantly."</p>
-                    <p class="sp-testimonial-author">— Maria L., Landlord</p>
+                    <p class="sp-testimonial-author">Maria L., Landlord</p>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="80">
                 <div class="sp-testimonial">
                     <p class="sp-testimonial-text">"Their virtual property management assistant handles everything from rent collection to maintenance scheduling. I can focus on acquiring new properties."</p>
-                    <p class="sp-testimonial-author">— James T., Property Investor</p>
+                    <p class="sp-testimonial-author">James T., Property Investor</p>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
                 <div class="sp-testimonial">
                     <p class="sp-testimonial-text">"The team is professional, reliable, and responsive. We now have complete visibility into property operations without being on-site."</p>
-                    <p class="sp-testimonial-author">— Emily K., Real Estate Manager</p>
+                    <p class="sp-testimonial-author">Emily K., Real Estate Manager</p>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="80">
                 <div class="sp-testimonial">
                     <p class="sp-testimonial-text">"ZingoAssist helped us streamline operations across multiple rental properties. We save hours each week and our tenants are more satisfied."</p>
-                    <p class="sp-testimonial-author">— Robert S., Landlord</p>
+                    <p class="sp-testimonial-author">Robert S., Landlord</p>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
                 <div class="sp-testimonial">
                     <p class="sp-testimonial-text">"The virtual property management services provided by ZingoAssist exceeded our expectations. Efficient, organized, and trustworthy."</p>
-                    <p class="sp-testimonial-author">— Linda P., Property Owner</p>
+                    <p class="sp-testimonial-author">Linda P., Property Owner</p>
                 </div>
             </div>
         </div>
@@ -397,6 +430,26 @@
     </div>
 </section>
 
+@include('partials.role-extras', ['x' => $pmExtras])
+
+<!-- ===================== COMPLIANCE ===================== -->
+<section class="sp-section">
+    <div class="container">
+        <div class="sp-section-header" data-aos="fade-up">
+            <span class="sp-label">Fair Housing and licensing</span>
+            <h2 class="sp-section-title">Compliant by Design</h2>
+        </div>
+        <div class="row justify-content-center"><div class="col-lg-9" data-aos="fade-up">
+            <ul class="sp-about-list">
+                <li><i class="fas fa-check-circle"></i> Every applicant gets the same scripted questions and criteria you approve, in line with the federal Fair Housing Act.</li>
+                <li><i class="fas fa-check-circle"></i> Decisions on applicants, lease terms, deposits and disputes stay with you or your licensed manager.</li>
+                <li><i class="fas fa-check-circle"></i> In many states, leasing or managing property for others requires a real estate or property management license. Your assistant handles the administrative work; licensed activity stays with your licensed staff. See <a href="{{ route('rules.hub') }}">real estate assistant rules by state</a>.</li>
+                <li><i class="fas fa-check-circle"></i> Confidentiality agreements and role-based access to your software; no shared logins.</li>
+            </ul>
+        </div></div>
+    </div>
+</section>
+
 <!-- ===================== FAQ ===================== -->
 <section class="sp-section">
     <div class="container">
@@ -420,31 +473,7 @@
     </div>
 </section>
 
-<!-- ===================== CTA ===================== -->
-<section class="sp-section" style="padding-bottom: 100px;">
-    <div class="container">
-        <div class="sp-cta" data-aos="fade-up" data-aos-duration="700">
-            <h2 class="sp-cta-title">Get Started with ZingoAssist</h2>
-            <p class="sp-cta-text">
-                Partner with ZingoAssist for professional Virtual Property Management Services and streamline your property operations. Our team ensures every task is handled efficiently, giving you more time to focus on growth.
-            </p>
-            <ul class="sp-cta-list">
-                <li><i class="fas fa-check-circle"></i> Improve operational efficiency and tenant satisfaction</li>
-                <li><i class="fas fa-check-circle"></i> Ensure timely rent collection and financial accuracy</li>
-                <li><i class="fas fa-check-circle"></i> Scale services as your property portfolio grows</li>
-                <li><i class="fas fa-check-circle"></i> Reduce administrative workload and save time</li>
-            </ul>
-            <div class="sp-hero-actions">
-                <a href="{{ route('contact') }}" class="sp-btn sp-btn--white">
-                    Start Your Virtual Property Management Today <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="{{ route('contact') }}" class="sp-btn sp-btn--outline">
-                    Request a Free Consultation <i class="fas fa-paper-plane"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.lead-final', ['final' => ['title' => 'Manage More Doors Without Hiring', 'text' => 'Tell us how many units you manage and which software you use. We will set up a trained property management assistant, starting with a free 2-day trial.', 'list' => ['Tenant calls answered', 'Tickets opened and closed', 'Rent reminders sent', 'Owner reports on time']], 'formService' => 'Virtual Property Management'])
 
 </div><!-- .sp-page -->
 

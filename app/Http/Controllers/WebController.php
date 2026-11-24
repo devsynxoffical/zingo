@@ -224,24 +224,45 @@ class WebController extends Controller
         return view('services.real_estate_isa');
     }
 
-    public function unlicensed_assistant_florida()
-    {
-        return view('blog.unlicensed_assistant_florida');
-    }
 
     public function re_va_cost()
     {
         return view('blog.re_va_cost');
     }
 
-    public function unlicensed_assistant_rules()
+
+
+    private function assistantRules(): array
     {
-        return view('blog.unlicensed_assistant_rules');
+        return require resource_path('data/assistant-rules.php');
     }
 
-    public function texas_unlicensed_cold_calls()
+    public function rules_hub()
     {
-        return view('blog.texas_unlicensed_cold_calls');
+        $d = $this->assistantRules();
+
+        return view('rules.hub', ['states' => $d['states'], 'federal' => $d['federal'], 'reviewed' => $d['reviewed']]);
+    }
+
+    public function rules_state(string $state)
+    {
+        $d = $this->assistantRules();
+        $st = $d['states'][$state] ?? abort(404);
+        $title = 'Unlicensed Assistant Rules in ' . $st['name'] . ' (2026)';
+        if (strlen($title . ' | Zingo Assist') < 60) {
+            $title .= ' | Zingo Assist';
+        }
+        $meta = 'What an unlicensed real estate assistant may and may not do in ' . $st['name'] . ' under ' . $st['short'] . ' guidance, plus ' . $st['name'] . ' calling rules. Sources linked.';
+
+        return view('rules.state', [
+            'st' => $st, 'all' => $d['states'], 'tasks' => $d['tasks'], 'federal' => $d['federal'],
+            'federalSources' => $d['federal_sources'], 'reviewed' => $d['reviewed'], 'title' => $title, 'meta' => $meta,
+        ]);
+    }
+
+    public function investor_va()
+    {
+        return view('services.investor_va');
     }
 
     public function tc_checklist()
@@ -274,10 +295,6 @@ class WebController extends Controller
         return view('blog.tc_vs_va');
     }
 
-    public function florida_cold_calling_laws()
-    {
-        return view('blog.florida_cold_calling_laws');
-    }
 
     /**
      * XML sitemap. lastmod comes from the view file's modification time so it
@@ -300,6 +317,7 @@ class WebController extends Controller
             'service.cold_calling' => ['services.cold_calling', '0.8', 'monthly'],
             'service.wholesale_cold_calling' => ['services.wholesale_cold_calling', '0.8', 'monthly'],
             'service.real_estate_transaction_coordinator' => ['services.real_estate_transaction_coordinator', '0.8', 'monthly'],
+            'service.investor_va' => ['services.investor_va', '0.8', 'monthly'],
             'service.virtual_property_management' => ['services.virtual_property_management', '0.8', 'monthly'],
             'service.lead_generation' => ['services.lead_generation', '0.8', 'monthly'],
             'service.crm_management' => ['services.crm_management', '0.8', 'monthly'],
@@ -313,16 +331,12 @@ class WebController extends Controller
             'faq' => ['faq', '0.6', 'monthly'],
             'blog' => ['blog', '0.7', 'weekly'],
             'blog.re_va_cost' => ['blog.re_va_cost', '0.7', 'monthly'],
-            'blog.unlicensed_assistant_rules' => ['blog.unlicensed_assistant_rules', '0.7', 'monthly'],
-            'blog.texas_unlicensed_cold_calls' => ['blog.texas_unlicensed_cold_calls', '0.7', 'monthly'],
             'blog.tc_checklist' => ['blog.tc_checklist', '0.7', 'monthly'],
             'blog.speed_to_lead' => ['blog.speed_to_lead', '0.7', 'monthly'],
             'blog.isa_scripts_expired_fsbo' => ['blog.isa_scripts_expired_fsbo', '0.7', 'monthly'],
             'blog.follow_up_boss_va' => ['blog.follow_up_boss_va', '0.7', 'monthly'],
             'blog.re_va_tasks_checklist' => ['blog.re_va_tasks_checklist', '0.7', 'monthly'],
             'blog.tc_vs_va' => ['blog.tc_vs_va', '0.7', 'monthly'],
-            'blog.florida_cold_calling_laws' => ['blog.florida_cold_calling_laws', '0.7', 'monthly'],
-            'blog.unlicensed_assistant_florida' => ['blog.unlicensed_assistant_florida', '0.7', 'monthly'],
             'blog.ten_signs_need_virtual_assistant' => ['blog.ten_signs_need_virtual_assistant', '0.6', 'monthly'],
             'blog.benefits_outsourcing_business_tasks' => ['blog.benefits_outsourcing_business_tasks', '0.6', 'monthly'],
             'blog.va_vs_full_time' => ['blog.va_vs_full_time', '0.6', 'monthly'],
@@ -332,6 +346,15 @@ class WebController extends Controller
             'editorial' => ['static.editorial', '0.3', 'yearly'],
             'privacy' => ['static.privacy', '0.2', 'yearly'],
             'terms' => ['static.terms', '0.2', 'yearly'],
+            'rules.hub' => ['rules.hub', '0.8', 'monthly'],
+            'rules.state:florida' => ['rules.state', '0.7', 'monthly'],
+            'rules.state:texas' => ['rules.state', '0.7', 'monthly'],
+            'rules.state:california' => ['rules.state', '0.7', 'monthly'],
+            'rules.state:georgia' => ['rules.state', '0.7', 'monthly'],
+            'rules.state:north-carolina' => ['rules.state', '0.7', 'monthly'],
+            'rules.state:arizona' => ['rules.state', '0.7', 'monthly'],
+            'rules.state:new-york' => ['rules.state', '0.7', 'monthly'],
+            'rules.state:colorado' => ['rules.state', '0.7', 'monthly'],
             'html_sitemap' => ['static.sitemap', '0.2', 'monthly'],
         ];
     }
@@ -345,14 +368,18 @@ class WebController extends Controller
         $xml = '<?xml version="1.0" encoding="UTF-8"?>';
         $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
-        foreach ($pages as $route => [$view, $priority, $freq]) {
+        foreach ($pages as $key => [$view, $priority, $freq]) {
+            [$route, $param] = array_pad(explode(':', $key, 2), 2, null);
             if (!\Illuminate\Support\Facades\Route::has($route)) {
                 continue;
             }
             $file = resource_path('views/' . str_replace('.', '/', $view) . '.blade.php');
             $lastmod = is_file($file) ? date('Y-m-d', filemtime($file)) : date('Y-m-d');
+            if (str_starts_with($route, 'rules.')) {
+                $lastmod = date('Y-m-d', max(filemtime($file), filemtime(resource_path('data/assistant-rules.php'))));
+            }
             $xml .= '<url>';
-            $path = parse_url(route($route), PHP_URL_PATH) ?: '/';
+            $path = parse_url($param ? route($route, $param) : route($route), PHP_URL_PATH) ?: '/';
             $xml .= '<loc>' . $base . $path . '</loc>';
             $xml .= '<lastmod>' . $lastmod . '</lastmod>';
             $xml .= '<changefreq>' . $freq . '</changefreq>';
@@ -368,9 +395,15 @@ class WebController extends Controller
     /** HTML site map: every indexable page, grouped, labelled with its page title. */
     public function html_sitemap()
     {
-        $groups = ['Real estate services' => [], 'Tools' => [], 'Locations' => [], 'Guides' => [], 'Company' => []];
-        foreach ($this->sitemapPages() as $route => [$view]) {
+        $groups = ['Real estate services' => [], 'Tools' => [], 'Rules by state' => [], 'Locations' => [], 'Guides' => [], 'Company' => []];
+        $rules = $this->assistantRules()['states'];
+        foreach ($this->sitemapPages() as $key => [$view]) {
+            [$route, $param] = array_pad(explode(':', $key, 2), 2, null);
             if ($route === 'html_sitemap' || !\Illuminate\Support\Facades\Route::has($route)) {
+                continue;
+            }
+            if ($route === 'rules.state' || $route === 'rules.hub') {
+                $groups['Rules by state'][] = [$param ? 'Unlicensed assistant rules in ' . $rules[$param]['name'] : 'Assistant rules by state (all states)', $param ? route($route, $param) : route($route)];
                 continue;
             }
             $file = resource_path('views/' . str_replace('.', '/', $view) . '.blade.php');

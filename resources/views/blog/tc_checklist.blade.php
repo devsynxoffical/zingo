@@ -22,7 +22,7 @@
         'type' => 'article',
         'name' => 'Transaction Coordinator Checklist: Contract to Close',
         'description' => 'An interactive contract-to-close checklist for real estate transaction coordinators, from opening the file to the broker compliance file.',
-        'breadcrumbs' => [['Blog', route('blog')]],
+        'breadcrumbs' => [['Tools', route('tool.va_roi_calculator')]],
         'datePublished' => '2026-11-20',
         'image' => asset('assets/images/blog/Need Help with specific Business Operations.jpg'),
         'faqs' => $faqs,
@@ -41,8 +41,7 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                                        <li class="breadcrumb-item"><a href="{{ route('blog') }}">Blog</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">TC Checklist</li>
+                                        <li class="breadcrumb-item active" aria-current="page">Tools: TC Checklist</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -118,7 +117,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <p>What an unlicensed coordinator may do varies by state; see <a href="{{ route('blog.unlicensed_assistant_florida') }}">what an unlicensed real estate assistant can do in Florida</a> and check your brokerage policy.</p>
+                            <p>What an unlicensed coordinator may do varies by state; see <a href="{{ route('rules.state', 'florida') }}">what an unlicensed real estate assistant can do in Florida</a> and check your brokerage policy.</p>
 
                             <h2>Tools that make the checklist easier</h2>
                             <ul class="guide-list">

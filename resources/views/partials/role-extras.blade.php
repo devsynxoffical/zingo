@@ -53,6 +53,7 @@
         </div>
         <div class="rx-price-foot" data-aos="fade-up">
             <p>{!! $x['pricing']['note'] !!}</p>
+            <p>What an unlicensed assistant may do differs by state: see <a href="{{ route('rules.hub') }}">real estate assistant rules by state</a>.</p>
             <div class="rx-price-cta">
                 <a class="rx-btn" href="{{ $x['quote_href'] ?? '#lead-final' }}">Get My Exact Quote <i class="fas fa-arrow-right"></i></a>
                 <a class="rx-btn rx-btn--ghost" href="{{ route('tool.va_roi_calculator') }}"><i class="fas fa-calculator"></i> Calculate My ROI</a>

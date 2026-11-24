@@ -1,5 +1,6 @@
 @php
     $page = [
+        'updated' => 'November 2026',
         'form_service' => 'Real Estate ISA',
         'h1' => ['Real Estate Inside Sales', 'Agent (ISA) Services'],
         'hero' => [
@@ -63,7 +64,7 @@
 <li><strong>Appointment-to-client conversion:</strong> tracked together with your agents, because the ISA&#39;s job is to create appointments your agents can convert.</li>
 </ul>
 <h3>Compliance</h3>
-<p>ISA calls are planned around the federal TCPA, the National Do Not Call Registry and state rules, and campaigns follow your consent records and opt-out requests. ISAs book appointments and share approved information; licensed activities such as negotiating or advising on contracts stay with your agents. Florida teams can read our guides to <a href="' . route('blog.florida_cold_calling_laws') . '">Florida cold calling laws</a> and <a href="' . route('blog.unlicensed_assistant_florida') . '">what an unlicensed real estate assistant can do in Florida</a>.</p>',
+<p>ISA calls are planned around the federal TCPA, the National Do Not Call Registry and state rules, and campaigns follow your consent records and opt-out requests. ISAs book appointments and share approved information; licensed activities such as negotiating or advising on contracts stay with your agents. Florida teams can read our guides to <a href="' . route('rules.state', 'florida') . '#cold-calling-laws' . '">Florida cold calling laws</a> and <a href="' . route('rules.state', 'florida') . '">what an unlicensed real estate assistant can do in Florida</a>.</p>',
         ],
         'process' => [
             'label' => 'How It Works',
@@ -119,7 +120,7 @@
         ],
         'faqs' => [
             ['What does a real estate ISA do?', 'A real estate ISA (inside sales agent) calls and texts leads, qualifies buyers and sellers on timeline, motivation and financing, nurtures older leads, and books appointments for agents. ISAs focus on converting leads into appointments rather than on showing property or negotiating.'],
-            ['Does a real estate ISA need a license?', 'It depends on the state and on what the ISA does. Setting appointments and sharing approved information usually does not require a license, but discussing terms, advising on value or showing property does. Check your state rules and brokerage policy; Florida teams can read our <a href="' . route('blog.unlicensed_assistant_florida') . '">Florida unlicensed assistant guide</a>.'],
+            ['Does a real estate ISA need a license?', 'It depends on the state and on what the ISA does. Setting appointments and sharing approved information usually does not require a license, but discussing terms, advising on value or showing property does. Check your state rules and brokerage policy; Florida teams can read our <a href="' . route('rules.state', 'florida') . '">Florida unlicensed assistant guide</a>.'],
             ['How much does an outsourced real estate ISA cost?', 'Outsourced ISAs are usually billed hourly or monthly, while in-house ISAs are often paid a base salary plus commission or bonuses. Zingo Assist quotes after a free consultation; see our <a href="' . route('blog.re_va_cost') . '">real estate virtual assistant cost guide</a> for market ranges.'],
             ['What is the difference between an ISA and a real estate virtual assistant?', 'An ISA specializes in phone-based lead conversion and appointment setting. A real estate virtual assistant covers broader admin, CRM, listing and marketing work and may make some calls. Many teams start with one <a href="' . route('service.real_estate_virtual_assistant') . '">real estate VA</a> and add a dedicated ISA as lead volume grows.'],
             ['Which lead sources and CRMs can your ISAs work with?', 'Our ISAs work leads from websites and IDX, Zillow, Realtor.com, social and search ads, open houses and past-client databases, inside CRMs such as Follow Up Boss, kvCORE, Lofty and Sierra Interactive.'],

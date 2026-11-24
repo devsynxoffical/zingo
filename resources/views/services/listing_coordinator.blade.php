@@ -1,5 +1,6 @@
 @php
     $page = [
+        'updated' => 'November 2026',
         'form_service' => 'Listing Coordinator',
         'eyebrow' => 'For listing agents & teams',
         'h1' => ['Listing Coordinator', 'Virtual Assistant'],
@@ -105,7 +106,7 @@
         'faqs' => [
             ['What does a real estate listing coordinator do?', 'A listing coordinator manages listing tasks from signed agreement to accepted offer: collecting seller documents, preparing MLS input, scheduling photos and signage, drafting listing copy for agent approval, collecting showing feedback and sending sellers regular updates.'],
             ['Can a virtual assistant be a listing coordinator?', 'Yes. Nearly all listing-coordination work is administrative and can be done remotely. The licensed agent approves listing content and handles advice, pricing and negotiation.'],
-            ['Can an unlicensed listing coordinator enter MLS listings?', 'In Florida, the FREC list of permitted activities allows unlicensed assistants to fill out and submit listings and changes to the MLS, under the licensee&#39;s supervision. MLS rules on assistant logins vary, so follow your MLS policy. See <a href="' . route('blog.unlicensed_assistant_florida') . '">what an unlicensed real estate assistant can do in Florida</a>.'],
+            ['Can an unlicensed listing coordinator enter MLS listings?', 'In Florida, the FREC list of permitted activities allows unlicensed assistants to fill out and submit listings and changes to the MLS, under the licensee&#39;s supervision. MLS rules on assistant logins vary, so follow your MLS policy. See <a href="' . route('rules.state', 'florida') . '">what an unlicensed real estate assistant can do in Florida</a>.'],
             ['How is a listing coordinator paid?', 'Listing coordinators are commonly paid per listing, hourly or on a monthly plan. Zingo Assist works hourly or monthly, so one assistant can coordinate all of your listings.'],
             ['What is the difference between a listing coordinator and a transaction coordinator?', 'A listing coordinator handles the period before an accepted offer (marketing, MLS, showings, seller updates). A transaction coordinator handles contract-to-close deadlines and paperwork.'],
         ],

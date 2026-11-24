@@ -67,7 +67,7 @@
             'items' => [
                 ['Real estate focus', 'Our callers understand wholesaling terms, seller situations and investor buy boxes.'],
                 ['Works with your stack', 'BatchDialer, Mojo, Readymode, CallTools and the CRM you already use.'],
-                ['Compliance-minded calling', 'Calling windows, Do Not Call handling and opt-out requests are built into the workflow. See our <a href="' . route('blog.florida_cold_calling_laws') . '">cold calling laws guide</a>.'],
+                ['Compliance-minded calling', 'Calling windows, Do Not Call handling and opt-out requests are built into the workflow. See our <a href="' . route('rules.state', 'florida') . '#cold-calling-laws' . '">cold calling laws guide</a>.'],
                 ['Transparent reporting', 'Know exactly how many dials, contacts and leads each list produced.'],
                 ['Scales with your budget', 'Start with one part-time caller and add shifts as deals come in.'],
                 ['Free 2-day trial', 'Hear real calls on your own lists before you commit.'],
@@ -76,7 +76,7 @@
         'faqs' => [
             ['What is wholesale real estate cold calling?', 'It is outbound calling to property owners on targeted lists to find motivated sellers who may sell off-market to an investor. Callers qualify the seller and pass warm leads to the investor or acquisitions manager.'],
             ['How many calls can a cold caller make per day?', 'It depends on the dialer. With a power or multi-line dialer a full-time caller can typically make several hundred dials per shift; with manual dialing it is much lower. We set targets with you based on your dialer and lists.'],
-            ['Is cold calling for real estate investors legal?', 'Yes, when campaigns follow the federal TCPA, the National Do Not Call Registry, state laws such as Florida&#39;s Telephone Solicitation Act, calling-hour limits and opt-out requests. Our <a href="' . route('blog.florida_cold_calling_laws') . '">Florida cold calling laws guide</a> explains the main rules. Speak with your attorney about your specific campaign.'],
+            ['Is cold calling for real estate investors legal?', 'Yes, when campaigns follow the federal TCPA, the National Do Not Call Registry, state laws such as Florida&#39;s Telephone Solicitation Act, calling-hour limits and opt-out requests. Our <a href="' . route('rules.state', 'florida') . '#cold-calling-laws' . '">Florida cold calling laws guide</a> explains the main rules. Speak with your attorney about your specific campaign.'],
             ['Do you provide the lists and dialer?', 'Most investors provide their own lists and dialer so they keep ownership of their data. We can advise on list types and work inside the tools you already pay for.'],
             ['How much do wholesale cold calling services cost?', 'Most providers charge hourly or per calling shift; offshore callers commonly range from about $8 to $15 per hour. Zingo Assist quotes after a free consultation based on hours and targets. See our <a href="' . route('blog.re_va_cost') . '">virtual assistant cost guide</a>.'],
             ['Can your callers also follow up with old leads?', 'Yes. Many clients use the same caller for follow-up on aged leads and past conversations, which often produces deals your team missed.'],

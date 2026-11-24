@@ -86,7 +86,7 @@
                             @foreach ($cl['groups'] as $g)
                                 <h2 id="{{ $g['id'] }}"><i class="fas {{ $g['icon'] }} ck-h-icon"></i> {{ $g['name'] }}</h2>
                                 @if ($g['id'] === 'agent')
-                                    <p>An unlicensed assistant supports the agent but should not do the following. Rules vary by state; see <a href="{{ route('blog.unlicensed_assistant_florida') }}">what an unlicensed real estate assistant can do</a>.</p>
+                                    <p>An unlicensed assistant supports the agent but should not do the following. Rules vary by state; see <a href="{{ route('rules.state', 'florida') }}">what an unlicensed real estate assistant can do</a>.</p>
                                     <ul class="ck-list ck-list--agent">
                                         @foreach ($g['items'] as $it)<li><i class="fas fa-user-tie"></i> {{ $it }}</li>@endforeach
                                     </ul>

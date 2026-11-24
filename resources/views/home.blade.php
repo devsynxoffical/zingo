@@ -163,6 +163,12 @@
                         <a class="sp-link-chip" href="{{ route('service.real_estate_isa') }}">Real Estate ISA Services <i class="fas fa-arrow-right"></i></a>
                         <a class="sp-link-chip" href="{{ route('service.wholesale_cold_calling') }}">Wholesale Cold Calling <i class="fas fa-arrow-right"></i></a>
                         <a class="sp-link-chip" href="{{ route('service.real_estate_transaction_coordinator') }}">Transaction Coordinator <i class="fas fa-arrow-right"></i></a>
+                        <a class="sp-link-chip" href="{{ route('service.listing_coordinator') }}">Listing Coordinator <i class="fas fa-arrow-right"></i></a>
+                        <a class="sp-link-chip" href="{{ route('service.cold_calling') }}">Real Estate Cold Calling <i class="fas fa-arrow-right"></i></a>
+                        <a class="sp-link-chip" href="{{ route('service.expired_fsbo_calling') }}">Expired &amp; FSBO Calling <i class="fas fa-arrow-right"></i></a>
+                        <a class="sp-link-chip" href="{{ route('service.virtual_property_management') }}">Property Management VA <i class="fas fa-arrow-right"></i></a>
+                        <a class="sp-link-chip" href="{{ route('service.investor_va') }}">Real Estate Investor VA <i class="fas fa-arrow-right"></i></a>
+                        <a class="sp-link-chip" href="{{ route('rules.hub') }}">Assistant Rules by State <i class="fas fa-arrow-right"></i></a>
                         <a class="sp-link-chip" href="{{ route('location.tampa_st_petersburg') }}">Tampa &amp; St. Petersburg <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>

@@ -114,7 +114,7 @@
                                 <li><strong>Data:</strong> skip-tracing and lead lists for prospecting campaigns.</li>
                                 <li><strong>Your management time:</strong> freelancers need you to train and supervise them; managed agencies absorb most of that.</li>
                                 <li><strong>Turnover:</strong> replacing a freelancer who disappears costs weeks of lost momentum.</li>
-                                <li><strong>Compliance:</strong> calling campaigns must scrub Do Not Call lists. Read our <a href="{{ route('blog.florida_cold_calling_laws') }}">Florida cold calling laws guide</a>.</li>
+                                <li><strong>Compliance:</strong> calling campaigns must scrub Do Not Call lists. Read our <a href="{{ route('rules.state', 'florida') . '#cold-calling-laws' }}">Florida cold calling laws guide</a>.</li>
                             </ul>
 
                             <h2>Is a real estate VA worth it? A simple ROI check</h2>

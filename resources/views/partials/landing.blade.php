@@ -28,6 +28,7 @@
                     <h1 class="sp-hero-title" data-aos="fade-up" data-aos-duration="700">
                         {{ $page['h1'][0] }} <span class="sp-hero-title-highlight">{{ $page['h1'][1] }}</span>
                     </h1>
+                    @if (!empty($page['updated']))<p class="sp-hero-updated">Updated: {{ $page['updated'] }}</p>@endif
                     @foreach ($page['hero'] as $p)
                         <p class="sp-hero-desc" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700">{!! $p !!}</p>
                     @endforeach
