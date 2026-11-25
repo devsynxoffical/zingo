@@ -24,7 +24,7 @@
                 ['Full-time assistant', '$8 – $15 / hr', '≈ $1,300 – $2,400 / month (160 hrs)', 'One dedicated assistant for tenant calls, maintenance, leasing support and data entry.', 'Most common'],
                 ['US-based assistant', '$25 – $45 / hr', '≈ $4,000 – $7,200 / month (160 hrs)', 'Native US assistant for high-touch tenant and owner communication.'],
             ],
-            'note' => 'Typical US market ranges in 2026, not a Zingo Assist price list. We quote after a free consultation; see the <a href="' . route('blog.re_va_cost') . '">real estate virtual assistant cost guide</a>.',
+            'note' => 'Typical US market ranges in 2026, not a Zingo Assist price list. We quote after a free consultation; see the full <a href="' . route('blog.pm_va_cost') . '">property management virtual assistant cost guide</a>.',
         ],
         'tools' => [
             'label' => 'Tools',

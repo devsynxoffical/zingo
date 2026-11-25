@@ -10,7 +10,7 @@
                 ['Hourly virtual TC', '$8 – $15 / hr', '≈ $640 – $1,200 / month (80 hrs)', 'One assistant for every file. Usually cheaper than per-file once you close 4+ deals a month.'],
                 ['US-based TC', '$25 – $45 / hr', '≈ $4,000 – $7,200 / month (160 hrs)', 'Native US coordinator for high-touch client communication.'],
             ],
-            'note' => 'Typical US market ranges in 2026, not a Zingo Assist price list. Zingo Assist works hourly or monthly, so one coordinator can run all of your files. We quote after a free consultation; compare models in <a href="' . route('blog.tc_vs_va') . '">transaction coordinator vs virtual assistant</a>.',
+            'note' => 'Typical US market ranges in 2026, not a Zingo Assist price list. Zingo Assist works hourly or monthly, so one coordinator can run all of your files. We quote after a free consultation; see <a href="' . route('blog.tc_fees') . '">transaction coordinator fees explained</a> or compare models in <a href="' . route('blog.tc_vs_va') . '">transaction coordinator vs virtual assistant</a>.',
         ],
         'day' => [
             'label' => 'A typical day',

@@ -11,6 +11,8 @@ return [
         ['route' => 'blog.isa_scripts_expired_fsbo', 'title' => "ISA Scripts for Expired and FSBO Leads", 'image' => 'assets/images/blog/Organizing Meetings and Appointments.jpg', 'topic' => 're'],
         ['route' => 'blog.follow_up_boss_va', 'title' => "How Top Teams Use a Virtual Assistant in Follow Up Boss", 'image' => 'assets/images/blog/Report Preparations and Presentations.jpg', 'topic' => 're'],
         ['route' => 'blog.re_va_tasks_checklist', 'title' => "Real Estate Virtual Assistant Tasks Checklist (Free PDF)", 'image' => 'assets/images/blog/Feel Swamped With Work.jpg', 'topic' => 're'],
+        ['route' => 'blog.pm_va_cost', 'title' => "Property Management Virtual Assistant Cost in 2026", 'image' => 'assets/images/blog/Managing Customer Relations.jpg', 'topic' => 're'],
+        ['route' => 'blog.tc_fees', 'title' => "Transaction Coordinator Fees in 2026: What TCs Charge", 'image' => 'assets/images/blog/Report Preparations and Presentations.jpg', 'topic' => 're'],
         ['route' => 'blog.re_va_cost', 'title' => "How Much Does a Real Estate Virtual Assistant Cost in 2026?", 'image' => 'assets/images/blog/need a VA.jpg', 'topic' => 're'],
         ['route' => 'blog.tc_vs_va', 'title' => "Transaction Coordinator vs Virtual Assistant: Which Do You Need?", 'image' => 'assets/images/blog/Research.jpg', 'topic' => 're'],
         ['route' => 'blog.seo_strategies', 'title' => "SEO Strategies That Zingo Assist Swears By for Small Businesses", 'image' => 'assets/images/blog/need a VA.jpg', 'topic' => 'mk', 'noindex' => true],

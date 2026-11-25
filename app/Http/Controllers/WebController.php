@@ -230,6 +230,16 @@ class WebController extends Controller
         return view('blog.re_va_cost');
     }
 
+    public function pm_va_cost()
+    {
+        return view('blog.pm_va_cost');
+    }
+
+    public function tc_fees()
+    {
+        return view('blog.tc_fees');
+    }
+
 
 
     private function assistantRules(): array
@@ -331,6 +341,8 @@ class WebController extends Controller
             'faq' => ['faq', '0.6', 'monthly'],
             'blog' => ['blog', '0.7', 'weekly'],
             'blog.re_va_cost' => ['blog.re_va_cost', '0.7', 'monthly'],
+            'blog.pm_va_cost' => ['blog.pm_va_cost', '0.7', 'monthly'],
+            'blog.tc_fees' => ['blog.tc_fees', '0.7', 'monthly'],
             'blog.tc_checklist' => ['blog.tc_checklist', '0.7', 'monthly'],
             'blog.speed_to_lead' => ['blog.speed_to_lead', '0.7', 'monthly'],
             'blog.isa_scripts_expired_fsbo' => ['blog.isa_scripts_expired_fsbo', '0.7', 'monthly'],

@@ -23,6 +23,8 @@ Route::controller(WebController::class)->group(function () {
     Route::get('/blog/follow-up-boss-virtual-assistant', 'follow_up_boss_va')->name('blog.follow_up_boss_va');
     Route::get('/blog/real-estate-virtual-assistant-tasks-checklist', 're_va_tasks_checklist')->name('blog.re_va_tasks_checklist');
     Route::get('/blog/transaction-coordinator-vs-virtual-assistant', 'tc_vs_va')->name('blog.tc_vs_va');
+    Route::get('/blog/property-management-virtual-assistant-cost', 'pm_va_cost')->name('blog.pm_va_cost');
+    Route::get('/blog/transaction-coordinator-fees', 'tc_fees')->name('blog.tc_fees');
     Route::get('/blog/seo-strategies', 'seo_strategies')->name('blog.seo_strategies');
     Route::get('/blog/free-va-trial', 'free_va_trial')->name('blog.free_va_trial');
     Route::get('/blog/web-dev-trends-2025', 'web_dev_trends_2025')->name('blog.web_dev_trends_2025');

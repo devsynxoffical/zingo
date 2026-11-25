@@ -247,6 +247,42 @@
                 </div>
 
                 <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('blog.pm_va_cost') }}" class="bp-post-card">
+                        <div class="bp-post-img">
+                            <img src="{{ asset('assets/images/blog/Managing Customer Relations.jpg') }}" alt="Property Management Virtual Assistant Cost in 2026" loading="lazy">
+                            <div class="bp-post-category">Real Estate</div>
+                        </div>
+                        <div class="bp-post-body">
+                            <div class="bp-post-meta-sm">
+                                <span><i class="fas fa-calendar"></i> Nov 25, 2026</span>
+                                <span><i class="fas fa-clock"></i> 7 min read</span>
+                            </div>
+                            <h3 class="bp-post-title">Property Management Virtual Assistant Cost in 2026</h3>
+                            <p class="bp-post-excerpt">Hourly and monthly rates, cost per door, after-hours coverage and the hidden costs to budget for.</p>
+                            <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <a href="{{ route('blog.tc_fees') }}" class="bp-post-card">
+                        <div class="bp-post-img">
+                            <img src="{{ asset('assets/images/blog/Report Preparations and Presentations.jpg') }}" alt="Transaction Coordinator Fees in 2026" loading="lazy">
+                            <div class="bp-post-category">Real Estate</div>
+                        </div>
+                        <div class="bp-post-body">
+                            <div class="bp-post-meta-sm">
+                                <span><i class="fas fa-calendar"></i> Nov 25, 2026</span>
+                                <span><i class="fas fa-clock"></i> 7 min read</span>
+                            </div>
+                            <h3 class="bp-post-title">Transaction Coordinator Fees in 2026: What TCs Charge</h3>
+                            <p class="bp-post-excerpt">Per-file vs hourly fees, listing vs buyer side, who pays, and when an hourly coordinator costs less.</p>
+                            <span class="bp-post-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                     <a href="{{ route('blog.re_va_cost') }}" class="bp-post-card">
                         <div class="bp-post-img">
                             <img src="{{ asset('assets/images/blog/need a VA.jpg') }}" alt="How Much Does a Real Estate Virtual Assistant Cost in 2026?" loading="lazy">
