@@ -1,13 +1,13 @@
 @extends('layout.main')
 
 @section('title', 'About Zingo Assist | US Virtual Assistant Agency')
-@section('meta_description', 'Zingo Assist is a St. Petersburg, FL virtual assistant agency helping real estate professionals and small businesses delegate admin, calling and marketing work.')
+@section('meta_description', 'Zingo Assist is a St. Petersburg, FL virtual assistant agency helping real estate professionals and small businesses delegate admin, calls and marketing.')
 
 @push('schema')
     @include('partials.schema-page', [
         'type' => 'page',
         'name' => 'About Zingo Assist',
-        'description' => 'Zingo Assist is a St. Petersburg, FL virtual assistant agency helping real estate professionals and small businesses delegate admin, calling and marketing work.',
+        'description' => 'Zingo Assist is a St. Petersburg, FL virtual assistant agency helping real estate professionals and small businesses delegate admin, calls and marketing.',
         'breadcrumbs' => [],
     ])
 @endpush

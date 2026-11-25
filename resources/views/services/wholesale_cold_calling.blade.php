@@ -100,8 +100,8 @@
 @endphp
 @extends('layout.main')
 
-@section('title', 'Wholesale Real Estate Cold Calling for Investors | Zingo Assist')
-@section('meta_description', 'Cold calling for real estate wholesalers and investors: trained callers find and qualify motivated sellers from your lists and log leads in your CRM. Free trial.')
+@section('title', 'Wholesale Real Estate Cold Calling | Zingo Assist')
+@section('meta_description', 'Cold calling for real estate wholesalers and investors: trained callers find and qualify motivated sellers and log every lead in your CRM. Free trial.')
 
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">

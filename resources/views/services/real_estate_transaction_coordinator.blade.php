@@ -45,7 +45,7 @@
 @extends('layout.main')
 
 @section('title', 'Virtual Transaction Coordinator Services | Zingo Assist')
-@section('meta_description', 'Virtual transaction coordinator services for real estate agents: contract-to-close deadlines, documents, lender and title updates. Pricing, tools and free trial.')
+@section('meta_description', 'Virtual transaction coordinator services for agents: contract-to-close deadlines, documents, lender and title updates. Pricing, tools and free trial.')
 
 @push('schema')
     @include('partials.schema-page', [

@@ -16,8 +16,8 @@
 @endphp
 @extends('layout.main')
 
-@section('title', 'Virtual Assistant FAQ: Pricing, Trial & Hiring | Zingo Assist')
-@section('meta_description', 'Answers to common questions about hiring a Zingo Assist virtual assistant: services, pricing, the free 2-day trial, data security, time zones and onboarding.')
+@section('title', 'Virtual Assistant FAQ: Pricing, Trial &amp; Hiring | Zingo')
+@section('meta_description', 'Answers to common questions about hiring a Zingo Assist virtual assistant: services, pricing, the free 2-day trial, data security, time zones, onboarding.')
 
 @push('schema')
     @include('partials.schema-page', [

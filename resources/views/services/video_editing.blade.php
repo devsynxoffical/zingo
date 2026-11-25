@@ -1,14 +1,14 @@
 @extends('layout.main')
 
 @section('title', 'Video Editing Services for Business | Zingo Assist')
-@section('meta_description', 'Professional video editing for marketing, social media, real estate listing tours and corporate content, with captions, motion graphics and fast turnaround.')
+@section('meta_description', 'Video editing for marketing, social media, real estate listing tours and corporate content, with captions, motion graphics and fast turnaround.')
 
 @push('schema')
     @include('partials.schema-page', [
         'type' => 'service',
         'name' => 'Video Editing Services',
         'serviceType' => 'Video Editing Services',
-        'description' => 'Professional video editing for marketing, social media, real estate listing tours and corporate content, with captions, motion graphics and fast turnaround.',
+        'description' => 'Video editing for marketing, social media, real estate listing tours and corporate content, with captions, motion graphics and fast turnaround.',
         'breadcrumbs' => [['Services', route('service')]],
         'faqs' => [
             ['What is included in your Video Editing Services?', 'We handle trimming, cutting, color correction, audio editing, motion graphics, subtitles, and platform-specific optimization.'],

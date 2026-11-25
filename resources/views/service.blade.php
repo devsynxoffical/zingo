@@ -1,13 +1,13 @@
 @extends('layout.main')
 
 @section('title', 'Virtual Assistant Services for Businesses | Zingo Assist')
-@section('meta_description', 'Explore Zingo Assist services: real estate virtual assistants, cold calling, transaction coordination, lead generation, CRM management, bookkeeping and SEO.')
+@section('meta_description', 'Zingo Assist services: real estate virtual assistants, cold calling, transaction coordination, lead generation, CRM management, bookkeeping and SEO.')
 
 @push('schema')
     @include('partials.schema-page', [
         'type' => 'page',
         'name' => 'Our Services',
-        'description' => 'Explore Zingo Assist services: real estate virtual assistants, cold calling, transaction coordination, lead generation, CRM management, bookkeeping and SEO.',
+        'description' => 'Zingo Assist services: real estate virtual assistants, cold calling, transaction coordination, lead generation, CRM management, bookkeeping and SEO.',
         'breadcrumbs' => [],
     ])
 @endpush

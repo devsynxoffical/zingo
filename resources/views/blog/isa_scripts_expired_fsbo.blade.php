@@ -12,7 +12,7 @@
 @section('og_type', 'article')
 @section('og_image', asset('assets/images/blog/Organizing Meetings and Appointments.jpg'))
 @section('title', 'ISA Scripts for Expired and FSBO Leads (Free Templates)')
-@section('meta_description', 'Word-for-word ISA scripts for expired listings and FSBO sellers: openers, discovery questions, objection handlers, voicemails and a compliant follow-up cadence.')
+@section('meta_description', 'Word-for-word ISA scripts for expired listings and FSBO sellers: openers, discovery questions, objection handlers, voicemails and a compliant cadence.')
 
 @push('schema')
     @include('partials.schema-page', [

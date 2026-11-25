@@ -88,8 +88,8 @@
 @endphp
 @extends('layout.main')
 
-@section('title', 'Expired & FSBO Cold Calling Services for Agents | Zingo Assist')
-@section('meta_description', 'Expired listing and FSBO cold calling for real estate agents: trained callers work your lists, follow up and book listing appointments. DNC-aware. Free trial.')
+@section('title', 'Expired & FSBO Cold Calling for Agents | Zingo Assist')
+@section('meta_description', 'Expired listing and FSBO cold calling for agents: trained callers work your lists, follow up and book listing appointments. DNC-aware. Free trial.')
 
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">

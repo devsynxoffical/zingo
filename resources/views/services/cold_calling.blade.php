@@ -45,14 +45,14 @@
 @extends('layout.main')
 
 @section('title', 'Real Estate Cold Calling Services for Agents | Zingo Assist')
-@section('meta_description', 'Real estate cold calling services for agents and brokers: expired, FSBO and circle prospecting calls, appointment setting and CRM updates. Free 2-day trial.')
+@section('meta_description', 'Real estate cold calling for agents and brokers: expired, FSBO and circle prospecting calls, appointment setting and CRM updates. Free 2-day trial.')
 
 @push('schema')
     @include('partials.schema-page', [
         'type' => 'service',
         'name' => 'Real Estate Cold Calling Services',
         'serviceType' => 'Real estate cold calling',
-        'description' => 'Real estate cold calling services for agents and brokers: expired, FSBO and circle prospecting calls, appointment setting and CRM updates. Free 2-day trial.',
+        'description' => 'Real estate cold calling for agents and brokers: expired, FSBO and circle prospecting calls, appointment setting and CRM updates. Free 2-day trial.',
         'breadcrumbs' => [['Services', route('service')]],
         'faqs' => [
             ['What are cold calling services?', 'Cold calling services involve reaching out to potential clients directly to generate leads, appointments, or sales opportunities.'],

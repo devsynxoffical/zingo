@@ -170,7 +170,7 @@
 @extends('layout.main')
 
 @section('title', 'Real Estate Virtual Assistant Services | Zingo Assist')
-@section('meta_description', 'Hire a trained real estate virtual assistant for CRM updates, lead follow-up, ISA calls, listings and transaction support. Free 2-day trial. US-managed team.')
+@section('meta_description', 'Hire a trained real estate virtual assistant for CRM updates, lead follow-up, ISA calls, listings and transaction support. Free 2-day trial. US-managed.')
 
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">

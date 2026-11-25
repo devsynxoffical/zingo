@@ -9,7 +9,7 @@
 @extends('layout.main')
 
 @section('title', 'Real Estate Virtual Assistant ROI & Cost Calculator')
-@section('meta_description', 'Free calculator: estimate what a real estate virtual assistant costs per month, how many hours it frees and how many extra closings it takes to pay for itself.')
+@section('meta_description', 'Free calculator: estimate what a real estate virtual assistant costs per month, the hours it frees and the extra closings it takes to pay for itself.')
 
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">

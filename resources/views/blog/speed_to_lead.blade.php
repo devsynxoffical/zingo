@@ -11,7 +11,7 @@
 @section('og_type', 'article')
 @section('og_image', asset('assets/images/blog/Handling Email Communication.jpg'))
 @section('title', 'Speed to Lead in Real Estate: How Fast to Respond')
-@section('meta_description', 'Why speed to lead matters for real estate agents, how fast to call new leads, a 5-minute response workflow, first-call script, follow-up plan and the numbers to track.')
+@section('meta_description', 'Why speed to lead matters in real estate: how fast to call new leads, a 5-minute response workflow, a first-call script, follow-up and what to track.')
 
 @push('schema')
     @include('partials.schema-page', [

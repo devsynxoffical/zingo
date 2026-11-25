@@ -15,7 +15,7 @@
 @section('og_type', 'article')
 @section('og_image', asset('assets/images/blog/Need Help with specific Business Operations.jpg'))
 @section('title', 'Transaction Coordinator Checklist & Template (Free PDF)')
-@section('meta_description', 'Free transaction coordinator checklist and contract-to-close template: 34 steps from accepted contract to closing, interactive online or as a printable PDF.')
+@section('meta_description', 'Free transaction coordinator checklist and contract-to-close template: 34 steps from accepted contract to closing, online or as a printable PDF.')
 
 @push('schema')
     @include('partials.schema-page', [

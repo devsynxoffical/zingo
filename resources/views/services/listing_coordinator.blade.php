@@ -130,7 +130,7 @@
 @extends('layout.main')
 
 @section('title', 'Listing Coordinator Virtual Assistant | Zingo Assist')
-@section('meta_description', 'Hire a virtual listing coordinator: MLS input, photos and signage, listing copy, showing feedback and weekly seller updates for real estate agents. Free trial.')
+@section('meta_description', 'Hire a virtual listing coordinator: MLS input, photos and signage, listing copy, showing feedback and weekly seller updates for agents. Free trial.')
 
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">

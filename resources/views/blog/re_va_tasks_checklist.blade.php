@@ -13,7 +13,7 @@
 @section('og_type', 'article')
 @section('og_image', asset('assets/images/blog/Feel Swamped With Work.jpg'))
 @section('title', 'Real Estate Virtual Assistant Tasks Checklist (Free PDF)')
-@section('meta_description', 'A free real estate VA tasks checklist: 38 daily, weekly, monthly, listing and transaction tasks to delegate, plus what to keep with the agent. Download the PDF.')
+@section('meta_description', 'Free real estate VA tasks checklist: 38 daily, weekly, monthly, listing and transaction tasks to delegate, plus what to keep with the agent. Get the PDF.')
 
 @push('schema')
     @include('partials.schema-page', [

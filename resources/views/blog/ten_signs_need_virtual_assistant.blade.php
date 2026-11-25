@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('og_type', 'article')
-@section('title', '10 Signs You Need a Virtual Assistant Right Now | Zingo Assist')
+@section('title', '10 Signs You Need a Virtual Assistant | Zingo Assist')
 @section('meta_description', 'Feeling overwhelmed running your business? Here are 10 clear signs you need a virtual assistant and how delegating can transform your productivity.')
 
 @push('schema')

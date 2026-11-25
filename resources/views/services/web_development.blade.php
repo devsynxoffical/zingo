@@ -1,14 +1,14 @@
 @extends('layout.main')
 
 @section('title', 'Real Estate Web Development Services | Zingo Assist')
-@section('meta_description', 'Custom real estate websites with IDX integration, fast mobile performance and SEO built in, designed to capture buyer and seller leads for agents and brokers.')
+@section('meta_description', 'Custom real estate websites with IDX, fast mobile performance and SEO built in, designed to capture buyer and seller leads for agents and brokers.')
 
 @push('schema')
     @include('partials.schema-page', [
         'type' => 'service',
         'name' => 'Real Estate Web Development Services',
         'serviceType' => 'Real estate web development',
-        'description' => 'Custom real estate websites with IDX integration, fast mobile performance and SEO built in, designed to capture buyer and seller leads for agents and brokers.',
+        'description' => 'Custom real estate websites with IDX, fast mobile performance and SEO built in, designed to capture buyer and seller leads for agents and brokers.',
         'breadcrumbs' => [['Services', route('service')]],
         'faqs' => [
             ['1. What is included in your Real Estate Web Development Services?', 'We design, develop, optimize, and maintain real estate websites with IDX and branding features.'],

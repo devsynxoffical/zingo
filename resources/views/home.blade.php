@@ -1,7 +1,7 @@
 @extends('layout.main')
 
-@section('title', 'Zingo Assist | Virtual Assistants for Real Estate Agents & Teams')
-@section('meta_description', 'Trained virtual assistants for US real estate agents, teams and investors: transaction coordination, ISA calls, listing coordination and cold calling. Free 2-day trial.')
+@section('title', 'Real Estate Virtual Assistants for Agents & Teams | Zingo')
+@section('meta_description', 'Trained virtual assistants for US real estate agents, teams and investors: transaction coordination, ISA calls, listings, cold calling. Free 2-day trial.')
 
 @push('schema')
     @include('partials.schema-page', [

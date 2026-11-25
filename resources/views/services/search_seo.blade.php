@@ -1,14 +1,14 @@
 @extends('layout.main')
 
 @section('title', 'Real Estate SEO Services for Agents & Brokers | Zingo Assist')
-@section('meta_description', 'Real estate SEO services that help agents and brokerages rank in Google and AI search for local buyer and seller searches, and turn that traffic into leads.')
+@section('meta_description', 'Real estate SEO services that help agents and brokerages rank in Google and AI search for local buyer and seller searches and turn traffic into leads.')
 
 @push('schema')
     @include('partials.schema-page', [
         'type' => 'service',
         'name' => 'Real Estate SEO Services',
         'serviceType' => 'Real estate SEO',
-        'description' => 'Real estate SEO services that help agents and brokerages rank in Google and AI search for local buyer and seller searches, and turn that traffic into leads.',
+        'description' => 'Real estate SEO services that help agents and brokerages rank in Google and AI search for local buyer and seller searches and turn traffic into leads.',
         'breadcrumbs' => [['Services', route('service')]],
         'faqs' => [
             ['1. What do real estate SEO services include?', 'A complete optimization strategy covering technical SEO, content, local SEO, keyword targeting, and ranking growth.'],

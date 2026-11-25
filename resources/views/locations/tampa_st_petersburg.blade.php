@@ -90,7 +90,7 @@
 @extends('layout.main')
 
 @section('title', 'Real Estate Virtual Assistant Tampa & St. Petersburg, FL')
-@section('meta_description', 'St. Petersburg-based Zingo Assist provides real estate virtual assistants for Tampa Bay agents, investors and property managers. Eastern Time. Free 2-day trial.')
+@section('meta_description', 'St. Petersburg-based Zingo Assist provides real estate virtual assistants for Tampa Bay agents, investors and property managers. Free 2-day trial.')
 
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/css/service-page.css') }}">

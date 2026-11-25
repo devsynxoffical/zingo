@@ -13,7 +13,7 @@
 @section('og_type', 'article')
 @section('og_image', asset('assets/images/blog/need a VA.jpg'))
 @section('title', 'Real Estate Virtual Assistant Cost in 2026: Rates & ROI')
-@section('meta_description', 'How much does a real estate virtual assistant cost in 2026? Hourly and monthly rates for offshore and US-based VAs, what drives price, hidden costs and ROI math.')
+@section('meta_description', 'How much does a real estate virtual assistant cost in 2026? Hourly and monthly rates for offshore and US-based VAs, what drives price, hidden costs, ROI.')
 
 
 @push('schema')

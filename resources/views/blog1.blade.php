@@ -3,13 +3,13 @@
 @section('og_type', 'article')
 @section('og_image', asset('assets/images/element/element-5.png'))
 @section('title', 'Why Your Business Needs a Virtual Assistant | Zingo Assist')
-@section('meta_description', 'Why growing businesses hire virtual assistants: lower costs than in-house staff, flexible hours, specialized skills and more time for revenue-generating work.')
+@section('meta_description', 'Why growing businesses hire virtual assistants: lower cost than in-house staff, flexible hours, specialized skills and more time for revenue work.')
 
 @push('schema')
     @include('partials.schema-page', [
         'type' => 'article',
         'name' => 'Why Your Business Needs a Virtual Assistant',
-        'description' => 'Why growing businesses hire virtual assistants: lower costs than in-house staff, flexible hours, specialized skills and more time for revenue-generating work.',
+        'description' => 'Why growing businesses hire virtual assistants: lower cost than in-house staff, flexible hours, specialized skills and more time for revenue work.',
         'breadcrumbs' => [['Blog', route('blog')]],
         'datePublished' => '2025-10-31',
         'image' => asset('assets/images/element/element-5.png'),

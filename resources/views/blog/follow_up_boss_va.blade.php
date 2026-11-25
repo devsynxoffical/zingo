@@ -11,7 +11,7 @@
 @section('og_type', 'article')
 @section('og_image', asset('assets/images/blog/Report Preparations and Presentations.jpg'))
 @section('title', 'How Top Teams Use a Virtual Assistant in Follow Up Boss')
-@section('meta_description', 'How real estate teams set up a virtual assistant in Follow Up Boss: user access, daily smart lists, stages and tags, action plans, deals and weekly reporting.')
+@section('meta_description', 'How real estate teams set up a virtual assistant in Follow Up Boss: user access, daily smart lists, stages and tags, action plans, deals and reports.')
 
 @push('schema')
     @include('partials.schema-page', [
