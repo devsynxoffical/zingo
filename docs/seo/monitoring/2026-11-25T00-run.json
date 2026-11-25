@@ -1,0 +1,19 @@
+{
+  "run": "2026-11-25T00:40Z #14",
+  "deploy": {"run": 30, "sha": "1c031d2", "status": "success"},
+  "gsc_daily": {"2026-11-17": [5,0], "2026-11-18": [9,1], "2026-11-19": [46,0], "2026-11-20": [49,0], "2026-11-21": [39,0], "2026-11-22": [51,1], "2026-11-23": [92,4], "2026-11-24": [26,0,"incomplete"]},
+  "gsc_daily_format": "[impressions, clicks]",
+  "inspection": {
+    "/real-estate-virtual-assistant": "indexed, crawled 2026-11-18",
+    "/real-estate-isa-services": "indexed, crawled 2026-11-18",
+    "/real-estate-transaction-coordinator-services": "discovered, not indexed",
+    "/real-estate-assistant-rules": "unknown",
+    "/real-estate-assistant-rules/florida": "unknown",
+    "/real-estate-assistant-rules/texas": "unknown",
+    "/real-estate-investor-virtual-assistant": "unknown",
+    "/tools/transaction-coordinator-checklist": "unknown",
+    "/real-estate-listing-coordinator-services": "unknown",
+    "/real-estate-cold-calling-services": "unknown (earlier runs: discovered; state flips)"
+  },
+  "change": "none"
+}

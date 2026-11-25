@@ -293,3 +293,21 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
   - **Checks:** both pages return 200, and the `#cold-calling-laws` anchor exists on the Florida page.
 - **Next:** let today's large batch get crawled; watch the redirected Florida queries move to `/real-estate-assistant-rules/florida`.
 - **Owner:** request indexing in GSC for `/real-estate-assistant-rules`, `/real-estate-assistant-rules/florida`, `/real-estate-investor-virtual-assistant`, TC services and listing coordinator. Owner decisions are in `docs/seo/2026-11-24-structure-plan.md`.
+
+## 2026-11-25 00:40 UTC: 12-hour run #14
+- **Deployment:** live; run 30 (`1c031d2`, C18 link fix) succeeded and its URLs were submitted to IndexNow.
+- **Search Console:**
+  - **Nothing new to act on yet.** Nov 23 is now final-ish at 92 impressions and 4 clicks (best day).
+  - Nov 24 shows 26 impressions and 0 clicks, which is incomplete (2 to 3 day lag).
+  - The 7-day query view (Nov 16 to 22) has no change from run #13.
+- **Indexing:**
+  - The hub and the ISA page are indexed, last crawled 18 Nov.
+  - TC services: discovered, not indexed.
+  - All 24 Nov pages are still unknown to Google, as expected one day after launch:
+    - the rules hub and the Florida and Texas rules pages
+    - the investor VA page
+    - `/tools/transaction-coordinator-checklist`
+  - Listing coordinator and cold calling: unknown.
+- **Change:** none. The 24 Nov batch (49 URLs, 5 redirects) has to be crawled before new data can justify another edit.
+- **Next:** in the next run, check whether Google has picked up the 301s (old Florida URLs leaving the GSC reports) and whether the rules pages are discovered.
+- **Owner:** request indexing in GSC for the 7 unknown or discovered pages listed above. This is the only way to speed up Google, because IndexNow only covers Bing.
