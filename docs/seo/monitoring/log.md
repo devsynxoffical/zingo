@@ -311,3 +311,37 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
 - **Change:** none. The 24 Nov batch (49 URLs, 5 redirects) has to be crawled before new data can justify another edit.
 - **Next:** in the next run, check whether Google has picked up the 301s (old Florida URLs leaving the GSC reports) and whether the rules pages are discovered.
 - **Owner:** request indexing in GSC for the 7 unknown or discovered pages listed above. This is the only way to speed up Google, because IndexNow only covers Bing.
+
+## 2026-11-25 12:41 UTC: 12-hour run #15
+- **Deployment:** live.
+  - Run 31 (`424c9fe`) deployed 2 new guides: property management VA cost and transaction coordinator fees.
+  - Run 32 (`1a96a6c`) shortened 22 meta descriptions and 5 titles.
+  - Both succeeded and their URLs were submitted to IndexNow.
+- **Search Console:**
+  - Nov 24 is at 58 impressions and 0 clicks (still incomplete).
+  - Nov 23 holds at 92 impressions and 4 clicks.
+  - Nov 25 has no data yet.
+  - Queries for Nov 23 to 25:
+    - "outsource tasks to virtual assistants" (11 impressions, position 21.8)
+    - "real estate virtual assistant pricing" → cost guide (9, 36.1)
+    - "things to outsource to a virtual assistant" (8)
+    - "expired & fsbo leads" (14.5)
+    - "follow up boss virtual assistant" (14)
+  - New: "real estate virtual assistant sop template" → VA tasks checklist (34.5).
+  - "property management virtual assistant cost" still goes to the general cost guide (position 49), because the new property management cost post is not known to Google yet.
+- **Indexing:**
+  - Hub and ISA page: indexed.
+  - Property management page: indexed, crawled 24 Nov.
+  - TC services: discovered.
+  - Still unknown to Google:
+    - the rules hub and Florida rules page
+    - the investor VA page
+    - the listing coordinator page (correct URL `/listing-coordinator-virtual-assistant`; earlier runs inspected a non-existent URL)
+    - the 2 new guides
+- **Change:** none. Two batches went live today (2 guides, 27 title and description edits). They need to be crawled before their effect shows.
+- **Next:**
+  - Check when the PM cost guide replaces the general cost guide for "property management virtual assistant cost".
+  - Watch the click-through rate on the pages whose descriptions changed.
+- **Owner:**
+  - Request indexing in GSC for the rules hub, the Florida rules page, the investor page, the listing coordinator page, the 2 new guides and TC services.
+  - Start Step 1 of `docs/seo/link-building-plan.md`.

@@ -1,0 +1,30 @@
+{
+  "run": "2026-11-25T12:41Z #15",
+  "deploy": {"run": 32, "sha": "1a96a6c", "status": "success"},
+  "gsc_daily": {"2026-11-20": [49,0], "2026-11-21": [39,0], "2026-11-22": [51,1], "2026-11-23": [92,4], "2026-11-24": [58,0,"incomplete"], "2026-11-25": [0,0,"no data yet"]},
+  "gsc_daily_format": "[impressions, clicks]",
+  "notable_queries_nov23_25": [
+    ["outsource tasks to virtual assistants", "tasks post", 11, 21.8],
+    ["real estate virtual assistant pricing", "cost guide", 9, 36.1],
+    ["legal virtual assistant roi", "ROI calculator", 5, 27],
+    ["expired & fsbo leads", "ISA scripts", 2, 14.5],
+    ["follow up boss virtual assistant", "FUB post", 1, 14],
+    ["things to outsource to a virtual assistant", "tasks post", 1, 8],
+    ["real estate virtual assistant sop template", "VA tasks checklist", 2, 34.5],
+    ["property management virtual assistant cost", "cost guide (new PM cost post not yet known)", 1, 49]
+  ],
+  "query_row_format": "[query, page, impressions, position]",
+  "inspection": {
+    "/real-estate-virtual-assistant": "indexed, crawled 2026-11-18",
+    "/real-estate-isa-services": "indexed, crawled 2026-11-18",
+    "/virtual-property-management-services": "indexed, crawled 2026-11-24",
+    "/real-estate-transaction-coordinator-services": "discovered, not indexed",
+    "/real-estate-assistant-rules": "unknown",
+    "/real-estate-assistant-rules/florida": "unknown",
+    "/real-estate-investor-virtual-assistant": "unknown",
+    "/listing-coordinator-virtual-assistant": "unknown",
+    "/blog/property-management-virtual-assistant-cost": "unknown (published 25 Nov)",
+    "/blog/transaction-coordinator-fees": "unknown (published 25 Nov)"
+  },
+  "change": "none"
+}
