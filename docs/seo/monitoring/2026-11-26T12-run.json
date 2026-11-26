@@ -1,0 +1,29 @@
+{
+  "run": "2026-11-26T12:41Z #17",
+  "deploy": {"run": 32, "sha": "1a96a6c", "status": "success"},
+  "gsc_daily": {"2026-11-22": [51,1], "2026-11-23": [92,4], "2026-11-24": [62,0], "2026-11-25": [79,0,"incomplete"], "2026-11-26": [2,0,"incomplete"]},
+  "gsc_daily_format": "[impressions, clicks]",
+  "notable_queries_nov25_26": [
+    ["speed to lead real estate zanus", "speed to lead post", 16, 3.8],
+    ["what are must-have sops for real estate virtual assistants?", "VA tasks checklist", 1, 5],
+    ["what tasks can i outsource to a virtual assistant", "tasks post", 1, 8],
+    ["outsource tasks to virtual assistants", "tasks post", 2, 11.5],
+    ["real estate virtual assistant salary", "cost guide", 1, 18],
+    ["virtual assistant rate calculator", "ROI calculator", 1, 19],
+    ["outsourced isa services for real estate teams", "ISA page", 4, 38]
+  ],
+  "query_row_format": "[query, page, impressions, position]",
+  "inspection": {
+    "/real-estate-virtual-assistant": "indexed, crawled 2026-11-18",
+    "/real-estate-isa-services": "indexed, crawled 2026-11-18",
+    "/real-estate-assistant-rules": "indexed, crawled 2026-11-25",
+    "/real-estate-investor-virtual-assistant": "INDEXED, crawled 2026-11-26 03:16 (was unknown)",
+    "/real-estate-transaction-coordinator-services": "discovered, not indexed",
+    "/real-estate-assistant-rules/florida": "unknown",
+    "/real-estate-assistant-rules/texas": "unknown",
+    "/listing-coordinator-virtual-assistant": "unknown",
+    "/blog/property-management-virtual-assistant-cost": "unknown",
+    "/blog/transaction-coordinator-fees": "unknown"
+  },
+  "change": "C21: SOP FAQ on /blog/real-estate-virtual-assistant-tasks-checklist"
+}

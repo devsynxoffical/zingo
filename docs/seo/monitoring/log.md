@@ -369,3 +369,34 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
 - **Owner:**
   - Request indexing in GSC for the pages still unknown.
   - Start Step 1 of the link-building plan.
+
+## 2026-11-26 12:41 UTC: 12-hour run #17
+- **Deployment:** live (run 32, `1a96a6c`); this run's change deploys with its own commit.
+- **Search Console:**
+  - Nov 25 is at 79 impressions and 0 clicks (still incomplete), with average position 19.2. That is the best position of any day so far.
+  - Nov 24 is final at 62 impressions.
+  - Movers:
+    - "outsource tasks to virtual assistants": 17.3 → 11.5.
+    - "what tasks can i outsource to a virtual assistant": position 8.
+  - New queries:
+    - "what are must-have sops for real estate virtual assistants?" → VA tasks checklist, position 5.
+    - "real estate virtual assistant salary" → cost guide, 18.
+    - "virtual assistant rate calculator" → ROI calculator, 19.
+  - "speed to lead real estate zanus" (another company's product name) is at 16 impressions, position 3.8.
+- **Indexing:**
+  - **The investor VA page is now indexed**, crawled 26 Nov 03:16 and found through the homepage link.
+  - The rules hub is still indexed.
+  - TC services is back to "discovered".
+  - Still unknown to Google:
+    - the Florida and Texas rules pages
+    - the listing coordinator page
+    - both new guides
+- **Change (C21):** added an FAQ, "What SOPs does a real estate virtual assistant need?", to `/blog/real-estate-virtual-assistant-tasks-checklist`. It appears in both the visible FAQ and the schema, and the hand-over steps now point to it.
+  - **Reason:** two SOP queries land on this page (positions 5 and 34.5) and it had no direct answer.
+  - **Checks:** schema matches the visible text, one H1, no mobile overflow, 0 JS errors.
+- **Next:** check the position of the SOP queries over 14 days.
+- **Owner:** request indexing in GSC for:
+  - the Florida and Texas rules pages
+  - the listing coordinator page
+  - the 2 new guides
+  - TC services

@@ -5,6 +5,7 @@
         ['What tasks can I give a real estate virtual assistant?', 'Lead follow-up calls and texts, CRM updates, inbox and calendar management, listing coordination, transaction paperwork and deadlines, social media, email newsletters, seller reports and bookkeeping support. Anything that does not require a real estate license can usually be delegated.'],
         ['What should a real estate VA not do?', 'An unlicensed assistant should not give pricing advice or opinions of value, negotiate, interpret contracts, discuss commission or show property. Those tasks stay with the licensed agent; rules vary by state and brokerage.'],
         ['How many hours a week does a real estate VA need?', 'Most solo agents start with 15 to 20 hours a week on their most time-consuming tasks, usually lead follow-up and CRM updates, and move to full-time once listings and transactions are added.'],
+        ['What SOPs does a real estate virtual assistant need?', 'Start with one short SOP for each task you delegate first: new lead intake and follow-up, CRM logging rules (stages, tags and notes), appointment confirmations, inbox and calendar rules, and the end-of-day report. Add SOPs for listing launch and the transaction file once those tasks move over. Each SOP should cover the trigger, the steps, the tools and logins, and when to hand the task back to the agent. A screen recording plus a one-page written version is enough.'],
         ['Which tasks should I delegate first?', 'Start with the tasks that are repeated every day and cost you leads when they slip: speed-to-lead follow-up, CRM logging and appointment confirmations. Add listing and transaction work once those run smoothly.'],
     ];
 @endphp
@@ -109,7 +110,7 @@
                             <h2>How to hand the checklist to your assistant</h2>
                             <ol class="guide-list" style="padding-left:20px;">
                                 <li style="list-style:decimal;"><strong>Tick what you will delegate</strong> and cross out what you will keep.</li>
-                                <li style="list-style:decimal;"><strong>Record a short screen video</strong> of how you do each ticked task today. That becomes the SOP.</li>
+                                <li style="list-style:decimal;"><strong>Record a short screen video</strong> of how you do each ticked task today. That becomes the SOP (see the FAQ below for the SOPs to write first).</li>
                                 <li style="list-style:decimal;"><strong>Start with the daily list</strong> for two weeks, then add weekly, listing and transaction tasks.</li>
                                 <li style="list-style:decimal;"><strong>Agree on one report</strong>: five lines at the end of each day.</li>
                             </ol>
