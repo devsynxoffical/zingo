@@ -345,3 +345,27 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
 - **Owner:**
   - Request indexing in GSC for the rules hub, the Florida rules page, the investor page, the listing coordinator page, the 2 new guides and TC services.
   - Start Step 1 of `docs/seo/link-building-plan.md`.
+
+## 2026-11-26 00:41 UTC: 12-hour run #16
+- **Deployment:** live, no new deploy since run #15 (latest is run 32, `1a96a6c`).
+- **Search Console:**
+  - Nov 24 is final-ish at 62 impressions and 0 clicks.
+  - Nov 25 shows 33 impressions (incomplete), but average position improved to 12. Nov 24 was at 23.
+  - "speed to lead real estate zanus" (a query that includes another company's product name) has 9 impressions at position 3.7.
+  - "outsource tasks to virtual assistants" moved from 21.8 to 17.3.
+  - Nothing else is new.
+- **Indexing:**
+  - **The rules hub `/real-estate-assistant-rules` is now indexed**, crawled 25 Nov 19:48 and found through the header link.
+  - Still unknown to Google:
+    - the Florida and Texas rules pages
+    - the investor page
+    - the listing coordinator page
+    - both new guides
+  - TC services flipped from discovered to unknown again.
+- **Change:** none. The site went through 2 deploys yesterday; the hub being indexed shows crawling is under way.
+- **Next:**
+  - Check whether Google picks up the state pages from the indexed hub.
+  - Check whether the redirected Florida URLs drop out of the GSC reports.
+- **Owner:**
+  - Request indexing in GSC for the pages still unknown.
+  - Start Step 1 of the link-building plan.
