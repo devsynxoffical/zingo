@@ -210,3 +210,30 @@ Targets are set against the baseline in section 2 and reviewed monthly. They are
 1. Owner: Phase 0 items 0.1 to 0.3 (GA4 ID, GSC indexing requests, GBP).
 2. Dev: Phase 1 technical work (1.1 to 1.10), on a branch, merged to `main` to deploy.
 3. Dev: Week 2 page expansions from section 4.3 (respecting the 7-day rule for pages edited on 24 and 25 Nov).
+
+---
+
+## 10. Search Console data via Windsor.ai (pulled 26 Nov 2026, last 28 days)
+
+Windsor.ai is now connected to the `https://zingoassist.us/` Search Console property, so future runs can pull GSC data directly.
+
+### Trend
+
+| Period | Impressions per day | Clicks | Main queries |
+|---|---|---|---|
+| 29 Oct to 18 Nov | 0 to 11 (about 4 average) | 9 | Almost all brand ("zingo assist") |
+| 19 Nov to 24 Nov | 39 to 92 (about 57 average) | 5 | Non-brand real estate queries |
+
+28-day total: about 430 impressions, 14 clicks. Impressions rose about 14x after the 17 to 18 Nov changes went live. Average position dropped from about 3 to about 25 because the site now shows for many new non-brand queries, which is normal for that kind of growth.
+
+### What the query data says
+
+| Finding | Queries (impressions, position) | Action |
+|---|---|---|
+| Rules queries still credited to the old Florida URL (301 since 24 Nov) | "what can an unlicensed assistant do in real estate" (6, 64), "what can unlicensed real estate assistants do" (5, 66), "unlicensed assistant real estate" (6, 59), "can an unlicensed assistant call leads texas" (10, 60) | Wait for Google to move them to the hub and Texas page. After 1 Dec (7-day rule), add a "What can an unlicensed real estate assistant do?" quick answer at the top of the hub, matching the query wording |
+| Florida page wins on specific questions | "unlicensed real estate assistant" (1, 1), "can an unlicensed real estate assistant show property" (2, 3), MLS login sharing (4, 8) | Keep; these show the rules content can rank once indexed |
+| ROI calculator competes with the cost guide for pricing queries | "real estate virtual assistant pricing": cost guide 46, calculator 91; "rates": 36 vs 76 | Retitle the calculator around "ROI" only (drop "Cost" from the title); link from the calculator to the cost guide with "real estate virtual assistant pricing" as the anchor; move the cost guide's pricing table to the top |
+| Generic outsourcing post is the biggest non-brand entry | "outsource tasks to virtual assistants" (15, 22), plus long-tail at 8 to 17 | Add a real estate tasks section linking the tasks checklist and the hub (section 4.3) |
+| Speed to lead ranks | "speed to lead real estate zanus" (6, 3.8), "how fast to respond to real estate leads" (3, 27) | Add a short "how fast should you respond" answer near the top |
+| Job-seeker traffic | "how to become a virtual assistant" (15, 42) | Already noindexed; leave it |
+| Brand | "zingo assist": homepage (14, 1.4, 2 clicks), also About and the noindexed personal assistance page | Fine. GBP will strengthen brand results |
