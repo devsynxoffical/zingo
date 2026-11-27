@@ -400,3 +400,31 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
   - the listing coordinator page
   - the 2 new guides
   - TC services
+
+## 2026-11-27 00:40 UTC: 12-hour run #18
+- **Deployment:** live; run 33 (`3f70499`, SOP FAQ) succeeded.
+- **Search Console:**
+  - Nov 25 is final-ish at 81 impressions and 0 clicks, position 18.9.
+  - Nov 26 so far has 32 impressions, 1 click (a "zingo assist" search) and position 16.4. Average position keeps improving: 23.2 → 18.9 → 16.4.
+  - **The indexed rules hub now ranks:**
+    - "can an unlicensed assistant call leads texas" at 28, up from 51 when the old Florida post ranked.
+    - "unlicensed real estate assistants" at 61.
+  - New: "crm virtual assistant pricing for real estate" → cost guide, 19.
+- **Indexing:**
+  - No new pages indexed since run #17.
+  - TC services: discovered.
+  - Still unknown to Google:
+    - the Florida and Texas rules pages
+    - the listing coordinator page
+    - both new guides
+    - `/tools/transaction-coordinator-checklist`
+- **Change (C22):** added an FAQ, "Can an unlicensed assistant call leads in Texas?", to the rules hub `/real-estate-assistant-rules`. It gives a direct TREC answer, is in both the visible FAQ and the schema, and links to the Texas rules page.
+  - **Reason:** the Texas query now lands on the hub at 28, and the Texas page is not yet known to Google. The link also gives Google another path to the Texas page.
+  - **Checks:** schema matches the visible text, one H1, no mobile overflow, 0 JS errors.
+- **Next:** check the Texas query's position and whether the Texas page gets discovered.
+- **Owner:** request indexing in GSC for:
+  - the Florida and Texas rules pages
+  - the listing coordinator page
+  - the 2 new guides
+  - the TC checklist tool
+  - TC services

@@ -1,0 +1,27 @@
+{
+  "run": "2026-11-27T00:40Z #18",
+  "deploy": {"run": 33, "sha": "3f70499", "status": "success"},
+  "gsc_daily": {"2026-11-22": [51,1], "2026-11-23": [92,4], "2026-11-24": [62,0], "2026-11-25": [81,0], "2026-11-26": [32,1,"incomplete"]},
+  "gsc_daily_format": "[impressions, clicks]",
+  "notable_queries_nov26_27": [
+    ["zingo assist", "home", 1, 1, "1 click"],
+    ["can an unlicensed assistant call leads texas", "rules hub (was Florida post at 51)", 1, 28],
+    ["unlicensed real estate assistants", "rules hub", 1, 61],
+    ["crm virtual assistant pricing for real estate", "cost guide", 1, 19],
+    ["speed to lead real estate zanus", "speed to lead post", 8, 4.9]
+  ],
+  "query_row_format": "[query, page, impressions, position]",
+  "inspection": {
+    "/real-estate-virtual-assistant": "indexed, crawled 2026-11-18",
+    "/real-estate-isa-services": "indexed, crawled 2026-11-18",
+    "/blog/real-estate-virtual-assistant-tasks-checklist": "indexed, crawled 2026-11-21 (before C21)",
+    "/real-estate-transaction-coordinator-services": "discovered, not indexed",
+    "/real-estate-assistant-rules/florida": "unknown",
+    "/real-estate-assistant-rules/texas": "unknown",
+    "/listing-coordinator-virtual-assistant": "unknown",
+    "/blog/property-management-virtual-assistant-cost": "unknown",
+    "/blog/transaction-coordinator-fees": "unknown",
+    "/tools/transaction-coordinator-checklist": "unknown"
+  },
+  "change": "C22: Texas calling FAQ on the rules hub"
+}
