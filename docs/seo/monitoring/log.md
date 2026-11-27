@@ -428,3 +428,27 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
   - the 2 new guides
   - the TC checklist tool
   - TC services
+
+## 2026-11-27 12:40 UTC: 12-hour run #19
+- **Deployment:** live; run 34 (`20c9d9a`, Texas FAQ) succeeded.
+- **Indexing: 5 pages indexed on 27 Nov.**
+  - The Florida and Texas rules pages, found through the hub.
+  - The property management VA cost guide and the TC fees guide, found through `/sitemap`.
+  - `/tools/transaction-coordinator-checklist`, found through the Florida rules page.
+  - TC services: still discovered. Listing coordinator: still unknown.
+- **Search Console:**
+  - Nov 26 is at 74 impressions and 1 click (a "zingo assist" search), position 21.6. It is still incomplete.
+  - Movers and new queries:
+    - "can an unlicensed assistant call leads texas" → rules hub: 28 → 19.7 (3 impressions). The C22 FAQ went live at about 01:00 UTC on 27 Nov, so it isn't reflected yet.
+    - "real estate virtual assistant monthly pricing" → cost guide, 15 (new).
+    - The investor page has its first impression ("virtual assistant for real estate investors", 57).
+- **Change (C23):** added "Listing Coordinator" to the related-services strip on every real estate post.
+  - **Reason:** the listing coordinator page is the only priority page still unknown to Google. It was linked from the header and 17 body links, but not from the posts that Google is now crawling and indexing.
+  - **Checks:** 51/51 pages return 200, one H1, valid JSON-LD; no mobile overflow; 0 JS errors.
+- **Next:**
+  - Check whether the listing coordinator page gets discovered.
+  - Check the Texas query once the FAQ is crawled.
+  - Track the first queries for the newly indexed pages.
+- **Owner:** request indexing in GSC for:
+  - `/listing-coordinator-virtual-assistant`
+  - `/real-estate-transaction-coordinator-services` (discovered for over a week)

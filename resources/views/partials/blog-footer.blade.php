@@ -11,7 +11,7 @@
         ->merge($others)
         ->unique('route')->take(3);
     $services = [
-        're'  => [['Real Estate Virtual Assistant', 'service.real_estate_virtual_assistant'], ['Real Estate Cold Calling', 'service.cold_calling'], ['Transaction Coordinator', 'service.real_estate_transaction_coordinator'], ['Real Estate ISA Services', 'service.real_estate_isa'], ['Property Management VA', 'service.virtual_property_management'], ['Real Estate Investor VA', 'service.investor_va'], ['Assistant Rules by State', 'rules.hub']],
+        're'  => [['Real Estate Virtual Assistant', 'service.real_estate_virtual_assistant'], ['Real Estate Cold Calling', 'service.cold_calling'], ['Transaction Coordinator', 'service.real_estate_transaction_coordinator'], ['Listing Coordinator', 'service.listing_coordinator'], ['Real Estate ISA Services', 'service.real_estate_isa'], ['Property Management VA', 'service.virtual_property_management'], ['Real Estate Investor VA', 'service.investor_va'], ['Assistant Rules by State', 'rules.hub']],
         'va'  => [['Real Estate Virtual Assistant', 'service.real_estate_virtual_assistant'], ['Transaction Coordinator', 'service.real_estate_transaction_coordinator'], ['Property Management VA', 'service.virtual_property_management'], ['Assistant Rules by State', 'rules.hub']],
         'crm' => [['CRM Management', 'service.crm_management'], ['Lead Generation', 'service.lead_generation'], ['Real Estate Virtual Assistant', 'service.real_estate_virtual_assistant']],
         'mk'  => [['Real Estate SEO', 'service.search_seo'], ['Digital Marketing', 'service.digital_marketing'], ['Web Development', 'service.web_development'], ['Lead Generation', 'service.lead_generation']],

@@ -1,0 +1,27 @@
+{
+  "run": "2026-11-27T12:40Z #19",
+  "deploy": {"run": 34, "sha": "20c9d9a", "status": "success"},
+  "gsc_daily": {"2026-11-23": [92,4], "2026-11-24": [62,0], "2026-11-25": [81,0], "2026-11-26": [74,1,"incomplete"]},
+  "gsc_daily_format": "[impressions, clicks]",
+  "notable_queries_nov26_27": [
+    ["can an unlicensed assistant call leads texas", "rules hub", 3, 19.7, "was 28"],
+    ["real estate virtual assistant monthly pricing", "cost guide", 1, 15],
+    ["crm virtual assistant pricing for real estate", "cost guide", 1, 19],
+    ["virtual assistant for real estate investors", "investor page (first impression)", 1, 57],
+    ["speed to lead real estate zanus", "speed to lead post", 11, 4.5]
+  ],
+  "query_row_format": "[query, page, impressions, position]",
+  "inspection": {
+    "/real-estate-assistant-rules/florida": "INDEXED, crawled 2026-11-27 06:49 (was unknown)",
+    "/real-estate-assistant-rules/texas": "INDEXED, crawled 2026-11-27 06:47 (was unknown)",
+    "/blog/property-management-virtual-assistant-cost": "INDEXED, crawled 2026-11-27 09:15 (was unknown)",
+    "/blog/transaction-coordinator-fees": "INDEXED, crawled 2026-11-27 09:26 (was unknown)",
+    "/tools/transaction-coordinator-checklist": "INDEXED, crawled 2026-11-27 08:14 (was unknown)",
+    "/real-estate-assistant-rules": "indexed",
+    "/real-estate-virtual-assistant": "indexed",
+    "/real-estate-isa-services": "indexed",
+    "/real-estate-transaction-coordinator-services": "discovered, not indexed",
+    "/listing-coordinator-virtual-assistant": "unknown"
+  },
+  "change": "C23: Listing Coordinator added to the real estate posts' related-services strip"
+}
