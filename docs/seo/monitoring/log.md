@@ -473,3 +473,23 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
   - **Checks:** schema matches the visible text, one H1, no mobile overflow, 0 JS errors.
 - **Next:** check the salary query's position; check whether the listing coordinator page gets discovered.
 - **Owner:** request indexing in GSC for `/listing-coordinator-virtual-assistant` and `/real-estate-transaction-coordinator-services`.
+
+## 2026-11-28 12:41 UTC: 12-hour run #21
+- **Deployment:** live; run 36 (`d0fe3b6`, salary FAQ) succeeded.
+- **Search Console:**
+  - **Nov 27: 118 impressions (record so far)**, 0 clicks, average position 31.7. Still incomplete. The lower average position comes from many new pricing queries at positions 30 to 70.
+  - The cost guide now shows for about 15 pricing variants:
+    - monthly cost, monthly pricing, packages, offshore cost, hourly rate, ISA pricing, consultation cost.
+    - "how much do these jobs pay" at 3, "what is the agent assistant fee amount?" at 8, salary at 12.
+  - The investor page has 8 impressions across 3 investor queries (50 to 58).
+  - The Texas query → Texas page at 21. The rules hub shows at 11 for a long quiz-style question about offers and negotiation.
+  - The cost guide was last crawled 18 Nov, so C20 and C24 are not yet reflected.
+- **Indexing:**
+  - No change. TC services: discovered. Listing coordinator: unknown.
+- **Change (C25):** added an FAQ, "What do real estate virtual assistant monthly packages look like?", to the cost guide.
+  - It covers part-time (about 80 hours) and full-time (about 160 hours) packages, using the guide's existing ranges, plus what to check in a package.
+  - **Reason:** 5 "packages" and "monthly pricing" queries land on the cost guide at 30 to 71, and the guide never mentioned packages.
+  - **Checks:** schema matches the visible text, one H1, no mobile overflow, 0 JS errors.
+- **Next:** check when the cost guide is recrawled, then its pricing-query positions over 14 days.
+- **Owner:**
+  - Request indexing in GSC for `/blog/real-estate-virtual-assistant-cost` (changed 3 times since its last crawl), `/listing-coordinator-virtual-assistant` and `/real-estate-transaction-coordinator-services`.

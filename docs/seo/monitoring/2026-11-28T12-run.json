@@ -1,0 +1,27 @@
+{
+  "run": "2026-11-28T12:41Z #21",
+  "deploy": {"run": 36, "sha": "d0fe3b6", "status": "success"},
+  "gsc_daily": {"2026-11-23": [92,4], "2026-11-24": [62,0], "2026-11-25": [81,0], "2026-11-26": [75,1], "2026-11-27": [118,0,"incomplete, record impressions, avg position 31.7"]},
+  "gsc_daily_format": "[impressions, clicks]",
+  "notable_queries_nov27_28": [
+    ["how much do these jobs pay", "cost guide", 1, 3],
+    ["what is the agent assistant fee amount?", "cost guide", 2, 8],
+    ["the user id and login credentials of an mls subscriber can be shared...", "old Florida URL", 1, 7],
+    ["can your assistant answer client questions about offers and negotiation? ...", "rules hub", 1, 11],
+    ["real estate virtual assistant salary", "cost guide", 1, 12],
+    ["can an unlicensed assistant call leads texas", "Texas rules page", 3, 21],
+    ["virtual assistant for real estate investors", "investor page", 5, 58.4],
+    ["real estate virtual assistant monthly packages", "cost guide", 1, 42],
+    ["real estate virtual assistant monthly pricing", "cost guide", 2, 30.5],
+    ["offshore real estate virtual assistant cost", "cost guide", 2, 41]
+  ],
+  "query_row_format": "[query, page, impressions, position]",
+  "inspection": {
+    "/real-estate-virtual-assistant": "indexed, crawled 2026-11-18",
+    "/real-estate-isa-services": "indexed, crawled 2026-11-18",
+    "/blog/real-estate-virtual-assistant-cost": "indexed, last crawled 2026-11-18 (C20, C24 not yet crawled)",
+    "/real-estate-transaction-coordinator-services": "discovered, not indexed",
+    "/listing-coordinator-virtual-assistant": "unknown"
+  },
+  "change": "C25: monthly packages FAQ on /blog/real-estate-virtual-assistant-cost"
+}
