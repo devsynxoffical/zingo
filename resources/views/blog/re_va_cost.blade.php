@@ -3,6 +3,7 @@
         ['How much does a real estate virtual assistant cost per hour?', 'Offshore real estate virtual assistants commonly cost about $8 to $15 per hour, while US-based assistants typically cost about $25 to $45 per hour. Specialized roles such as experienced ISAs or transaction coordinators sit at the higher end of each range.'],
         ['How much does a real estate ISA virtual assistant cost?', 'An offshore inside sales agent (ISA) through a managed agency commonly costs about $8 to $15 per hour, with strong spoken English and objection handling at the top of that range: roughly $640 to $1,200 a month part-time (80 hours) or $1,300 to $2,400 a month full-time. A US-based ISA usually costs $25 to $45 per hour. Budget another $50 to $300 a month for a dialer seat and data.'],
         ['How much does a full-time real estate VA cost per month?', 'A full-time (about 160 hours a month) offshore real estate VA through a managed agency commonly costs around $1,300 to $2,400 per month. A full-time US-based assistant usually costs $4,000 or more per month.'],
+        ['How much does a real estate virtual assistant make?', 'In the US, ZipRecruiter reports an average of about $24.40 per hour for virtual real estate assistants (May 2026), with most postings between about $20 and $30 per hour. That is the assistant\'s pay. An agency rate is higher than the pay of a comparable assistant because it also covers recruiting, training, management and backup cover.'],
         ['Is a real estate virtual assistant worth it?', 'For most active agents, yes. If an assistant frees 15 to 20 hours a week that you reinvest in prospecting, appointments and client service, closing even one additional transaction a quarter typically covers the cost many times over.'],
         ['Is it cheaper to hire a VA or an in-house assistant?', 'A VA is usually cheaper because you avoid payroll taxes, benefits, office space and equipment, and you pay only for the hours you need. An in-house assistant can make sense when the role requires being physically present in the office.'],
         ['How much does a transaction coordinator cost compared to a VA?', 'Transaction coordinators usually charge per file, commonly about $300 to $600 per closed transaction, while a virtual assistant is usually paid by the hour or month and covers a wider range of tasks.'],
@@ -151,11 +152,12 @@
                             <ul class="guide-list">
                                 <li><a href="https://wingassistant.com/blog/virtual-assistant-pricing/" target="_blank" rel="noopener">Wing Assistant: Virtual assistant pricing</a></li>
                                 <li><a href="https://www.myoutdesk.com/blog/virtual-assistant-cost/" target="_blank" rel="noopener">MyOutDesk: Virtual assistant cost</a></li>
+                                <li><a href="https://www.ziprecruiter.com/Jobs/Virtual-Real-Estate-Assistant" target="_blank" rel="noopener">ZipRecruiter: Virtual real estate assistant pay</a></li>
                                 <li><a href="https://www.listedkit.com/transaction-coordinator-cost-calculator" target="_blank" rel="noopener">ListedKit: Transaction coordinator cost calculator</a></li>
                                 <li><a href="https://floridarealtors.org/law-ethics/library/unlicensed-assistants" target="_blank" rel="noopener">Florida Realtors: Unlicensed assistants</a></li>
                             </ul>
 
-                            <p class="guide-note">Rates are typical market ranges observed in 2026 and are provided for budgeting purposes only. They are not a quote. Last reviewed November 21, 2026.</p>
+                            <p class="guide-note">Rates are typical market ranges observed in 2026 and are provided for budgeting purposes only. They are not a quote. Last reviewed November 28, 2026.</p>
                         </div>
                     </div>
                 </div>

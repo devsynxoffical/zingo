@@ -1,0 +1,24 @@
+{
+  "run": "2026-11-28T00:40Z #20",
+  "deploy": {"run": 35, "sha": "e713bb9", "status": "success"},
+  "gsc_daily": {"2026-11-22": [51,1], "2026-11-23": [92,4], "2026-11-24": [62,0], "2026-11-25": [81,0], "2026-11-26": [75,1], "2026-11-27": [28,0,"incomplete"]},
+  "gsc_daily_format": "[impressions, clicks]",
+  "notable_queries_nov27_28": [
+    ["can an unlicensed assistant call leads texas", "Texas rules page (first appearance)", 2, 17],
+    ["real estate virtual assistant salary", "cost guide", 1, 12, "was 18"],
+    ["what is the agent assistant fee amount?", "cost guide", 2, 8],
+    ["real estate virtual assistant sop template", "VA tasks checklist PDF", 1, 11, "was 34.5 on the page"],
+    ["real estate va monthly cost", "cost guide", 1, 21],
+    ["virtual assistant for real estate investors", "investor page", 2, 58.5]
+  ],
+  "query_row_format": "[query, page, impressions, position]",
+  "cannibalization": "Texas query showed 4 URLs on 27 Nov (Texas page 17, hub 70, California 89, old Florida URL 100); the Texas page leads, which is the intended target",
+  "inspection": {
+    "/real-estate-virtual-assistant": "indexed, crawled 2026-11-18",
+    "/real-estate-isa-services": "indexed, crawled 2026-11-18",
+    "/real-estate-assistant-rules": "indexed, crawled 2026-11-25",
+    "/real-estate-transaction-coordinator-services": "discovered, not indexed",
+    "/listing-coordinator-virtual-assistant": "unknown"
+  },
+  "change": "C24: salary FAQ on /blog/real-estate-virtual-assistant-cost"
+}

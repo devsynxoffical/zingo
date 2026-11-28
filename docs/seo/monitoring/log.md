@@ -452,3 +452,24 @@ Every 12 hours a scheduled run pulls Search Console data, compares it with the p
 - **Owner:** request indexing in GSC for:
   - `/listing-coordinator-virtual-assistant`
   - `/real-estate-transaction-coordinator-services` (discovered for over a week)
+
+## 2026-11-28 00:40 UTC: 12-hour run #20
+- **Deployment:** live; run 35 (`e713bb9`, listing coordinator footer link) succeeded.
+- **Search Console:**
+  - Nov 26 is final at 75 impressions and 1 click. Nov 27 shows 28 (incomplete).
+  - **The Texas rules page ranks on its first day indexed:** "can an unlicensed assistant call leads texas" → `/real-estate-assistant-rules/texas` at 17. The hub, California and the old Florida URL also showed (70, 89, 100), but the Texas page leads as intended.
+  - Movers:
+    - "real estate virtual assistant salary" → cost guide: 18 → 12.
+    - "real estate virtual assistant sop template" → the checklist **PDF** at 11 (the page was at 34.5).
+  - New: "what is the agent assistant fee amount?" → cost guide, 8. The intent is unclear (it may be a brokerage fee), so no action.
+- **Indexing:**
+  - No change for the priority pages.
+  - TC services: discovered.
+  - Listing coordinator: still unknown, 12 hours after the footer links were added.
+- **Change (C24):** added an FAQ, "How much does a real estate virtual assistant make?", to `/blog/real-estate-virtual-assistant-cost`.
+  - It cites ZipRecruiter's US average of $24.40 an hour (May 2026), with most postings between $20 and $30, and explains why an agency rate is higher than the assistant's pay.
+  - Added ZipRecruiter to the sources and updated "Last reviewed".
+  - **Reason:** salary queries land on the cost guide (now at 12), which only covered what the client pays.
+  - **Checks:** schema matches the visible text, one H1, no mobile overflow, 0 JS errors.
+- **Next:** check the salary query's position; check whether the listing coordinator page gets discovered.
+- **Owner:** request indexing in GSC for `/listing-coordinator-virtual-assistant` and `/real-estate-transaction-coordinator-services`.
